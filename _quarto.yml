@@ -3,48 +3,35 @@ project:
   output-dir: docs
 
 book:
-  title: "Social Network Analysis for Crime Analysts"
+  title: "Statistical Analysis"
   search: true
   reader-mode: true
 
   page-footer: 
     left: |
-      Social Network Analysis for Crime Analysts was written by <a href="https://jacobtnyoung.github.io/">Jacob T.N. Young</a>
+      Statistical Analysis was written by <a href="https://jacobtnyoung.github.io/">Jacob T.N. Young</a>
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
-  site-url: https://jacobtnyoung.github.io/snaca-textbook/
-  repo-url: https://github.com/jacobtnyoung/snaca-textbook
+  site-url: https://jacobtnyoung.github.io/crj-303-textbook/
+  repo-url: https://github.com/jacobtnyoung/crj-303-textbook
   repo-branch: main
   repo-actions: [issue]
 
   chapters:
     - index.qmd
-    - snaca-introduction.qmd
-    - snaca-theory.qmd
-    - snaca-methods.qmd
-    - snaca-net-data-structures.qmd
-    - snaca-net-description.qmd
-    - snaca-centrality-degree.qmd
-    - snaca-centrality-closeness.qmd
-    - snaca-centrality-betweenness.qmd
-    - snaca-bipartite.qmd
-    - snaca-projection.qmd
-    - snaca-conclusion.qmd
-    - references.qmd
-
-bibliography: references.bib
+    - 01-levels-of-measurement.qmd
 
 format:
   html:
-    theme: darkly
+    theme: lux
 
     navbar:
       right:
 
       # add a link to report an issue
         - text: "Report an Issue"
-          href: "https://github.com/jacobtnyoung/snaca-textbook/issues"
+          href: "https://github.com/jacobtnyoung/crj-303-textbook/issues"
 
     author-meta: "Jacob T.N. Young"
 
