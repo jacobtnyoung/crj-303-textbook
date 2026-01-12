@@ -51,6 +51,7 @@ Can we say there are *half as many* crimes in a neighborhood compared to another
 *Note*: if the variable has a true zero point, then it is called a **ratio** level of measurement.
 
 ## Practice
+
 What are the levels of measurement?
 
 | Example Variable                                 | Level of Measurement |
