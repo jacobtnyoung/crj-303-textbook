@@ -22,6 +22,7 @@ book:
     - index.qmd
     - 01-levels-of-measurement.qmd
     - 02-frequency-distributions.qmd
+    - 03-bar-charts.qmd
 
 format:
   html:

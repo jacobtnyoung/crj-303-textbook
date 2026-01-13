@@ -1,0 +1,115 @@
+# Lecture 3: Visualizing Data with Bar Charts
+
+## Scenario
+
+When examining data, we often want to describe how people, cases, or outcomes are distributed across categories.
+In the last lecture we saw how to do that using frequencies and proportions. 
+We can also usual visualizations to illustrate the information in a table of frequencies and proportions.  
+
+Bar charts are one of the simplest and most powerful ways to show those differences visually. 
+Bar charts are best for **nominal** or **ordinal** data, as they make comparisons between categories easy to see.  
+
+## Distribution of Case Types and Disposition
+
+Suppose we had some data on 20 recent cases filed in court. The raw data reports the case type and disposition.
+
+<!-- make table smaller -->
+\small
+
+| Case ID | Case Type | Case Disposition |
+|:-------:|:---------:|:----------------:|
+| 1 | Property | Plea Agreement |
+| 2 | Property | Dismissed |
+| 3 | Drug | Plea Agreement |
+| 4 | Property | Plea Agreement |
+| 5 | Violent | Convicted at Trial |
+| 6 | Drug | Plea Agreement |
+| 7 | Property | Pending |
+| 8 | Property | Plea Agreement |
+| 9 | Drug | Dismissed |
+| 10 | Property | Plea Agreement |
+| 11 | Property | Plea Agreement |
+| 12 | Drug | Plea Agreement |
+| 13 | Property | Pending |
+| 14 | Property | Plea Agreement |
+| 15 | Violent | Convicted at Trial |
+| 16 | Drug | Plea Agreement |
+| 17 | Property | Plea Agreement |
+| 18 | Property | Dismissed |
+| 19 | Drug | Plea Agreement |
+| 20 | Property | Plea Agreement |
+
+\normalsize
+
+Suppose we had the following research question: *What are the the most common type of case in the county court system?* How could we answer this question?
+
+\newpage
+
+### Frequency and Proportion Table
+
+Let's start by making a table of frequencies and proportions
+
+<!-- make table smaller -->
+\small
+
+| Case Type  | Frequency (**f**) | Proportion (**p**) |
+|:----------:|:-----------------:|:------------------:|
+| Property   |                12 |       12/20 = 0.6  |
+| Drug       |                 6 |       6/20 = 0.3   |
+| Violent    |                 2 |      2/20 = 0.1    |
+| **Total**  |            **20** |  **20/20 = 1.00**  |
+
+\normalsize
+
+In looking at our table, what can we say about our research question?
+
+### Create a Bar Chart
+
+In a *bar chart*, each bar represents a type of case. 
+The height of the bar shows how many cases fall into each category. 
+The x-axis shows the categories. 
+The y-axis shows how many cases are in each category.
+
+So, to create a bar chart, we draw the axes and then a bar for each category:  
+
+```{r, echo=FALSE, fig.align='center'}
+
+library( ggplot2 )
+
+# Create the data
+cases <- data.frame(
+  case_id = 1:20,
+  case_type = c(
+    "Property", "Property", "Drug", "Property", "Violent",
+    "Drug", "Property", "Property", "Drug", "Property",
+    "Property", "Drug", "Property", "Property", "Violent",
+    "Drug", "Property", "Property", "Drug", "Property"
+  )
+)
+
+# Create a print-friendly bar chart with discrete y-axis values
+ggplot(cases, aes(x = case_type)) +
+  geom_bar() +
+  labs(
+    title = "Distribution of Case Types",
+    x = "Case Type",
+    y = "Number of Cases"
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 12, by = 1)   # force whole-number counts
+  ) +
+  theme_classic() +
+  theme(
+    text = element_text(size = 14),
+    title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  )
+
+```
+
+#### What does the chart tell us?
+
+### Let's do it again
+
+Now, what if our research question was: *What are the the most common case dispsotions in the county court system?* How could we answer this question?
