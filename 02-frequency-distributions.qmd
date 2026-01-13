@@ -1,0 +1,75 @@
+# Lecture 2: Frequency Distributions and Levels of Measurement
+
+## Scenario
+
+In criminology, we often start with a question about people’s attitudes or experiences and then use data to describe what we find. Suppose we want to answer this question: *How much public support is there for expanding rehabilitation programs for people in prison?*
+
+To begin answering this, suppose we ask 10 people the following survey question: "How much do you support expanding rehabilitation programs for people in prison?", where the response options were: 1 = Strongly oppose, 2 = Oppose, 3 = Support, 4 = Strongly support.
+
+Here are their answers, called *raw data*:
+
+| ID  | Support for Rehabilitation |
+|:---:|:--------------------------:|
+|  1  |             2              |
+|  2  |             3              |
+|  3  |             2              |
+|  4  |             4              |
+|  5  |             3              |
+|  6  |             3              |
+|  7  |             1              |
+|  8  |             4              |
+|  9  |             2              |
+| 10  |             3              |
+
+**Question**: What do the values in the raw data table represent?
+
+## Tools
+
+Remember our research question: *How much public support is there for expanding rehabilitation programs for people in prison?*
+
+Our goal is to **describe** what the data tells us. What are some things we could describe about the data based on this table?
+
+Now, let's identify some of the tools we can use and what they can tell us.
+
+### Frequencies
+
+The frequency, $f$, tells us how many people chose each response. To get the frequency, we just count up each instance of a response category:
+
+| Response  | Response Category |  *f*   |
+|:---------:|:-----------------:|:------:|
+|     1     |  Strongly oppose  |   1    |
+|     2     |      Oppose       |   3    |
+|     3     |      Support      |   4    |
+|     4     | Strongly support  |   2    |
+| **Total** |                   | **10** |
+
+What can we infer from this table, having grouped the responses by frequency?
+
+### Proportions
+
+Proportion, $p$, represents the fraction of the total that each category represents, $p = \frac{f}{N}$, where $N$ represents the total number of cases. (A quick note on symbols: for now we will use $N$ to refer to the total number of cases in our data. When we discuss samples and populations we will agument this and use $n$ to refer to the size of a sample and $N$ to refer to the size of a population).
+
+| Response  | *f* |          *p* |
+|:---------:|----:|-------------:|
+|     1     |   1 | 1 / 10 = 0.1 |
+|     2     |   3 | 3 / 10 = 0.3 |
+|     3     |   4 | 4 / 10 = 0.4 |
+|     4     |   2 | 2 / 10 = 0.2 |
+| **Total** |  10 |      **1.0** |
+
+What can we infer from this table, having calculated the proportions?
+
+### Cumulative Frequency
+
+The cumulative frequency, $cf$, is the running total of frequencies as we move through the ordered categories.
+
+| Response | *f* | *p* | *cf* |
+|:--------:|:---:|:---:|:----:|
+|    1     |  1  | 0.1 | 0.1  |
+|    2     |  3  | 0.3 | 0.4  |
+|    3     |  4  | 0.4 | 0.8  |
+|    4     |  2  | 0.2 | 1.0  |
+
+What can we infer from this table, having calculated the cumulative proportions?
+
+Note that if we multiply $p$ and $cf$ by 100, we would get the **percentage** and **cumulative percentage**. Try it.

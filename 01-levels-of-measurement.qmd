@@ -13,7 +13,7 @@ Each of those pieces of information has a different kind of structure. Some are 
 
 These are just labels — categories with no inherent order.
 
-**Examples**\
+**Examples**
 - Type of crime (Assault, Theft, Fraud)\
 - Neighborhood (Downtown, North End, Eastside)\
 - Season (Fall, Summer)
@@ -26,7 +26,7 @@ Can we say that ‘Fraud’ is *more* than ‘Assault’? No — they’re just 
 
 These have a meaningful order, but the distance between ranks isn’t consistent.
 
-**Examples**\
+**Examples**
 - Trust in the police (1 = Poor, 2 = Somewhat, 3= Not Sure, 4= Sort of, 5 = Excellent)\
 - Crime severity (Low, Moderate, High)\
 - Level of fear of crime (Low, Medium, High)
@@ -39,9 +39,9 @@ What about trust in the police?
 
 Here the units are consistent, so the values are meaningful.
 
-**Examples** - Number of arrests\
-- Incident response time (minutes)\
-- Property damage (\$)\
+**Examples** - Number of arrests
+- Incident response time (minutes)
+- Property damage (dollars)
 - Victim age
 
 If one officer took 10 minutes and another took 20, can we say one took *twice as long*? Yes — because zero means none.
@@ -66,6 +66,6 @@ What are the levels of measurement?
 
 Why does it matter to know the level of measurement?
 
--   It determines which statistical tools we can use\
--   It shapes how we interpret averages or differences\
+-   It determines which statistical tools we can use
+-   It shapes how we interpret averages or differences
 -   It helps us understand what our numbers *actually represent*

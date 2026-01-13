@@ -34,7 +34,7 @@
     "href": "01-levels-of-measurement.html#the-four-levels-of-measurement",
     "title": "1  Lecture 1: Understanding Levels of Measurement",
     "section": "1.2 The Four Levels of Measurement",
-    "text": "1.2 The Four Levels of Measurement\n\n1.2.1 Nominal (Name Only)\nThese are just labels — categories with no inherent order.\nExamples\n- Type of crime (Assault, Theft, Fraud)\n- Neighborhood (Downtown, North End, Eastside)\n- Season (Fall, Summer)\nCan we say that ‘Fraud’ is more than ‘Assault’? No — they’re just different categories.\nBut what if we say it was “more violent”?\n\n\n1.2.2 Ordinal (Order Matters, But Spacing Doesn’t)\nThese have a meaningful order, but the distance between ranks isn’t consistent.\nExamples\n- Trust in the police (1 = Poor, 2 = Somewhat, 3= Not Sure, 4= Sort of, 5 = Excellent)\n- Crime severity (Low, Moderate, High)\n- Level of fear of crime (Low, Medium, High)\nIs a ‘High’ severity crime exactly three times worse than a ‘Low’ one? Probably not.\nWhat about trust in the police?\n\n\n1.2.3 Interval/Ratio (Equal Spacing)\nHere the units are consistent, so the values are meaningful.\nExamples - Number of arrests\n- Incident response time (minutes)\n- Property damage ($)\n- Victim age\nIf one officer took 10 minutes and another took 20, can we say one took twice as long? Yes — because zero means none.\nCan we say there are half as many crimes in a neighborhood compared to another?\nNote: if the variable has a true zero point, then it is called a ratio level of measurement.",
+    "text": "1.2 The Four Levels of Measurement\n\n1.2.1 Nominal (Name Only)\nThese are just labels — categories with no inherent order.\nExamples - Type of crime (Assault, Theft, Fraud)\n- Neighborhood (Downtown, North End, Eastside)\n- Season (Fall, Summer)\nCan we say that ‘Fraud’ is more than ‘Assault’? No — they’re just different categories.\nBut what if we say it was “more violent”?\n\n\n1.2.2 Ordinal (Order Matters, But Spacing Doesn’t)\nThese have a meaningful order, but the distance between ranks isn’t consistent.\nExamples - Trust in the police (1 = Poor, 2 = Somewhat, 3= Not Sure, 4= Sort of, 5 = Excellent)\n- Crime severity (Low, Moderate, High)\n- Level of fear of crime (Low, Medium, High)\nIs a ‘High’ severity crime exactly three times worse than a ‘Low’ one? Probably not.\nWhat about trust in the police?\n\n\n1.2.3 Interval/Ratio (Equal Spacing)\nHere the units are consistent, so the values are meaningful.\nExamples - Number of arrests - Incident response time (minutes) - Property damage (dollars) - Victim age\nIf one officer took 10 minutes and another took 20, can we say one took twice as long? Yes — because zero means none.\nCan we say there are half as many crimes in a neighborhood compared to another?\nNote: if the variable has a true zero point, then it is called a ratio level of measurement.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lecture 1: Understanding Levels of Measurement</span>"
     ]
@@ -54,9 +54,39 @@
     "href": "01-levels-of-measurement.html#so-what",
     "title": "1  Lecture 1: Understanding Levels of Measurement",
     "section": "1.4 So what?",
-    "text": "1.4 So what?\nWhy does it matter to know the level of measurement?\n\nIt determines which statistical tools we can use\n\nIt shapes how we interpret averages or differences\n\nIt helps us understand what our numbers actually represent",
+    "text": "1.4 So what?\nWhy does it matter to know the level of measurement?\n\nIt determines which statistical tools we can use\nIt shapes how we interpret averages or differences\nIt helps us understand what our numbers actually represent",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lecture 1: Understanding Levels of Measurement</span>"
+    ]
+  },
+  {
+    "objectID": "02-frequency-distributions.html",
+    "href": "02-frequency-distributions.html",
+    "title": "2  Lecture 2: Frequency Distributions and Levels of Measurement",
+    "section": "",
+    "text": "2.1 Scenario\nIn criminology, we often start with a question about people’s attitudes or experiences and then use data to describe what we find. Suppose we want to answer this question: How much public support is there for expanding rehabilitation programs for people in prison?\nTo begin answering this, suppose we ask 10 people the following survey question: “How much do you support expanding rehabilitation programs for people in prison?”, where the response options were: 1 = Strongly oppose, 2 = Oppose, 3 = Support, 4 = Strongly support.\nHere are their answers, called raw data:\nQuestion: What do the values in the raw data table represent?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lecture 2: Frequency Distributions and Levels of Measurement</span>"
+    ]
+  },
+  {
+    "objectID": "02-frequency-distributions.html#scenario",
+    "href": "02-frequency-distributions.html#scenario",
+    "title": "2  Lecture 2: Frequency Distributions and Levels of Measurement",
+    "section": "",
+    "text": "ID\nSupport for Rehabilitation\n\n\n\n\n1\n2\n\n\n2\n3\n\n\n3\n2\n\n\n4\n4\n\n\n5\n3\n\n\n6\n3\n\n\n7\n1\n\n\n8\n4\n\n\n9\n2\n\n\n10\n3",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lecture 2: Frequency Distributions and Levels of Measurement</span>"
+    ]
+  },
+  {
+    "objectID": "02-frequency-distributions.html#tools",
+    "href": "02-frequency-distributions.html#tools",
+    "title": "2  Lecture 2: Frequency Distributions and Levels of Measurement",
+    "section": "2.2 Tools",
+    "text": "2.2 Tools\nRemember our research question: How much public support is there for expanding rehabilitation programs for people in prison?\nOur goal is to describe what the data tells us. What are some things we could describe about the data based on this table?\nNow, let’s identify some of the tools we can use and what they can tell us.\n\n2.2.1 Frequencies\nThe frequency, \\(f\\), tells us how many people chose each response. To get the frequency, we just count up each instance of a response category:\n\n\n\nResponse\nResponse Category\nf\n\n\n\n\n1\nStrongly oppose\n1\n\n\n2\nOppose\n3\n\n\n3\nSupport\n4\n\n\n4\nStrongly support\n2\n\n\nTotal\n\n10\n\n\n\nWhat can we infer from this table, having grouped the responses by frequency?\n\n\n2.2.2 Proportions\nProportion, \\(p\\), represents the fraction of the total that each category represents, \\(p = \\frac{f}{N}\\), where \\(N\\) represents the total number of cases. (A quick note on symbols: for now we will use \\(N\\) to refer to the total number of cases in our data. When we discuss samples and populations we will agument this and use \\(n\\) to refer to the size of a sample and \\(N\\) to refer to the size of a population).\n\n\n\nResponse\nf\np\n\n\n\n\n1\n1\n1 / 10 = 0.1\n\n\n2\n3\n3 / 10 = 0.3\n\n\n3\n4\n4 / 10 = 0.4\n\n\n4\n2\n2 / 10 = 0.2\n\n\nTotal\n10\n1.0\n\n\n\nWhat can we infer from this table, having calculated the proportions?\n\n\n2.2.3 Cumulative Frequency\nThe cumulative frequency, \\(cf\\), is the running total of frequencies as we move through the ordered categories.\n\n\n\nResponse\nf\np\ncf\n\n\n\n\n1\n1\n0.1\n0.1\n\n\n2\n3\n0.3\n0.4\n\n\n3\n4\n0.4\n0.8\n\n\n4\n2\n0.2\n1.0\n\n\n\nWhat can we infer from this table, having calculated the cumulative proportions?\nNote that if we multiply \\(p\\) and \\(cf\\) by 100, we would get the percentage and cumulative percentage. Try it.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lecture 2: Frequency Distributions and Levels of Measurement</span>"
     ]
   }
 ]

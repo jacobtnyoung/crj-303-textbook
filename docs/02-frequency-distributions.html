@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jacob T.N. Young">
 
-<title>Statistical Analysis</title>
+<title>2&nbsp; Lecture 2: Frequency Distributions and Levels of Measurement – Statistical Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-levels-of-measurement.html" rel="next">
+<link href="./01-levels-of-measurement.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-frequency-distributions.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lecture 2: Frequency Distributions and Levels of Measurement</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -120,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -132,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-frequency-distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="./02-frequency-distributions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lecture 2: Frequency Distributions and Levels of Measurement</span></span></a>
   </div>
 </li>
@@ -146,7 +175,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#scenario" id="toc-scenario" class="nav-link active" data-scroll-target="#scenario"><span class="header-section-number">2.1</span> Scenario</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools"><span class="header-section-number">2.2</span> Tools</a>
+  <ul class="collapse">
+  <li><a href="#frequencies" id="toc-frequencies" class="nav-link" data-scroll-target="#frequencies"><span class="header-section-number">2.2.1</span> Frequencies</a></li>
+  <li><a href="#proportions" id="toc-proportions" class="nav-link" data-scroll-target="#proportions"><span class="header-section-number">2.2.2</span> Proportions</a></li>
+  <li><a href="#cumulative-frequency" id="toc-cumulative-frequency" class="nav-link" data-scroll-target="#cumulative-frequency"><span class="header-section-number">2.2.3</span> Cumulative Frequency</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jacobtnyoung/crj-303-textbook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -155,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistical Analysis</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lecture 2: Frequency Distributions and Levels of Measurement</span></h1>
 </div>
 
 
@@ -172,11 +207,194 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Why another stats book?</p>
+<section id="scenario" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="scenario"><span class="header-section-number">2.1</span> Scenario</h2>
+<p>In criminology, we often start with a question about people’s attitudes or experiences and then use data to describe what we find. Suppose we want to answer this question: <em>How much public support is there for expanding rehabilitation programs for people in prison?</em></p>
+<p>To begin answering this, suppose we ask 10 people the following survey question: “How much do you support expanding rehabilitation programs for people in prison?”, where the response options were: 1 = Strongly oppose, 2 = Oppose, 3 = Support, 4 = Strongly support.</p>
+<p>Here are their answers, called <em>raw data</em>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: center;">Support for Rehabilitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question</strong>: What do the values in the raw data table represent?</p>
+</section>
+<section id="tools" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="tools"><span class="header-section-number">2.2</span> Tools</h2>
+<p>Remember our research question: <em>How much public support is there for expanding rehabilitation programs for people in prison?</em></p>
+<p>Our goal is to <strong>describe</strong> what the data tells us. What are some things we could describe about the data based on this table?</p>
+<p>Now, let’s identify some of the tools we can use and what they can tell us.</p>
+<section id="frequencies" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="frequencies"><span class="header-section-number">2.2.1</span> Frequencies</h3>
+<p>The frequency, <span class="math inline">\(f\)</span>, tells us how many people chose each response. To get the frequency, we just count up each instance of a response category:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: center;">Response Category</th>
+<th style="text-align: center;"><em>f</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Strongly oppose</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Oppose</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Support</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Strongly support</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>What can we infer from this table, having grouped the responses by frequency?</p>
+</section>
+<section id="proportions" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="proportions"><span class="header-section-number">2.2.2</span> Proportions</h3>
+<p>Proportion, <span class="math inline">\(p\)</span>, represents the fraction of the total that each category represents, <span class="math inline">\(p = \frac{f}{N}\)</span>, where <span class="math inline">\(N\)</span> represents the total number of cases. (A quick note on symbols: for now we will use <span class="math inline">\(N\)</span> to refer to the total number of cases in our data. When we discuss samples and populations we will agument this and use <span class="math inline">\(n\)</span> to refer to the size of a sample and <span class="math inline">\(N\)</span> to refer to the size of a population).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: right;"><em>f</em></th>
+<th style="text-align: right;"><em>p</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1 / 10 = 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3 / 10 = 0.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4 / 10 = 0.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2 / 10 = 0.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;"><strong>1.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>What can we infer from this table, having calculated the proportions?</p>
+</section>
+<section id="cumulative-frequency" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="cumulative-frequency"><span class="header-section-number">2.2.3</span> Cumulative Frequency</h3>
+<p>The cumulative frequency, <span class="math inline">\(cf\)</span>, is the running total of frequencies as we move through the ordered categories.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: center;"><em>f</em></th>
+<th style="text-align: center;"><em>p</em></th>
+<th style="text-align: center;"><em>cf</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: center;">0.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">1.0</td>
+</tr>
+</tbody>
+</table>
+<p>What can we infer from this table, having calculated the cumulative proportions?</p>
+<p>Note that if we multiply <span class="math inline">\(p\)</span> and <span class="math inline">\(cf\)</span> by 100, we would get the <strong>percentage</strong> and <strong>cumulative percentage</strong>. Try it.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -582,11 +800,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./01-levels-of-measurement.html" class="pagination-link" aria-label="Lecture 1: Understanding Levels of Measurement">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lecture 1: Understanding Levels of Measurement</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-levels-of-measurement.html" class="pagination-link" aria-label="Lecture 1: Understanding Levels of Measurement">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lecture 1: Understanding Levels of Measurement</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

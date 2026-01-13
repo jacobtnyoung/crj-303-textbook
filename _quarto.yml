@@ -21,6 +21,7 @@ book:
   chapters:
     - index.qmd
     - 01-levels-of-measurement.qmd
+    - 02-frequency-distributions.qmd
 
 format:
   html:
