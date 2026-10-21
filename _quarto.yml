@@ -21,17 +21,11 @@ book:
         - chapter-04-visualizing-categorical-data.qmd
         - chapter-05-central-tendency.qmd
         - chapter-06-variation.qmd
-        - chapter-00-template.qmd
 
-    - part: part-02-inference.qmd
-      chapters:
-        - chapter-00-template.qmd
-
-    - part: part-03-relationships.qmd
-      chapters:
-        - chapter-00-template.qmd
-
-bibliography: references.bib
+  appendices:
+    - appendix-01-standard-normal-table.qmd
+    - appendix-02-t-distribution-table.qmd
+    - appendix-03-chi-square-table.qmd
 
 format:
   html:

@@ -1,0 +1,115 @@
+# Chi-Square Distribution Critical Values
+
+The chi-square distribution is used for several statistical procedures. For a chi-square test involving an $r\times c$ contingency table, the degrees of freedom are:
+
+$$
+df=(r-1)(c-1)
+$$
+
+The table reports **right-tail critical values**. For a selected significance level, $\alpha$, the area to the right of the critical value equals $\alpha$.
+
+```{r}
+#| label: tbl-chi-square-critical
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Right-tail critical values of the chi-square distribution."
+
+library(knitr)
+library(kableExtra)
+
+df_values <- c(1:30, 40, 50, 60, 80, 100)
+alpha_values <- c(0.05, 0.01, 0.001)
+
+critical_values <- sapply(
+  alpha_values,
+  function(alpha) qchisq(1 - alpha, df = df_values)
+)
+
+chi_square_table <- data.frame(
+  df = df_values,
+  round(critical_values, 3),
+  check.names = FALSE
+)
+
+names(chi_square_table) <- c("df", "α = .05", "α = .01", "α = .001")
+
+chi_output <- kable(
+  chi_square_table,
+  booktabs = TRUE,
+  align = "cccc"
+)
+
+if (knitr::is_latex_output()) {
+  chi_output <- kable_styling(
+    chi_output,
+    latex_options = c("hold_position", "repeat_header"),
+    font_size = 9
+  )
+} else {
+  chi_output <- kable_styling(chi_output, full_width = FALSE)
+}
+
+chi_output
+```
+
+## Using the Table
+
+1. Calculate the degrees of freedom.
+2. Select the column for the predetermined significance level, $\alpha$.
+3. Compare the obtained chi-square statistic with the listed critical value.
+4. Reject the null hypothesis when the obtained statistic is greater than the critical value.
+
+Chi-square statistics cannot be negative. If the exact degrees of freedom are not listed, use the next smaller listed value as a conservative classroom approximation.
+
+## Worked Example
+
+Suppose a contingency table has three rows and four columns. Its degrees of freedom are:
+
+$$
+df=(3-1)(4-1)=2\times3=6
+$$
+
+For $df=6$ and $\alpha=.05$, the table gives:
+
+$$
+\chi^2_{critical}=12.592
+$$
+
+An obtained chi-square statistic greater than 12.592 falls in the right-tail rejection region. An obtained statistic at or below 12.592 does not.
+
+```{r}
+#| label: fig-chi-square-critical-example
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Right-tail rejection region for df = 6 and alpha = .05."
+#| fig-alt: "Chi-square distribution with six degrees of freedom and the right tail beyond 12.592 shaded."
+#| fig-height: 2.6
+#| fig-width: 6
+
+library(ggplot2)
+
+example_df <- 6
+example_alpha <- 0.05
+chi_critical <- qchisq(1 - example_alpha, df = example_df)
+chi_data <- data.frame(chi_square = seq(0, 30, length.out = 1600))
+chi_data$density <- dchisq(chi_data$chi_square, df = example_df)
+chi_tail <- subset(chi_data, chi_square >= chi_critical)
+
+ggplot(chi_data, aes(x = chi_square, y = density)) +
+  geom_line(linewidth = 0.8) +
+  geom_area(
+    data = chi_tail,
+    fill = "grey65",
+    color = "black",
+    alpha = 0.8
+  ) +
+  geom_vline(xintercept = chi_critical, linetype = "dashed") +
+  annotate("text", x = 17, y = 0.025, label = "α = .05") +
+  scale_x_continuous(breaks = c(0, 5, 10, 12.592, 15, 20, 25, 30)) +
+  labs(x = expression(chi^2), y = "Density") +
+  theme_classic(base_size = 11)
+```
+
+The degrees-of-freedom formula above applies to contingency tables. Other uses of the chi-square distribution may calculate degrees of freedom differently.

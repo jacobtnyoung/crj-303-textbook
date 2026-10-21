@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jacob T.N. Young">
-
-<title>Chapter Title – Textbook for Statistical Analysis</title>
+<title>Appendix A — Standard Normal Distribution Table – Textbook for Statistical Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,7 +26,6 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -37,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./part-03-relationships.html" rel="next">
-<link href="./chapter-00-template.html" rel="prev">
+<link href="./appendix-02-t-distribution-table.html" rel="next">
+<link href="./chapter-06-variation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -48,8 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bb70f3890ce631548f457652de1e04e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-2202478e21b5d5705478b75c28beab00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -75,34 +70,51 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="site_libs/kePrint-0.0.1/kePrint.js"></script><link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 </head>
-
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-inference.html">Chapter Title</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-01-standard-normal-table.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-01-standard-normal-table.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Textbook for Statistical Analysis</a> 
         <div class="sidebar-tools-main">
@@ -121,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
@@ -135,8 +147,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-01-thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
@@ -172,83 +184,52 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Describing Variation</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
-  </div>
-</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./part-02-inference.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapter Title</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-01-standard-normal-table.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  <a href="./appendix-02-t-distribution-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">t-Distribution Critical Values</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-03-chi-square-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Chi-Square Distribution Critical Values</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./part-03-relationships.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter Title</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
-  </div>
 </li>
-      </ul>
-  </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question">The Question</a></li>
-  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn">What You Will Learn</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why This Matters</a></li>
-  <li><a href="#core-concept" id="toc-core-concept" class="nav-link" data-scroll-target="#core-concept">Core Concept</a></li>
-  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked Example</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check Your Understanding</a></li>
-  <li><a href="#interactive-exploration" id="toc-interactive-exploration" class="nav-link" data-scroll-target="#interactive-exploration">Interactive Exploration</a></li>
-  <li><a href="#test-your-knowledge-activity-title" id="toc-test-your-knowledge-activity-title" class="nav-link" data-scroll-target="#test-your-knowledge-activity-title">Test Your Knowledge: Activity Title</a>
-  <ul class="collapse">
-  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario">The Scenario</a></li>
-  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task">Your Task</a></li>
-  </ul></li>
-  <li><a href="#data-investigation" id="toc-data-investigation" class="nav-link" data-scroll-target="#data-investigation">Data Investigation</a></li>
-  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection">Project Connection</a></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary">Chapter Summary</a></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key Terms</a></li>
-  </ul>
-</nav>
+<li><a href="#using-the-table" id="toc-using-the-table" class="nav-link active" data-scroll-target="#using-the-table"><span class="header-section-number">A.1</span> Using the Table</a></li>
+  <li><a href="#worked-example-z1.25" id="toc-worked-example-z1.25" class="nav-link" data-scroll-target="#worked-example-z1.25"><span class="header-section-number">A.2</span> Worked Example: <span class="math inline">\(z=1.25\)</span></a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Chapter Title</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-01-standard-normal-table.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-01-standard-normal-table.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Appendix A — Standard Normal Distribution Table</h1>
 </div>
 
 
@@ -262,179 +243,288 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<section id="the-question" class="level2">
-<h2 class="anchored" data-anchor-id="the-question">The Question</h2>
-<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
+</header><p>For a standard normal random variable, <span class="math inline">\(Z\)</span>, the mean is 0 and the standard deviation is 1. Each entry in the table gives the area under the standard normal curve <strong>between the mean, <span class="math inline">\(z=0\)</span>, and the listed positive z-score</strong>:</p>
+<p><span class="math display">\[
+A=P(0&lt;Z&lt;z)
+\]</span></p>
+<p>The table does not directly report cumulative probability from negative infinity. Use symmetry and the rules below to obtain lower- and upper-tail probabilities.</p>
+<div class="cell">
+<div id="tbl-standard-normal" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-standard-normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;A.1: Areas between the mean and selected positive z-scores.
+</figcaption><div aria-describedby="tbl-standard-normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table cell caption-top table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">z</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Area</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">z</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Area</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">z</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Area</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">1.10</td>
+<td style="text-align: center;">0.3643</td>
+<td style="text-align: center;">2.10</td>
+<td style="text-align: center;">0.4821</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.0199</td>
+<td style="text-align: center;">1.15</td>
+<td style="text-align: center;">0.3749</td>
+<td style="text-align: center;">2.15</td>
+<td style="text-align: center;">0.4842</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.0398</td>
+<td style="text-align: center;">1.20</td>
+<td style="text-align: center;">0.3849</td>
+<td style="text-align: center;">2.20</td>
+<td style="text-align: center;">0.4861</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.0596</td>
+<td style="text-align: center;">1.25</td>
+<td style="text-align: center;">0.3944</td>
+<td style="text-align: center;">2.25</td>
+<td style="text-align: center;">0.4878</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.0793</td>
+<td style="text-align: center;">1.30</td>
+<td style="text-align: center;">0.4032</td>
+<td style="text-align: center;">2.30</td>
+<td style="text-align: center;">0.4893</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.0987</td>
+<td style="text-align: center;">1.35</td>
+<td style="text-align: center;">0.4115</td>
+<td style="text-align: center;">2.35</td>
+<td style="text-align: center;">0.4906</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">0.1179</td>
+<td style="text-align: center;">1.40</td>
+<td style="text-align: center;">0.4192</td>
+<td style="text-align: center;">2.40</td>
+<td style="text-align: center;">0.4918</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.1368</td>
+<td style="text-align: center;">1.45</td>
+<td style="text-align: center;">0.4265</td>
+<td style="text-align: center;">2.45</td>
+<td style="text-align: center;">0.4929</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">0.1554</td>
+<td style="text-align: center;">1.50</td>
+<td style="text-align: center;">0.4332</td>
+<td style="text-align: center;">2.50</td>
+<td style="text-align: center;">0.4938</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.45</td>
+<td style="text-align: center;">0.1736</td>
+<td style="text-align: center;">1.55</td>
+<td style="text-align: center;">0.4394</td>
+<td style="text-align: center;">2.55</td>
+<td style="text-align: center;">0.4946</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">0.1915</td>
+<td style="text-align: center;">1.60</td>
+<td style="text-align: center;">0.4452</td>
+<td style="text-align: center;">2.58</td>
+<td style="text-align: center;">0.4951</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.55</td>
+<td style="text-align: center;">0.2088</td>
+<td style="text-align: center;">1.64</td>
+<td style="text-align: center;">0.4495</td>
+<td style="text-align: center;">2.60</td>
+<td style="text-align: center;">0.4953</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.60</td>
+<td style="text-align: center;">0.2257</td>
+<td style="text-align: center;">1.65</td>
+<td style="text-align: center;">0.4505</td>
+<td style="text-align: center;">2.65</td>
+<td style="text-align: center;">0.4960</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.65</td>
+<td style="text-align: center;">0.2422</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">0.4554</td>
+<td style="text-align: center;">2.70</td>
+<td style="text-align: center;">0.4965</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.70</td>
+<td style="text-align: center;">0.2580</td>
+<td style="text-align: center;">1.75</td>
+<td style="text-align: center;">0.4599</td>
+<td style="text-align: center;">2.75</td>
+<td style="text-align: center;">0.4970</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.2734</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">0.4641</td>
+<td style="text-align: center;">2.80</td>
+<td style="text-align: center;">0.4974</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.2881</td>
+<td style="text-align: center;">1.85</td>
+<td style="text-align: center;">0.4678</td>
+<td style="text-align: center;">2.85</td>
+<td style="text-align: center;">0.4978</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;">0.3023</td>
+<td style="text-align: center;">1.90</td>
+<td style="text-align: center;">0.4713</td>
+<td style="text-align: center;">2.90</td>
+<td style="text-align: center;">0.4981</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.90</td>
+<td style="text-align: center;">0.3159</td>
+<td style="text-align: center;">1.95</td>
+<td style="text-align: center;">0.4744</td>
+<td style="text-align: center;">2.95</td>
+<td style="text-align: center;">0.4984</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.95</td>
+<td style="text-align: center;">0.3289</td>
+<td style="text-align: center;">1.96</td>
+<td style="text-align: center;">0.4750</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">0.4987</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.3413</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">0.4772</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.05</td>
+<td style="text-align: center;">0.3531</td>
+<td style="text-align: center;">2.05</td>
+<td style="text-align: center;">0.4798</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="using-the-table" class="level2" data-number="A.1"><h2 data-number="A.1" class="anchored" data-anchor-id="using-the-table">
+<span class="header-section-number">A.1</span> Using the Table</h2>
+<p>Let <span class="math inline">\(A\)</span> represent the area obtained from the table for the absolute value of the z-score.</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Desired probability</th>
+<th style="text-align: left;">Calculation</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math inline">\(P(Z&lt;z)\)</span> when <span class="math inline">\(z&gt;0\)</span>
+</td>
+<td style="text-align: left;"><span class="math inline">\(0.5+A\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<span class="math inline">\(P(Z&gt;z)\)</span> when <span class="math inline">\(z&gt;0\)</span>
+</td>
+<td style="text-align: left;"><span class="math inline">\(0.5-A\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math inline">\(P(Z&lt;z)\)</span> when <span class="math inline">\(z&lt;0\)</span>
+</td>
+<td style="text-align: left;"><span class="math inline">\(0.5-A\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<span class="math inline">\(P(Z&gt;z)\)</span> when <span class="math inline">\(z&lt;0\)</span>
+</td>
+<td style="text-align: left;"><span class="math inline">\(0.5+A\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Negative z-scores">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Central question
+<span class="screen-reader-only">Tip</span>Negative z-scores
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Insert the central question for the chapter.</strong></p>
+<p>The normal distribution is symmetric. Look up the absolute value of a negative z-score and then select the appropriate rule from the table above.</p>
 </div>
 </div>
-<p>Write a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.</p>
-</section>
-<section id="what-you-will-learn" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-will-learn">What You Will Learn</h2>
-<p>After completing this chapter, you should be able to:</p>
-<ol type="1">
-<li>Objective one.</li>
-<li>Objective two.</li>
-<li>Objective three.</li>
-</ol>
-</section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why This Matters</h2>
-<p>Connect the concept to criminal justice research, policy, professional practice, or public claims.</p>
-</section>
-<section id="core-concept" class="level2">
-<h2 class="anchored" data-anchor-id="core-concept">Core Concept</h2>
-<p>Develop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.</p>
-<div class="callout callout-style-simple callout-tip callout-titled" title="Helpful reasoning strategy">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section><section id="worked-example-z1.25" class="level2" data-number="A.2"><h2 data-number="A.2" class="anchored" data-anchor-id="worked-example-z1.25">
+<span class="header-section-number">A.2</span> Worked Example: <span class="math inline">\(z=1.25\)</span>
+</h2>
+<p>The table reports an area of <span class="math inline">\(A=0.3944\)</span> between 0 and 1.25. Therefore:</p>
+<p><span class="math display">\[
+P(Z&lt;1.25)=0.5+0.3944=0.8944
+\]</span></p>
+<p><span class="math display">\[
+P(Z&gt;1.25)=0.5-0.3944=0.1056
+\]</span></p>
+<p>By symmetry:</p>
+<p><span class="math display">\[
+P(Z&lt;-1.25)=0.1056
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-standard-normal-example" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Standard normal curve with the area between zero and 1.25 shaded.">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-standard-normal-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="appendix-01-standard-normal-table_files/figure-html/fig-standard-normal-example-1.png" class="img-fluid figure-img" alt="Standard normal curve with the area between zero and 1.25 shaded." width="576">
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Helpful reasoning strategy
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use a tip callout for a reusable strategy or decision rule.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-important callout-titled" title="Important distinction">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Important distinction
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use an important callout for a distinction students must understand.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-warning callout-titled" title="A common mistake">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>A common mistake
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use a warning callout for a common misconception or interpretation error.</p>
-</div>
-</div>
-</section>
-<section id="worked-example" class="level2">
-<h2 class="anchored" data-anchor-id="worked-example">Worked Example</h2>
-<ol type="1">
-<li>State the question.</li>
-<li>Identify the cases and variables.</li>
-<li>Select and justify the method.</li>
-<li>Present the result.</li>
-<li>Interpret the result in context.</li>
-<li>State what cannot be concluded.</li>
-</ol>
-</section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check Your Understanding</h2>
-<p>Insert a short, embedded comprehension check.</p>
-<div class="callout callout-style-simple callout-note callout-titled" title="Check your answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Check your answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Provide the answer and a brief explanation.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-standard-normal-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.1: Area between the mean and z = 1.25.
+</figcaption></figure>
 </div>
 </div>
 </div>
-</section>
-<section id="interactive-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-exploration">Interactive Exploration</h2>
-<p>When an interactive activity materially improves understanding, ask students to:</p>
-<ol type="1">
-<li><strong>Predict</strong> what will happen.</li>
-<li><strong>Manipulate</strong> an input.</li>
-<li><strong>Observe</strong> the result.</li>
-<li><strong>Explain</strong> why it occurred.</li>
-<li><strong>Reset</strong> and test another prediction.</li>
-</ol>
-<p>Include a static explanation or illustration so the central lesson does not depend entirely on the external application.</p>
-</section>
-<section id="test-your-knowledge-activity-title" class="level2">
-<h2 class="anchored" data-anchor-id="test-your-knowledge-activity-title">Test Your Knowledge: Activity Title</h2>
-<section id="the-scenario" class="level3">
-<h3 class="anchored" data-anchor-id="the-scenario">The Scenario</h3>
-<p>Introduce a self-contained criminal justice scenario, dataset, table, or visualization.</p>
-</section>
-<section id="your-task" class="level3">
-<h3 class="anchored" data-anchor-id="your-task">Your Task</h3>
-<p>Include questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.</p>
-<div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Review the answers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Provide answers with enough reasoning for students to diagnose misunderstandings.</p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="data-investigation" class="level2">
-<h2 class="anchored" data-anchor-id="data-investigation">Data Investigation</h2>
-<p>Connect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.</p>
-</section>
-<section id="project-connection" class="level2">
-<h2 class="anchored" data-anchor-id="project-connection">Project Connection</h2>
-<p>Add a small task that advances the semester investigation.</p>
-</section>
-<section id="chapter-summary" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-summary">Chapter Summary</h2>
-<ul>
-<li>Summarize the first central idea.</li>
-<li>Summarize the second central idea.</li>
-<li>Summarize the third central idea.</li>
-</ul>
-</section>
-<section id="key-terms" class="level2">
-<h2 class="anchored" data-anchor-id="key-terms">Key Terms</h2>
-<ul>
-<li><strong>Term:</strong> Concise definition.</li>
-</ul>
+<p>If a calculated z-score falls between table entries, use the closest listed value unless instructed to interpolate. A z-score beyond the table represents a very small tail probability; report that it lies beyond the table rather than treating its probability as zero.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -833,22 +923,19 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./chapter-00-template.html" class="pagination-link" aria-label="Chapter Title">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter Title</span></span>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./chapter-06-variation.html" class="pagination-link" aria-label="Describing Variation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Describing Variation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./part-03-relationships.html" class="pagination-link" aria-label="Chapter Title">
-        <span class="nav-page-text">Chapter Title</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./appendix-02-t-distribution-table.html" class="pagination-link" aria-label="t-Distribution Critical Values">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">t-Distribution Critical Values</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Textbook for Statistical Analysis was written by Jacob T.N. Young.</p>
 </div>   
@@ -860,8 +947,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

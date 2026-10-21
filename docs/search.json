@@ -1086,406 +1086,102 @@
     ]
   },
   {
-    "objectID": "chapter-00-template.html",
-    "href": "chapter-00-template.html",
-    "title": "7  Chapter Title",
+    "objectID": "appendix-01-standard-normal-table.html",
+    "href": "appendix-01-standard-normal-table.html",
+    "title": "Appendix A — Standard Normal Distribution Table",
     "section": "",
-    "text": "7.1 The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "text": "A.1 Using the Table\nFor a standard normal random variable, \\(Z\\), the mean is 0 and the standard deviation is 1. Each entry in the table gives the area under the standard normal curve between the mean, \\(z=0\\), and the listed positive z-score:\n\\[\nA=P(0&lt;Z&lt;z)\n\\]\nThe table does not directly report cumulative probability from negative infinity. Use symmetry and the rules below to obtain lower- and upper-tail probabilities.\nLet \\(A\\) represent the area obtained from the table for the absolute value of the z-score.",
     "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Standard Normal Distribution Table</span>"
     ]
   },
   {
-    "objectID": "chapter-00-template.html#the-question",
-    "href": "chapter-00-template.html#the-question",
-    "title": "7  Chapter Title",
+    "objectID": "appendix-01-standard-normal-table.html#using-the-table",
+    "href": "appendix-01-standard-normal-table.html#using-the-table",
+    "title": "Appendix A — Standard Normal Distribution Table",
     "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "text": "Desired probability\nCalculation\n\n\n\n\n\\(P(Z&lt;z)\\) when \\(z&gt;0\\)\n\n\\(0.5+A\\)\n\n\n\n\\(P(Z&gt;z)\\) when \\(z&gt;0\\)\n\n\\(0.5-A\\)\n\n\n\n\\(P(Z&lt;z)\\) when \\(z&lt;0\\)\n\n\\(0.5-A\\)\n\n\n\n\\(P(Z&gt;z)\\) when \\(z&lt;0\\)\n\n\\(0.5+A\\)\n\n\n\n\n\n\n\n\n\nTipNegative z-scores\n\n\n\nThe normal distribution is symmetric. Look up the absolute value of a negative z-score and then select the appropriate rule from the table above.",
     "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Standard Normal Distribution Table</span>"
     ]
   },
   {
-    "objectID": "chapter-00-template.html#what-you-will-learn",
-    "href": "chapter-00-template.html#what-you-will-learn",
-    "title": "7  Chapter Title",
-    "section": "7.2 What You Will Learn",
-    "text": "7.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "objectID": "appendix-01-standard-normal-table.html#worked-example-z1.25",
+    "href": "appendix-01-standard-normal-table.html#worked-example-z1.25",
+    "title": "Appendix A — Standard Normal Distribution Table",
+    "section": "\nA.2 Worked Example: \\(z=1.25\\)\n",
+    "text": "A.2 Worked Example: \\(z=1.25\\)\n\nThe table reports an area of \\(A=0.3944\\) between 0 and 1.25. Therefore:\n\\[\nP(Z&lt;1.25)=0.5+0.3944=0.8944\n\\]\n\\[\nP(Z&gt;1.25)=0.5-0.3944=0.1056\n\\]\nBy symmetry:\n\\[\nP(Z&lt;-1.25)=0.1056\n\\]\n\n\n\n\n\n\n\nFigure A.1: Area between the mean and z = 1.25.\n\n\n\n\nIf a calculated z-score falls between table entries, use the closest listed value unless instructed to interpolate. A z-score beyond the table represents a very small tail probability; report that it lies beyond the table rather than treating its probability as zero.",
     "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Standard Normal Distribution Table</span>"
     ]
   },
   {
-    "objectID": "chapter-00-template.html#why-this-matters",
-    "href": "chapter-00-template.html#why-this-matters",
-    "title": "7  Chapter Title",
-    "section": "7.3 Why This Matters",
-    "text": "7.3 Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#core-concept",
-    "href": "chapter-00-template.html#core-concept",
-    "title": "7  Chapter Title",
-    "section": "7.4 Core Concept",
-    "text": "7.4 Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#worked-example",
-    "href": "chapter-00-template.html#worked-example",
-    "title": "7  Chapter Title",
-    "section": "7.5 Worked Example",
-    "text": "7.5 Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#check-your-understanding",
-    "href": "chapter-00-template.html#check-your-understanding",
-    "title": "7  Chapter Title",
-    "section": "7.6 Check Your Understanding",
-    "text": "7.6 Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#interactive-exploration",
-    "href": "chapter-00-template.html#interactive-exploration",
-    "title": "7  Chapter Title",
-    "section": "7.7 Interactive Exploration",
-    "text": "7.7 Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#test-your-knowledge-activity-title",
-    "href": "chapter-00-template.html#test-your-knowledge-activity-title",
-    "title": "7  Chapter Title",
-    "section": "7.8 Test Your Knowledge: Activity Title",
-    "text": "7.8 Test Your Knowledge: Activity Title\n\n7.8.1 The Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\n7.8.2 Your Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#data-investigation",
-    "href": "chapter-00-template.html#data-investigation",
-    "title": "7  Chapter Title",
-    "section": "7.9 Data Investigation",
-    "text": "7.9 Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#project-connection",
-    "href": "chapter-00-template.html#project-connection",
-    "title": "7  Chapter Title",
-    "section": "7.10 Project Connection",
-    "text": "7.10 Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#chapter-summary",
-    "href": "chapter-00-template.html#chapter-summary",
-    "title": "7  Chapter Title",
-    "section": "7.11 Chapter Summary",
-    "text": "7.11 Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#key-terms",
-    "href": "chapter-00-template.html#key-terms",
-    "title": "7  Chapter Title",
-    "section": "7.12 Key Terms",
-    "text": "7.12 Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html",
-    "href": "part-02-inference.html",
-    "title": "Chapter Title",
+    "objectID": "appendix-02-t-distribution-table.html",
+    "href": "appendix-02-t-distribution-table.html",
+    "title": "Appendix B — t-Distribution Critical Values",
     "section": "",
-    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "text": "B.1 Using the Table\nThe t distribution is used for inference about a population mean when the population standard deviation, \\(\\sigma\\), is unknown and is estimated with the sample standard deviation, \\(s\\). The appropriate critical value depends on:\nFor a one-sample t test, \\(df=n-1\\). Other t tests use different degrees-of-freedom formulas.",
     "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>t-Distribution Critical Values</span>"
     ]
   },
   {
-    "objectID": "part-02-inference.html#the-question",
-    "href": "part-02-inference.html#the-question",
-    "title": "Chapter Title",
+    "objectID": "appendix-02-t-distribution-table.html#using-the-table",
+    "href": "appendix-02-t-distribution-table.html#using-the-table",
+    "title": "Appendix B — t-Distribution Critical Values",
     "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "text": "For a right-tailed test, use the positive critical value shown in the one-tailed section.\nFor a left-tailed test, use the negative of the listed one-tailed value.\nFor a two-tailed test, compare the absolute obtained statistic, \\(|t|\\), with the positive value in the two-tailed section.\nFor a confidence interval with confidence level \\(1-\\alpha\\), use the corresponding two-tailed critical value.\nIf the exact degrees of freedom are not listed, use the next smaller listed value as a conservative classroom approximation.\nWelch’s t test can produce noninteger degrees of freedom. Round down when using this printed table unless instructed to use software.\n\n\n\n\n\n\n\nImportantSelect the column before examining the result\n\n\n\nThe research hypothesis determines whether a test is one-tailed or two-tailed. Do not select the tail after seeing the sample result.",
     "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>t-Distribution Critical Values</span>"
     ]
   },
   {
-    "objectID": "part-02-inference.html#what-you-will-learn",
-    "href": "part-02-inference.html#what-you-will-learn",
-    "title": "Chapter Title",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "objectID": "appendix-02-t-distribution-table.html#worked-example",
+    "href": "appendix-02-t-distribution-table.html#worked-example",
+    "title": "Appendix B — t-Distribution Critical Values",
+    "section": "\nB.2 Worked Example",
+    "text": "B.2 Worked Example\nSuppose a one-sample test has \\(n=6\\), so:\n\\[\ndf=n-1=5\n\\]\nFor a right-tailed test with \\(\\alpha=.05\\), locate row \\(df=5\\) and the one-tailed \\(\\alpha=.05\\) column. The critical value is approximately:\n\\[\nt_{critical}=2.015\n\\]\nReject the null hypothesis only if the obtained t statistic is greater than 2.015. For a left-tailed test, the corresponding critical value would be \\(-2.015\\).\n\n\n\n\n\n\n\nFigure B.1: Right-tail rejection region for df = 5 and alpha = .05.\n\n\n\n\nThe final row, \\(df=\\infty\\), gives the corresponding standard normal critical values. As degrees of freedom increase, the t distribution approaches the standard normal distribution.",
     "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>t-Distribution Critical Values</span>"
     ]
   },
   {
-    "objectID": "part-02-inference.html#why-this-matters",
-    "href": "part-02-inference.html#why-this-matters",
-    "title": "Chapter Title",
-    "section": "Why This Matters",
-    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#core-concept",
-    "href": "part-02-inference.html#core-concept",
-    "title": "Chapter Title",
-    "section": "Core Concept",
-    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#worked-example",
-    "href": "part-02-inference.html#worked-example",
-    "title": "Chapter Title",
-    "section": "Worked Example",
-    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#check-your-understanding",
-    "href": "part-02-inference.html#check-your-understanding",
-    "title": "Chapter Title",
-    "section": "Check Your Understanding",
-    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#interactive-exploration",
-    "href": "part-02-inference.html#interactive-exploration",
-    "title": "Chapter Title",
-    "section": "Interactive Exploration",
-    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#test-your-knowledge-activity-title",
-    "href": "part-02-inference.html#test-your-knowledge-activity-title",
-    "title": "Chapter Title",
-    "section": "Test Your Knowledge: Activity Title",
-    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#data-investigation",
-    "href": "part-02-inference.html#data-investigation",
-    "title": "Chapter Title",
-    "section": "Data Investigation",
-    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#project-connection",
-    "href": "part-02-inference.html#project-connection",
-    "title": "Chapter Title",
-    "section": "Project Connection",
-    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#chapter-summary",
-    "href": "part-02-inference.html#chapter-summary",
-    "title": "Chapter Title",
-    "section": "Chapter Summary",
-    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#key-terms",
-    "href": "part-02-inference.html#key-terms",
-    "title": "Chapter Title",
-    "section": "Key Terms",
-    "text": "Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html",
-    "href": "part-03-relationships.html",
-    "title": "Chapter Title",
+    "objectID": "appendix-03-chi-square-table.html",
+    "href": "appendix-03-chi-square-table.html",
+    "title": "Appendix C — Chi-Square Distribution Critical Values",
     "section": "",
-    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "text": "C.1 Using the Table\nThe chi-square distribution is used for several statistical procedures. For a chi-square test involving an \\(r\\times c\\) contingency table, the degrees of freedom are:\n\\[\ndf=(r-1)(c-1)\n\\]\nThe table reports right-tail critical values. For a selected significance level, \\(\\alpha\\), the area to the right of the critical value equals \\(\\alpha\\).\nChi-square statistics cannot be negative. If the exact degrees of freedom are not listed, use the next smaller listed value as a conservative classroom approximation.",
     "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Chi-Square Distribution Critical Values</span>"
     ]
   },
   {
-    "objectID": "part-03-relationships.html#the-question",
-    "href": "part-03-relationships.html#the-question",
-    "title": "Chapter Title",
+    "objectID": "appendix-03-chi-square-table.html#using-the-table",
+    "href": "appendix-03-chi-square-table.html#using-the-table",
+    "title": "Appendix C — Chi-Square Distribution Critical Values",
     "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "text": "Calculate the degrees of freedom.\nSelect the column for the predetermined significance level, \\(\\alpha\\).\nCompare the obtained chi-square statistic with the listed critical value.\nReject the null hypothesis when the obtained statistic is greater than the critical value.",
     "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Chi-Square Distribution Critical Values</span>"
     ]
   },
   {
-    "objectID": "part-03-relationships.html#what-you-will-learn",
-    "href": "part-03-relationships.html#what-you-will-learn",
-    "title": "Chapter Title",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "objectID": "appendix-03-chi-square-table.html#worked-example",
+    "href": "appendix-03-chi-square-table.html#worked-example",
+    "title": "Appendix C — Chi-Square Distribution Critical Values",
+    "section": "\nC.2 Worked Example",
+    "text": "C.2 Worked Example\nSuppose a contingency table has three rows and four columns. Its degrees of freedom are:\n\\[\ndf=(3-1)(4-1)=2\\times3=6\n\\]\nFor \\(df=6\\) and \\(\\alpha=.05\\), the table gives:\n\\[\n\\chi^2_{critical}=12.592\n\\]\nAn obtained chi-square statistic greater than 12.592 falls in the right-tail rejection region. An obtained statistic at or below 12.592 does not.\n\n\n\n\n\n\n\nFigure C.1: Right-tail rejection region for df = 6 and alpha = .05.\n\n\n\n\nThe degrees-of-freedom formula above applies to contingency tables. Other uses of the chi-square distribution may calculate degrees of freedom differently.",
     "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#why-this-matters",
-    "href": "part-03-relationships.html#why-this-matters",
-    "title": "Chapter Title",
-    "section": "Why This Matters",
-    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#core-concept",
-    "href": "part-03-relationships.html#core-concept",
-    "title": "Chapter Title",
-    "section": "Core Concept",
-    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#worked-example",
-    "href": "part-03-relationships.html#worked-example",
-    "title": "Chapter Title",
-    "section": "Worked Example",
-    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#check-your-understanding",
-    "href": "part-03-relationships.html#check-your-understanding",
-    "title": "Chapter Title",
-    "section": "Check Your Understanding",
-    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#interactive-exploration",
-    "href": "part-03-relationships.html#interactive-exploration",
-    "title": "Chapter Title",
-    "section": "Interactive Exploration",
-    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#test-your-knowledge-activity-title",
-    "href": "part-03-relationships.html#test-your-knowledge-activity-title",
-    "title": "Chapter Title",
-    "section": "Test Your Knowledge: Activity Title",
-    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#data-investigation",
-    "href": "part-03-relationships.html#data-investigation",
-    "title": "Chapter Title",
-    "section": "Data Investigation",
-    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#project-connection",
-    "href": "part-03-relationships.html#project-connection",
-    "title": "Chapter Title",
-    "section": "Project Connection",
-    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#chapter-summary",
-    "href": "part-03-relationships.html#chapter-summary",
-    "title": "Chapter Title",
-    "section": "Chapter Summary",
-    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#key-terms",
-    "href": "part-03-relationships.html#key-terms",
-    "title": "Chapter Title",
-    "section": "Key Terms",
-    "text": "Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title"
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Chi-Square Distribution Critical Values</span>"
     ]
   }
 ]

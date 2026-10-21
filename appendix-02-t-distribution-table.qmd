@@ -1,0 +1,140 @@
+# t-Distribution Critical Values
+
+The t distribution is used for inference about a population mean when the population standard deviation, $\sigma$, is unknown and is estimated with the sample standard deviation, $s$. The appropriate critical value depends on:
+
+1. the degrees of freedom;
+2. the significance level, $\alpha$; and
+3. whether the test is one-tailed or two-tailed.
+
+For a one-sample t test, $df=n-1$. Other t tests use different degrees-of-freedom formulas.
+
+```{r}
+#| label: tbl-t-critical
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Positive critical values of the t distribution."
+
+library(knitr)
+library(kableExtra)
+
+df_values <- c(1:30, 40, 60, 80, 100, 120, Inf)
+alpha_values <- c(0.05, 0.01, 0.001)
+
+one_tailed <- sapply(
+  alpha_values,
+  function(alpha) ifelse(
+    is.infinite(df_values),
+    qnorm(1 - alpha),
+    qt(1 - alpha, df_values)
+  )
+)
+
+two_tailed <- sapply(
+  alpha_values,
+  function(alpha) ifelse(
+    is.infinite(df_values),
+    qnorm(1 - alpha / 2),
+    qt(1 - alpha / 2, df_values)
+  )
+)
+
+t_table <- data.frame(
+  df = ifelse(is.infinite(df_values), "∞ (z)", as.character(df_values)),
+  round(cbind(one_tailed, two_tailed), 3),
+  check.names = FALSE
+)
+
+names(t_table) <- c(
+  "df",
+  rep(c("α = .05", "α = .01", "α = .001"), 2)
+)
+
+t_output <- kable(
+  t_table,
+  booktabs = TRUE,
+  align = "ccccccc"
+)
+
+t_output <- add_header_above(
+  t_output,
+  c(" " = 1, "One-Tailed Test" = 3, "Two-Tailed Test" = 3)
+)
+
+if (knitr::is_latex_output()) {
+  t_output <- kable_styling(
+    t_output,
+    latex_options = c("hold_position", "repeat_header"),
+    font_size = 8
+  )
+} else {
+  t_output <- kable_styling(t_output, full_width = FALSE)
+}
+
+t_output
+```
+
+## Using the Table
+
+- For a **right-tailed test**, use the positive critical value shown in the one-tailed section.
+- For a **left-tailed test**, use the negative of the listed one-tailed value.
+- For a **two-tailed test**, compare the absolute obtained statistic, $|t|$, with the positive value in the two-tailed section.
+- For a confidence interval with confidence level $1-\alpha$, use the corresponding two-tailed critical value.
+- If the exact degrees of freedom are not listed, use the next smaller listed value as a conservative classroom approximation.
+- Welch's t test can produce noninteger degrees of freedom. Round down when using this printed table unless instructed to use software.
+
+::: {.callout-important title="Select the column before examining the result"}
+The research hypothesis determines whether a test is one-tailed or two-tailed. Do not select the tail after seeing the sample result.
+:::
+
+## Worked Example
+
+Suppose a one-sample test has $n=6$, so:
+
+$$
+df=n-1=5
+$$
+
+For a right-tailed test with $\alpha=.05$, locate row $df=5$ and the one-tailed $\alpha=.05$ column. The critical value is approximately:
+
+$$
+t_{critical}=2.015
+$$
+
+Reject the null hypothesis only if the obtained t statistic is greater than 2.015. For a left-tailed test, the corresponding critical value would be $-2.015$.
+
+```{r}
+#| label: fig-t-critical-example
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Right-tail rejection region for df = 5 and alpha = .05."
+#| fig-alt: "t distribution with five degrees of freedom and the right tail beyond 2.015 shaded."
+#| fig-height: 2.6
+#| fig-width: 6
+
+library(ggplot2)
+
+example_df <- 5
+example_alpha <- 0.05
+t_critical <- qt(1 - example_alpha, example_df)
+t_data <- data.frame(t = seq(-5, 5, length.out = 1600))
+t_data$density <- dt(t_data$t, df = example_df)
+t_tail <- subset(t_data, t >= t_critical)
+
+ggplot(t_data, aes(x = t, y = density)) +
+  geom_line(linewidth = 0.8) +
+  geom_area(
+    data = t_tail,
+    fill = "grey65",
+    color = "black",
+    alpha = 0.8
+  ) +
+  geom_vline(xintercept = t_critical, linetype = "dashed") +
+  annotate("text", x = 2.9, y = 0.035, label = "α = .05") +
+  scale_x_continuous(breaks = c(-4, -3, -2, -1, 0, 1, 2.015, 3, 4)) +
+  labs(x = "t", y = "Density") +
+  theme_classic(base_size = 11)
+```
+
+The final row, $df=\infty$, gives the corresponding standard normal critical values. As degrees of freedom increase, the t distribution approaches the standard normal distribution.

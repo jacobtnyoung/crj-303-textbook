@@ -1,0 +1,134 @@
+# Standard Normal Distribution Table
+
+For a standard normal random variable, $Z$, the mean is 0 and the standard deviation is 1. Each entry in the table gives the area under the standard normal curve **between the mean, $z=0$, and the listed positive z-score**:
+
+$$
+A=P(0<Z<z)
+$$
+
+The table does not directly report cumulative probability from negative infinity. Use symmetry and the rules below to obtain lower- and upper-tail probabilities.
+
+```{r}
+#| label: tbl-standard-normal
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Areas between the mean and selected positive z-scores."
+
+library(knitr)
+library(kableExtra)
+
+z_values <- sort(unique(c(seq(0, 3.00, by = 0.05), 1.64, 1.96, 2.58)))
+areas <- pnorm(z_values) - 0.5
+
+pairs_per_row <- 3
+rows <- ceiling(length(z_values) / pairs_per_row)
+pad <- rows * pairs_per_row - length(z_values)
+
+if (pad > 0) {
+  z_values <- c(z_values, rep(NA_real_, pad))
+  areas <- c(areas, rep(NA_real_, pad))
+}
+
+z_matrix <- matrix(z_values, nrow = rows, ncol = pairs_per_row)
+area_matrix <- matrix(areas, nrow = rows, ncol = pairs_per_row)
+
+format_z <- function(x) ifelse(is.na(x), "", sprintf("%.2f", x))
+format_area <- function(x) ifelse(is.na(x), "", sprintf("%.4f", x))
+
+normal_table <- data.frame(
+  z1 = format_z(z_matrix[, 1]),
+  area1 = format_area(area_matrix[, 1]),
+  z2 = format_z(z_matrix[, 2]),
+  area2 = format_area(area_matrix[, 2]),
+  z3 = format_z(z_matrix[, 3]),
+  area3 = format_area(area_matrix[, 3]),
+  check.names = FALSE
+)
+
+normal_output <- kable(
+  normal_table,
+  booktabs = TRUE,
+  align = "cccccc",
+  col.names = c("z", "Area", "z", "Area", "z", "Area")
+)
+
+if (knitr::is_latex_output()) {
+  normal_output <- kable_styling(
+    normal_output,
+    latex_options = "hold_position",
+    font_size = 9
+  )
+} else {
+  normal_output <- kable_styling(normal_output, full_width = FALSE)
+}
+
+normal_output
+```
+
+## Using the Table
+
+Let $A$ represent the area obtained from the table for the absolute value of the z-score.
+
+| Desired probability | Calculation |
+|:--------------------|:------------|
+| $P(Z<z)$ when $z>0$ | $0.5+A$ |
+| $P(Z>z)$ when $z>0$ | $0.5-A$ |
+| $P(Z<z)$ when $z<0$ | $0.5-A$ |
+| $P(Z>z)$ when $z<0$ | $0.5+A$ |
+
+::: {.callout-tip title="Negative z-scores"}
+The normal distribution is symmetric. Look up the absolute value of a negative z-score and then select the appropriate rule from the table above.
+:::
+
+## Worked Example: $z=1.25$
+
+The table reports an area of $A=0.3944$ between 0 and 1.25. Therefore:
+
+$$
+P(Z<1.25)=0.5+0.3944=0.8944
+$$
+
+$$
+P(Z>1.25)=0.5-0.3944=0.1056
+$$
+
+By symmetry:
+
+$$
+P(Z<-1.25)=0.1056
+$$
+
+```{r}
+#| label: fig-standard-normal-example
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Area between the mean and z = 1.25."
+#| fig-alt: "Standard normal curve with the area between zero and 1.25 shaded."
+#| fig-height: 2.6
+#| fig-width: 6
+
+library(ggplot2)
+
+example_z <- 1.25
+curve_data <- data.frame(z = seq(-4, 4, length.out = 1200))
+curve_data$density <- dnorm(curve_data$z)
+shaded_data <- subset(curve_data, z >= 0 & z <= example_z)
+
+ggplot(curve_data, aes(x = z, y = density)) +
+  geom_line(linewidth = 0.8) +
+  geom_area(
+    data = shaded_data,
+    fill = "grey65",
+    color = "black",
+    alpha = 0.8
+  ) +
+  geom_vline(xintercept = c(0, example_z), linetype = "dashed") +
+  annotate("text", x = 0.63, y = 0.13, label = "Area = 0.3944") +
+  scale_x_continuous(breaks = c(-3, -2, -1, 0, 1, 1.25, 2, 3)) +
+  labs(x = "z-score", y = "Density") +
+  theme_classic(base_size = 11)
+```
+
+If a calculated z-score falls between table entries, use the closest listed value unless instructed to interpolate. A z-score beyond the table represents a very small tail probability; report that it lies beyond the table rather than treating its probability as zero.
