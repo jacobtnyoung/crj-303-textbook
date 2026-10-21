@@ -558,409 +558,6 @@
     ]
   },
   {
-    "objectID": "chapter-00-template.html",
-    "href": "chapter-00-template.html",
-    "title": "6  Chapter Title",
-    "section": "",
-    "text": "6.1 The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#the-question",
-    "href": "chapter-00-template.html#the-question",
-    "title": "6  Chapter Title",
-    "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#what-you-will-learn",
-    "href": "chapter-00-template.html#what-you-will-learn",
-    "title": "6  Chapter Title",
-    "section": "6.2 What You Will Learn",
-    "text": "6.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#why-this-matters",
-    "href": "chapter-00-template.html#why-this-matters",
-    "title": "6  Chapter Title",
-    "section": "6.3 Why This Matters",
-    "text": "6.3 Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#core-concept",
-    "href": "chapter-00-template.html#core-concept",
-    "title": "6  Chapter Title",
-    "section": "6.4 Core Concept",
-    "text": "6.4 Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#worked-example",
-    "href": "chapter-00-template.html#worked-example",
-    "title": "6  Chapter Title",
-    "section": "6.5 Worked Example",
-    "text": "6.5 Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#check-your-understanding",
-    "href": "chapter-00-template.html#check-your-understanding",
-    "title": "6  Chapter Title",
-    "section": "6.6 Check Your Understanding",
-    "text": "6.6 Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#interactive-exploration",
-    "href": "chapter-00-template.html#interactive-exploration",
-    "title": "6  Chapter Title",
-    "section": "6.7 Interactive Exploration",
-    "text": "6.7 Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#test-your-knowledge-activity-title",
-    "href": "chapter-00-template.html#test-your-knowledge-activity-title",
-    "title": "6  Chapter Title",
-    "section": "6.8 Test Your Knowledge: Activity Title",
-    "text": "6.8 Test Your Knowledge: Activity Title\n\n6.8.1 The Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\n6.8.2 Your Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#data-investigation",
-    "href": "chapter-00-template.html#data-investigation",
-    "title": "6  Chapter Title",
-    "section": "6.9 Data Investigation",
-    "text": "6.9 Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#project-connection",
-    "href": "chapter-00-template.html#project-connection",
-    "title": "6  Chapter Title",
-    "section": "6.10 Project Connection",
-    "text": "6.10 Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#chapter-summary",
-    "href": "chapter-00-template.html#chapter-summary",
-    "title": "6  Chapter Title",
-    "section": "6.11 Chapter Summary",
-    "text": "6.11 Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-template.html#key-terms",
-    "href": "chapter-00-template.html#key-terms",
-    "title": "6  Chapter Title",
-    "section": "6.12 Key Terms",
-    "text": "6.12 Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html",
-    "href": "part-02-inference.html",
-    "title": "Chapter Title",
-    "section": "",
-    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#the-question",
-    "href": "part-02-inference.html#the-question",
-    "title": "Chapter Title",
-    "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#what-you-will-learn",
-    "href": "part-02-inference.html#what-you-will-learn",
-    "title": "Chapter Title",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#why-this-matters",
-    "href": "part-02-inference.html#why-this-matters",
-    "title": "Chapter Title",
-    "section": "Why This Matters",
-    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#core-concept",
-    "href": "part-02-inference.html#core-concept",
-    "title": "Chapter Title",
-    "section": "Core Concept",
-    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#worked-example",
-    "href": "part-02-inference.html#worked-example",
-    "title": "Chapter Title",
-    "section": "Worked Example",
-    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#check-your-understanding",
-    "href": "part-02-inference.html#check-your-understanding",
-    "title": "Chapter Title",
-    "section": "Check Your Understanding",
-    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#interactive-exploration",
-    "href": "part-02-inference.html#interactive-exploration",
-    "title": "Chapter Title",
-    "section": "Interactive Exploration",
-    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#test-your-knowledge-activity-title",
-    "href": "part-02-inference.html#test-your-knowledge-activity-title",
-    "title": "Chapter Title",
-    "section": "Test Your Knowledge: Activity Title",
-    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#data-investigation",
-    "href": "part-02-inference.html#data-investigation",
-    "title": "Chapter Title",
-    "section": "Data Investigation",
-    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#project-connection",
-    "href": "part-02-inference.html#project-connection",
-    "title": "Chapter Title",
-    "section": "Project Connection",
-    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#chapter-summary",
-    "href": "part-02-inference.html#chapter-summary",
-    "title": "Chapter Title",
-    "section": "Chapter Summary",
-    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-02-inference.html#key-terms",
-    "href": "part-02-inference.html#key-terms",
-    "title": "Chapter Title",
-    "section": "Key Terms",
-    "text": "Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html",
-    "href": "part-03-relationships.html",
-    "title": "Chapter Title",
-    "section": "",
-    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#the-question",
-    "href": "part-03-relationships.html#the-question",
-    "title": "Chapter Title",
-    "section": "",
-    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#what-you-will-learn",
-    "href": "part-03-relationships.html#what-you-will-learn",
-    "title": "Chapter Title",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#why-this-matters",
-    "href": "part-03-relationships.html#why-this-matters",
-    "title": "Chapter Title",
-    "section": "Why This Matters",
-    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#core-concept",
-    "href": "part-03-relationships.html#core-concept",
-    "title": "Chapter Title",
-    "section": "Core Concept",
-    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#worked-example",
-    "href": "part-03-relationships.html#worked-example",
-    "title": "Chapter Title",
-    "section": "Worked Example",
-    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#check-your-understanding",
-    "href": "part-03-relationships.html#check-your-understanding",
-    "title": "Chapter Title",
-    "section": "Check Your Understanding",
-    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#interactive-exploration",
-    "href": "part-03-relationships.html#interactive-exploration",
-    "title": "Chapter Title",
-    "section": "Interactive Exploration",
-    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#test-your-knowledge-activity-title",
-    "href": "part-03-relationships.html#test-your-knowledge-activity-title",
-    "title": "Chapter Title",
-    "section": "Test Your Knowledge: Activity Title",
-    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#data-investigation",
-    "href": "part-03-relationships.html#data-investigation",
-    "title": "Chapter Title",
-    "section": "Data Investigation",
-    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#project-connection",
-    "href": "part-03-relationships.html#project-connection",
-    "title": "Chapter Title",
-    "section": "Project Connection",
-    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#chapter-summary",
-    "href": "part-03-relationships.html#chapter-summary",
-    "title": "Chapter Title",
-    "section": "Chapter Summary",
-    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
-    "objectID": "part-03-relationships.html#key-terms",
-    "href": "part-03-relationships.html#key-terms",
-    "title": "Chapter Title",
-    "section": "Key Terms",
-    "text": "Key Terms\n\nTerm: Concise definition.",
-    "crumbs": [
-      "Chapter Title"
-    ]
-  },
-  {
     "objectID": "chapter-04-visualizing-categorical-data.html",
     "href": "chapter-04-visualizing-categorical-data.html",
     "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
@@ -1288,6 +885,607 @@
     "crumbs": [
       "Chapter Title",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html",
+    "href": "chapter-06-variation.html",
+    "title": "6  Describing Variation",
+    "section": "",
+    "text": "6.1 The Question\nA measure of central tendency identifies the center of a distribution, but the center cannot describe the distribution by itself. Two groups can have the same mean while differing greatly in how their observations are distributed around that mean.\nMeasures of variation, also called measures of dispersion, describe how much observations differ from one another. This chapter introduces the range, variance, standard deviation, and interquartile range. Each measure captures spread differently, and the most useful choice depends on the variable, distribution, and research question.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#the-question",
+    "href": "chapter-06-variation.html#the-question",
+    "title": "6  Describing Variation",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nHow can we describe whether observations are tightly clustered or widely dispersed?",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#what-you-will-learn",
+    "href": "chapter-06-variation.html#what-you-will-learn",
+    "title": "6  Describing Variation",
+    "section": "6.2 What You Will Learn",
+    "text": "6.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nExplain why a measure of center should be accompanied by a measure of variation.\nCalculate and interpret the range, sample variance, and sample standard deviation.\nDistinguish sample variance and standard deviation from their population counterparts.\nCalculate and interpret the interquartile range.\nExplain how extreme values affect the range, variance, and standard deviation.\nSelect an appropriate measure of variation based on the shape of a distribution.\nEvaluate whether comparisons of variation are substantively meaningful.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#the-same-mean-different-distributions",
+    "href": "chapter-06-variation.html#the-same-mean-different-distributions",
+    "title": "6  Describing Variation",
+    "section": "6.3 The Same Mean, Different Distributions",
+    "text": "6.3 The Same Mean, Different Distributions\nSuppose we want to compare the number of crimes reported across six neighborhoods in each of two cities.\n\n\n\nNeighborhood\nCity A\nCity B\n\n\n\n\n1\n20\n25\n\n\n2\n22\n25\n\n\n3\n25\n25\n\n\n4\n28\n25\n\n\n5\n29\n25\n\n\n6\n26\n25\n\n\n\nThe sample mean for City A is:\n\\[\n\\bar{x}_A=\\frac{20+22+25+28+29+26}{6}=\\frac{150}{6}=25\n\\]\nThe sample mean for City B is:\n\\[\n\\bar{x}_B=\\frac{25+25+25+25+25+25}{6}=\\frac{150}{6}=25\n\\]\nBoth cities have a mean of 25 reported crimes per neighborhood. Nevertheless, their distributions are not the same. City B has exactly 25 crimes in every neighborhood, while City A ranges from 20 to 29. Crime is distributed more unevenly across City A’s neighborhoods.\n\n\n\n\n\n\nImportantCenter and variation answer different questions\n\n\n\nA measure of central tendency describes where a distribution is centered. A measure of variation describes how much observations differ around that center. A useful description of a quantitative variable generally reports both.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#the-range",
+    "href": "chapter-06-variation.html#the-range",
+    "title": "6  Describing Variation",
+    "section": "6.4 The Range",
+    "text": "6.4 The Range\nThe range is the difference between the largest and smallest observed values:\n\\[\n\\text{Range}=x_{\\max}-x_{\\min}\n\\]\nFor City A:\n\\[\n\\text{Range}_A=29-20=9\n\\]\nFor City B:\n\\[\n\\text{Range}_B=25-25=0\n\\]\nThe neighborhood crime counts span 9 crimes in City A and do not vary at all in City B.\nThe range is easy to calculate and communicate, but it uses only the two most extreme observations. It ignores every value between them and can change dramatically because of a single unusual case.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#deviations-from-the-mean",
+    "href": "chapter-06-variation.html#deviations-from-the-mean",
+    "title": "6  Describing Variation",
+    "section": "6.5 Deviations from the Mean",
+    "text": "6.5 Deviations from the Mean\nTo incorporate every observation, we can examine how far each value falls from the mean. A deviation from the mean is:\n\\[\nx_i-\\bar{x}\n\\]\nFor City A, a neighborhood with 20 crimes has a deviation of:\n\\[\n20-25=-5\n\\]\nIt falls 5 crimes below the sample mean (hence the negative sign). A neighborhood with 29 crimes has a deviation of:\n\\[\n29-25=4\n\\]\nIt falls 4 crimes above the sample mean.\nIf we simply added all deviations, the negative and positive values would cancel. In fact, deviations from the sample mean always sum to zero. To prevent that cancellation, the variance squares each deviation before combining them.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#sample-variance",
+    "href": "chapter-06-variation.html#sample-variance",
+    "title": "6  Describing Variation",
+    "section": "6.6 Sample Variance",
+    "text": "6.6 Sample Variance\nThe sample variance, written as \\(s^2\\), is based on the sum of the squared deviations from the sample mean:\n\\[\ns^2=\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\]\nwhere:\n\n\\(s^2\\) is the sample variance;\n\\(x_i\\) is the value for observation \\(i\\);\n\\(\\bar{x}\\) is the sample mean;\n\\(n\\) is the sample size; and\n\\(n-1\\) is the sample’s degrees of freedom for estimating variation.\n\nThe numerator, \\(\\sum(x_i-\\bar{x})^2\\), is called the sum of squares. It combines the squared distance of every observation from the mean.\n\n\n\n\n\n\nNoteWhy divide by n − 1?\n\n\n\nWhen a sample is used to estimate variation in a larger population, dividing by \\(n-1\\) corrects the tendency of the sample to underestimate population variation. We will return to this idea when we study sampling and statistical inference.\n\n\n\n6.6.1 Calculating the Variance for City A\nThe sample mean is 25. We subtract 25 from every observation and square each deviation.\n\n\n\n\n\n\n\n\n\nNeighborhood\nCrimes (\\(x_i\\))\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n1\n20\n\\(20-25=-5\\)\n\\((-5)^2=25\\)\n\n\n2\n22\n\\(22-25=-3\\)\n\\((-3)^2=9\\)\n\n\n3\n25\n\\(25-25=0\\)\n\\(0^2=0\\)\n\n\n4\n28\n\\(28-25=3\\)\n\\(3^2=9\\)\n\n\n5\n29\n\\(29-25=4\\)\n\\(4^2=16\\)\n\n\n6\n26\n\\(26-25=1\\)\n\\(1^2=1\\)\n\n\nTotal\n\n0\n60\n\n\n\nThe squared deviations sum to 60. Therefore:\n\\[\ns_A^2=\\frac{60}{6-1}=\\frac{60}{5}=12\n\\]\nThe sample variance is 12 squared crimes. The squared unit is mathematically necessary, but it makes the variance difficult to interpret directly. This is why analysts more often communicate the standard deviation.\n\n\n6.6.2 What About City B?\nEvery City B neighborhood has 25 crimes, which is also the mean. Every deviation is therefore zero:\n\\[\ns_B^2=\\frac{0}{6-1}=0\n\\]\nA variance of zero means that the observed values do not vary at all. Put differently, crimes are uniformly distributed across the neighborhoods in City B.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#sample-standard-deviation",
+    "href": "chapter-06-variation.html#sample-standard-deviation",
+    "title": "6  Describing Variation",
+    "section": "6.7 Sample Standard Deviation",
+    "text": "6.7 Sample Standard Deviation\nThe sample standard deviation, written as \\(s\\), is the square root of the sample variance:\n\\[\ns=\\sqrt{s^2}\n\\]\nFor City A:\n\\[\ns_A=\\sqrt{12}\\approx3.46\n\\]\nFor City B:\n\\[\ns_B=\\sqrt{0}=0\n\\]\nThe standard deviation returns the measure of spread to the variable’s original units. City A’s neighborhood crime counts typically spread several crimes around the mean of 25, whereas City B’s observed counts are all exactly equal to the mean.\n\n\n\n\n\n\nTipInterpreting a standard deviation\n\n\n\nAlways report the standard deviation with the mean, identify the variable’s units, and describe the substantive pattern. For example: “Across the six City A neighborhoods, the mean was 25 reported crimes and the standard deviation was 3.46 crimes.”",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#sample-and-population-notation",
+    "href": "chapter-06-variation.html#sample-and-population-notation",
+    "title": "6  Describing Variation",
+    "section": "6.8 Sample and Population Notation",
+    "text": "6.8 Sample and Population Notation\nThe formulas depend on whether the observations are treated as a sample or an entire population.\n\n\n\nQuantity\nSample\nPopulation\n\n\n\n\nNumber of observations\n\\(n\\)\n\\(N\\)\n\n\nMean\n\\(\\bar{x}\\)\n\\(\\mu\\)\n\n\nVariance\n\\(s^2\\)\n\\(\\sigma^2\\)\n\n\nStandard deviation\n\\(s\\)\n\\(\\sigma\\)\n\n\nVariance divisor\n\\(n-1\\)\n\\(N\\)\n\n\n\nFor an entire population:\n\\[\n\\sigma^2=\\frac{\\sum_{i=1}^{N}(X_i-\\mu)^2}{N}\n\\]\nand:\n\\[\n\\sigma=\\sqrt{\\sigma^2}\n\\]\nThe data in this chapter are treated as samples, so the worked examples use \\(s^2\\), \\(s\\), and \\(n-1\\).",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#check-your-understanding-correctional-measures",
+    "href": "chapter-06-variation.html#check-your-understanding-correctional-measures",
+    "title": "6  Describing Variation",
+    "section": "6.9 Check Your Understanding: Correctional Measures",
+    "text": "6.9 Check Your Understanding: Correctional Measures\nYou are an analyst for a state corrections department. Your supervisor asks which of three variables has the least variation among five incarcerated people and wants the result explained in nontechnical language.\n\n\n\n\n\n\n\n\n\nPerson\nVocational Sessions\nDays in Restrictive Housing\nDisciplinary Reports\n\n\n\n\n1\n8\n17\n7\n\n\n2\n8\n17\n7\n\n\n3\n10\n20\n10\n\n\n4\n12\n23\n13\n\n\n5\n12\n23\n13\n\n\n\nFor each variable:\n\nCalculate the sample mean.\nCalculate the sample variance and standard deviation.\nIdentify the variable with the smallest raw standard deviation.\nExplain the result in plain language.\n\n\n\n\n\n\n\nNoteCheck your answers\n\n\n\n\n\n\n\n\nVariable\n\\(\\bar{x}\\)\nSum of squared deviations\n\\(s^2\\)\n\\(s\\)\n\n\n\n\nVocational Sessions\n10\n16\n4\n2\n\n\nDays in Restrictive Housing\n20\n36\n9\n3\n\n\nDisciplinary Reports\n10\n36\n9\n3\n\n\n\nUsing the raw standard deviations, vocational sessions has the least variation. In plain language, the number of vocational sessions is more tightly clustered around its mean than the other two variables are around their respective means.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#extreme-values-and-the-standard-deviation",
+    "href": "chapter-06-variation.html#extreme-values-and-the-standard-deviation",
+    "title": "6  Describing Variation",
+    "section": "6.10 Extreme Values and the Standard Deviation",
+    "text": "6.10 Extreme Values and the Standard Deviation\nMeasures based on the mean are sensitive to extreme observations because an unusual value affects both the mean and its own squared deviation. Consider the number of days that 10 people were held in Waitenlonng County Jail before transfer to state prison:\n\\[\n2, 6, 8, 9, 9, 9, 9, 9, 9, 40\n\\]\nThe sample mean is:\n\\[\n\\bar{x}=\\frac{110}{10}=11\n\\]\nThe deviation table is:\n\n\n\nCase\nDays (\\(x_i\\))\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n1\n2\n\\(-9\\)\n81\n\n\n2\n6\n\\(-5\\)\n25\n\n\n3\n8\n\\(-3\\)\n9\n\n\n4\n9\n\\(-2\\)\n4\n\n\n5\n9\n\\(-2\\)\n4\n\n\n6\n9\n\\(-2\\)\n4\n\n\n7\n9\n\\(-2\\)\n4\n\n\n8\n9\n\\(-2\\)\n4\n\n\n9\n9\n\\(-2\\)\n4\n\n\n10\n40\n\\(29\\)\n841\n\n\nTotal\n\n0\n980\n\n\n\nThe sample variance is:\n\\[\ns^2=\\frac{980}{10-1}=\\frac{980}{9}\\approx108.89\n\\]\nThe sample standard deviation is:\n\\[\ns=\\sqrt{108.89}\\approx10.44\\text{ days}\n\\]\nThe mean is 11 days and the standard deviation is 10.44 days. However, eight of the ten observations fall between 8 and 9 days. The 40-day case contributes 841 of the 980 total squared-deviation units, more than 85% of the sum of squares.\nThe standard deviation is mathematically correct. It reveals substantial overall dispersion created by the unusual case, but it does not mean that most observed waiting times differ greatly from one another.\nIn other words, the calculation for the standard deviation is correct. However, it does a poor job accurately describing variation in this case because the data are skewed.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#the-interquartile-range",
+    "href": "chapter-06-variation.html#the-interquartile-range",
+    "title": "6  Describing Variation",
+    "section": "6.11 The Interquartile Range",
+    "text": "6.11 The Interquartile Range\nThe interquartile range, or IQR, measures the width of the middle half of an ordered distribution:\n\\[\nIQR=Q_3-Q_1\n\\]\nBecause the IQR depends on the first and third quartiles rather than the most extreme values, it is a resistant measure of variation.\nUsing the median-of-halves method established in Chapter 5, the ordered jail data divide into these halves:\n\\[\n\\text{Lower half: }2, 6, 8, 9, 9\n\\]\n\\[\n\\text{Upper half: }9, 9, 9, 9, 40\n\\]\nThe median of the lower half is 8, so \\(Q_1=8\\). The median of the upper half is 9, so \\(Q_3=9\\).\nTherefore:\n\\[\nIQR=9-8=1\\text{ day}\n\\]\nThe middle half of the observed waiting times spans only one day, from 8 to 9 days. Together, the standard deviation and IQR reveal two features of the data:\n\nMost observations are tightly clustered.\nOne extreme observation creates substantial overall dispersion.\n\n\n\n\n\n\n\nImportantStandard deviation and IQR describe different aspects of spread\n\n\n\nThe standard deviation uses every observation and is sensitive to extreme values. The IQR describes the width of the middle 50% and is resistant to extreme values. Neither measure is automatically better, as the distribution and analytical purpose determine which is more informative.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#evaluating-claims-about-variation",
+    "href": "chapter-06-variation.html#evaluating-claims-about-variation",
+    "title": "6  Describing Variation",
+    "section": "6.12 Evaluating Claims About Variation",
+    "text": "6.12 Evaluating Claims About Variation\nSuppose a journalist argues that the large standard deviation proves that transfer times in the jail are unjust. The calculation alone cannot support that conclusion.\nAn appropriate response would distinguish the statistical evidence from the normative claim:\n\nThe observed standard deviation is large relative to the mean because one case took 40 days.\nThe middle half of cases is tightly clustered between 8 and 9 days.\nThe reason for the 40-day wait should be investigated.\nWhether the process is unjust requires a defensible standard for fairness and evidence about how transfer decisions were made.\nThese 10 cases may not represent all people transferred from the jail.\n\n\n\n\n\n\n\nWarningA descriptive statistic does not establish fairness or causation\n\n\n\nA measure of variation describes a numerical pattern. It cannot, by itself, determine whether a process is fair, identify why an unusual value occurred, or establish that one group was treated differently from another.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#choosing-a-measure-of-variation",
+    "href": "chapter-06-variation.html#choosing-a-measure-of-variation",
+    "title": "6  Describing Variation",
+    "section": "6.13 Choosing a Measure of Variation",
+    "text": "6.13 Choosing a Measure of Variation\n\n\n\n\n\n\n\n\nDistribution or purpose\nUseful measure\nReason\n\n\n\n\nQuick description of total observed spread\nRange\nEasy to calculate, but uses only the minimum and maximum.\n\n\nApproximately symmetric quantitative distribution\nStandard deviation\nUses every observation and complements the mean.\n\n\nSkewed distribution or distribution with extreme values\nIQR, often with the standard deviation\nThe IQR describes the middle half without being dominated by extremes.\n\n\nNeed to understand both the center and spread\nMean and standard deviation, or median and IQR\nPairs measures based on the same features of the distribution.\n\n\n\nA common reporting strategy is:\n\nreport the mean and standard deviation for a roughly symmetric quantitative distribution; and\nreport the median and IQR for a skewed quantitative distribution.\n\nReporting both pairs can sometimes reveal important features that either pair alone would hide.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#test-your-knowledge-vocational-training-hours",
+    "href": "chapter-06-variation.html#test-your-knowledge-vocational-training-hours",
+    "title": "6  Describing Variation",
+    "section": "6.14 Test Your Knowledge: Vocational Training Hours",
+    "text": "6.14 Test Your Knowledge: Vocational Training Hours\n\n6.14.1 The Scenario\nA corrections analyst is examining the number of monthly vocational-training hours completed by 10 incarcerated women in a small unit. The analyst wants to describe both the overall spread and the spread of the middle half of the observations.\nThe ordered data are:\n\n\n\nID\nTraining Hours per Month\n\n\n\n\n1\n17\n\n\n2\n17\n\n\n3\n17\n\n\n4\n17\n\n\n5\n17\n\n\n6\n23\n\n\n7\n23\n\n\n8\n23\n\n\n9\n23\n\n\n10\n23\n\n\n\n\n\n6.14.2 Part 1: Calculate\n\nCalculate the sample mean.\nCreate a deviation table containing \\(x_i\\), \\(x_i-\\bar{x}\\), and \\((x_i-\\bar{x})^2\\).\nCalculate the sample variance and sample standard deviation.\nUsing the median-of-halves method, find \\(Q_1\\) and \\(Q_3\\).\nCalculate the IQR.\n\n\n\n6.14.3 Part 2: Interpret\n\nInterpret the standard deviation in context.\nInterpret the IQR in context.\nDoes the mean of 20 hours describe an observation that actually appears in the data? What does that reveal about relying on the mean alone?\nDescribe the shape of this distribution.\n\n\n\n6.14.4 Part 3: Evaluate\n\nWould it be accurate to conclude that most people completed approximately 20 hours of training? Explain.\nWhat can these data tell us about the 10 people, and what would you need to know before generalizing to all incarcerated women in the facility?\n\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nThe sample mean is:\n\\[\n\\bar{x}=\\frac{5(17)+5(23)}{10}=\\frac{200}{10}=20\\text{ hours}\n\\]\n\n\n\n\n\n\n\n\n\n\nTraining Hours (\\(x_i\\))\nFrequency\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\nFrequency × Squared Deviation\n\n\n\n\n17\n5\n\\(-3\\)\n9\n45\n\n\n23\n5\n\\(3\\)\n9\n45\n\n\nTotal\n10\n\n\n90\n\n\n\nThe sample variance and standard deviation are:\n\\[\ns^2=\\frac{90}{10-1}=10\n\\]\n\\[\ns=\\sqrt{10}\\approx3.16\\text{ hours}\n\\]\nThe lower half consists of five values of 17, so \\(Q_1=17\\). The upper half consists of five values of 23, so \\(Q_3=23\\):\n\\[\nIQR=23-17=6\\text{ hours}\n\\]\nEvery observed value is exactly 3 hours from the mean. The sample standard deviation is slightly larger, 3.16 hours, because the sample formula uses \\(n-1\\) to estimate population variation. The IQR indicates that the middle half spans from 17 to 23 hours, a width of 6 hours.\nHalf of the people completed 17 hours and half completed 23 hours. The distribution is symmetric but bimodal, with two equally common values and no observations at its arithmetic center. It would therefore be misleading to say that most people completed approximately 20 hours without also describing the two clusters.\nThe results describe these 10 people. Before generalizing, we would need to know how they were selected, what period the measurements represent, and whether the small unit is representative of other incarcerated women in the facility.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#project-connection-describe-variation",
+    "href": "chapter-06-variation.html#project-connection-describe-variation",
+    "title": "6  Describing Variation",
+    "section": "6.15 Project Connection: Describe Variation",
+    "text": "6.15 Project Connection: Describe Variation\nSelect one quantitative variable from your semester investigation.\n\nState whether the observations are being treated as a sample or an entire population.\nCalculate an appropriate measure of center.\nCalculate the range, variance, standard deviation, and IQR when appropriate.\nExamine the distribution for skewness, clusters, or extreme values.\nSelect the measure of variation that best supports your research question and justify the choice.\nWrite two or three sentences interpreting the center and variation together.\nIdentify one conclusion that these descriptive statistics cannot support.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#chapter-summary",
+    "href": "chapter-06-variation.html#chapter-summary",
+    "title": "6  Describing Variation",
+    "section": "6.16 Chapter Summary",
+    "text": "6.16 Chapter Summary\n\nMeasures of central tendency describe where a distribution is centered; measures of variation describe how widely observations are dispersed.\nThe range is the maximum minus the minimum, but it uses only two observations and is sensitive to extreme values.\nSample variance, \\(s^2\\), averages squared deviations using the divisor \\(n-1\\).\nThe sample standard deviation, \\(s\\), is the square root of the variance and is expressed in the variable’s original units.\nPopulation variance and standard deviation use \\(\\sigma^2\\), \\(\\sigma\\), and the divisor \\(N\\).\nThe IQR, \\(Q_3-Q_1\\), describes the width of the middle 50% and is resistant to extreme observations.\nThe standard deviation and IQR answer different questions; examining both can reveal whether overall dispersion is driven by unusual values.\nA numerical measure of variation cannot by itself establish unfairness, causation, or generalizability.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-variation.html#key-terms",
+    "href": "chapter-06-variation.html#key-terms",
+    "title": "6  Describing Variation",
+    "section": "6.17 Key Terms",
+    "text": "6.17 Key Terms\n\nDegrees of freedom: The number of independent pieces of information available for estimating a quantity; sample variance uses \\(n-1\\).\nDeviation from the mean: The difference between an observation and the mean, \\(x_i-\\bar{x}\\).\nDispersion: The degree to which observations are spread out; another term for variation.\nInterquartile range (IQR): The difference between the third and first quartiles, describing the width of the middle 50%.\nPopulation standard deviation (\\(\\sigma\\)): The square root of the population variance.\nPopulation variance (\\(\\sigma^2\\)): The average squared deviation from the population mean, using divisor \\(N\\).\nRange: The maximum observed value minus the minimum observed value.\nResistant measure: A statistic that is not strongly affected by extreme observations.\nSample standard deviation (\\(s\\)): The square root of the sample variance.\nSample variance (\\(s^2\\)): The sum of squared deviations from the sample mean divided by \\(n-1\\).\nSum of squares: The sum of the squared deviations from the mean.\nVariation: The extent to which observations differ from one another.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Describing Variation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html",
+    "href": "chapter-00-template.html",
+    "title": "7  Chapter Title",
+    "section": "",
+    "text": "7.1 The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#the-question",
+    "href": "chapter-00-template.html#the-question",
+    "title": "7  Chapter Title",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#what-you-will-learn",
+    "href": "chapter-00-template.html#what-you-will-learn",
+    "title": "7  Chapter Title",
+    "section": "7.2 What You Will Learn",
+    "text": "7.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#why-this-matters",
+    "href": "chapter-00-template.html#why-this-matters",
+    "title": "7  Chapter Title",
+    "section": "7.3 Why This Matters",
+    "text": "7.3 Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#core-concept",
+    "href": "chapter-00-template.html#core-concept",
+    "title": "7  Chapter Title",
+    "section": "7.4 Core Concept",
+    "text": "7.4 Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#worked-example",
+    "href": "chapter-00-template.html#worked-example",
+    "title": "7  Chapter Title",
+    "section": "7.5 Worked Example",
+    "text": "7.5 Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#check-your-understanding",
+    "href": "chapter-00-template.html#check-your-understanding",
+    "title": "7  Chapter Title",
+    "section": "7.6 Check Your Understanding",
+    "text": "7.6 Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#interactive-exploration",
+    "href": "chapter-00-template.html#interactive-exploration",
+    "title": "7  Chapter Title",
+    "section": "7.7 Interactive Exploration",
+    "text": "7.7 Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#test-your-knowledge-activity-title",
+    "href": "chapter-00-template.html#test-your-knowledge-activity-title",
+    "title": "7  Chapter Title",
+    "section": "7.8 Test Your Knowledge: Activity Title",
+    "text": "7.8 Test Your Knowledge: Activity Title\n\n7.8.1 The Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\n7.8.2 Your Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#data-investigation",
+    "href": "chapter-00-template.html#data-investigation",
+    "title": "7  Chapter Title",
+    "section": "7.9 Data Investigation",
+    "text": "7.9 Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#project-connection",
+    "href": "chapter-00-template.html#project-connection",
+    "title": "7  Chapter Title",
+    "section": "7.10 Project Connection",
+    "text": "7.10 Project Connection\nAdd a small task that advances the semester investigation.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#chapter-summary",
+    "href": "chapter-00-template.html#chapter-summary",
+    "title": "7  Chapter Title",
+    "section": "7.11 Chapter Summary",
+    "text": "7.11 Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-template.html#key-terms",
+    "href": "chapter-00-template.html#key-terms",
+    "title": "7  Chapter Title",
+    "section": "7.12 Key Terms",
+    "text": "7.12 Key Terms\n\nTerm: Concise definition.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter Title</span>"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html",
+    "href": "part-02-inference.html",
+    "title": "Chapter Title",
+    "section": "",
+    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#the-question",
+    "href": "part-02-inference.html#the-question",
+    "title": "Chapter Title",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#what-you-will-learn",
+    "href": "part-02-inference.html#what-you-will-learn",
+    "title": "Chapter Title",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#why-this-matters",
+    "href": "part-02-inference.html#why-this-matters",
+    "title": "Chapter Title",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#core-concept",
+    "href": "part-02-inference.html#core-concept",
+    "title": "Chapter Title",
+    "section": "Core Concept",
+    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#worked-example",
+    "href": "part-02-inference.html#worked-example",
+    "title": "Chapter Title",
+    "section": "Worked Example",
+    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#check-your-understanding",
+    "href": "part-02-inference.html#check-your-understanding",
+    "title": "Chapter Title",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#interactive-exploration",
+    "href": "part-02-inference.html#interactive-exploration",
+    "title": "Chapter Title",
+    "section": "Interactive Exploration",
+    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#test-your-knowledge-activity-title",
+    "href": "part-02-inference.html#test-your-knowledge-activity-title",
+    "title": "Chapter Title",
+    "section": "Test Your Knowledge: Activity Title",
+    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#data-investigation",
+    "href": "part-02-inference.html#data-investigation",
+    "title": "Chapter Title",
+    "section": "Data Investigation",
+    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#project-connection",
+    "href": "part-02-inference.html#project-connection",
+    "title": "Chapter Title",
+    "section": "Project Connection",
+    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#chapter-summary",
+    "href": "part-02-inference.html#chapter-summary",
+    "title": "Chapter Title",
+    "section": "Chapter Summary",
+    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-02-inference.html#key-terms",
+    "href": "part-02-inference.html#key-terms",
+    "title": "Chapter Title",
+    "section": "Key Terms",
+    "text": "Key Terms\n\nTerm: Concise definition.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html",
+    "href": "part-03-relationships.html",
+    "title": "Chapter Title",
+    "section": "",
+    "text": "The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#the-question",
+    "href": "part-03-relationships.html#the-question",
+    "title": "Chapter Title",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#what-you-will-learn",
+    "href": "part-03-relationships.html#what-you-will-learn",
+    "title": "Chapter Title",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#why-this-matters",
+    "href": "part-03-relationships.html#why-this-matters",
+    "title": "Chapter Title",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#core-concept",
+    "href": "part-03-relationships.html#core-concept",
+    "title": "Chapter Title",
+    "section": "Core Concept",
+    "text": "Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#worked-example",
+    "href": "part-03-relationships.html#worked-example",
+    "title": "Chapter Title",
+    "section": "Worked Example",
+    "text": "Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#check-your-understanding",
+    "href": "part-03-relationships.html#check-your-understanding",
+    "title": "Chapter Title",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#interactive-exploration",
+    "href": "part-03-relationships.html#interactive-exploration",
+    "title": "Chapter Title",
+    "section": "Interactive Exploration",
+    "text": "Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#test-your-knowledge-activity-title",
+    "href": "part-03-relationships.html#test-your-knowledge-activity-title",
+    "title": "Chapter Title",
+    "section": "Test Your Knowledge: Activity Title",
+    "text": "Test Your Knowledge: Activity Title\n\nThe Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\nYour Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#data-investigation",
+    "href": "part-03-relationships.html#data-investigation",
+    "title": "Chapter Title",
+    "section": "Data Investigation",
+    "text": "Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#project-connection",
+    "href": "part-03-relationships.html#project-connection",
+    "title": "Chapter Title",
+    "section": "Project Connection",
+    "text": "Project Connection\nAdd a small task that advances the semester investigation.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#chapter-summary",
+    "href": "part-03-relationships.html#chapter-summary",
+    "title": "Chapter Title",
+    "section": "Chapter Summary",
+    "text": "Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
+    "crumbs": [
+      "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "part-03-relationships.html#key-terms",
+    "href": "part-03-relationships.html#key-terms",
+    "title": "Chapter Title",
+    "section": "Key Terms",
+    "text": "Key Terms\n\nTerm: Concise definition.",
+    "crumbs": [
+      "Chapter Title"
     ]
   }
 ]
