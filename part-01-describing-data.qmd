@@ -1,0 +1,98 @@
+# Chapter Title
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**Insert the central question for the chapter.**
+:::
+
+Write a short opening that establishes a criminal justice problem and explains why the chapter's concept is needed.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Objective one.
+2. Objective two.
+3. Objective three.
+
+## Why This Matters
+
+Connect the concept to criminal justice research, policy, professional practice, or public claims.
+
+## Core Concept
+
+Develop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.
+
+::: {.callout-tip title="Helpful reasoning strategy"}
+Use a tip callout for a reusable strategy or decision rule.
+:::
+
+::: {.callout-important title="Important distinction"}
+Use an important callout for a distinction students must understand.
+:::
+
+::: {.callout-warning title="A common mistake"}
+Use a warning callout for a common misconception or interpretation error.
+:::
+
+## Worked Example
+
+1. State the question.
+2. Identify the cases and variables.
+3. Select and justify the method.
+4. Present the result.
+5. Interpret the result in context.
+6. State what cannot be concluded.
+
+## Check Your Understanding
+
+Insert a short, embedded comprehension check.
+
+::: {.callout-note collapse="true" title="Check your answer"}
+Provide the answer and a brief explanation.
+:::
+
+## Interactive Exploration
+
+When an interactive activity materially improves understanding, ask students to:
+
+1. **Predict** what will happen.
+2. **Manipulate** an input.
+3. **Observe** the result.
+4. **Explain** why it occurred.
+5. **Reset** and test another prediction.
+
+Include a static explanation or illustration so the central lesson does not depend entirely on the external application.
+
+## Test Your Knowledge: Activity Title
+
+### The Scenario
+
+Introduce a self-contained criminal justice scenario, dataset, table, or visualization.
+
+### Your Task
+
+Include questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+Provide answers with enough reasoning for students to diagnose misunderstandings.
+:::
+
+## Data Investigation
+
+Connect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.
+
+## Project Connection
+
+Add a small task that advances the semester investigation.
+
+## Chapter Summary
+
+- Summarize the first central idea.
+- Summarize the second central idea.
+- Summarize the third central idea.
+
+## Key Terms
+
+- **Term:** Concise definition.

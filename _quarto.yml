@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Textbook for Statistical Analysis"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      Textbook for Statistical Analysis was written by Jacob T.N. Young.
+
+  chapters:
+    - index.qmd
+
+    - part: part-01-describing-data.qmd
+      chapters:
+        - chapter-01-thinking-with-data.qmd
+        - chapter-02-measurement.qmd
+        - chapter-03-frequency-distributions.qmd
+        - chapter-00-template.qmd
+
+    - part: part-02-inference.qmd
+      chapters:
+        - chapter-00-template.qmd
+
+    - part: part-03-relationships.qmd
+      chapters:
+        - chapter-00-template.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - crj-303-textbook.scss
+    code-link: true
+    author-meta: "Jacob T.N. Young"
+    callout-appearance: simple
+
+editor: source

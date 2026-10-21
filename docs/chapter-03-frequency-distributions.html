@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jacob T.N. Young">
+
+<title>3&nbsp; Organizing Data with Frequency Distributions – Textbook for Statistical Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-00-template.html" rel="next">
+<link href="./chapter-02-measurement.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bb70f3890ce631548f457652de1e04e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-03-frequency-distributions.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Textbook for Statistical Analysis</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-01-describing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-01-thinking-with-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-03-frequency-distributions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-02-inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-03-relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">3.1</span> The Question</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">3.2</span> What You Will Learn</a></li>
+  <li><a href="#from-raw-data-to-an-organized-distribution" id="toc-from-raw-data-to-an-organized-distribution" class="nav-link" data-scroll-target="#from-raw-data-to-an-organized-distribution"><span class="header-section-number">3.3</span> From Raw Data to an Organized Distribution</a></li>
+  <li><a href="#frequency" id="toc-frequency" class="nav-link" data-scroll-target="#frequency"><span class="header-section-number">3.4</span> Frequency</a></li>
+  <li><a href="#proportion-and-percentage" id="toc-proportion-and-percentage" class="nav-link" data-scroll-target="#proportion-and-percentage"><span class="header-section-number">3.5</span> Proportion and Percentage</a></li>
+  <li><a href="#cumulative-frequency-and-cumulative-proportion" id="toc-cumulative-frequency-and-cumulative-proportion" class="nav-link" data-scroll-target="#cumulative-frequency-and-cumulative-proportion"><span class="header-section-number">3.6</span> Cumulative Frequency and Cumulative Proportion</a></li>
+  <li><a href="#one-table-several-kinds-of-information" id="toc-one-table-several-kinds-of-information" class="nav-link" data-scroll-target="#one-table-several-kinds-of-information"><span class="header-section-number">3.7</span> One Table, Several Kinds of Information</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">3.8</span> Check Your Understanding</a></li>
+  <li><a href="#test-your-knowledge-neighborhood-safety-survey" id="toc-test-your-knowledge-neighborhood-safety-survey" class="nav-link" data-scroll-target="#test-your-knowledge-neighborhood-safety-survey"><span class="header-section-number">3.9</span> Test Your Knowledge: Neighborhood Safety Survey</a>
+  <ul class="collapse">
+  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">3.9.1</span> The Scenario</a></li>
+  <li><a href="#part-1-identify-the-levels-of-measurement" id="toc-part-1-identify-the-levels-of-measurement" class="nav-link" data-scroll-target="#part-1-identify-the-levels-of-measurement"><span class="header-section-number">3.9.2</span> Part 1: Identify the Levels of Measurement</a></li>
+  <li><a href="#part-2-construct-frequency-distributions" id="toc-part-2-construct-frequency-distributions" class="nav-link" data-scroll-target="#part-2-construct-frequency-distributions"><span class="header-section-number">3.9.3</span> Part 2: Construct Frequency Distributions</a></li>
+  <li><a href="#part-3-interpret-and-evaluate" id="toc-part-3-interpret-and-evaluate" class="nav-link" data-scroll-target="#part-3-interpret-and-evaluate"><span class="header-section-number">3.9.4</span> Part 3: Interpret and Evaluate</a></li>
+  </ul></li>
+  <li><a href="#project-connection-describe-one-variable" id="toc-project-connection-describe-one-variable" class="nav-link" data-scroll-target="#project-connection-describe-one-variable"><span class="header-section-number">3.10</span> Project Connection: Describe One Variable</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">3.11</span> Chapter Summary</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">3.12</span> Key Terms</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-03-frequency-distributions.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-question" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">3.1</span> The Question</h2>
+<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Central question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>How can we turn a list of raw observations into a clear description of a variable?</strong></p>
+</div>
+</div>
+<p>Criminal justice researchers and analysts often begin with a set of individual observations. A survey may contain one response from every participant, an incident file may contain one row for every reported crime, and a correctional dataset may contain one record for every person admitted to a facility.</p>
+<p>Raw data preserve the individual observations, but they can make the overall pattern difficult to see. A <strong>frequency distribution</strong> organizes those observations so we can determine which values are common, how much of the dataset falls into each category, and (when the categories have a meaningful order) how observations accumulate across the distribution.</p>
+</section>
+<section id="what-you-will-learn" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="what-you-will-learn"><span class="header-section-number">3.2</span> What You Will Learn</h2>
+<p>After completing this chapter, you should be able to:</p>
+<ol type="1">
+<li>Distinguish raw data from a frequency distribution.</li>
+<li>Calculate and interpret frequencies, proportions, and percentages.</li>
+<li>Calculate and interpret cumulative frequencies and cumulative proportions for ordered variables.</li>
+<li>Explain how a variable’s level of measurement affects the frequency table we can construct.</li>
+<li>Use a frequency distribution to answer a substantive criminal justice question.</li>
+</ol>
+</section>
+<section id="from-raw-data-to-an-organized-distribution" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="from-raw-data-to-an-organized-distribution"><span class="header-section-number">3.3</span> From Raw Data to an Organized Distribution</h2>
+<p>Suppose we want to answer the following question:</p>
+<blockquote class="blockquote">
+<p>How much public support is there for expanding rehabilitation programs for people in prison?</p>
+</blockquote>
+<p>We ask 10 people: <em>How much do you support expanding rehabilitation programs for people in prison?</em> Responses are recorded using this scale:</p>
+<ol type="1">
+<li>Strongly oppose</li>
+<li>Oppose</li>
+<li>Support</li>
+<li>Strongly support</li>
+</ol>
+<p>The individual responses are the <strong>raw data</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Respondent</th>
+<th style="text-align: center;">Support for rehabilitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p>Each row represents one respondent, and each recorded value represents that person’s response category. We could inspect the rows one at a time, but organizing the responses into a frequency distribution makes the overall pattern easier to understand.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="The numbers represent ordered categories">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The numbers represent ordered categories
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The response values <code>1</code> through <code>4</code> are codes for an ordinal variable. A higher value represents more support, but we cannot assume that the distance between every pair of response categories is equal.</p>
+</div>
+</div>
+</section>
+<section id="frequency" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="frequency"><span class="header-section-number">3.4</span> Frequency</h2>
+<p>The <strong>frequency</strong>, written as <span class="math inline">\(f\)</span>, is the number of observations with a particular value. We find the frequency by counting how many respondents selected each category.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: left;">Response category</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Strongly oppose</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Oppose</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Support</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Strongly support</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This table makes two facts immediately visible: <em>Support</em> is the most common response, and only one respondent selected <em>Strongly oppose</em>.</p>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Check the total">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check the total
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The frequencies should add to the total number of observations. Here, <span class="math inline">\(1 + 3 + 4 + 2 = 10\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="proportion-and-percentage" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="proportion-and-percentage"><span class="header-section-number">3.5</span> Proportion and Percentage</h2>
+<p>A <strong>proportion</strong>, written as <span class="math inline">\(p\)</span>, is the share of all observations that falls into a particular category. It is calculated by dividing a category’s frequency by the total number of observations:</p>
+<p><span class="math display">\[
+p = \frac{f}{N}
+\]</span></p>
+<p>For this chapter, <span class="math inline">\(N\)</span> represents the total number of cases in the dataset. Later, when we distinguish samples from populations, we will use <span class="math inline">\(n\)</span> for sample size and <span class="math inline">\(N\)</span> for population size.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+<th style="text-align: center;">Calculation</th>
+<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;"><span class="math inline">\(1/10\)</span></td>
+<td style="text-align: right;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: center;"><span class="math inline">\(3/10\)</span></td>
+<td style="text-align: right;">0.30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: center;"><span class="math inline">\(4/10\)</span></td>
+<td style="text-align: right;">0.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;"><span class="math inline">\(2/10\)</span></td>
+<td style="text-align: right;">0.20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>10</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>percentage</strong> expresses the same share out of 100:</p>
+<p><span class="math display">\[
+\text{Percentage} = p \times 100
+\]</span></p>
+<p>Thus, a proportion of 0.40 is equivalent to 40%. In this survey, 60% of respondents selected either <em>Support</em> or <em>Strongly support</em>.</p>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Check the proportion or percentage total">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check the proportion or percentage total
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Proportions should add to 1.00, and percentages should add to 100%. Small differences can occur when values have been rounded.</p>
+</div>
+</div>
+</section>
+<section id="cumulative-frequency-and-cumulative-proportion" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="cumulative-frequency-and-cumulative-proportion"><span class="header-section-number">3.6</span> Cumulative Frequency and Cumulative Proportion</h2>
+<p>When a variable’s categories have a meaningful order, we can calculate running totals.</p>
+<p>The <strong>cumulative frequency</strong>, written here as <span class="math inline">\(cf\)</span>, is the number of observations at or below a particular category. The <strong>cumulative proportion</strong>, written as <span class="math inline">\(cp\)</span>, is the corresponding running share of observations.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(cf\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(cp\)</span></th>
+<th style="text-align: right;">Cumulative percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">10%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">40%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">80%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<p>The second row tells us that four respondents—or 40% of the group—selected either <em>Strongly oppose</em> or <em>Oppose</em>. The third row tells us that eight respondents—or 80%—selected <em>Support</em> or a lower response.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Cumulative summaries require an order">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Cumulative summaries require an order
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cumulative frequency and cumulative proportion are meaningful only when the values can be arranged from lower to higher. They are appropriate for ordinal, interval, and ratio variables. They are generally not meaningful for nominal variables such as neighborhood or incident type, because changing the arbitrary category order would change the cumulative totals.</p>
+</div>
+</div>
+</section>
+<section id="one-table-several-kinds-of-information" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="one-table-several-kinds-of-information"><span class="header-section-number">3.7</span> One Table, Several Kinds of Information</h2>
+<p>Each column answers a different question:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Summary</th>
+<th style="text-align: left;">Question answered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Frequency</td>
+<td style="text-align: left;">How many observations have this value?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Proportion</td>
+<td style="text-align: left;">What share of the observations has this value?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Percentage</td>
+<td style="text-align: left;">What share out of 100 has this value?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cumulative frequency</td>
+<td style="text-align: left;">How many observations are at or below this ordered value?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cumulative proportion</td>
+<td style="text-align: left;">What share of observations is at or below this ordered value?</td>
+</tr>
+</tbody>
+</table>
+<p>Frequencies communicate counts. Proportions and percentages make it easier to compare distributions with different totals. Cumulative summaries show where observations fall within an ordered distribution.</p>
+</section>
+<section id="check-your-understanding" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">3.8</span> Check Your Understanding</h2>
+<p>Suppose 25 respondents were asked how safe they feel in their neighborhood. Ten selected <em>Very safe</em>. Five selected <em>Somewhat safe</em>.</p>
+<ol type="1">
+<li>What is the frequency for <em>Very safe</em>?</li>
+<li>What proportion selected <em>Very safe</em>?</li>
+<li>What percentage selected <em>Somewhat safe</em>?</li>
+<li>What additional information would you need to calculate the cumulative percentage through <em>Somewhat safe</em>?</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Check your answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check your answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>The frequency for <em>Very safe</em> is 10.</li>
+<li>The proportion is <span class="math inline">\(10/25 = 0.40\)</span>.</li>
+<li>The percentage is <span class="math inline">\((5/25) \times 100 = 20\%\)</span>.</li>
+<li>You would need the frequencies for every response category ordered below <em>Somewhat safe</em>. A cumulative percentage includes the selected category and all categories below it.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="test-your-knowledge-neighborhood-safety-survey" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="test-your-knowledge-neighborhood-safety-survey"><span class="header-section-number">3.9</span> Test Your Knowledge: Neighborhood Safety Survey</h2>
+<section id="the-scenario" class="level3" data-number="3.9.1">
+<h3 data-number="3.9.1" class="anchored" data-anchor-id="the-scenario"><span class="header-section-number">3.9.1</span> The Scenario</h3>
+<p>A local criminology research group surveyed 20 residents about their experiences and perceptions of neighborhood safety. The researchers recorded the following variables:</p>
+<ul>
+<li><strong>Sex:</strong> Recorded as male or female.</li>
+<li><strong>Fear of Crime:</strong> <code>1 = Not at all afraid</code>, <code>2 = A little afraid</code>, <code>3 = Somewhat afraid</code>, and <code>4 = Very afraid</code>.</li>
+<li><strong>Age:</strong> Measured in years.</li>
+<li><strong>Calls to Police:</strong> Number of calls to the police for service.</li>
+<li><strong>Victim of Crime:</strong> Whether the respondent had been a victim of crime, recorded as yes or no.</li>
+<li><strong>Perceived Neighborhood Safety:</strong> <code>1 = Very unsafe</code>, <code>2 = Somewhat unsafe</code>, <code>3 = Somewhat safe</code>, and <code>4 = Very safe</code>.</li>
+</ul>
+<p>The raw data are shown below.</p>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">ID</th>
+<th style="text-align: center;">Sex</th>
+<th style="text-align: center;">Fear of Crime</th>
+<th style="text-align: right;">Age</th>
+<th style="text-align: right;">Calls to Police</th>
+<th style="text-align: center;">Victim of Crime</th>
+<th style="text-align: center;">Perceived Neighborhood Safety</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="part-1-identify-the-levels-of-measurement" class="level3" data-number="3.9.2">
+<h3 data-number="3.9.2" class="anchored" data-anchor-id="part-1-identify-the-levels-of-measurement"><span class="header-section-number">3.9.2</span> Part 1: Identify the Levels of Measurement</h3>
+<p>For each variable, identify its level of measurement and briefly justify your classification.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Level of measurement</th>
+<th style="text-align: left;">Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sex</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fear of Crime</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Age</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Calls to Police</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Victim of Crime</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Perceived Neighborhood Safety</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="part-2-construct-frequency-distributions" class="level3" data-number="3.9.3">
+<h3 data-number="3.9.3" class="anchored" data-anchor-id="part-2-construct-frequency-distributions"><span class="header-section-number">3.9.3</span> Part 2: Construct Frequency Distributions</h3>
+<p>Select two variables and construct a frequency table for each. Your selections must include at least one variable with meaningfully ordered values.</p>
+<p>For each selected variable:</p>
+<ol type="1">
+<li>List every possible value or category.</li>
+<li>Calculate the frequency and proportion.</li>
+<li>Convert each proportion into a percentage.</li>
+<li>If the variable is ordered, calculate its cumulative frequency and cumulative proportion.</li>
+<li>If the variable is nominal, explain why a cumulative summary is not appropriate.</li>
+</ol>
+<p>You may adapt the following table. Omit the cumulative columns when they are not meaningful.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Value or category</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: right;">Percentage</th>
+<th style="text-align: right;"><span class="math inline">\(cf\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(cp\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="part-3-interpret-and-evaluate" class="level3" data-number="3.9.4">
+<h3 data-number="3.9.4" class="anchored" data-anchor-id="part-3-interpret-and-evaluate"><span class="header-section-number">3.9.4</span> Part 3: Interpret and Evaluate</h3>
+<p>Answer the following questions using your tables:</p>
+<ol type="1">
+<li>What is the most common value or category for each selected variable?</li>
+<li>What does one proportion or percentage from each table tell us about the surveyed residents?</li>
+<li>If you calculated a cumulative proportion, interpret one of its values in words.</li>
+<li>What can these data tell us about the 20 surveyed residents?</li>
+<li>What additional information would you need before generalizing the results to all residents of the neighborhood?</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Review the levels of measurement">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review the levels of measurement
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 23%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: center;">Level</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sex</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">The values identify categories without an inherent order.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fear of Crime</td>
+<td style="text-align: center;">Ordinal</td>
+<td style="text-align: left;">The categories range from less to more fear, but equal spacing between responses cannot be assumed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Age</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Age in years has equal intervals and a meaningful conceptual zero.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Calls to Police</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">This is a count with equal intervals and a meaningful zero.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Victim of Crime</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">Yes and no identify categories without a quantitative order.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Perceived Neighborhood Safety</td>
+<td style="text-align: center;">Ordinal</td>
+<td style="text-align: left;">The categories range from less to more safety, but their spacing is not known to be equal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled" title="Review two example frequency distributions">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review two example frequency distributions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>One possible pair is <em>Fear of Crime</em> and <em>Calls to Police</em>.</p>
+<p><strong>Fear of Crime</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Response</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: right;">Percentage</th>
+<th style="text-align: right;"><span class="math inline">\(cf\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(cp\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>20</strong></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>For example, the cumulative proportion of 0.40 for response 2 means that 40% of respondents reported being <em>Not at all afraid</em> or <em>A little afraid</em>.</p>
+<p><strong>Calls to Police</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Calls</th>
+<th style="text-align: right;"><span class="math inline">\(f\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: right;">Percentage</th>
+<th style="text-align: right;"><span class="math inline">\(cf\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(cp\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>20</strong></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>For example, the cumulative proportion of 0.80 for two calls means that 80% of respondents made two or fewer calls to police.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="project-connection-describe-one-variable" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="project-connection-describe-one-variable"><span class="header-section-number">3.10</span> Project Connection: Describe One Variable</h2>
+<p>Select one variable from your semester investigation and create a frequency distribution.</p>
+<ol type="1">
+<li>State the variable’s level of measurement.</li>
+<li>Report its frequencies, proportions, and percentages.</li>
+<li>Include cumulative frequencies or proportions only if the values have a meaningful order.</li>
+<li>Write two or three sentences explaining the most important pattern.</li>
+<li>Identify one limitation that affects how the distribution should be interpreted.</li>
+</ol>
+</section>
+<section id="chapter-summary" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">3.11</span> Chapter Summary</h2>
+<ul>
+<li>Raw data display individual observations, while a frequency distribution organizes values into a summary.</li>
+<li>A frequency is the number of observations with a particular value.</li>
+<li>A proportion is a frequency divided by the total number of observations; a percentage expresses that proportion out of 100.</li>
+<li>Cumulative frequency is a running count, while cumulative proportion is a running share.</li>
+<li>Cumulative summaries are meaningful only when a variable’s values have a meaningful order.</li>
+<li>A useful frequency table should do more than present numbers: it should help answer a substantive question.</li>
+</ul>
+</section>
+<section id="key-terms" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">3.12</span> Key Terms</h2>
+<ul>
+<li><strong>Cumulative frequency:</strong> The number of observations at or below a particular ordered value.</li>
+<li><strong>Cumulative percentage:</strong> The percentage of observations at or below a particular ordered value.</li>
+<li><strong>Cumulative proportion:</strong> The proportion of observations at or below a particular ordered value.</li>
+<li><strong>Frequency:</strong> The number of observations with a particular value.</li>
+<li><strong>Frequency distribution:</strong> A table showing how observations are distributed across the values of a variable.</li>
+<li><strong>Percentage:</strong> A proportion expressed out of 100.</li>
+<li><strong>Proportion:</strong> The fraction of all observations with a particular value.</li>
+<li><strong>Raw data:</strong> Data presented as individual, ungrouped observations.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-02-measurement.html" class="pagination-link" aria-label="Measuring Variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-00-template.html" class="pagination-link" aria-label="Chapter Title">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Textbook for Statistical Analysis was written by Jacob T.N. Young.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

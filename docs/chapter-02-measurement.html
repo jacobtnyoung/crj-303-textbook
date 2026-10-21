@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jacob T.N. Young">
+
+<title>2&nbsp; Measuring Variables – Textbook for Statistical Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-03-frequency-distributions.html" rel="next">
+<link href="./chapter-01-thinking-with-data.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bb70f3890ce631548f457652de1e04e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-02-measurement.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Textbook for Statistical Analysis</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-01-describing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-01-thinking-with-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-measurement.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-03-frequency-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-02-inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-03-relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter Title</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">2.1</span> The Question</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">2.2</span> What You Will Learn</a></li>
+  <li><a href="#what-does-it-mean-to-measure-something" id="toc-what-does-it-mean-to-measure-something" class="nav-link" data-scroll-target="#what-does-it-mean-to-measure-something"><span class="header-section-number">2.3</span> What Does It Mean to Measure Something?</a></li>
+  <li><a href="#the-four-levels-of-measurement" id="toc-the-four-levels-of-measurement" class="nav-link" data-scroll-target="#the-four-levels-of-measurement"><span class="header-section-number">2.4</span> The Four Levels of Measurement</a>
+  <ul class="collapse">
+  <li><a href="#nominal-categories-without-an-order" id="toc-nominal-categories-without-an-order" class="nav-link" data-scroll-target="#nominal-categories-without-an-order"><span class="header-section-number">2.4.1</span> Nominal: Categories Without an Order</a></li>
+  <li><a href="#ordinal-categories-with-an-order" id="toc-ordinal-categories-with-an-order" class="nav-link" data-scroll-target="#ordinal-categories-with-an-order"><span class="header-section-number">2.4.2</span> Ordinal: Categories With an Order</a></li>
+  <li><a href="#interval-equal-distances-without-a-true-zero" id="toc-interval-equal-distances-without-a-true-zero" class="nav-link" data-scroll-target="#interval-equal-distances-without-a-true-zero"><span class="header-section-number">2.4.3</span> Interval: Equal Distances Without a True Zero</a></li>
+  <li><a href="#ratio-equal-distances-and-a-true-zero" id="toc-ratio-equal-distances-and-a-true-zero" class="nav-link" data-scroll-target="#ratio-equal-distances-and-a-true-zero"><span class="header-section-number">2.4.4</span> Ratio: Equal Distances and a True Zero</a></li>
+  </ul></li>
+  <li><a href="#comparing-the-four-levels" id="toc-comparing-the-four-levels" class="nav-link" data-scroll-target="#comparing-the-four-levels"><span class="header-section-number">2.5</span> Comparing the Four Levels</a></li>
+  <li><a href="#why-the-level-of-measurement-matters" id="toc-why-the-level-of-measurement-matters" class="nav-link" data-scroll-target="#why-the-level-of-measurement-matters"><span class="header-section-number">2.6</span> Why the Level of Measurement Matters</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">2.7</span> Check Your Understanding</a></li>
+  <li><a href="#test-your-knowledge-metrovale-crime-data" id="toc-test-your-knowledge-metrovale-crime-data" class="nav-link" data-scroll-target="#test-your-knowledge-metrovale-crime-data"><span class="header-section-number">2.8</span> Test Your Knowledge: Metrovale Crime Data</a>
+  <ul class="collapse">
+  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">2.8.1</span> The Scenario</a></li>
+  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task"><span class="header-section-number">2.8.2</span> Your Task</a></li>
+  <li><a href="#interpret-and-evaluate" id="toc-interpret-and-evaluate" class="nav-link" data-scroll-target="#interpret-and-evaluate"><span class="header-section-number">2.8.3</span> Interpret and Evaluate</a></li>
+  </ul></li>
+  <li><a href="#project-connection-conduct-a-variable-audit" id="toc-project-connection-conduct-a-variable-audit" class="nav-link" data-scroll-target="#project-connection-conduct-a-variable-audit"><span class="header-section-number">2.9</span> Project Connection: Conduct a Variable Audit</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">2.10</span> Chapter Summary</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">2.11</span> Key Terms</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-02-measurement.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-question" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">2.1</span> The Question</h2>
+<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Central question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>How do we turn an idea into a variable that can be recorded and analyzed?</strong></p>
+</div>
+</div>
+<p>Criminal justice data describe people, incidents, places, organizations, and decisions. A dataset might record the type of crime reported, the neighborhood where it occurred, the amount of property damage, or the time an officer took to respond. Although all of these appear as columns in a dataset, they do not contain the same kind of information.</p>
+<p>Some variables place observations into categories. Others arrange observations in a meaningful order. Still others record numerical amounts for which differences—or even ratios—have meaningful interpretations. Recognizing these differences is an important first step in selecting an appropriate statistical analysis.</p>
+</section>
+<section id="what-you-will-learn" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="what-you-will-learn"><span class="header-section-number">2.2</span> What You Will Learn</h2>
+<p>After completing this chapter, you should be able to:</p>
+<ol type="1">
+<li>Explain what it means to measure a characteristic with a variable.</li>
+<li>Distinguish among nominal, ordinal, interval, and ratio levels of measurement.</li>
+<li>Justify the level of measurement assigned to a variable.</li>
+<li>Explain why the level of measurement affects the statistical summaries and comparisons we can make.</li>
+</ol>
+</section>
+<section id="what-does-it-mean-to-measure-something" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="what-does-it-mean-to-measure-something"><span class="header-section-number">2.3</span> What Does It Mean to Measure Something?</h2>
+<p>When we measure something, we use a rule to assign a value to an observation. Consider an incident in a police-records system. The system might assign that incident:</p>
+<ul>
+<li>an incident type such as <em>burglary</em>;</li>
+<li>a severity rating such as <em>high</em>;</li>
+<li>a response time of <em>12 minutes</em>; and</li>
+<li>an estimated property loss of <em>$800</em>.</li>
+</ul>
+<p>Each assigned value communicates information, but the information has a different structure. <em>Burglary</em> is a category. <em>High</em> indicates an ordered position. <em>12 minutes</em> and <em>$800</em> represent measured quantities.</p>
+<p>The <strong>level of measurement</strong> describes the kinds of comparisons that the values of a variable permit. The four commonly recognized levels are nominal, ordinal, interval, and ratio.</p>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Ask these questions">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ask these questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When determining a variable’s level of measurement, ask:</p>
+<ol type="1">
+<li>Are the values simply different categories?</li>
+<li>Can the values be placed in a meaningful order?</li>
+<li>Are the distances between values equal?</li>
+<li>Does zero represent the absence of the quantity?</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="the-four-levels-of-measurement" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="the-four-levels-of-measurement"><span class="header-section-number">2.4</span> The Four Levels of Measurement</h2>
+<section id="nominal-categories-without-an-order" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="nominal-categories-without-an-order"><span class="header-section-number">2.4.1</span> Nominal: Categories Without an Order</h3>
+<p>A <strong>nominal</strong> variable places observations into categories. The categories are different from one another, but they do not have an inherent order.</p>
+<p>Examples include:</p>
+<ul>
+<li>type of crime: assault, theft, or fraud;</li>
+<li>neighborhood: Downtown, North End, or Eastside;</li>
+<li>season: fall, winter, spring, or summer; and</li>
+<li>arrest made: yes or no.</li>
+</ul>
+<p>We cannot say that fraud is <em>more than</em> assault or that Downtown is <em>higher than</em> the North End. The labels identify different groups; they do not rank them.</p>
+<p>Numbers do not necessarily make a variable quantitative. A police department might code burglary as <code>1</code>, robbery as <code>2</code>, and fraud as <code>3</code>. Those numbers are labels. Fraud is not three times as much as burglary, and calculating their average would not be meaningful.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="The coding does not determine the measurement level">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The coding does not determine the measurement level
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A variable’s level of measurement depends on what its values represent, <strong>not</strong> on whether the values happen to be written as words or numbers.</p>
+</div>
+</div>
+</section>
+<section id="ordinal-categories-with-an-order" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="ordinal-categories-with-an-order"><span class="header-section-number">2.4.2</span> Ordinal: Categories With an Order</h3>
+<p>An <strong>ordinal</strong> variable places observations into categories that have a meaningful order. However, the distance between consecutive categories is not necessarily equal.</p>
+<p>Examples include:</p>
+<ul>
+<li>trust in the police: poor, fair, good, or excellent;</li>
+<li>crime severity: low, moderate, or high;</li>
+<li>fear of crime: low, medium, or high; and</li>
+<li>inmate security level: minimum, medium, or maximum.</li>
+</ul>
+<p>We know that <em>high</em> crime severity represents more severity than <em>low</em> crime severity. We do not know that the difference between low and moderate is identical to the difference between moderate and high.</p>
+<p>A rating scale written with numbers can still be ordinal. For example, suppose trust in the police is recorded from <code>1 = Poor</code> to <code>5 = Excellent</code>. A score of 4 indicates more trust than a score of 2, but it does not necessarily indicate exactly twice as much trust.</p>
+</section>
+<section id="interval-equal-distances-without-a-true-zero" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="interval-equal-distances-without-a-true-zero"><span class="header-section-number">2.4.3</span> Interval: Equal Distances Without a True Zero</h3>
+<p>An <strong>interval</strong> variable has ordered numerical values with equal distances between them. A one-unit change represents the same amount anywhere on the scale. However, zero does not represent the complete absence of the quantity.</p>
+<p>Temperature measured in degrees Fahrenheit is a familiar example. The difference between 50°F and 60°F is the same as the difference between 70°F and 80°F: ten degrees. However, 0°F does not represent the absence of temperature. Because the zero point is arbitrary, ratios are not meaningful. For example, 80°F is not twice the absolute temperature of 40°F, even though 80 is twice 40.</p>
+<p>Calendar year is another interval-level example. The difference between 2000 and 2010 is ten years, just as the difference between 2010 and 2020 is ten years. The year zero is a location on a calendar rather than the absence of time.</p>
+</section>
+<section id="ratio-equal-distances-and-a-true-zero" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="ratio-equal-distances-and-a-true-zero"><span class="header-section-number">2.4.4</span> Ratio: Equal Distances and a True Zero</h3>
+<p>A <strong>ratio</strong> variable has all the properties of an interval variable and also has a meaningful zero point. Zero represents the absence of the quantity being measured, so ratio comparisons are meaningful.</p>
+<p>Examples include:</p>
+<ul>
+<li>number of arrests;</li>
+<li>incident response time in minutes;</li>
+<li>property damage in dollars;</li>
+<li>victim age;</li>
+<li>sentence length in years; and</li>
+<li>number of prior convictions.</li>
+</ul>
+<p>If one response took 20 minutes and another took 10 minutes, the first took twice as long. If one neighborhood recorded 50 crimes and another recorded 25, the first recorded twice as many crimes. These comparisons are possible because time and counts have meaningful zero points.</p>
+</section>
+</section>
+<section id="comparing-the-four-levels" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="comparing-the-four-levels"><span class="header-section-number">2.5</span> Comparing the Four Levels</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: center;">Categories differ</th>
+<th style="text-align: center;">Values have an order</th>
+<th style="text-align: center;">Equal intervals</th>
+<th style="text-align: center;">Meaningful zero</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nominal</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Incident type</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Crime severity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Interval</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Temperature in °F</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ratio</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Response time</td>
+</tr>
+</tbody>
+</table>
+<p>The levels build on one another. Ordinal variables contain the distinction available in nominal variables and add order. Interval variables add equal spacing. Ratio variables add a meaningful zero.</p>
+</section>
+<section id="why-the-level-of-measurement-matters" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="why-the-level-of-measurement-matters"><span class="header-section-number">2.6</span> Why the Level of Measurement Matters</h2>
+<p>The level of measurement affects what we can reasonably do with a variable.</p>
+<ul>
+<li>It helps determine which summaries and statistical procedures are appropriate.</li>
+<li>It shapes how we describe differences between observations.</li>
+<li>It tells us whether an average, distance, or ratio has a meaningful interpretation.</li>
+<li>It prevents us from treating numerical labels as measured quantities.</li>
+</ul>
+<p>For example, the most common incident type may be useful, but the <em>average</em> incident type is not. The median security level may communicate a meaningful ordered position, but saying that maximum security is three times minimum security would not. A mean response time, by contrast, has a clear interpretation.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="A common mistake">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>A common mistake
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not classify a variable solely by looking at its stored values. Always ask what those values represent.</p>
+</div>
+</div>
+</section>
+<section id="check-your-understanding" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">2.7</span> Check Your Understanding</h2>
+<p>Identify the level of measurement for each variable. Before checking the answers, explain what comparisons the values permit.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Level of measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Type of weapon used</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sentence length in years</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inmate security level: minimum, medium, maximum</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year of conviction</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of prior convictions</td>
+<td style="text-align: left;">?</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-note callout-titled" title="Check your answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check your answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type of weapon used — nominal.</strong> The values identify categories without ranking them.</li>
+<li><strong>Sentence length — ratio.</strong> The values have equal intervals and zero years represents no custodial sentence length.</li>
+<li><strong>Inmate security level — ordinal.</strong> The categories have a meaningful order, but the distance between levels is not measurable.</li>
+<li><strong>Year of conviction — interval.</strong> Differences between years are meaningful, but the calendar does not have a true zero representing the absence of time.</li>
+<li><strong>Number of prior convictions — ratio.</strong> This is a count with equal intervals and a meaningful zero.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="test-your-knowledge-metrovale-crime-data" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="test-your-knowledge-metrovale-crime-data"><span class="header-section-number">2.8</span> Test Your Knowledge: Metrovale Crime Data</h2>
+<section id="the-scenario" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="the-scenario"><span class="header-section-number">2.8.1</span> The Scenario</h3>
+<p>The city of Metrovale has released a small dataset describing one week of police-reported incidents. You are a data analyst with the <strong>Metrovale Bureau of Justice Analytics (MBJA)</strong>, and your first task is to determine how each piece of information is measured.</p>
+<p>Your supervisor reminds you that the level of measurement determines what kinds of statistical summaries and analyses can be used later.</p>
+</section>
+<section id="your-task" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="your-task"><span class="header-section-number">2.8.2</span> Your Task</h3>
+<p>For each variable:</p>
+<ol type="1">
+<li>Identify its level of measurement.</li>
+<li>Briefly explain why that classification is appropriate.</li>
+<li>Base your explanation on what the values represent, not simply on whether they are written as numbers or words.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 16%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Level</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Case ID</td>
+<td style="text-align: left;">Unique identifier for each police report</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Incident Type</td>
+<td style="text-align: left;">Category of reported offense, such as burglary, fraud, or assault</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Neighborhood</td>
+<td style="text-align: left;">Area of the city where the incident occurred</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrest Made</td>
+<td style="text-align: left;">Whether an arrest was made: yes or no</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Officer Rating</td>
+<td style="text-align: left;">Supervisor’s rating of officer performance from 1 = Poor to 5 = Excellent</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Estimated Damage</td>
+<td style="text-align: left;">Estimated property loss in dollars</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Response Time</td>
+<td style="text-align: left;">Time from dispatch to officer arrival in minutes</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Day of Week</td>
+<td style="text-align: left;">Day the incident occurred, Monday through Sunday</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Temperature</td>
+<td style="text-align: left;">Outdoor temperature during the call in degrees Fahrenheit</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Victim Age</td>
+<td style="text-align: left;">Age of the primary victim</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Crime Severity Code</td>
+<td style="text-align: left;">Administrative code: 1 = Low, 2 = Moderate, 3 = High</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Officers on Scene</td>
+<td style="text-align: left;">Number of responding officers</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Investigation Duration</td>
+<td style="text-align: left;">Time from report to closure in days</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Property Type</td>
+<td style="text-align: left;">Residential, commercial, vehicle, or other</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Suspect Height</td>
+<td style="text-align: left;">Reported height of the primary suspect in inches</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="interpret-and-evaluate" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="interpret-and-evaluate"><span class="header-section-number">2.8.3</span> Interpret and Evaluate</h3>
+<p>After completing the table, answer the following questions:</p>
+<ol type="1">
+<li>Which variables use numbers as labels rather than as measured quantities?</li>
+<li>For which variables would a mean be meaningful? Why?</li>
+<li>Could the same underlying concept be measured at different levels? Give one example.</li>
+<li>What information would you need before deciding how to classify <em>Day of Week</em> if an analyst wanted to study the passage of time?</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Review the classifications">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review the classifications
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 23%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: center;">Level</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Case ID</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">The values uniquely label reports but do not measure an amount.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Incident Type</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">The offense categories have no inherent order.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Neighborhood</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">The neighborhood names identify places without ranking them.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrest Made</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">Yes and no are categories without a quantitative order.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Officer Rating</td>
+<td style="text-align: center;">Ordinal</td>
+<td style="text-align: left;">Higher values represent better ratings, but equal spacing between ratings cannot be assumed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Estimated Damage</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Dollar amounts have equal intervals and a meaningful zero.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Response Time</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Minutes have equal intervals and zero represents no elapsed response time.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Day of Week</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">Used here, the values are named categories in a repeating weekly cycle rather than a lowest-to-highest ranking.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Temperature</td>
+<td style="text-align: center;">Interval</td>
+<td style="text-align: left;">Fahrenheit degrees have equal intervals, but 0°F is not an absence of temperature.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Victim Age</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Age has equal intervals and a meaningful conceptual zero.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Crime Severity Code</td>
+<td style="text-align: center;">Ordinal</td>
+<td style="text-align: left;">The codes rank severity, but the distance between categories is not known to be equal.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Officers on Scene</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">This is a count with equal intervals and a meaningful zero.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Investigation Duration</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Days measure elapsed time and have a meaningful zero.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Property Type</td>
+<td style="text-align: center;">Nominal</td>
+<td style="text-align: left;">The values identify categories without an inherent order.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Suspect Height</td>
+<td style="text-align: center;">Ratio</td>
+<td style="text-align: left;">Inches have equal intervals and a meaningful zero.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="project-connection-conduct-a-variable-audit" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="project-connection-conduct-a-variable-audit"><span class="header-section-number">2.9</span> Project Connection: Conduct a Variable Audit</h2>
+<p>Select three variables that you might use in your semester investigation. For each variable, record:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 20%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">What does it measure?</th>
+<th style="text-align: left;">How is it recorded?</th>
+<th style="text-align: left;">Level of measurement</th>
+<th style="text-align: left;">What comparisons are meaningful?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Then identify one measurement decision that could affect the conclusions you draw. For example, consider whether a concept has been reduced to broad categories, whether a numerical code is being mistaken for a quantity, or whether important information is missing from the measure.</p>
+</section>
+<section id="chapter-summary" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">2.10</span> Chapter Summary</h2>
+<ul>
+<li>Measurement assigns values to observations according to a rule.</li>
+<li>Nominal variables distinguish among categories without ordering them.</li>
+<li>Ordinal variables place categories in a meaningful order, but the spacing between categories is not necessarily equal.</li>
+<li>Interval variables have meaningful order and equal spacing, but they do not have a true zero.</li>
+<li>Ratio variables have meaningful order, equal spacing, and a true zero.</li>
+<li>A variable’s level of measurement depends on what its values represent, not on how those values are written or coded.</li>
+<li>Recognizing the level of measurement helps us select appropriate summaries, comparisons, visualizations, and statistical procedures.</li>
+</ul>
+</section>
+<section id="key-terms" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">2.11</span> Key Terms</h2>
+<ul>
+<li><strong>Interval variable:</strong> A variable with ordered values and equal intervals but no meaningful zero.</li>
+<li><strong>Level of measurement:</strong> The mathematical structure of a variable and the comparisons its values permit.</li>
+<li><strong>Measurement:</strong> The use of a rule to assign a value to an observation.</li>
+<li><strong>Nominal variable:</strong> A variable whose values identify categories without an inherent order.</li>
+<li><strong>Ordinal variable:</strong> A variable whose values identify categories with a meaningful order but without demonstrably equal spacing.</li>
+<li><strong>Ratio variable:</strong> A variable with ordered values, equal intervals, and a meaningful zero.</li>
+<li><strong>Variable:</strong> A characteristic that can take different values across observations.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-01-thinking-with-data.html" class="pagination-link" aria-label="Chapter Title">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter Title</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-03-frequency-distributions.html" class="pagination-link" aria-label="Organizing Data with Frequency Distributions">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Textbook for Statistical Analysis was written by Jacob T.N. Young.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

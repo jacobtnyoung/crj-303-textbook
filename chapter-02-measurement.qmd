@@ -1,0 +1,278 @@
+# Measuring Variables
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**How do we turn an idea into a variable that can be recorded and analyzed?**
+:::
+
+Criminal justice data describe people, incidents, places, organizations, and decisions. 
+A dataset might record the type of crime reported, the neighborhood where it occurred, the amount of property damage, or the time an officer took to respond. 
+Although all of these appear as columns in a dataset, they do not contain the same kind of information.
+
+Some variables place observations into categories.
+Others arrange observations in a meaningful order. 
+Still others record numerical amounts for which differences—or even ratios—have meaningful interpretations. 
+Recognizing these differences is an important first step in selecting an appropriate statistical analysis.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Explain what it means to measure a characteristic with a variable.
+2. Distinguish among nominal, ordinal, interval, and ratio levels of measurement.
+3. Justify the level of measurement assigned to a variable.
+4. Explain why the level of measurement affects the statistical summaries and comparisons we can make.
+
+## What Does It Mean to Measure Something?
+
+When we measure something, we use a rule to assign a value to an observation. 
+Consider an incident in a police-records system. 
+The system might assign that incident:
+
+- an incident type such as *burglary*;
+- a severity rating such as *high*;
+- a response time of *12 minutes*; and
+- an estimated property loss of *$800*.
+
+Each assigned value communicates information, but the information has a different structure. 
+*Burglary* is a category. 
+*High* indicates an ordered position. 
+*12 minutes* and *$800* represent measured quantities.
+
+The **level of measurement** describes the kinds of comparisons that the values of a variable permit. 
+The four commonly recognized levels are nominal, ordinal, interval, and ratio.
+
+::: {.callout-tip title="Ask these questions"}
+When determining a variable's level of measurement, ask:
+
+1. Are the values simply different categories?
+2. Can the values be placed in a meaningful order?
+3. Are the distances between values equal?
+4. Does zero represent the absence of the quantity?
+:::
+
+## The Four Levels of Measurement
+
+### Nominal: Categories Without an Order
+
+A **nominal** variable places observations into categories. 
+The categories are different from one another, but they do not have an inherent order.
+
+Examples include:
+
+- type of crime: assault, theft, or fraud;
+- neighborhood: Downtown, North End, or Eastside;
+- season: fall, winter, spring, or summer; and
+- arrest made: yes or no.
+
+We cannot say that fraud is *more than* assault or that Downtown is *higher than* the North End. 
+The labels identify different groups; they do not rank them.
+
+Numbers do not necessarily make a variable quantitative. 
+A police department might code burglary as `1`, robbery as `2`, and fraud as `3`. Those numbers are labels. 
+Fraud is not three times as much as burglary, and calculating their average would not be meaningful.
+
+::: {.callout-important title="The coding does not determine the measurement level"}
+A variable's level of measurement depends on what its values represent, **not** on whether the values happen to be written as words or numbers.
+:::
+
+### Ordinal: Categories With an Order
+
+An **ordinal** variable places observations into categories that have a meaningful order. 
+However, the distance between consecutive categories is not necessarily equal.
+
+Examples include:
+
+- trust in the police: poor, fair, good, or excellent;
+- crime severity: low, moderate, or high;
+- fear of crime: low, medium, or high; and
+- inmate security level: minimum, medium, or maximum.
+
+We know that *high* crime severity represents more severity than *low* crime severity. 
+We do not know that the difference between low and moderate is identical to the difference between moderate and high.
+
+A rating scale written with numbers can still be ordinal. 
+For example, suppose trust in the police is recorded from `1 = Poor` to `5 = Excellent`. 
+A score of 4 indicates more trust than a score of 2, but it does not necessarily indicate exactly twice as much trust.
+
+### Interval: Equal Distances Without a True Zero
+
+An **interval** variable has ordered numerical values with equal distances between them. 
+A one-unit change represents the same amount anywhere on the scale. However, zero does not represent the complete absence of the quantity.
+
+Temperature measured in degrees Fahrenheit is a familiar example. 
+The difference between 50°F and 60°F is the same as the difference between 70°F and 80°F: ten degrees. 
+However, 0°F does not represent the absence of temperature. 
+Because the zero point is arbitrary, ratios are not meaningful. 
+For example, 80°F is not twice the absolute temperature of 40°F, even though 80 is twice 40.
+
+Calendar year is another interval-level example. 
+The difference between 2000 and 2010 is ten years, just as the difference between 2010 and 2020 is ten years. 
+The year zero is a location on a calendar rather than the absence of time.
+
+### Ratio: Equal Distances and a True Zero
+
+A **ratio** variable has all the properties of an interval variable and also has a meaningful zero point. 
+Zero represents the absence of the quantity being measured, so ratio comparisons are meaningful.
+
+Examples include:
+
+- number of arrests;
+- incident response time in minutes;
+- property damage in dollars;
+- victim age;
+- sentence length in years; and
+- number of prior convictions.
+
+If one response took 20 minutes and another took 10 minutes, the first took twice as long. 
+If one neighborhood recorded 50 crimes and another recorded 25, the first recorded twice as many crimes. 
+These comparisons are possible because time and counts have meaningful zero points.
+
+## Comparing the Four Levels
+
+| Level | Categories differ | Values have an order | Equal intervals | Meaningful zero | Example |
+|:------|:------------------:|:--------------------:|:---------------:|:---------------:|:--------|
+| Nominal | Yes | No | No | No | Incident type |
+| Ordinal | Yes | Yes | No | No | Crime severity |
+| Interval | Yes | Yes | Yes | No | Temperature in °F |
+| Ratio | Yes | Yes | Yes | Yes | Response time |
+
+The levels build on one another. 
+Ordinal variables contain the distinction available in nominal variables and add order. 
+Interval variables add equal spacing. 
+Ratio variables add a meaningful zero.
+
+## Why the Level of Measurement Matters
+
+The level of measurement affects what we can reasonably do with a variable.
+
+- It helps determine which summaries and statistical procedures are appropriate.
+- It shapes how we describe differences between observations.
+- It tells us whether an average, distance, or ratio has a meaningful interpretation.
+- It prevents us from treating numerical labels as measured quantities.
+
+For example, the most common incident type may be useful, but the *average* incident type is not. 
+The median security level may communicate a meaningful ordered position, but saying that maximum security is three times minimum security would not. 
+A mean response time, by contrast, has a clear interpretation.
+
+::: {.callout-warning title="A common mistake"}
+Do not classify a variable solely by looking at its stored values. Always ask what those values represent.
+:::
+
+## Check Your Understanding
+
+Identify the level of measurement for each variable. Before checking the answers, explain what comparisons the values permit.
+
+| Variable | Level of measurement |
+|:---------|:---------------------|
+| Type of weapon used | ? |
+| Sentence length in years | ? |
+| Inmate security level: minimum, medium, maximum | ? |
+| Year of conviction | ? |
+| Number of prior convictions | ? |
+
+::: {.callout-note collapse="true" title="Check your answers"}
+- **Type of weapon used — nominal.** The values identify categories without ranking them.
+- **Sentence length — ratio.** The values have equal intervals and zero years represents no custodial sentence length.
+- **Inmate security level — ordinal.** The categories have a meaningful order, but the distance between levels is not measurable.
+- **Year of conviction — interval.** Differences between years are meaningful, but the calendar does not have a true zero representing the absence of time.
+- **Number of prior convictions — ratio.** This is a count with equal intervals and a meaningful zero.
+:::
+
+## Test Your Knowledge: Metrovale Crime Data
+
+### The Scenario
+
+The city of Metrovale has released a small dataset describing one week of police-reported incidents. 
+You are a data analyst with the **Metrovale Bureau of Justice Analytics (MBJA)**, and your first task is to determine how each piece of information is measured.
+
+Your supervisor reminds you that the level of measurement determines what kinds of statistical summaries and analyses can be used later.
+
+### Your Task
+
+For each variable:
+
+1. Identify its level of measurement.
+2. Briefly explain why that classification is appropriate.
+3. Base your explanation on what the values represent, not simply on whether they are written as numbers or words.
+
+| Variable | Description | Level | Explanation |
+|:---------|:------------|:-----:|:------------|
+| Case ID | Unique identifier for each police report |  |  |
+| Incident Type | Category of reported offense, such as burglary, fraud, or assault |  |  |
+| Neighborhood | Area of the city where the incident occurred |  |  |
+| Arrest Made | Whether an arrest was made: yes or no |  |  |
+| Officer Rating | Supervisor's rating of officer performance from 1 = Poor to 5 = Excellent |  |  |
+| Estimated Damage | Estimated property loss in dollars |  |  |
+| Response Time | Time from dispatch to officer arrival in minutes |  |  |
+| Day of Week | Day the incident occurred, Monday through Sunday |  |  |
+| Temperature | Outdoor temperature during the call in degrees Fahrenheit |  |  |
+| Victim Age | Age of the primary victim |  |  |
+| Crime Severity Code | Administrative code: 1 = Low, 2 = Moderate, 3 = High |  |  |
+| Officers on Scene | Number of responding officers |  |  |
+| Investigation Duration | Time from report to closure in days |  |  |
+| Property Type | Residential, commercial, vehicle, or other |  |  |
+| Suspect Height | Reported height of the primary suspect in inches |  |  |
+
+### Interpret and Evaluate
+
+After completing the table, answer the following questions:
+
+1. Which variables use numbers as labels rather than as measured quantities?
+2. For which variables would a mean be meaningful? Why?
+3. Could the same underlying concept be measured at different levels? Give one example.
+4. What information would you need before deciding how to classify *Day of Week* if an analyst wanted to study the passage of time?
+
+::: {.callout-note collapse="true" title="Review the classifications"}
+| Variable | Level | Explanation |
+|:---------|:-----:|:------------|
+| Case ID | Nominal | The values uniquely label reports but do not measure an amount. |
+| Incident Type | Nominal | The offense categories have no inherent order. |
+| Neighborhood | Nominal | The neighborhood names identify places without ranking them. |
+| Arrest Made | Nominal | Yes and no are categories without a quantitative order. |
+| Officer Rating | Ordinal | Higher values represent better ratings, but equal spacing between ratings cannot be assumed. |
+| Estimated Damage | Ratio | Dollar amounts have equal intervals and a meaningful zero. |
+| Response Time | Ratio | Minutes have equal intervals and zero represents no elapsed response time. |
+| Day of Week | Nominal | Used here, the values are named categories in a repeating weekly cycle rather than a lowest-to-highest ranking. |
+| Temperature | Interval | Fahrenheit degrees have equal intervals, but 0°F is not an absence of temperature. |
+| Victim Age | Ratio | Age has equal intervals and a meaningful conceptual zero. |
+| Crime Severity Code | Ordinal | The codes rank severity, but the distance between categories is not known to be equal. |
+| Officers on Scene | Ratio | This is a count with equal intervals and a meaningful zero. |
+| Investigation Duration | Ratio | Days measure elapsed time and have a meaningful zero. |
+| Property Type | Nominal | The values identify categories without an inherent order. |
+| Suspect Height | Ratio | Inches have equal intervals and a meaningful zero. |
+:::
+
+## Project Connection: Conduct a Variable Audit
+
+Select three variables that you might use in your semester investigation. For each variable, record:
+
+| Variable | What does it measure? | How is it recorded? | Level of measurement | What comparisons are meaningful? |
+|:---------|:----------------------|:--------------------|:---------------------|:---------------------------------|
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+
+Then identify one measurement decision that could affect the conclusions you draw. 
+For example, consider whether a concept has been reduced to broad categories, whether a numerical code is being mistaken for a quantity, or whether important information is missing from the measure.
+
+## Chapter Summary
+
+- Measurement assigns values to observations according to a rule.
+- Nominal variables distinguish among categories without ordering them.
+- Ordinal variables place categories in a meaningful order, but the spacing between categories is not necessarily equal.
+- Interval variables have meaningful order and equal spacing, but they do not have a true zero.
+- Ratio variables have meaningful order, equal spacing, and a true zero.
+- A variable's level of measurement depends on what its values represent, not on how those values are written or coded.
+- Recognizing the level of measurement helps us select appropriate summaries, comparisons, visualizations, and statistical procedures.
+
+## Key Terms
+
+- **Interval variable:** A variable with ordered values and equal intervals but no meaningful zero.
+- **Level of measurement:** The mathematical structure of a variable and the comparisons its values permit.
+- **Measurement:** The use of a rule to assign a value to an observation.
+- **Nominal variable:** A variable whose values identify categories without an inherent order.
+- **Ordinal variable:** A variable whose values identify categories with a meaningful order but without demonstrably equal spacing.
+- **Ratio variable:** A variable with ordered values, equal intervals, and a meaningful zero.
+- **Variable:** A characteristic that can take different values across observations.
