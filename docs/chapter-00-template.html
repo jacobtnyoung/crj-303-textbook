@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jacob T.N. Young">
 
-<title>4&nbsp; Chapter Title – Textbook for Statistical Analysis</title>
+<title>6&nbsp; Chapter Title – Textbook for Statistical Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./part-02-inference.html" rel="next">
-<link href="./chapter-03-frequency-distributions.html" rel="prev">
+<link href="./chapter-05-central-tendency.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-00-template.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-00-template.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,8 +156,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./chapter-04-visualizing-categorical-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Visualizing Categorical Data with Bar Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-05-central-tendency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Describing the Typical Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
   </div>
 </li>
       </ul>
@@ -174,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
   </div>
 </li>
       </ul>
@@ -191,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-00-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
   </div>
 </li>
       </ul>
@@ -206,31 +218,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">4.1</span> The Question</a></li>
-  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">4.2</span> What You Will Learn</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters"><span class="header-section-number">4.3</span> Why This Matters</a></li>
-  <li><a href="#core-concept" id="toc-core-concept" class="nav-link" data-scroll-target="#core-concept"><span class="header-section-number">4.4</span> Core Concept</a></li>
-  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example"><span class="header-section-number">4.5</span> Worked Example</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">4.6</span> Check Your Understanding</a></li>
-  <li><a href="#interactive-exploration" id="toc-interactive-exploration" class="nav-link" data-scroll-target="#interactive-exploration"><span class="header-section-number">4.7</span> Interactive Exploration</a></li>
-  <li><a href="#test-your-knowledge-activity-title" id="toc-test-your-knowledge-activity-title" class="nav-link" data-scroll-target="#test-your-knowledge-activity-title"><span class="header-section-number">4.8</span> Test Your Knowledge: Activity Title</a>
+  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">6.1</span> The Question</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">6.2</span> What You Will Learn</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters"><span class="header-section-number">6.3</span> Why This Matters</a></li>
+  <li><a href="#core-concept" id="toc-core-concept" class="nav-link" data-scroll-target="#core-concept"><span class="header-section-number">6.4</span> Core Concept</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example"><span class="header-section-number">6.5</span> Worked Example</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">6.6</span> Check Your Understanding</a></li>
+  <li><a href="#interactive-exploration" id="toc-interactive-exploration" class="nav-link" data-scroll-target="#interactive-exploration"><span class="header-section-number">6.7</span> Interactive Exploration</a></li>
+  <li><a href="#test-your-knowledge-activity-title" id="toc-test-your-knowledge-activity-title" class="nav-link" data-scroll-target="#test-your-knowledge-activity-title"><span class="header-section-number">6.8</span> Test Your Knowledge: Activity Title</a>
   <ul class="collapse">
-  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">4.8.1</span> The Scenario</a></li>
-  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task"><span class="header-section-number">4.8.2</span> Your Task</a></li>
+  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">6.8.1</span> The Scenario</a></li>
+  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task"><span class="header-section-number">6.8.2</span> Your Task</a></li>
   </ul></li>
-  <li><a href="#data-investigation" id="toc-data-investigation" class="nav-link" data-scroll-target="#data-investigation"><span class="header-section-number">4.9</span> Data Investigation</a></li>
-  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection"><span class="header-section-number">4.10</span> Project Connection</a></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">4.11</span> Chapter Summary</a></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">4.12</span> Key Terms</a></li>
+  <li><a href="#data-investigation" id="toc-data-investigation" class="nav-link" data-scroll-target="#data-investigation"><span class="header-section-number">6.9</span> Data Investigation</a></li>
+  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection"><span class="header-section-number">6.10</span> Project Connection</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">6.11</span> Chapter Summary</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">6.12</span> Key Terms</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-00-template.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-01-describing-data.html">Chapter Title</a></li><li class="breadcrumb-item"><a href="./chapter-00-template.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter Title</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter Title</span></h1>
 </div>
 
 
@@ -247,8 +259,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-question" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">4.1</span> The Question</h2>
+<section id="the-question" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">6.1</span> The Question</h2>
 <div class="callout callout-style-simple callout-note callout-titled" title="Central question">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -264,8 +276,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Write a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.</p>
 </section>
-<section id="what-you-will-learn" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="what-you-will-learn"><span class="header-section-number">4.2</span> What You Will Learn</h2>
+<section id="what-you-will-learn" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="what-you-will-learn"><span class="header-section-number">6.2</span> What You Will Learn</h2>
 <p>After completing this chapter, you should be able to:</p>
 <ol type="1">
 <li>Objective one.</li>
@@ -273,12 +285,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Objective three.</li>
 </ol>
 </section>
-<section id="why-this-matters" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="why-this-matters"><span class="header-section-number">4.3</span> Why This Matters</h2>
+<section id="why-this-matters" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="why-this-matters"><span class="header-section-number">6.3</span> Why This Matters</h2>
 <p>Connect the concept to criminal justice research, policy, professional practice, or public claims.</p>
 </section>
-<section id="core-concept" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="core-concept"><span class="header-section-number">4.4</span> Core Concept</h2>
+<section id="core-concept" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="core-concept"><span class="header-section-number">6.4</span> Core Concept</h2>
 <p>Develop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.</p>
 <div class="callout callout-style-simple callout-tip callout-titled" title="Helpful reasoning strategy">
 <div class="callout-header d-flex align-content-center">
@@ -320,8 +332,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="worked-example" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="worked-example"><span class="header-section-number">4.5</span> Worked Example</h2>
+<section id="worked-example" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="worked-example"><span class="header-section-number">6.5</span> Worked Example</h2>
 <ol type="1">
 <li>State the question.</li>
 <li>Identify the cases and variables.</li>
@@ -331,8 +343,8 @@ ul.task-list li input[type="checkbox"] {
 <li>State what cannot be concluded.</li>
 </ol>
 </section>
-<section id="check-your-understanding" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">4.6</span> Check Your Understanding</h2>
+<section id="check-your-understanding" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">6.6</span> Check Your Understanding</h2>
 <p>Insert a short, embedded comprehension check.</p>
 <div class="callout callout-style-simple callout-note callout-titled" title="Check your answer">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -351,8 +363,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="interactive-exploration" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="interactive-exploration"><span class="header-section-number">4.7</span> Interactive Exploration</h2>
+<section id="interactive-exploration" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="interactive-exploration"><span class="header-section-number">6.7</span> Interactive Exploration</h2>
 <p>When an interactive activity materially improves understanding, ask students to:</p>
 <ol type="1">
 <li><strong>Predict</strong> what will happen.</li>
@@ -363,14 +375,14 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Include a static explanation or illustration so the central lesson does not depend entirely on the external application.</p>
 </section>
-<section id="test-your-knowledge-activity-title" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="test-your-knowledge-activity-title"><span class="header-section-number">4.8</span> Test Your Knowledge: Activity Title</h2>
-<section id="the-scenario" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="the-scenario"><span class="header-section-number">4.8.1</span> The Scenario</h3>
+<section id="test-your-knowledge-activity-title" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="test-your-knowledge-activity-title"><span class="header-section-number">6.8</span> Test Your Knowledge: Activity Title</h2>
+<section id="the-scenario" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="the-scenario"><span class="header-section-number">6.8.1</span> The Scenario</h3>
 <p>Introduce a self-contained criminal justice scenario, dataset, table, or visualization.</p>
 </section>
-<section id="your-task" class="level3" data-number="4.8.2">
-<h3 data-number="4.8.2" class="anchored" data-anchor-id="your-task"><span class="header-section-number">4.8.2</span> Your Task</h3>
+<section id="your-task" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="your-task"><span class="header-section-number">6.8.2</span> Your Task</h3>
 <p>Include questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.</p>
 <div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -390,24 +402,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </section>
-<section id="data-investigation" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="data-investigation"><span class="header-section-number">4.9</span> Data Investigation</h2>
+<section id="data-investigation" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="data-investigation"><span class="header-section-number">6.9</span> Data Investigation</h2>
 <p>Connect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.</p>
 </section>
-<section id="project-connection" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="project-connection"><span class="header-section-number">4.10</span> Project Connection</h2>
+<section id="project-connection" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="project-connection"><span class="header-section-number">6.10</span> Project Connection</h2>
 <p>Add a small task that advances the semester investigation.</p>
 </section>
-<section id="chapter-summary" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">4.11</span> Chapter Summary</h2>
+<section id="chapter-summary" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">6.11</span> Chapter Summary</h2>
 <ul>
 <li>Summarize the first central idea.</li>
 <li>Summarize the second central idea.</li>
 <li>Summarize the third central idea.</li>
 </ul>
 </section>
-<section id="key-terms" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">4.12</span> Key Terms</h2>
+<section id="key-terms" class="level2" data-number="6.12">
+<h2 data-number="6.12" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">6.12</span> Key Terms</h2>
 <ul>
 <li><strong>Term:</strong> Concise definition.</li>
 </ul>
@@ -818,8 +830,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter-03-frequency-distributions.html" class="pagination-link" aria-label="Organizing Data with Frequency Distributions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span>
+      <a href="./chapter-05-central-tendency.html" class="pagination-link" aria-label="Describing the Typical Case">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Describing the Typical Case</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

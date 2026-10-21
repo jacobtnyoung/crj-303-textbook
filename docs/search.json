@@ -474,7 +474,7 @@
     "href": "chapter-03-frequency-distributions.html#proportion-and-percentage",
     "title": "3  Organizing Data with Frequency Distributions",
     "section": "3.5 Proportion and Percentage",
-    "text": "3.5 Proportion and Percentage\nA proportion, written as \\(p\\), is the share of all observations that falls into a particular category. It is calculated by dividing a category’s frequency by the total number of observations:\n\\[\np = \\frac{f}{N}\n\\]\nFor this chapter, \\(N\\) represents the total number of cases in the dataset. Later, when we distinguish samples from populations, we will use \\(n\\) for sample size and \\(N\\) for population size.\n\n\n\nResponse\n\\(f\\)\nCalculation\n\\(p\\)\n\n\n\n\n1\n1\n\\(1/10\\)\n0.10\n\n\n2\n3\n\\(3/10\\)\n0.30\n\n\n3\n4\n\\(4/10\\)\n0.40\n\n\n4\n2\n\\(2/10\\)\n0.20\n\n\nTotal\n10\n\n1.00\n\n\n\nA percentage expresses the same share out of 100:\n\\[\n\\text{Percentage} = p \\times 100\n\\]\nThus, a proportion of 0.40 is equivalent to 40%. In this survey, 60% of respondents selected either Support or Strongly support.\n\n\n\n\n\n\nTipCheck the proportion or percentage total\n\n\n\nProportions should add to 1.00, and percentages should add to 100%. Small differences can occur when values have been rounded.",
+    "text": "3.5 Proportion and Percentage\nA proportion, written as \\(p\\), is the share of all observations that falls into a particular category. It is calculated by dividing a category’s frequency by the total number of observations:\n\\[\np = \\frac{f}{N}\n\\]\nFor this chapter, \\(N\\) represents the total number of cases in the dataset. Later, when we distinguish samples from populations, we will use \\(n\\) for sample size and \\(N\\) for population size.\n\n\n\nResponse\n\\(f\\)\nCalculation\n\\(p\\)\n\n\n\n\n1\n1\n\\(1/10\\)\n0.10\n\n\n2\n3\n\\(3/10\\)\n0.30\n\n\n3\n4\n\\(4/10\\)\n0.40\n\n\n4\n2\n\\(2/10\\)\n0.20\n\n\nTotal\n10\n\n1.00\n\n\n\nA percentage expresses the same share out of 100:\n\\[\n\\text{Percentage} = p \\times 100\n\\]\nThus, a proportion of 0.40 is equivalent to 40%. In this survey, 60% of respondents selected either Support or Strongly support.\n\n\n\n\n\n\nTipCheck the proportion or percentage total\n\n\n\nProportions should add to 1.00, and percentages should add to 100%. But, keep in mind that small differences can occur when values have been rounded.",
     "crumbs": [
       "Chapter Title",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Organizing Data with Frequency Distributions</span>"
@@ -485,7 +485,7 @@
     "href": "chapter-03-frequency-distributions.html#cumulative-frequency-and-cumulative-proportion",
     "title": "3  Organizing Data with Frequency Distributions",
     "section": "3.6 Cumulative Frequency and Cumulative Proportion",
-    "text": "3.6 Cumulative Frequency and Cumulative Proportion\nWhen a variable’s categories have a meaningful order, we can calculate running totals.\nThe cumulative frequency, written here as \\(cf\\), is the number of observations at or below a particular category. The cumulative proportion, written as \\(cp\\), is the corresponding running share of observations.\n\n\n\nResponse\n\\(f\\)\n\\(p\\)\n\\(cf\\)\n\\(cp\\)\nCumulative percentage\n\n\n\n\n1\n1\n0.10\n1\n0.10\n10%\n\n\n2\n3\n0.30\n4\n0.40\n40%\n\n\n3\n4\n0.40\n8\n0.80\n80%\n\n\n4\n2\n0.20\n10\n1.00\n100%\n\n\n\nThe second row tells us that four respondents—or 40% of the group—selected either Strongly oppose or Oppose. The third row tells us that eight respondents—or 80%—selected Support or a lower response.\n\n\n\n\n\n\nWarningCumulative summaries require an order\n\n\n\nCumulative frequency and cumulative proportion are meaningful only when the values can be arranged from lower to higher. They are appropriate for ordinal, interval, and ratio variables. They are generally not meaningful for nominal variables such as neighborhood or incident type, because changing the arbitrary category order would change the cumulative totals.",
+    "text": "3.6 Cumulative Frequency and Cumulative Proportion\nWhen a variable’s categories have a meaningful order, we can calculate running totals.\nThe cumulative frequency, written here as \\(cf\\), is the number of observations at or below a particular category. The cumulative proportion, written as \\(cp\\), is the corresponding running share of observations.\n\n\n\nResponse\n\\(f\\)\n\\(p\\)\n\\(cf\\)\n\\(cp\\)\nCumulative percentage\n\n\n\n\n1\n1\n0.10\n1\n0.10\n10%\n\n\n2\n3\n0.30\n4\n0.40\n40%\n\n\n3\n4\n0.40\n8\n0.80\n80%\n\n\n4\n2\n0.20\n10\n1.00\n100%\n\n\n\nThe second row tells us that four respondents, or 40% of the group, selected either Strongly oppose or Oppose. The third row tells us that eight respondents, or 80%, selected Support or a lower response.\n\n\n\n\n\n\nWarningCumulative summaries require an order\n\n\n\nCumulative frequency and cumulative proportion are meaningful only when the values can be arranged from lower to higher. They are appropriate for ordinal, interval, and ratio variables. They are generally not meaningful for nominal variables such as neighborhood or incident type, because changing the arbitrary category order would change the cumulative totals.",
     "crumbs": [
       "Chapter Title",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Organizing Data with Frequency Distributions</span>"
@@ -518,7 +518,7 @@
     "href": "chapter-03-frequency-distributions.html#test-your-knowledge-neighborhood-safety-survey",
     "title": "3  Organizing Data with Frequency Distributions",
     "section": "3.9 Test Your Knowledge: Neighborhood Safety Survey",
-    "text": "3.9 Test Your Knowledge: Neighborhood Safety Survey\n\n3.9.1 The Scenario\nA local criminology research group surveyed 20 residents about their experiences and perceptions of neighborhood safety. The researchers recorded the following variables:\n\nSex: Recorded as male or female.\nFear of Crime: 1 = Not at all afraid, 2 = A little afraid, 3 = Somewhat afraid, and 4 = Very afraid.\nAge: Measured in years.\nCalls to Police: Number of calls to the police for service.\nVictim of Crime: Whether the respondent had been a victim of crime, recorded as yes or no.\nPerceived Neighborhood Safety: 1 = Very unsafe, 2 = Somewhat unsafe, 3 = Somewhat safe, and 4 = Very safe.\n\nThe raw data are shown below.\n\n\n\n\n\n\n\n\n\n\n\n\n\nID\nSex\nFear of Crime\nAge\nCalls to Police\nVictim of Crime\nPerceived Neighborhood Safety\n\n\n\n\n1\nM\n1\n20\n0\nNo\n4\n\n\n2\nF\n2\n22\n0\nNo\n3\n\n\n3\nF\n2\n24\n1\nNo\n3\n\n\n4\nM\n3\n26\n1\nYes\n2\n\n\n5\nM\n3\n28\n2\nYes\n2\n\n\n6\nF\n3\n30\n2\nNo\n3\n\n\n7\nF\n4\n32\n2\nNo\n4\n\n\n8\nM\n4\n34\n3\nNo\n4\n\n\n9\nF\n4\n36\n3\nYes\n4\n\n\n10\nM\n4\n38\n3\nNo\n4\n\n\n11\nM\n1\n40\n0\nNo\n4\n\n\n12\nF\n2\n42\n0\nNo\n3\n\n\n13\nF\n2\n44\n1\nYes\n3\n\n\n14\nM\n3\n46\n1\nNo\n2\n\n\n15\nM\n3\n48\n1\nNo\n2\n\n\n16\nF\n3\n50\n2\nNo\n3\n\n\n17\nF\n4\n52\n2\nYes\n4\n\n\n18\nM\n4\n54\n3\nNo\n4\n\n\n19\nF\n1\n56\n0\nNo\n4\n\n\n20\nM\n2\n58\n0\nYes\n3\n\n\n\n\n\n\n3.9.2 Part 1: Identify the Levels of Measurement\nFor each variable, identify its level of measurement and briefly justify your classification.\n\n\n\nVariable\nLevel of measurement\nWhy?\n\n\n\n\nSex\n\n\n\n\nFear of Crime\n\n\n\n\nAge\n\n\n\n\nCalls to Police\n\n\n\n\nVictim of Crime\n\n\n\n\nPerceived Neighborhood Safety\n\n\n\n\n\n\n\n3.9.3 Part 2: Construct Frequency Distributions\nSelect two variables and construct a frequency table for each. Your selections must include at least one variable with meaningfully ordered values.\nFor each selected variable:\n\nList every possible value or category.\nCalculate the frequency and proportion.\nConvert each proportion into a percentage.\nIf the variable is ordered, calculate its cumulative frequency and cumulative proportion.\nIf the variable is nominal, explain why a cumulative summary is not appropriate.\n\nYou may adapt the following table. Omit the cumulative columns when they are not meaningful.\n\n\n\nValue or category\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\n3.9.4 Part 3: Interpret and Evaluate\nAnswer the following questions using your tables:\n\nWhat is the most common value or category for each selected variable?\nWhat does one proportion or percentage from each table tell us about the surveyed residents?\nIf you calculated a cumulative proportion, interpret one of its values in words.\nWhat can these data tell us about the 20 surveyed residents?\nWhat additional information would you need before generalizing the results to all residents of the neighborhood?\n\n\n\n\n\n\n\nNoteReview the levels of measurement\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nLevel\nExplanation\n\n\n\n\nSex\nNominal\nThe values identify categories without an inherent order.\n\n\nFear of Crime\nOrdinal\nThe categories range from less to more fear, but equal spacing between responses cannot be assumed.\n\n\nAge\nRatio\nAge in years has equal intervals and a meaningful conceptual zero.\n\n\nCalls to Police\nRatio\nThis is a count with equal intervals and a meaningful zero.\n\n\nVictim of Crime\nNominal\nYes and no identify categories without a quantitative order.\n\n\nPerceived Neighborhood Safety\nOrdinal\nThe categories range from less to more safety, but their spacing is not known to be equal.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteReview two example frequency distributions\n\n\n\n\n\nOne possible pair is Fear of Crime and Calls to Police.\nFear of Crime\n\n\n\nResponse\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n1\n3\n0.15\n15%\n3\n0.15\n\n\n2\n5\n0.25\n25%\n8\n0.40\n\n\n3\n6\n0.30\n30%\n14\n0.70\n\n\n4\n6\n0.30\n30%\n20\n1.00\n\n\nTotal\n20\n1.00\n100%\n\n\n\n\n\nFor example, the cumulative proportion of 0.40 for response 2 means that 40% of respondents reported being Not at all afraid or A little afraid.\nCalls to Police\n\n\n\nCalls\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n0\n6\n0.30\n30%\n6\n0.30\n\n\n1\n5\n0.25\n25%\n11\n0.55\n\n\n2\n5\n0.25\n25%\n16\n0.80\n\n\n3\n4\n0.20\n20%\n20\n1.00\n\n\nTotal\n20\n1.00\n100%\n\n\n\n\n\nFor example, the cumulative proportion of 0.80 for two calls means that 80% of respondents made two or fewer calls to police.",
+    "text": "3.9 Test Your Knowledge: Neighborhood Safety Survey\n\n3.9.1 The Scenario\nA local criminology research group surveyed 20 residents about their experiences and perceptions of neighborhood safety. The researchers recorded the following variables:\n\nSex: Recorded as male or female.\nFear of Crime: 1 = Not at all afraid, 2 = A little afraid, 3 = Somewhat afraid, and 4 = Very afraid.\nAge: Measured in years.\nCalls to Police: Number of calls to the police for service.\nVictim of Crime: Whether the respondent had been a victim of crime, recorded as yes or no.\nPerceived Neighborhood Safety: 1 = Very unsafe, 2 = Somewhat unsafe, 3 = Somewhat safe, and 4 = Very safe.\n\nThe raw data are shown below.\n\n\n\n\n\n\n\n\n\n\n\n\n\nID\nSex\nFear of Crime\nAge\nCalls to Police\nVictim of Crime\nPerceived Neighborhood Safety\n\n\n\n\n1\nM\n1\n20\n0\nNo\n4\n\n\n2\nF\n2\n22\n0\nNo\n3\n\n\n3\nF\n2\n24\n1\nNo\n3\n\n\n4\nM\n3\n26\n1\nYes\n2\n\n\n5\nM\n3\n28\n2\nYes\n2\n\n\n6\nF\n3\n30\n2\nNo\n3\n\n\n7\nF\n4\n32\n2\nNo\n4\n\n\n8\nM\n4\n34\n3\nNo\n4\n\n\n9\nF\n4\n36\n3\nYes\n4\n\n\n10\nM\n4\n38\n3\nNo\n4\n\n\n11\nM\n1\n40\n0\nNo\n4\n\n\n12\nF\n2\n42\n0\nNo\n3\n\n\n13\nF\n2\n44\n1\nYes\n3\n\n\n14\nM\n3\n46\n1\nNo\n2\n\n\n15\nM\n3\n48\n1\nNo\n2\n\n\n16\nF\n3\n50\n2\nNo\n3\n\n\n17\nF\n4\n52\n2\nYes\n4\n\n\n18\nM\n4\n54\n3\nNo\n4\n\n\n19\nF\n1\n56\n0\nNo\n4\n\n\n20\nM\n2\n58\n0\nYes\n3\n\n\n\n\n\n\n3.9.2 Part 1: Identify the Levels of Measurement\nFor each variable, identify its level of measurement and briefly justify your classification.\n\n\n\nVariable\nLevel of measurement\nWhy?\n\n\n\n\nSex\n\n\n\n\nFear of Crime\n\n\n\n\nAge\n\n\n\n\nCalls to Police\n\n\n\n\nVictim of Crime\n\n\n\n\nPerceived Neighborhood Safety\n\n\n\n\n\n\n\n3.9.3 Part 2: Construct Frequency Distributions\nSelect two variables and construct a frequency table for each.\nFor each selected variable:\n\nList every possible value or category.\nCalculate the frequency and proportion.\nConvert each proportion into a percentage.\nIf the variable is ordered, calculate its cumulative frequency and cumulative proportion.\nIf the variable is nominal, explain why a cumulative summary is not appropriate.\n\nYou may adapt the following table. Omit the cumulative columns when they are not meaningful.\n\n\n\nValue or category\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\n3.9.4 Part 3: Interpret and Evaluate\nAnswer the following questions using your tables:\n\nWhat is the most common value or category for each selected variable?\nWhat does one proportion or percentage from each table tell us about the surveyed residents?\nIf you calculated a cumulative proportion, interpret one of its values in words.\nWhat can these data tell us about the 20 surveyed residents?\nWhat additional information would you need before generalizing the results to all residents of the neighborhood?\n\n\n\n\n\n\n\nNoteReview the levels of measurement\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nLevel\nExplanation\n\n\n\n\nSex\nNominal\nThe values identify categories without an inherent order.\n\n\nFear of Crime\nOrdinal\nThe categories range from less to more fear, but equal spacing between responses cannot be assumed.\n\n\nAge\nRatio\nAge in years has equal intervals and a meaningful conceptual zero.\n\n\nCalls to Police\nRatio\nThis is a count with equal intervals and a meaningful zero.\n\n\nVictim of Crime\nNominal\nYes and no identify categories without a quantitative order.\n\n\nPerceived Neighborhood Safety\nOrdinal\nThe categories range from less to more safety, but their spacing is not known to be equal.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteReview two example frequency distributions\n\n\n\n\n\nOne possible pair is Fear of Crime and Calls to Police.\nFear of Crime\n\n\n\nResponse\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n1\n3\n0.15\n15%\n3\n0.15\n\n\n2\n5\n0.25\n25%\n8\n0.40\n\n\n3\n6\n0.30\n30%\n14\n0.70\n\n\n4\n6\n0.30\n30%\n20\n1.00\n\n\nTotal\n20\n1.00\n100%\n\n\n\n\n\nFor example, the cumulative proportion of 0.40 for response 2 means that 40% of respondents reported being Not at all afraid or A little afraid.\nCalls to Police\n\n\n\nCalls\n\\(f\\)\n\\(p\\)\nPercentage\n\\(cf\\)\n\\(cp\\)\n\n\n\n\n0\n6\n0.30\n30%\n6\n0.30\n\n\n1\n5\n0.25\n25%\n11\n0.55\n\n\n2\n5\n0.25\n25%\n16\n0.80\n\n\n3\n4\n0.20\n20%\n20\n1.00\n\n\nTotal\n20\n1.00\n100%\n\n\n\n\n\nFor example, the cumulative proportion of 0.80 for two calls means that 80% of respondents made two or fewer calls to police.",
     "crumbs": [
       "Chapter Title",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Organizing Data with Frequency Distributions</span>"
@@ -540,7 +540,7 @@
     "href": "chapter-03-frequency-distributions.html#chapter-summary",
     "title": "3  Organizing Data with Frequency Distributions",
     "section": "3.11 Chapter Summary",
-    "text": "3.11 Chapter Summary\n\nRaw data display individual observations, while a frequency distribution organizes values into a summary.\nA frequency is the number of observations with a particular value.\nA proportion is a frequency divided by the total number of observations; a percentage expresses that proportion out of 100.\nCumulative frequency is a running count, while cumulative proportion is a running share.\nCumulative summaries are meaningful only when a variable’s values have a meaningful order.\nA useful frequency table should do more than present numbers: it should help answer a substantive question.",
+    "text": "3.11 Chapter Summary\n\nRaw data display individual observations, while a frequency distribution organizes values into a summary.\nA frequency is the number of observations with a particular value.\nA proportion is a frequency divided by the total number of observations, while a percentage expresses that proportion out of 100.\nCumulative frequency is a running count, while cumulative proportion is a running share.\nCumulative summaries are meaningful only when a variable’s values have a meaningful order.\nA useful frequency table should do more than present numbers: it should help answer a substantive question.",
     "crumbs": [
       "Chapter Title",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Organizing Data with Frequency Distributions</span>"
@@ -560,144 +560,144 @@
   {
     "objectID": "chapter-00-template.html",
     "href": "chapter-00-template.html",
-    "title": "4  Chapter Title",
+    "title": "6  Chapter Title",
     "section": "",
-    "text": "4.1 The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
+    "text": "6.1 The Question\nWrite a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#the-question",
     "href": "chapter-00-template.html#the-question",
-    "title": "4  Chapter Title",
+    "title": "6  Chapter Title",
     "section": "",
     "text": "NoteCentral question\n\n\n\nInsert the central question for the chapter.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#what-you-will-learn",
     "href": "chapter-00-template.html#what-you-will-learn",
-    "title": "4  Chapter Title",
-    "section": "4.2 What You Will Learn",
-    "text": "4.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
+    "title": "6  Chapter Title",
+    "section": "6.2 What You Will Learn",
+    "text": "6.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nObjective one.\nObjective two.\nObjective three.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#why-this-matters",
     "href": "chapter-00-template.html#why-this-matters",
-    "title": "4  Chapter Title",
-    "section": "4.3 Why This Matters",
-    "text": "4.3 Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
+    "title": "6  Chapter Title",
+    "section": "6.3 Why This Matters",
+    "text": "6.3 Why This Matters\nConnect the concept to criminal justice research, policy, professional practice, or public claims.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#core-concept",
     "href": "chapter-00-template.html#core-concept",
-    "title": "4  Chapter Title",
-    "section": "4.4 Core Concept",
-    "text": "4.4 Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
+    "title": "6  Chapter Title",
+    "section": "6.4 Core Concept",
+    "text": "6.4 Core Concept\nDevelop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.\n\n\n\n\n\n\nTipHelpful reasoning strategy\n\n\n\nUse a tip callout for a reusable strategy or decision rule.\n\n\n\n\n\n\n\n\nImportantImportant distinction\n\n\n\nUse an important callout for a distinction students must understand.\n\n\n\n\n\n\n\n\nWarningA common mistake\n\n\n\nUse a warning callout for a common misconception or interpretation error.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#worked-example",
     "href": "chapter-00-template.html#worked-example",
-    "title": "4  Chapter Title",
-    "section": "4.5 Worked Example",
-    "text": "4.5 Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
+    "title": "6  Chapter Title",
+    "section": "6.5 Worked Example",
+    "text": "6.5 Worked Example\n\nState the question.\nIdentify the cases and variables.\nSelect and justify the method.\nPresent the result.\nInterpret the result in context.\nState what cannot be concluded.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#check-your-understanding",
     "href": "chapter-00-template.html#check-your-understanding",
-    "title": "4  Chapter Title",
-    "section": "4.6 Check Your Understanding",
-    "text": "4.6 Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
+    "title": "6  Chapter Title",
+    "section": "6.6 Check Your Understanding",
+    "text": "6.6 Check Your Understanding\nInsert a short, embedded comprehension check.\n\n\n\n\n\n\nNoteCheck your answer\n\n\n\n\n\nProvide the answer and a brief explanation.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#interactive-exploration",
     "href": "chapter-00-template.html#interactive-exploration",
-    "title": "4  Chapter Title",
-    "section": "4.7 Interactive Exploration",
-    "text": "4.7 Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
+    "title": "6  Chapter Title",
+    "section": "6.7 Interactive Exploration",
+    "text": "6.7 Interactive Exploration\nWhen an interactive activity materially improves understanding, ask students to:\n\nPredict what will happen.\nManipulate an input.\nObserve the result.\nExplain why it occurred.\nReset and test another prediction.\n\nInclude a static explanation or illustration so the central lesson does not depend entirely on the external application.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#test-your-knowledge-activity-title",
     "href": "chapter-00-template.html#test-your-knowledge-activity-title",
-    "title": "4  Chapter Title",
-    "section": "4.8 Test Your Knowledge: Activity Title",
-    "text": "4.8 Test Your Knowledge: Activity Title\n\n4.8.1 The Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\n4.8.2 Your Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
+    "title": "6  Chapter Title",
+    "section": "6.8 Test Your Knowledge: Activity Title",
+    "text": "6.8 Test Your Knowledge: Activity Title\n\n6.8.1 The Scenario\nIntroduce a self-contained criminal justice scenario, dataset, table, or visualization.\n\n\n6.8.2 Your Task\nInclude questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nProvide answers with enough reasoning for students to diagnose misunderstandings.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#data-investigation",
     "href": "chapter-00-template.html#data-investigation",
-    "title": "4  Chapter Title",
-    "section": "4.9 Data Investigation",
-    "text": "4.9 Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
+    "title": "6  Chapter Title",
+    "section": "6.9 Data Investigation",
+    "text": "6.9 Data Investigation\nConnect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#project-connection",
     "href": "chapter-00-template.html#project-connection",
-    "title": "4  Chapter Title",
-    "section": "4.10 Project Connection",
-    "text": "4.10 Project Connection\nAdd a small task that advances the semester investigation.",
+    "title": "6  Chapter Title",
+    "section": "6.10 Project Connection",
+    "text": "6.10 Project Connection\nAdd a small task that advances the semester investigation.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#chapter-summary",
     "href": "chapter-00-template.html#chapter-summary",
-    "title": "4  Chapter Title",
-    "section": "4.11 Chapter Summary",
-    "text": "4.11 Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
+    "title": "6  Chapter Title",
+    "section": "6.11 Chapter Summary",
+    "text": "6.11 Chapter Summary\n\nSummarize the first central idea.\nSummarize the second central idea.\nSummarize the third central idea.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
     "objectID": "chapter-00-template.html#key-terms",
     "href": "chapter-00-template.html#key-terms",
-    "title": "4  Chapter Title",
-    "section": "4.12 Key Terms",
-    "text": "4.12 Key Terms\n\nTerm: Concise definition.",
+    "title": "6  Chapter Title",
+    "section": "6.12 Key Terms",
+    "text": "6.12 Key Terms\n\nTerm: Concise definition.",
     "crumbs": [
       "Chapter Title",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter Title</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter Title</span>"
     ]
   },
   {
@@ -958,6 +958,336 @@
     "text": "Key Terms\n\nTerm: Concise definition.",
     "crumbs": [
       "Chapter Title"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html",
+    "href": "chapter-04-visualizing-categorical-data.html",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "",
+    "text": "4.1 The Question\nFrequency tables organize categorical data and make exact counts and proportions available. A visualization presents the same information in a form that can make comparisons easier to see. When we want to compare how observations are distributed across categories, a bar chart is often the clearest place to begin.\nA useful bar chart does more than replace numbers with shapes. It directs attention to the pattern that matters, represents the values accurately, and helps an audience understand the evidence without requiring them to study a detailed table.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#the-question",
+    "href": "chapter-04-visualizing-categorical-data.html#the-question",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nHow can we use a bar chart to communicate the distribution of a categorical variable?",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#what-you-will-learn",
+    "href": "chapter-04-visualizing-categorical-data.html#what-you-will-learn",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.2 What You Will Learn",
+    "text": "4.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nExplain when a bar chart is appropriate.\nConstruct a bar chart using frequencies or proportions.\nIdentify the categories and values represented by the two axes.\nApply basic design principles that make a bar chart accurate and readable.\nInterpret a bar chart in relation to a criminal justice question.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#from-a-frequency-table-to-a-visualization",
+    "href": "chapter-04-visualizing-categorical-data.html#from-a-frequency-table-to-a-visualization",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.3 From a Frequency Table to a Visualization",
+    "text": "4.3 From a Frequency Table to a Visualization\nSuppose we have information about 20 recently filed court cases. For each case, the dataset records the type of case and its disposition.\n\n\n\nCase ID\nCase Type\nCase Disposition\n\n\n\n1\nProperty\nPlea Agreement\n\n\n2\nProperty\nDismissed\n\n\n3\nDrug\nPlea Agreement\n\n\n4\nProperty\nPlea Agreement\n\n\n5\nViolent\nConvicted at Trial\n\n\n6\nDrug\nPlea Agreement\n\n\n7\nProperty\nPending\n\n\n8\nProperty\nPlea Agreement\n\n\n9\nDrug\nDismissed\n\n\n10\nProperty\nPlea Agreement\n\n\n11\nProperty\nPlea Agreement\n\n\n12\nDrug\nPlea Agreement\n\n\n13\nProperty\nPending\n\n\n14\nProperty\nPlea Agreement\n\n\n15\nViolent\nConvicted at Trial\n\n\n16\nDrug\nPlea Agreement\n\n\n17\nProperty\nPlea Agreement\n\n\n18\nProperty\nDismissed\n\n\n19\nDrug\nPlea Agreement\n\n\n20\nProperty\nPlea Agreement\n\n\n\n\nConsider the research question:\n\nWhat is the most common type of case among these recently filed cases?\n\nWe can begin with a frequency and proportion table.\n\n\nCase type\nFrequency (\\(f\\))\nProportion (\\(p\\))\nPercentage\n\n\n\nProperty\n12\n0.60\n60%\n\n\nDrug\n6\n0.30\n30%\n\n\nViolent\n2\n0.10\n10%\n\n\nTotal\n20\n1.00\n100%\n\n\n\nThe table provides exact values. Property cases are the most common and account for 60% of the 20 cases. Drug cases account for 30% and violent cases account for 10%.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#constructing-a-bar-chart",
+    "href": "chapter-04-visualizing-categorical-data.html#constructing-a-bar-chart",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.4 Constructing a Bar Chart",
+    "text": "4.4 Constructing a Bar Chart\nIn a bar chart:\n\neach bar represents a category;\nthe horizontal axis identifies the categories;\nthe vertical axis reports a frequency, proportion, or percentage; and\nthe height of each bar represents the value for that category.\n\n\n\n\n\n\n\n\nFigure 4.1: Distribution of case types among 20 recently filed cases.\n\n\n\n\nThe chart communicates the same pattern as the table, but the differences are immediately visible. The property bar is twice the height of the drug bar and six times the height of the violent bar.\n\n\n\n\n\n\nImportantA chart complements a table\n\n\n\nA table is usually better when the audience needs exact values. A chart is often better when the audience needs to see the pattern quickly. A report may use both, but each should serve a clear purpose.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#frequencies-proportions-or-percentages",
+    "href": "chapter-04-visualizing-categorical-data.html#frequencies-proportions-or-percentages",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.5 Frequencies, Proportions, or Percentages?",
+    "text": "4.5 Frequencies, Proportions, or Percentages?\nA bar chart can display any of these three summaries:\n\n\nFrequency: the number of observations in each category;\n\nProportion: the share of observations in each category, ranging from 0 to 1; or\n\nPercentage: the share of observations in each category, ranging from 0% to 100%.\n\nFor a single group, all three produce the same relative bar heights. The vertical-axis labels and interpretation change, but the pattern does not.\nFrequencies are intuitive when the total number of observations matters. Proportions or percentages are generally more useful when comparing groups of different sizes. For example, if two courts process different numbers of cases, comparing the percentage of cases in each category is more informative than comparing raw counts alone.\n\n\n\n\n\n\nTipMatch the chart to the question\n\n\n\nUse counts when the question concerns how many cases occurred. Use proportions or percentages when the question concerns how cases are distributed or when groups have different totals.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#designing-an-accurate-bar-chart",
+    "href": "chapter-04-visualizing-categorical-data.html#designing-an-accurate-bar-chart",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.6 Designing an Accurate Bar Chart",
+    "text": "4.6 Designing an Accurate Bar Chart\n\n4.6.1 Begin the Value Axis at Zero\nThe length of a bar represents its value. If the value axis begins above zero, small differences can appear much larger than they really are. Beginning at zero preserves the visual relationship between bar lengths.\n\n4.6.2 Keep the Bars Separate\nBar charts describe distinct categories, so the bars should have spaces between them. Later, when we use histograms to display quantitative variables, the bars will touch because they represent adjacent numerical intervals.\n\n4.6.3 Use a Meaningful Category Order\nOrdinal categories should remain in their natural order. Nominal categories can be arranged logically, alphabetically, or from most to least common. The order should make the comparison easier to understand rather than manipulate the audience.\n\n4.6.4 Label the Chart Clearly\nA reader should be able to determine:\n\nwhat the chart is about;\nwhat each category represents;\nwhether the values are counts, proportions, or percentages; and\nwhich population, sample, place, or time period is being described.\n\n4.6.5 Avoid Unnecessary Decoration\nThree-dimensional bars, excessive colors, backgrounds, and decorative images can distract from the comparison. A simple chart with readable labels is usually more effective.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#interpreting-a-bar-chart",
+    "href": "chapter-04-visualizing-categorical-data.html#interpreting-a-bar-chart",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.7 Interpreting a Bar Chart",
+    "text": "4.7 Interpreting a Bar Chart\nA good interpretation should connect the visual pattern to the substantive question. It should identify the important comparison and report enough numerical information to make the statement precise.\nFor the court-case example, an appropriate interpretation is:\n\nProperty cases were the most common type among the 20 recently filed cases. Twelve cases, or 60%, involved property offenses, compared with six drug cases and two violent cases.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#check-your-understanding",
+    "href": "chapter-04-visualizing-categorical-data.html#check-your-understanding",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.8 Check Your Understanding",
+    "text": "4.8 Check Your Understanding\nSuppose Court A processed 40 drug cases out of 100 total cases, while Court B processed 60 drug cases out of 300 total cases.\n\nWhich court processed more drug cases?\nIn which court did drug cases constitute a larger share of the caseload?\nWould frequencies or percentages provide the better comparison of the courts’ case distributions?\n\n\n\n\n\n\n\nNoteCheck your answers\n\n\n\n\n\n\nCourt B processed more drug cases: 60 compared with 40.\nDrug cases constituted a larger share in Court A: \\(40/100 = 40\\%\\), compared with \\(60/300 = 20\\%\\) in Court B.\nPercentages provide the better comparison of the distributions because the courts processed different total numbers of cases. Counts remain relevant if the question concerns workload rather than composition.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#test-your-knowledge-juvenile-detention-center-staff",
+    "href": "chapter-04-visualizing-categorical-data.html#test-your-knowledge-juvenile-detention-center-staff",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.9 Test Your Knowledge: Juvenile Detention Center Staff",
+    "text": "4.9 Test Your Knowledge: Juvenile Detention Center Staff\n\n4.9.1 The Scenario\nYou work as a junior data analyst for the Lokkemup County Juvenile Detention Center. The center is preparing a report about its staff, and your supervisor asks for clear visualizations showing how employees are distributed across departments, shifts, and training-completion categories.\nYou receive the following data for 20 staff members.\n\n\nID\nDepartment\nShift Type\nCompleted Trainings\n\n\n\n1\nSecurity\nDay\nYes\n\n\n2\nSecurity\nDay\nNo\n\n\n3\nSecurity\nNight\nYes\n\n\n4\nSecurity\nNight\nNo\n\n\n5\nSecurity\nDay\nYes\n\n\n6\nSecurity\nDay\nYes\n\n\n7\nProgramming\nNight\nNo\n\n\n8\nProgramming\nNight\nYes\n\n\n9\nProgramming\nDay\nNo\n\n\n10\nProgramming\nDay\nYes\n\n\n11\nProgramming\nNight\nYes\n\n\n12\nProgramming\nDay\nYes\n\n\n13\nAdministration\nDay\nNo\n\n\n14\nAdministration\nNight\nYes\n\n\n15\nAdministration\nNight\nNo\n\n\n16\nAdministration\nDay\nYes\n\n\n17\nAdministration\nDay\nYes\n\n\n18\nAdministration\nNight\nNo\n\n\n19\nAdministration\nNight\nYes\n\n\n20\nAdministration\nDay\nYes\n\n\n\nThe variables are defined as follows:\n\n\nDepartment: Security, Programming, or Administration.\n\nShift Type: Day or Night.\n\nCompleted Trainings: Whether the employee has completed all required training webinars, recorded as yes or no.\n\n4.9.2 Part 1: Identify the Variables\nFor each variable, identify its level of measurement and briefly explain your reasoning.\n\n\nVariable\nLevel of measurement\nWhy?\n\n\n\nDepartment\n\n\n\n\nShift Type\n\n\n\n\nCompleted Trainings\n\n\n\n\n\n4.9.3 Part 2: Construct Frequency Tables\nFor each variable, construct a table containing its categories, frequencies, proportions, and percentages.\n\n\nCategory\n\\(f\\)\n\\(p\\)\nPercentage\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotal\n\n\n\n\n\n\n\n\n\n\n\n\nImportantWhy there is no cumulative column\n\n\n\nAll three variables are nominal. Their categories do not have an inherent lowest-to-highest order, so cumulative frequencies and proportions would depend on an arbitrary ordering and would not have a useful interpretation.\n\n\n\n4.9.4 Part 3: Create the Bar Charts\nCreate one bar chart for each variable. You may display frequencies or proportions, but make the choice clear on the vertical-axis label.\nEach chart should include:\n\na descriptive title;\nclearly labeled axes;\none separate bar for each category;\na value axis that begins at zero; and\nan ordering that makes the categories easy to compare.\n\n4.9.5 Part 4: Interpret and Evaluate\nAnswer the following questions:\n\nWhat is the most common category for each variable?\nWhat is the least common category for each variable? If there is a tie, state that clearly.\nDescribe the most important pattern shown by each chart.\nWhich chart would be most useful to the center’s administrators? Explain your choice.\nWhat conclusions cannot be drawn from these 20 staff records?\n\n\n\n\n\n\n\nNoteReview the levels of measurement and frequency tables\n\n\n\n\n\nAll three variables are nominal because their values identify categories without an inherent order.\nDepartment\n\n\nDepartment\n\\(f\\)\n\\(p\\)\nPercentage\n\n\n\nSecurity\n6\n0.30\n30%\n\n\nProgramming\n6\n0.30\n30%\n\n\nAdministration\n8\n0.40\n40%\n\n\nTotal\n20\n1.00\n100%\n\n\n\nShift Type\n\n\nShift\n\\(f\\)\n\\(p\\)\nPercentage\n\n\n\nDay\n11\n0.55\n55%\n\n\nNight\n9\n0.45\n45%\n\n\nTotal\n20\n1.00\n100%\n\n\n\nCompleted Trainings\n\n\nCompleted\n\\(f\\)\n\\(p\\)\nPercentage\n\n\n\nYes\n13\n0.65\n65%\n\n\nNo\n7\n0.35\n35%\n\n\nTotal\n20\n1.00\n100%\n\n\n\n\n\n\n\n\n\n\n\n\nNoteReview the central patterns\n\n\n\n\n\n\n\nDepartment: Administration is the most common department, with 8 employees or 40%. Security and Programming are tied as the least common, with 6 employees or 30% each.\n\nShift Type: Day shift is more common, with 11 employees or 55%, although the day and night groups are fairly similar in size.\n\nCompleted Trainings: A majority of employees have completed the required trainings. Thirteen employees, or 65%, have completed them, compared with 7 employees, or 35%, who have not.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#project-connection-visualize-a-categorical-variable",
+    "href": "chapter-04-visualizing-categorical-data.html#project-connection-visualize-a-categorical-variable",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.10 Project Connection: Visualize a Categorical Variable",
+    "text": "4.10 Project Connection: Visualize a Categorical Variable\nSelect one categorical variable from your semester investigation.\n\nCreate a frequency table containing counts, proportions, and percentages.\nConstruct a bar chart using either frequencies or percentages.\nGive the chart a title that identifies the variable, group, place, or time period being described.\nWrite two or three sentences interpreting the most important pattern.\nIdentify one conclusion that the chart does not support.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#chapter-summary",
+    "href": "chapter-04-visualizing-categorical-data.html#chapter-summary",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.11 Chapter Summary",
+    "text": "4.11 Chapter Summary\n\nBar charts display the distribution of categorical variables.\nEach bar represents a category, and its height represents a frequency, proportion, or percentage.\nFrequencies emphasize the number of cases, while proportions and percentages make it easier to compare groups of different sizes.\nThe value axis should begin at zero because bar length encodes magnitude.\nBars should remain separate because they represent distinct categories.\nClear titles, labels, category ordering, and simple design help an audience interpret the chart accurately.\nAn interpretation should describe the observed pattern without generalizing beyond the available data.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-visualizing-categorical-data.html#key-terms",
+    "href": "chapter-04-visualizing-categorical-data.html#key-terms",
+    "title": "\n4  Visualizing Categorical Data with Bar Charts\n",
+    "section": "\n4.12 Key Terms",
+    "text": "4.12 Key Terms\n\n\nBar chart: A graph that uses separated bars to display the frequency, proportion, or percentage in each category.\n\nCategory axis: The axis identifying the categories represented by the bars.\n\nFrequency bar chart: A bar chart in which bar heights represent counts.\n\nPercentage bar chart: A bar chart in which bar heights represent percentages.\n\nProportion bar chart: A bar chart in which bar heights represent proportions.\n\nValue axis: The axis showing the numerical values represented by bar height.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Visualizing Categorical Data with Bar Charts</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html",
+    "href": "chapter-05-central-tendency.html",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "",
+    "text": "5.1 The Question\nCriminal justice data often contain many observations, but we frequently need to communicate the overall pattern with a small number of meaningful summaries. A measure of central tendency identifies a value that represents the center or typical case in a distribution.\nThere is no single definition of typical. The most common value, the middle value, and the arithmetic average can all describe a distribution’s center, but they answer different questions and require different kinds of data. Choosing among the mode, median, and mean is therefore an analytical decision rather than a mechanical one.\nThis chapter also extends the logic of the median to percentiles and shows how the shape of a distribution affects our choice of a measure of center.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#the-question",
+    "href": "chapter-05-central-tendency.html#the-question",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nHow can we select one value that meaningfully represents the center of a distribution?",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#what-you-will-learn",
+    "href": "chapter-05-central-tendency.html#what-you-will-learn",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.2 What You Will Learn",
+    "text": "5.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nCalculate and interpret the mode, median, and mean.\nSelect an appropriate measure of central tendency based on the research question, level of measurement, and shape of the distribution.\nDistinguish the notation for a sample mean from the notation for a population mean.\nUse quartiles and percentiles to describe the relative position of observations.\nDistinguish symmetric, right-skewed, and left-skewed distributions.\nExplain how extreme values affect the mean and median differently.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#crime-in-slumberg",
+    "href": "chapter-05-central-tendency.html#crime-in-slumberg",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.3 Crime in Slumberg",
+    "text": "5.3 Crime in Slumberg\nThe city of Slumberg is studying burglary patterns across neighborhoods. Officials want to answer three questions:\n\nWhat is the most common neighborhood for burglaries?\nWhat is the typical level of fear of crime?\nWhat is the average response time for burglary calls?\n\nThe police department examines a sample of 11 recent burglary cases.\n\n\n\n\n\n\n\n\n\n\nCase\nNeighborhood\nResponse Time (minutes)\nValue Stolen (hundreds of dollars)\nFear of Crime (1–5)\n\n\n\n1\nEast\n4\n8\n4\n\n\n2\nEast\n5\n2\n3\n\n\n3\nNorth\n6\n3\n3\n\n\n4\nEast\n7\n4\n4\n\n\n5\nWest\n6\n12\n5\n\n\n6\nNorth\n5\n3\n2\n\n\n7\nNorth\n8\n3\n4\n\n\n8\nWest\n10\n15\n5\n\n\n9\nEast\n4\n1\n3\n\n\n10\nEast\n5\n4\n3\n\n\n11\nEast\n6\n4\n3\n\n\n\n\nDifferent measures of central tendency answer the three questions:\n\nThe mode identifies what is most common.\nThe median identifies the middle of an ordered distribution.\nThe mean identifies the arithmetic balance point of quantitative values (i.e., the average).",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#the-mode-what-is-most-common",
+    "href": "chapter-05-central-tendency.html#the-mode-what-is-most-common",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.4 The Mode: What Is Most Common?",
+    "text": "5.4 The Mode: What Is Most Common?\nThe mode is the value or category that occurs most frequently. To identify the most common neighborhood, we count the cases in each category.\n\n\nNeighborhood\nFrequency (\\(f\\))\n\n\n\nEast\n6\n\n\nNorth\n3\n\n\nWest\n2\n\n\nTotal\n11\n\n\n\nThe modal neighborhood is East, where 6 of the 11 burglaries occurred.\nThe mode can be used with nominal, ordinal, interval, or ratio variables because it requires only a count of how often each value occurs. This flexibility across levels of measurement makes the mode a very useful measure.\n\n\n\n\n\n\nImportantA distribution may have more than one mode\n\n\n\nIf two values tie for the highest frequency, the distribution is bimodal. More generally, a distribution with several most-frequent values is multimodal. If every value occurs equally often, the distribution has no uniquely informative mode (called a uniform distribution because data are distributed uniformly across categories).",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#the-median-what-falls-in-the-middle",
+    "href": "chapter-05-central-tendency.html#the-median-what-falls-in-the-middle",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.5 The Median: What Falls in the Middle?",
+    "text": "5.5 The Median: What Falls in the Middle?\nThe median is the middle value after observations have been arranged from lowest to highest. It separates the ordered observations so that approximately half fall at or below it and half fall at or above it.\nBecause finding a median requires meaningful ordering, it is appropriate for ordinal, interval, and ratio variables but not for nominal variables.\n\n5.5.1 Step 1: Order the Values\nThe observed fear-of-crime values are:\n\\[\n4, 3, 3, 4, 5, 2, 4, 5, 3, 3, 3\n\\]\nIn ascending order, they are:\n\\[\n2, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5\n\\]\n\n5.5.2 Step 2: Locate the Middle\nFor an odd number of observations, the median position is:\n\\[\n\\text{Median position}=\\frac{n+1}{2}\n\\]\nHere, \\(n=11\\), so:\n\\[\n\\frac{11+1}{2}=6\n\\]\nThe sixth ordered value is 3. Therefore, the median fear-of-crime response is 3.\nIf the scale defines 3 as Somewhat afraid, an appropriate interpretation is:\n\nThe median fear-of-crime response among the 11 cases was Somewhat afraid.\n\n\n5.5.3 What If the Number of Observations Is Even?\nWhen \\(n\\) is even, there are two middle positions. For a quantitative variable, the conventional median is the mean of those two values. For an ordinal variable, the middle categories should be interpreted carefully because averaging category codes may imply equal spacing that the scale does not guarantee. When both middle observations fall in the same category, as they often do, the median category is unambiguous.\n\n\n\n\n\n\nTipThe median depends on position, not distance\n\n\n\nThe median is determined by the ordering of the observations. Extreme values do not pull it upward or downward in the way they can affect the mean.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#the-mean-what-is-the-arithmetic-average",
+    "href": "chapter-05-central-tendency.html#the-mean-what-is-the-arithmetic-average",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.6 The Mean: What Is the Arithmetic Average?",
+    "text": "5.6 The Mean: What Is the Arithmetic Average?\nThe mean is calculated by adding the observed values and dividing by the number of observations. It is appropriate for interval- or ratio-level variables when an arithmetic average has a meaningful interpretation.\nBecause the 11 burglary cases are treated as a sample, we use the sample mean:\n\\[\n\\bar{x}=\\frac{\\sum_{i=1}^{n}x_i}{n}\n\\]\nwhere:\n\n\n\\(\\bar{x}\\) is the sample mean (pronounced “x bar”);\n\n\\(x_i\\) is the value for observation \\(i\\);\n\n\\(\\sum\\) indicates that we add the values; and\n\n\\(n\\) is the number of observations in the sample.\n\nFor the response times:\n\\[\n\\bar{x}=\\frac{4+5+6+7+6+5+8+10+4+5+6}{11}\n=\\frac{66}{11}\n=6\n\\]\nThe mean response time among these 11 burglary cases was 6 minutes.\n\n\n\n\n\n\nNoteSample and population notation\n\n\n\nWhen values come from a sample, the mean is a statistic written as \\(\\bar{x}\\), and the sample size is \\(n\\).\nWhen values describe an entire population, the mean is a parameter written as \\(\\mu\\), and the population size is \\(N\\):\n\\[\n\\mu=\\frac{\\sum_{i=1}^{N}X_i}{N}\n\\]\nThe calculation follows the same logic, but the notation tells us whether we are describing a sample or an entire population. When we discuss sampling distributions this distinction will make more sense (but we want to start makign it now).",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#how-extreme-values-affect-the-center",
+    "href": "chapter-05-central-tendency.html#how-extreme-values-affect-the-center",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.7 How Extreme Values Affect the Center",
+    "text": "5.7 How Extreme Values Affect the Center\nConsider the values of property stolen, measured in hundreds of dollars:\n\\[\n8, 2, 3, 4, 12, 3, 3, 15, 1, 4, 4\n\\]\nThe ordered values are:\n\\[\n1, 2, 3, 3, 3, 4, 4, 4, 8, 12, 15\n\\]\nThe median is 4, representing $400. The sample mean is:\n\\[\n\\bar{x}=\\frac{59}{11}\\approx5.36\n\\]\nBecause the values are recorded in hundreds of dollars, the mean is approximately $536.\nWhy are the median and mean different? The relatively large values of $1,200 and $1,500 pull the mean above the median.\nThis does not make the mean incorrect. It just tells us that the mean incorporates the magnitude of every observation, while the median depends primarily on their ordered positions. When a distribution is skewed or contains extreme values, reporting both may provide a more complete description.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#choosing-an-appropriate-measure",
+    "href": "chapter-05-central-tendency.html#choosing-an-appropriate-measure",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.8 Choosing an Appropriate Measure",
+    "text": "5.8 Choosing an Appropriate Measure\n\n\nLevel of measurement\nMode\nMedian\nMean\n\n\n\nNominal\nYes\nNo\nNo\n\n\nOrdinal\nYes\nYes\nGenerally no\n\n\nInterval\nYes\nYes\nYes\n\n\nRatio\nYes\nYes\nYes\n\n\n\nThe level of measurement establishes what is mathematically meaningful, but the research question and distribution also matter.\n\nUse the mode when the question asks what is most common.\nUse the median when the question asks for the middle ordered observation or when extreme values make the mean less representative.\nUse the mean when the question asks for an arithmetic average and the distances between values are meaningful.\n\n\n\n\n\n\n\nWarningDo not choose a measure from the wording alone\n\n\n\nWords such as typical and average can be ambiguous. First identify what the question is trying to communicate, then consider the variable’s level of measurement and the shape of its distribution.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#check-your-understanding-crime-on-campus",
+    "href": "chapter-05-central-tendency.html#check-your-understanding-crime-on-campus",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.9 Check Your Understanding: Crime on Campus",
+    "text": "5.9 Check Your Understanding: Crime on Campus\nYou have taken a work-study position as an analyst for Slumberg University. Campus safety officials collected data on 10 incidents reported during the past semester.\n\n\n\n\n\n\n\n\n\n\n\nCase\nType of Crime\nResidence Hall\nFear of Crime (1–5)\nResponse Time (minutes)\nNumber of Witnesses\n\n\n\n1\nTheft\nOak\n3\n6\n7\n\n\n2\nAssault\nPine\n4\n8\n10\n\n\n3\nTheft\nOak\n2\n5\n5\n\n\n4\nVandalism\nBirch\n3\n6\n8\n\n\n5\nTheft\nOak\n4\n7\n6\n\n\n6\nAssault\nMaple\n3\n5\n9\n\n\n7\nTheft\nOak\n2\n4\n7\n\n\n8\nVandalism\nPine\n3\n8\n8\n\n\n9\nTheft\nOak\n4\n6\n6\n\n\n10\nAssault\nMaple\n3\n7\n9\n\n\n\n\nFor each question, identify the appropriate measure of central tendency, calculate it, and interpret the result.\n\nWhat is the most common type of crime reported on campus?\nWhat is the median level of fear of crime among the people involved in these cases?\nWhat is the mean police response time for the incidents?\nAt which residence hall did the largest number of reports occur?\nWhat is the mean number of witnesses per incident?\n\n\n\n\n\n\n\nNoteCheck your answers\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion\nAppropriate measure\nResult\nInterpretation\n\n\n\nMost common type of crime\nMode\nTheft\nTheft was the most frequently reported crime, appearing in 5 of the 10 incidents.\n\n\nMiddle fear-of-crime response\nMedian\n3\nThe median fear-of-crime response was 3.\n\n\nAverage response time\nMean\n6.2 minutes\nThe mean response time among the 10 incidents was 6.2 minutes.\n\n\nResidence hall with the most reports\nMode\nOak\nOak was the modal residence hall, appearing in 5 reports.\n\n\nAverage number of witnesses\nMean\n7.5 witnesses\nThe mean number of witnesses among the 10 incidents was 7.5. This average need not be a possible count for an individual incident.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#percentiles-describing-relative-position",
+    "href": "chapter-05-central-tendency.html#percentiles-describing-relative-position",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.10 Percentiles: Describing Relative Position",
+    "text": "5.10 Percentiles: Describing Relative Position\nThe median identifies the center of an ordered distribution. Percentiles extend that idea by identifying positions throughout the distribution. The \\(k\\)th percentile is a value at or below which approximately \\(k\\) percent of the observations fall.\nThree percentiles are used especially often:\n\nThe first quartile, \\(Q_1\\), is the 25th percentile.\nThe second quartile, \\(Q_2\\), is the 50th percentile, or median.\nThe third quartile, \\(Q_3\\), is the 75th percentile.\n\nTogether, the quartiles divide the ordered observations into four portions. They help us determine whether a case is relatively low, near the middle, or relatively high compared with other cases in the dataset.\n\n\n\n\n\n\nImportantPercentile calculation methods vary\n\n\n\nSeveral accepted rules exist for calculating percentiles, especially in small datasets. Statistical software packages may therefore return slightly different values. This book uses the median-of-halves method for quartiles: find the overall median, then find the median of the lower and upper halves.\n\n\n\n5.10.1 Example: Correctional Risk Scores\nA state department of corrections uses a risk-assessment score ranging from 1, representing very low assessed risk, to 20, representing very high assessed risk. An administrator wants to identify the highest-scoring quarter of 12 cases so that staff can plan reentry services for these individuals.\nThe ordered risk scores are:\n\\[\n4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 12\n\\]\n\n5.10.2 Finding the Median\nBecause \\(n=12\\), the median is the mean of the sixth and seventh values:\n\\[\nQ_2=\\frac{7+7}{2}=7\n\\] Since risk scores are an ratio level measure, we can use this method for finding the median. If the risk scores were measured at the ordinal or nominal level, this would make less sense to do.\n\n5.10.3 Finding the First Quartile\nThe lower half contains the first six values:\n\\[\n4, 5, 5, 6, 6, 7\n\\]\nThe middle of this half lies between 5 and 6:\n\\[\nQ_1=\\frac{5+6}{2}=5.5\n\\]\n\n5.10.4 Finding the Third Quartile\nThe upper half contains the final six values:\n\\[\n7, 8, 8, 9, 10, 12\n\\]\nThe middle of this half lies between 8 and 9:\n\\[\nQ_3=\\frac{8+9}{2}=8.5\n\\]\nThe scores in the highest quarter are 9, 10, and 12. In these data, they fall above \\(Q_3=8.5\\).\n\n\n\n\n\n\nWarningA percentile cutoff does not always produce an exact percentage of cases\n\n\n\nTied scores can place several cases at the same cutoff. As a result, a rule such as “select everyone at or above the 75th percentile” may include more than 25% of the cases. Analysts should report the selection rule and consider the consequences of cases tied at the boundary.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#symmetry-and-skewness",
+    "href": "chapter-05-central-tendency.html#symmetry-and-skewness",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.11 Symmetry and Skewness",
+    "text": "5.11 Symmetry and Skewness\nThe shape of a distribution describes how its values are arranged. Shape helps us understand why the mean and median may provide different descriptions of the center.\n\n5.11.1 Symmetric Distributions\nA symmetric distribution has roughly the same shape on both sides of its center. In a perfectly symmetric distribution, the mean and median coincide. In observed data that are approximately symmetric, they are generally close.\n\n5.11.2 Right-Skewed Distributions\nA right-skewed, or positively skewed, distribution has a longer tail toward the higher values. A small number of high observations pull the mean toward the right tail, so the mean is typically greater than the median.\nExamples can include the value of property stolen, sentence lengths, or the number of offenses committed when a small number of cases have especially high values.\n\n5.11.3 Left-Skewed Distributions\nA left-skewed, or negatively skewed, distribution has a longer tail toward the lower values. A small number of low observations pull the mean toward the left tail, so the mean is typically less than the median.\n\n5.11.4 Example: A Right-Skewed Distribution\nConsider these 13 ordered risk scores:\n\\[\n2, 3, 3, 3, 4, 4, 4, 5, 5, 6, 8, 11, 20\n\\]\nThe median is the seventh value:\n\\[\n\\text{Median}=4\n\\]\nThe sample mean is:\n\\[\n\\bar{x}=\\frac{2+3+3+3+4+4+4+5+5+6+8+11+20}{13}\n=\\frac{78}{13}\n=6\n\\]\nThe mean is greater than the median because the score of 20 extends the upper tail and pulls the mean above the median. The distribution is right-skewed.\n\n\n\n\n\n\n\nFigure 5.1: A right-skewed distribution of 13 risk scores. The high score of 20 pulls the mean above the median.\n\n\n\n\n\n\n\n\n\n\nTipThe mean is pulled toward the tail\n\n\n\nIn a right-skewed distribution, the mean is usually above the median. In a left-skewed distribution, the mean is usually below the median. This is a useful diagnostic, but the graph and the underlying observations should also be examined.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#selecting-a-measure-for-a-distribution",
+    "href": "chapter-05-central-tendency.html#selecting-a-measure-for-a-distribution",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.12 Selecting a Measure for a Distribution",
+    "text": "5.12 Selecting a Measure for a Distribution\n\n\n\n\n\n\n\nSituation\nOften-useful measure\nReason\n\n\n\nNominal variable\nMode\nCategories can be counted but not meaningfully ordered.\n\n\nOrdinal variable\nMedian or mode\nOrder is meaningful, but equal distances cannot be assumed.\n\n\nApproximately symmetric quantitative distribution\nMean, often with the median\nThe mean uses every value and is not being strongly pulled by a tail.\n\n\nSkewed quantitative distribution\nMedian, often with the mean\nThe median is resistant to extreme observations. Reporting both reveals the asymmetry.\n\n\nQuestion concerns the most common value\nMode\nThe mode directly identifies the most frequent value.\n\n\nQuestion concerns relative standing\nPercentile or quartile\nPosition in the ordered distribution is the focus.\n\n\n\nNo rule eliminates the need for judgment. An analyst should consider the question, level of measurement, shape of the distribution, and audience. Sometimes the most honest description reports more than one measure.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#test-your-knowledge-days-to-sentencing",
+    "href": "chapter-05-central-tendency.html#test-your-knowledge-days-to-sentencing",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.13 Test Your Knowledge: Days to Sentencing",
+    "text": "5.13 Test Your Knowledge: Days to Sentencing\n\n5.13.1 The Scenario\nThe Waitenlonng County Court is reviewing how long cases take to move from conviction to sentencing. Officials want to describe the waiting time and understand the shape of its distribution.\nThe court provides data from a sample of 15 recent cases. The values are already ordered from shortest to longest wait.\n\n\nCase\nMonths to Sentencing\n\n\n\n1\n1\n\n\n2\n7\n\n\n3\n9\n\n\n4\n10\n\n\n5\n12\n\n\n6\n14\n\n\n7\n15\n\n\n8\n15\n\n\n9\n16\n\n\n10\n17\n\n\n11\n17\n\n\n12\n18\n\n\n13\n18\n\n\n14\n19\n\n\n15\n22\n\n\n\n5.13.2 Part 1: Calculate\nUsing the median-of-halves method for the quartiles:\n\nCalculate the median time to sentencing.\nCalculate \\(Q_1\\), the 25th percentile.\nCalculate \\(Q_3\\), the 75th percentile.\nCalculate the sample mean.\n\n5.13.3 Part 2: Interpret\n\nInterpret the median in the context of the cases.\nInterpret \\(Q_1\\) and \\(Q_3\\) without claiming that the quartile cutoffs split tied observations perfectly.\nCompare the mean and median. Is the distribution symmetric, right-skewed, or left-skewed?\nWhich measure would you use to describe the typical waiting time? Explain your choice.\n\n5.13.4 Part 3: Evaluate\n\nA court administrator says, “A defendant in this county should expect to be sentenced within 14 months.” Is that conclusion supported by these data? Explain what is wrong or incomplete about it.\nWhat additional information would you need before generalizing from these 15 cases to all cases in the county?\n\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nUsing the median-of-halves method:\n\nThe median is the eighth observation, so \\(Q_2=15\\) months.\nExcluding the overall median, the lower half is \\(1, 7, 9, 10, 12, 14, 15\\). Its middle value is 10, so \\(Q_1=10\\) months.\nThe upper half is \\(16, 17, 17, 18, 18, 19, 22\\). Its middle value is 18, so \\(Q_3=18\\) months.\nThe values sum to 210, so \\(\\bar{x}=210/15=14\\) months.\nThe median indicates that the middle observed waiting time was 15 months. Approximately half of the cases had shorter waits and half had longer waits, with the tied value of 15 at the center.\nAbout one-quarter of the observed cases had waits at or below 10 months, and about three-quarters had waits at or below 18 months. Equivalently, the middle half of the observations fell approximately between 10 and 18 months.\nThe mean of 14 months is below the median of 15 months because the unusually short one-month wait pulls the mean toward the lower tail. The distribution is left-skewed.\nThe median of 15 months is a useful description of a typical wait because it is resistant to the unusually short observation. Reporting the mean as well would reveal the effect of the skew.\nThe claim is not supported as written. The mean of these 15 cases is 14 months, but many observed cases took longer, and the sample may not represent every county case. The wording should expect also suggests a prediction about a new case that a descriptive sample mean alone cannot provide.\nWe would need to know how the 15 cases were selected, what time period they represent, whether important kinds of cases were excluded, and how similar they are to the full population of county cases.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#project-connection-describe-the-center-and-shape",
+    "href": "chapter-05-central-tendency.html#project-connection-describe-the-center-and-shape",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.14 Project Connection: Describe the Center and Shape",
+    "text": "5.14 Project Connection: Describe the Center and Shape\nSelect one variable from your semester investigation for which a measure of central tendency is meaningful.\n\nState the variable’s level of measurement.\nCalculate every appropriate measure among the mode, median, and mean.\nIf the variable is ordered, calculate \\(Q_1\\) and \\(Q_3\\) using a stated method.\nExamine the distribution for skewness or extreme values.\nSelect the measure that best answers your question and justify the choice.\nWrite two or three sentences interpreting the result without generalizing beyond the available data.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#chapter-summary",
+    "href": "chapter-05-central-tendency.html#chapter-summary",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.15 Chapter Summary",
+    "text": "5.15 Chapter Summary\n\nThe mode identifies the most frequent value, the median identifies the middle ordered value, and the mean identifies the arithmetic balance point.\nThe appropriate measure depends on the research question, level of measurement, and shape of the distribution.\nThe sample mean is written as \\(\\bar{x}\\) and uses \\(n\\); the population mean is written as \\(\\mu\\) and uses \\(N\\).\nPercentiles describe relative position. \\(Q_1\\), the median, and \\(Q_3\\) mark the 25th, 50th, and 75th percentiles.\nAccepted percentile algorithms can produce slightly different cutoffs, and ties can prevent a cutoff from dividing cases into exact percentages.\nThe mean is sensitive to extreme values, while the median is resistant to them.\nThe mean is typically greater than the median in a right-skewed distribution and less than the median in a left-skewed distribution.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-central-tendency.html#key-terms",
+    "href": "chapter-05-central-tendency.html#key-terms",
+    "title": "\n5  Describing the Typical Case\n",
+    "section": "\n5.16 Key Terms",
+    "text": "5.16 Key Terms\n\n\nBimodal: Having two values tied for the highest frequency.\n\nCentral tendency: The center or typical value of a distribution.\n\nFirst quartile (\\(Q_1\\)): The 25th percentile.\n\nLeft-skewed distribution: A distribution with a longer tail toward lower values.\n\nMean: The arithmetic average of a set of quantitative values.\n\nMedian: The middle value of an ordered distribution.\n\nMode: The most frequently occurring value or category.\n\nMultimodal: Having more than two values tied for the highest frequency.\n\nPercentile: A value at or below which approximately a specified percentage of observations fall.\n\nQuartiles: Values that divide ordered observations into four portions.\n\nResistant measure: A statistic that is not strongly affected by extreme observations.\n\nRight-skewed distribution: A distribution with a longer tail toward higher values.\n\nSymmetric distribution: A distribution with roughly the same shape on both sides of its center.\n\nThird quartile (\\(Q_3\\)): The 75th percentile.",
+    "crumbs": [
+      "Chapter Title",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Describing the Typical Case</span>"
     ]
   }
 ]

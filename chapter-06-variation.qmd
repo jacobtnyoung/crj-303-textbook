@@ -1,0 +1,508 @@
+# Describing Variation
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**How can we describe whether observations are tightly clustered or widely dispersed?**
+:::
+
+A measure of central tendency identifies the center of a distribution, but the center cannot describe the distribution by itself. 
+Two groups can have the same mean while differing greatly in how their observations are distributed around that mean.
+
+Measures of **variation**, also called measures of **dispersion**, describe how much observations differ from one another.
+This chapter introduces the range, variance, standard deviation, and interquartile range. 
+Each measure captures spread differently, and the most useful choice depends on the variable, distribution, and research question.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Explain why a measure of center should be accompanied by a measure of variation.
+2. Calculate and interpret the range, sample variance, and sample standard deviation.
+3. Distinguish sample variance and standard deviation from their population counterparts.
+4. Calculate and interpret the interquartile range.
+5. Explain how extreme values affect the range, variance, and standard deviation.
+6. Select an appropriate measure of variation based on the shape of a distribution.
+7. Evaluate whether comparisons of variation are substantively meaningful.
+
+## The Same Mean, Different Distributions
+
+Suppose we want to compare the number of crimes reported across six neighborhoods in each of two cities.
+
+| Neighborhood | City A | City B |
+|-------------:|-------:|-------:|
+| 1 | 20 | 25 |
+| 2 | 22 | 25 |
+| 3 | 25 | 25 |
+| 4 | 28 | 25 |
+| 5 | 29 | 25 |
+| 6 | 26 | 25 |
+
+The sample mean for City A is:
+
+$$
+\bar{x}_A=\frac{20+22+25+28+29+26}{6}=\frac{150}{6}=25
+$$
+
+The sample mean for City B is:
+
+$$
+\bar{x}_B=\frac{25+25+25+25+25+25}{6}=\frac{150}{6}=25
+$$
+
+Both cities have a mean of 25 reported crimes per neighborhood. 
+Nevertheless, their distributions are not the same. 
+City B has exactly 25 crimes in every neighborhood, while City A ranges from 20 to 29. 
+Crime is distributed more unevenly across City A's neighborhoods.
+
+::: {.callout-important title="Center and variation answer different questions"}
+A measure of central tendency describes where a distribution is centered. 
+A measure of variation describes how much observations differ around that center. 
+A useful description of a quantitative variable generally reports both.
+:::
+
+## The Range
+
+The **range** is the difference between the largest and smallest observed values:
+
+$$
+\text{Range}=x_{\max}-x_{\min}
+$$
+
+For City A:
+
+$$
+\text{Range}_A=29-20=9
+$$
+
+For City B:
+
+$$
+\text{Range}_B=25-25=0
+$$
+
+The neighborhood crime counts span 9 crimes in City A and do not vary at all in City B.
+
+The range is easy to calculate and communicate, but it uses only the two most extreme observations. 
+It ignores every value between them and can change dramatically because of a single unusual case.
+
+## Deviations from the Mean
+
+To incorporate every observation, we can examine how far each value falls from the mean. A **deviation from the mean** is:
+
+$$
+x_i-\bar{x}
+$$
+
+For City A, a neighborhood with 20 crimes has a deviation of:
+
+$$
+20-25=-5
+$$
+
+It falls 5 crimes *below* the sample mean (hence the negative sign). 
+A neighborhood with 29 crimes has a deviation of:
+
+$$
+29-25=4
+$$
+
+It falls 4 crimes *above* the sample mean.
+
+If we simply added all deviations, the negative and positive values would cancel. 
+In fact, deviations from the sample mean always sum to zero. 
+To prevent that cancellation, the variance squares each deviation before combining them.
+
+## Sample Variance
+
+The **sample variance**, written as $s^2$, is based on the sum of the squared deviations from the sample mean:
+
+$$
+s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}
+$$
+
+where:
+
+- $s^2$ is the sample variance;
+- $x_i$ is the value for observation $i$;
+- $\bar{x}$ is the sample mean;
+- $n$ is the sample size; and
+- $n-1$ is the sample's **degrees of freedom** for estimating variation.
+
+The numerator, $\sum(x_i-\bar{x})^2$, is called the **sum of squares**. 
+It combines the squared distance of every observation from the mean.
+
+::: {.callout-note title="Why divide by n − 1?"}
+When a sample is used to estimate variation in a larger population, dividing by $n-1$ corrects the tendency of the sample to underestimate population variation. 
+We will return to this idea when we study sampling and statistical inference.
+:::
+
+### Calculating the Variance for City A
+
+The sample mean is 25. 
+We subtract 25 from every observation and square each deviation.
+
+| Neighborhood | Crimes ($x_i$) | $x_i-\bar{x}$ | $(x_i-\bar{x})^2$ |
+|-------------:|---------------:|-------------------:|-----------------------:|
+| 1 | 20 | $20-25=-5$ | $(-5)^2=25$ |
+| 2 | 22 | $22-25=-3$ | $(-3)^2=9$ |
+| 3 | 25 | $25-25=0$ | $0^2=0$ |
+| 4 | 28 | $28-25=3$ | $3^2=9$ |
+| 5 | 29 | $29-25=4$ | $4^2=16$ |
+| 6 | 26 | $26-25=1$ | $1^2=1$ |
+| **Total** |  | **0** | **60** |
+
+The squared deviations sum to 60. 
+Therefore:
+
+$$
+s_A^2=\frac{60}{6-1}=\frac{60}{5}=12
+$$
+
+The sample variance is 12 squared crimes. 
+The squared unit is mathematically necessary, but it makes the variance difficult to interpret directly. 
+This is why analysts more often communicate the *standard deviation*.
+
+### What About City B?
+
+Every City B neighborhood has 25 crimes, which is also the mean. Every deviation is therefore zero:
+
+$$
+s_B^2=\frac{0}{6-1}=0
+$$
+
+A variance of zero means that the observed values do not vary at all.
+Put differently, crimes are uniformly distributed across the neighborhoods in City B.
+
+## Sample Standard Deviation
+
+The **sample standard deviation**, written as $s$, is the square root of the sample variance:
+
+$$
+s=\sqrt{s^2}
+$$
+
+For City A:
+
+$$
+s_A=\sqrt{12}\approx3.46
+$$
+
+For City B:
+
+$$
+s_B=\sqrt{0}=0
+$$
+
+The standard deviation returns the measure of spread to the variable's original units. 
+City A's neighborhood crime counts typically spread several crimes around the mean of 25, whereas City B's observed counts are all exactly equal to the mean.
+
+::: {.callout-tip title="Interpreting a standard deviation"}
+Always report the standard deviation with the mean, identify the variable's units, and describe the substantive pattern. 
+For example: “Across the six City A neighborhoods, the mean was 25 reported crimes and the standard deviation was 3.46 crimes.”
+:::
+
+## Sample and Population Notation
+
+The formulas depend on whether the observations are treated as a sample or an entire population.
+
+| Quantity | Sample | Population |
+|:---------|:------:|:----------:|
+| Number of observations | $n$ | $N$ |
+| Mean | $\bar{x}$ | $\mu$ |
+| Variance | $s^2$ | $\sigma^2$ |
+| Standard deviation | $s$ | $\sigma$ |
+| Variance divisor | $n-1$ | $N$ |
+
+For an entire population:
+
+$$
+\sigma^2=\frac{\sum_{i=1}^{N}(X_i-\mu)^2}{N}
+$$
+
+and:
+
+$$
+\sigma=\sqrt{\sigma^2}
+$$
+
+The data in this chapter are treated as samples, so the worked examples use $s^2$, $s$, and $n-1$.
+
+## Check Your Understanding: Correctional Measures
+
+You are an analyst for a state corrections department. 
+Your supervisor asks which of three variables has the least variation among five incarcerated people and wants the result explained in nontechnical language.
+
+| Person | Vocational Sessions | Days in Restrictive Housing | Disciplinary Reports |
+|------:|--------------------:|----------------------------:|---------------------:|
+| 1 | 8 | 17 | 7 |
+| 2 | 8 | 17 | 7 |
+| 3 | 10 | 20 | 10 |
+| 4 | 12 | 23 | 13 |
+| 5 | 12 | 23 | 13 |
+
+For each variable:
+
+1. Calculate the sample mean.
+2. Calculate the sample variance and standard deviation.
+3. Identify the variable with the smallest raw standard deviation.
+4. Explain the result in plain language.
+
+::: {.callout-note collapse="true" title="Check your answers"}
+| Variable | $\bar{x}$ | Sum of squared deviations | $s^2$ | $s$ |
+|:---------|----------:|--------------------------:|------:|----:|
+| Vocational Sessions | 10 | 16 | 4 | 2 |
+| Days in Restrictive Housing | 20 | 36 | 9 | 3 |
+| Disciplinary Reports | 10 | 36 | 9 | 3 |
+
+Using the raw standard deviations, vocational sessions has the least variation. 
+In plain language, the number of vocational sessions is more tightly clustered around its mean than the other two variables are around their respective means.
+:::
+
+## Extreme Values and the Standard Deviation
+
+Measures based on the mean are sensitive to extreme observations because an unusual value affects both the mean and its own squared deviation. 
+Consider the number of days that 10 people were held in **Waitenlonng County Jail** before transfer to state prison:
+
+$$
+2, 6, 8, 9, 9, 9, 9, 9, 9, 40
+$$
+
+The sample mean is:
+
+$$
+\bar{x}=\frac{110}{10}=11
+$$
+
+The deviation table is:
+
+| Case | Days ($x_i$) | $x_i-\bar{x}$ | $(x_i-\bar{x})^2$ |
+|----:|---------------:|-------------------:|-----------------------:|
+| 1 | 2 | $-9$ | 81 |
+| 2 | 6 | $-5$ | 25 |
+| 3 | 8 | $-3$ | 9 |
+| 4 | 9 | $-2$ | 4 |
+| 5 | 9 | $-2$ | 4 |
+| 6 | 9 | $-2$ | 4 |
+| 7 | 9 | $-2$ | 4 |
+| 8 | 9 | $-2$ | 4 |
+| 9 | 9 | $-2$ | 4 |
+| 10 | 40 | $29$ | 841 |
+| **Total** |  | **0** | **980** |
+
+The sample variance is:
+
+$$
+s^2=\frac{980}{10-1}=\frac{980}{9}\approx108.89
+$$
+
+The sample standard deviation is:
+
+$$
+s=\sqrt{108.89}\approx10.44\text{ days}
+$$
+
+The mean is 11 days and the standard deviation is 10.44 days. 
+However, eight of the ten observations fall between 8 and 9 days. 
+The 40-day case contributes 841 of the 980 total squared-deviation units, more than 85% of the sum of squares.
+
+The standard deviation is mathematically correct. 
+It reveals substantial overall dispersion created by the unusual case, but it does not mean that most observed waiting times differ greatly from one another.
+
+In other words, the calculation for the standard deviation is correct. 
+However, it does a poor job accurately describing variation in this case because the data are skewed.
+
+## The Interquartile Range
+
+The **interquartile range**, or **IQR**, measures the width of the middle half of an ordered distribution:
+
+$$
+IQR=Q_3-Q_1
+$$
+
+Because the IQR depends on the first and third quartiles rather than the most extreme values, it is a **resistant measure** of variation.
+
+Using the median-of-halves method established in Chapter 5, the ordered jail data divide into these halves:
+
+$$
+\text{Lower half: }2, 6, 8, 9, 9
+$$
+
+$$
+\text{Upper half: }9, 9, 9, 9, 40
+$$
+
+The median of the lower half is 8, so $Q_1=8$. The median of the upper half is 9, so $Q_3=9$.
+
+Therefore:
+
+$$
+IQR=9-8=1\text{ day}
+$$
+
+The middle half of the observed waiting times spans only one day, from 8 to 9 days. 
+Together, the standard deviation and IQR reveal two features of the data:
+
+- Most observations are tightly clustered.
+- One extreme observation creates substantial overall dispersion.
+
+::: {.callout-important title="Standard deviation and IQR describe different aspects of spread"}
+The standard deviation uses every observation and is sensitive to extreme values. 
+The IQR describes the width of the middle 50% and is resistant to extreme values. 
+Neither measure is automatically better, as the distribution and analytical purpose determine which is more informative.
+:::
+
+## Evaluating Claims About Variation
+
+Suppose a journalist argues that the large standard deviation proves that transfer times in the jail are unjust. 
+The calculation alone cannot support that conclusion.
+
+An appropriate response would distinguish the statistical evidence from the normative claim:
+
+- The observed standard deviation is large relative to the mean because one case took 40 days.
+- The middle half of cases is tightly clustered between 8 and 9 days.
+- The reason for the 40-day wait should be investigated.
+- Whether the process is unjust requires a defensible standard for fairness and evidence about how transfer decisions were made.
+- These 10 cases may not represent all people transferred from the jail.
+
+::: {.callout-warning title="A descriptive statistic does not establish fairness or causation"}
+A measure of variation describes a numerical pattern. 
+It cannot, by itself, determine whether a process is fair, identify why an unusual value occurred, or establish that one group was treated differently from another.
+:::
+
+## Choosing a Measure of Variation
+
+| Distribution or purpose | Useful measure | Reason |
+|:------------------------|:---------------|:-------|
+| Quick description of total observed spread | Range | Easy to calculate, but uses only the minimum and maximum. |
+| Approximately symmetric quantitative distribution | Standard deviation | Uses every observation and complements the mean. |
+| Skewed distribution or distribution with extreme values | IQR, often with the standard deviation | The IQR describes the middle half without being dominated by extremes. |
+| Need to understand both the center and spread | Mean and standard deviation, or median and IQR | Pairs measures based on the same features of the distribution. |
+
+A common reporting strategy is:
+
+- report the **mean and standard deviation** for a roughly symmetric quantitative distribution; and
+- report the **median and IQR** for a skewed quantitative distribution.
+
+Reporting both pairs can sometimes reveal important features that either pair alone would hide.
+
+## Test Your Knowledge: Vocational Training Hours
+
+### The Scenario
+
+A corrections analyst is examining the number of monthly vocational-training hours completed by 10 incarcerated women in a small unit. 
+The analyst wants to describe both the overall spread and the spread of the middle half of the observations.
+
+The ordered data are:
+
+| ID | Training Hours per Month |
+|---:|-------------------------:|
+| 1 | 17 |
+| 2 | 17 |
+| 3 | 17 |
+| 4 | 17 |
+| 5 | 17 |
+| 6 | 23 |
+| 7 | 23 |
+| 8 | 23 |
+| 9 | 23 |
+| 10 | 23 |
+
+### Part 1: Calculate
+
+1. Calculate the sample mean.
+2. Create a deviation table containing $x_i$, $x_i-\bar{x}$, and $(x_i-\bar{x})^2$.
+3. Calculate the sample variance and sample standard deviation.
+4. Using the median-of-halves method, find $Q_1$ and $Q_3$.
+5. Calculate the IQR.
+
+### Part 2: Interpret
+
+6. Interpret the standard deviation in context.
+7. Interpret the IQR in context.
+8. Does the mean of 20 hours describe an observation that actually appears in the data? What does that reveal about relying on the mean alone?
+9. Describe the shape of this distribution.
+
+### Part 3: Evaluate
+
+10. Would it be accurate to conclude that most people completed approximately 20 hours of training? Explain.
+11. What can these data tell us about the 10 people, and what would you need to know before generalizing to all incarcerated women in the facility?
+
+::: {.callout-note collapse="true" title="Review the answers"}
+The sample mean is:
+
+$$
+\bar{x}=\frac{5(17)+5(23)}{10}=\frac{200}{10}=20\text{ hours}
+$$
+
+| Training Hours ($x_i$) | Frequency | $x_i-\bar{x}$ | $(x_i-\bar{x})^2$ | Frequency × Squared Deviation |
+|-----------------------:|----------:|-------------------:|-----------------------:|------------------------------:|
+| 17 | 5 | $-3$ | 9 | 45 |
+| 23 | 5 | $3$ | 9 | 45 |
+| **Total** | **10** |  |  | **90** |
+
+The sample variance and standard deviation are:
+
+$$
+s^2=\frac{90}{10-1}=10
+$$
+
+$$
+s=\sqrt{10}\approx3.16\text{ hours}
+$$
+
+The lower half consists of five values of 17, so $Q_1=17$. The upper half consists of five values of 23, so $Q_3=23$:
+
+$$
+IQR=23-17=6\text{ hours}
+$$
+
+Every observed value is exactly 3 hours from the mean. 
+The sample standard deviation is slightly larger, 3.16 hours, because the sample formula uses $n-1$ to estimate population variation. 
+The IQR indicates that the middle half spans from 17 to 23 hours, a width of 6 hours.
+
+Half of the people completed 17 hours and half completed 23 hours. 
+The distribution is symmetric but bimodal, with two equally common values and no observations at its arithmetic center. 
+It would therefore be misleading to say that most people completed approximately 20 hours without also describing the two clusters.
+
+The results describe these 10 people. 
+Before generalizing, we would need to know how they were selected, what period the measurements represent, and whether the small unit is representative of other incarcerated women in the facility.
+:::
+
+## Project Connection: Describe Variation
+
+Select one quantitative variable from your semester investigation.
+
+1. State whether the observations are being treated as a sample or an entire population.
+2. Calculate an appropriate measure of center.
+3. Calculate the range, variance, standard deviation, and IQR when appropriate.
+4. Examine the distribution for skewness, clusters, or extreme values.
+5. Select the measure of variation that best supports your research question and justify the choice.
+6. Write two or three sentences interpreting the center and variation together.
+7. Identify one conclusion that these descriptive statistics cannot support.
+
+## Chapter Summary
+
+- Measures of central tendency describe where a distribution is centered; measures of variation describe how widely observations are dispersed.
+- The range is the maximum minus the minimum, but it uses only two observations and is sensitive to extreme values.
+- Sample variance, $s^2$, averages squared deviations using the divisor $n-1$.
+- The sample standard deviation, $s$, is the square root of the variance and is expressed in the variable's original units.
+- Population variance and standard deviation use $\sigma^2$, $\sigma$, and the divisor $N$.
+- The IQR, $Q_3-Q_1$, describes the width of the middle 50% and is resistant to extreme observations.
+- The standard deviation and IQR answer different questions; examining both can reveal whether overall dispersion is driven by unusual values.
+- A numerical measure of variation cannot by itself establish unfairness, causation, or generalizability.
+
+## Key Terms
+
+- **Degrees of freedom:** The number of independent pieces of information available for estimating a quantity; sample variance uses $n-1$.
+- **Deviation from the mean:** The difference between an observation and the mean, $x_i-\bar{x}$.
+- **Dispersion:** The degree to which observations are spread out; another term for variation.
+- **Interquartile range (IQR):** The difference between the third and first quartiles, describing the width of the middle 50%.
+- **Population standard deviation ($\sigma$):** The square root of the population variance.
+- **Population variance ($\sigma^2$):** The average squared deviation from the population mean, using divisor $N$.
+- **Range:** The maximum observed value minus the minimum observed value.
+- **Resistant measure:** A statistic that is not strongly affected by extreme observations.
+- **Sample standard deviation ($s$):** The square root of the sample variance.
+- **Sample variance ($s^2$):** The sum of squared deviations from the sample mean divided by $n-1$.
+- **Sum of squares:** The sum of the squared deviations from the mean.
+- **Variation:** The extent to which observations differ from one another.

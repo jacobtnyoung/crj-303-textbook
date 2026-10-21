@@ -18,6 +18,9 @@ book:
         - chapter-01-thinking-with-data.qmd
         - chapter-02-measurement.qmd
         - chapter-03-frequency-distributions.qmd
+        - chapter-04-visualizing-categorical-data.qmd
+        - chapter-05-central-tendency.qmd
+        - chapter-06-variation.qmd
         - chapter-00-template.qmd
 
     - part: part-02-inference.qmd

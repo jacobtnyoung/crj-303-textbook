@@ -50,7 +50,8 @@ The individual responses are the **raw data**:
 | 9 | 2 |
 | 10 | 3 |
 
-Each row represents one respondent, and each recorded value represents that person's response category. We could inspect the rows one at a time, but organizing the responses into a frequency distribution makes the overall pattern easier to understand.
+Each row represents one respondent, and each recorded value represents that person's response category. 
+We could inspect the rows one at a time, but organizing the responses into a frequency distribution makes the overall pattern easier to understand.
 
 ::: {.callout-important title="The numbers represent ordered categories"}
 The response values `1` through `4` are codes for an ordinal variable. A higher value represents more support, but we cannot assume that the distance between every pair of response categories is equal.
@@ -58,7 +59,8 @@ The response values `1` through `4` are codes for an ordinal variable. A higher 
 
 ## Frequency
 
-The **frequency**, written as $f$, is the number of observations with a particular value. We find the frequency by counting how many respondents selected each category.
+The **frequency**, written as $f$, is the number of observations with a particular value. 
+We find the frequency by counting how many respondents selected each category.
 
 | Response | Response category | $f$ |
 |:--------:|:------------------|----:|
@@ -68,7 +70,8 @@ The **frequency**, written as $f$, is the number of observations with a particul
 | 4 | Strongly support | 2 |
 | **Total** |  | **10** |
 
-This table makes two facts immediately visible: *Support* is the most common response, and only one respondent selected *Strongly oppose*.
+This table makes two facts immediately visible: 
+*Support* is the most common response, and only one respondent selected *Strongly oppose*.
 
 ::: {.callout-tip title="Check the total"}
 The frequencies should add to the total number of observations. Here, $1 + 3 + 4 + 2 = 10$.
@@ -76,13 +79,15 @@ The frequencies should add to the total number of observations. Here, $1 + 3 + 4
 
 ## Proportion and Percentage
 
-A **proportion**, written as $p$, is the share of all observations that falls into a particular category. It is calculated by dividing a category's frequency by the total number of observations:
+A **proportion**, written as $p$, is the share of all observations that falls into a particular category. 
+It is calculated by dividing a category's frequency by the total number of observations:
 
 $$
 p = \frac{f}{N}
 $$
 
-For this chapter, $N$ represents the total number of cases in the dataset. Later, when we distinguish samples from populations, we will use $n$ for sample size and $N$ for population size.
+For this chapter, $N$ represents the total number of cases in the dataset. 
+Later, when we distinguish samples from populations, we will use $n$ for sample size and $N$ for population size.
 
 | Response | $f$ | Calculation | $p$ |
 |:--------:|----:|:-----------:|----:|
@@ -98,10 +103,11 @@ $$
 \text{Percentage} = p \times 100
 $$
 
-Thus, a proportion of 0.40 is equivalent to 40%. In this survey, 60% of respondents selected either *Support* or *Strongly support*.
+Thus, a proportion of 0.40 is equivalent to 40%. 
+In this survey, 60% of respondents selected either *Support* or *Strongly support*.
 
 ::: {.callout-tip title="Check the proportion or percentage total"}
-Proportions should add to 1.00, and percentages should add to 100%. Small differences can occur when values have been rounded.
+Proportions should add to 1.00, and percentages should add to 100%. But, keep in mind that small differences can occur when values have been rounded.
 :::
 
 ## Cumulative Frequency and Cumulative Proportion
@@ -117,10 +123,13 @@ The **cumulative frequency**, written here as $cf$, is the number of observation
 | 3 | 4 | 0.40 | 8 | 0.80 | 80% |
 | 4 | 2 | 0.20 | 10 | 1.00 | 100% |
 
-The second row tells us that four respondents—or 40% of the group—selected either *Strongly oppose* or *Oppose*. The third row tells us that eight respondents—or 80%—selected *Support* or a lower response.
+The second row tells us that four respondents, or 40% of the group, selected either *Strongly oppose* or *Oppose*. 
+The third row tells us that eight respondents, or 80%, selected *Support* or a lower response.
 
 ::: {.callout-warning title="Cumulative summaries require an order"}
-Cumulative frequency and cumulative proportion are meaningful only when the values can be arranged from lower to higher. They are appropriate for ordinal, interval, and ratio variables. They are generally not meaningful for nominal variables such as neighborhood or incident type, because changing the arbitrary category order would change the cumulative totals.
+Cumulative frequency and cumulative proportion are meaningful only when the values can be arranged from lower to higher. 
+They are appropriate for ordinal, interval, and ratio variables. 
+They are generally not meaningful for nominal variables such as neighborhood or incident type, because changing the arbitrary category order would change the cumulative totals.
 :::
 
 ## One Table, Several Kinds of Information
@@ -135,11 +144,14 @@ Each column answers a different question:
 | Cumulative frequency | How many observations are at or below this ordered value? |
 | Cumulative proportion | What share of observations is at or below this ordered value? |
 
-Frequencies communicate counts. Proportions and percentages make it easier to compare distributions with different totals. Cumulative summaries show where observations fall within an ordered distribution.
+Frequencies communicate counts. 
+Proportions and percentages make it easier to compare distributions with different totals. 
+Cumulative summaries show where observations fall within an ordered distribution.
 
 ## Check Your Understanding
 
-Suppose 25 respondents were asked how safe they feel in their neighborhood. Ten selected *Very safe*. Five selected *Somewhat safe*.
+Suppose 25 respondents were asked how safe they feel in their neighborhood. 
+Ten selected *Very safe*. Five selected *Somewhat safe*.
 
 1. What is the frequency for *Very safe*?
 2. What proportion selected *Very safe*?
@@ -150,14 +162,16 @@ Suppose 25 respondents were asked how safe they feel in their neighborhood. Ten 
 1. The frequency for *Very safe* is 10.
 2. The proportion is $10/25 = 0.40$.
 3. The percentage is $(5/25) \times 100 = 20\%$.
-4. You would need the frequencies for every response category ordered below *Somewhat safe*. A cumulative percentage includes the selected category and all categories below it.
+4. You would need the frequencies for every response category ordered below *Somewhat safe*. 
+A cumulative percentage includes the selected category and all categories below it.
 :::
 
 ## Test Your Knowledge: Neighborhood Safety Survey
 
 ### The Scenario
 
-A local criminology research group surveyed 20 residents about their experiences and perceptions of neighborhood safety. The researchers recorded the following variables:
+A local criminology research group surveyed 20 residents about their experiences and perceptions of neighborhood safety. 
+The researchers recorded the following variables:
 
 - **Sex:** Recorded as male or female.
 - **Fear of Crime:** `1 = Not at all afraid`, `2 = A little afraid`, `3 = Somewhat afraid`, and `4 = Very afraid`.
@@ -208,7 +222,7 @@ For each variable, identify its level of measurement and briefly justify your cl
 
 ### Part 2: Construct Frequency Distributions
 
-Select two variables and construct a frequency table for each. Your selections must include at least one variable with meaningfully ordered values.
+Select two variables and construct a frequency table for each. 
 
 For each selected variable:
 
@@ -290,7 +304,7 @@ Select one variable from your semester investigation and create a frequency dist
 
 - Raw data display individual observations, while a frequency distribution organizes values into a summary.
 - A frequency is the number of observations with a particular value.
-- A proportion is a frequency divided by the total number of observations; a percentage expresses that proportion out of 100.
+- A proportion is a frequency divided by the total number of observations, while a percentage expresses that proportion out of 100.
 - Cumulative frequency is a running count, while cumulative proportion is a running share.
 - Cumulative summaries are meaningful only when a variable's values have a meaningful order.
 - A useful frequency table should do more than present numbers: it should help answer a substantive question.
