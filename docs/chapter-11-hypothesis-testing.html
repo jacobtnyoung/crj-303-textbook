@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Jacob T.N. Young">
+<title>11&nbsp; Hypothesis Testing – Textbook for Statistical Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-12-t-tests.html" rel="next">
+<link href="./chapter-10-estimation.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2202478e21b5d5705478b75c28beab00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Part II: Statistical Inference</a></li><li class="breadcrumb-item"><a href="./chapter-11-hypothesis-testing.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Textbook for Statistical Analysis</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-01-describing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part I: Understanding and Describing Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-01-statistical-reasoning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Reasoning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-03-frequency-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-04-visualizing-categorical-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Visualizing Categorical Data with Bar Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-05-central-tendency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Describing the Typical Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-06-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Describing Variation</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-02-making-inferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part II: Statistical Inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-07-probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Understanding Probability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-08-normal-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Normal Distribution and <em>z</em>-Scores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-09-sampling-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sampling Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Estimation and Confidence Intervals</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-hypothesis-testing.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12-t-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The <em>t</em>-Distribution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-13-comparing-two-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Comparing Two Means</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-01-standard-normal-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-02-t-distribution-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">t-Distribution Critical Values</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-03-chi-square-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Chi-Square Distribution Critical Values</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">11.1</span> The Question</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">11.2</span> What You Will Learn</a></li>
+  <li><a href="#the-logic-of-hypothesis-testing" id="toc-the-logic-of-hypothesis-testing" class="nav-link" data-scroll-target="#the-logic-of-hypothesis-testing"><span class="header-section-number">11.3</span> The Logic of Hypothesis Testing</a></li>
+  <li><a href="#reject-or-fail-to-reject" id="toc-reject-or-fail-to-reject" class="nav-link" data-scroll-target="#reject-or-fail-to-reject"><span class="header-section-number">11.4</span> Reject or Fail to Reject</a></li>
+  <li><a href="#direction-of-the-alternative-hypothesis" id="toc-direction-of-the-alternative-hypothesis" class="nav-link" data-scroll-target="#direction-of-the-alternative-hypothesis"><span class="header-section-number">11.5</span> Direction of the Alternative Hypothesis</a></li>
+  <li><a href="#significance-level-and-critical-values" id="toc-significance-level-and-critical-values" class="nav-link" data-scroll-target="#significance-level-and-critical-values"><span class="header-section-number">11.6</span> Significance Level and Critical Values</a></li>
+  <li><a href="#calculating-the-test-statistic" id="toc-calculating-the-test-statistic" class="nav-link" data-scroll-target="#calculating-the-test-statistic"><span class="header-section-number">11.7</span> Calculating the Test Statistic</a></li>
+  <li>
+<a href="#worked-example-traffic-citations" id="toc-worked-example-traffic-citations" class="nav-link" data-scroll-target="#worked-example-traffic-citations"><span class="header-section-number">11.8</span> Worked Example: Traffic Citations</a>
+  <ul class="collapse">
+<li><a href="#step-1-state-the-hypotheses" id="toc-step-1-state-the-hypotheses" class="nav-link" data-scroll-target="#step-1-state-the-hypotheses"><span class="header-section-number">11.8.1</span> Step 1: State the Hypotheses</a></li>
+  <li><a href="#step-2-calculate-the-standard-error" id="toc-step-2-calculate-the-standard-error" class="nav-link" data-scroll-target="#step-2-calculate-the-standard-error"><span class="header-section-number">11.8.2</span> Step 2: Calculate the Standard Error</a></li>
+  <li><a href="#step-3-calculate-the-obtained-statistic" id="toc-step-3-calculate-the-obtained-statistic" class="nav-link" data-scroll-target="#step-3-calculate-the-obtained-statistic"><span class="header-section-number">11.8.3</span> Step 3: Calculate the Obtained Statistic</a></li>
+  <li><a href="#step-4-make-the-decision" id="toc-step-4-make-the-decision" class="nav-link" data-scroll-target="#step-4-make-the-decision"><span class="header-section-number">11.8.4</span> Step 4: Make the Decision</a></li>
+  <li><a href="#step-5-interpret-the-result" id="toc-step-5-interpret-the-result" class="nav-link" data-scroll-target="#step-5-interpret-the-result"><span class="header-section-number">11.8.5</span> Step 5: Interpret the Result</a></li>
+  </ul>
+</li>
+  <li><a href="#the-p-value" id="toc-the-p-value" class="nav-link" data-scroll-target="#the-p-value"><span class="header-section-number">11.9</span> The <em>p</em>-Value</a></li>
+  <li>
+<a href="#one-tailed-and-two-tailed-decisions" id="toc-one-tailed-and-two-tailed-decisions" class="nav-link" data-scroll-target="#one-tailed-and-two-tailed-decisions"><span class="header-section-number">11.10</span> One-Tailed and Two-Tailed Decisions</a>
+  <ul class="collapse">
+<li><a href="#left-tailed-claim" id="toc-left-tailed-claim" class="nav-link" data-scroll-target="#left-tailed-claim"><span class="header-section-number">11.10.1</span> Left-Tailed Claim</a></li>
+  <li><a href="#two-tailed-claim" id="toc-two-tailed-claim" class="nav-link" data-scroll-target="#two-tailed-claim"><span class="header-section-number">11.10.2</span> Two-Tailed Claim</a></li>
+  </ul>
+</li>
+  <li><a href="#sample-size-variability-and-the-test-statistic" id="toc-sample-size-variability-and-the-test-statistic" class="nav-link" data-scroll-target="#sample-size-variability-and-the-test-statistic"><span class="header-section-number">11.11</span> Sample Size, Variability, and the Test Statistic</a></li>
+  <li><a href="#a-complete-testing-process" id="toc-a-complete-testing-process" class="nav-link" data-scroll-target="#a-complete-testing-process"><span class="header-section-number">11.12</span> A Complete Testing Process</a></li>
+  <li>
+<a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">11.13</span> Check Your Understanding</a>
+  <ul class="collapse">
+<li><a href="#sample-1" id="toc-sample-1" class="nav-link" data-scroll-target="#sample-1"><span class="header-section-number">11.13.1</span> Sample 1</a></li>
+  <li><a href="#sample-2" id="toc-sample-2" class="nav-link" data-scroll-target="#sample-2"><span class="header-section-number">11.13.2</span> Sample 2</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#test-your-knowledge-filing-times" id="toc-test-your-knowledge-filing-times" class="nav-link" data-scroll-target="#test-your-knowledge-filing-times"><span class="header-section-number">11.14</span> Test Your Knowledge: Filing Times</a>
+  <ul class="collapse">
+<li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">11.14.1</span> The Scenario</a></li>
+  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task"><span class="header-section-number">11.14.2</span> Your Task</a></li>
+  </ul>
+</li>
+  <li><a href="#data-investigation-decisions-and-evidence" id="toc-data-investigation-decisions-and-evidence" class="nav-link" data-scroll-target="#data-investigation-decisions-and-evidence"><span class="header-section-number">11.15</span> Data Investigation: Decisions and Evidence</a></li>
+  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection"><span class="header-section-number">11.16</span> Project Connection</a></li>
+  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">11.17</span> Looking Ahead</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">11.18</span> Chapter Summary</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">11.19</span> Key Terms</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Part II: Statistical Inference</a></li><li class="breadcrumb-item"><a href="./chapter-11-hypothesis-testing.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="the-question" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="the-question">
+<span class="header-section-number">11.1</span> The Question</h2>
+<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Central question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>How can sample data be used to evaluate a claim about a population?</strong></p>
+</div>
+</div>
+<p>Suppose a police department claims that officers issue an average of four traffic citations per week. A random sample from a researcher produces an average of six. The difference could mean that the department’s claim is inaccurate, or it could have arisen through ordinary sampling variability.</p>
+<p><strong>Hypothesis testing</strong> provides a structured way to evaluate these possibilities. We begin by assuming a specific population value, determine how unusual the sample result would be under that assumption, and then decide whether the data provide sufficient evidence against the assumption.</p>
+</section><section id="what-you-will-learn" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="what-you-will-learn">
+<span class="header-section-number">11.2</span> What You Will Learn</h2>
+<p>After completing this chapter, you should be able to:</p>
+<ol type="1">
+<li>State null and alternative hypotheses about a population mean.</li>
+<li>Distinguish right-tailed, left-tailed, and two-tailed tests.</li>
+<li>Explain the meaning of the significance level and <em>p</em>-value.</li>
+<li>Calculate a standard error and obtained <em>z</em>-statistic.</li>
+<li>Compare an <strong>obtained</strong> statistic with a <strong>critical</strong> value.</li>
+<li>Decide whether to reject or fail to reject a null hypothesis.</li>
+<li>Interpret a hypothesis-test result without overstating the evidence.</li>
+</ol></section><section id="the-logic-of-hypothesis-testing" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="the-logic-of-hypothesis-testing">
+<span class="header-section-number">11.3</span> The Logic of Hypothesis Testing</h2>
+<p>A statistical hypothesis is a claim about a population parameter. Hypothesis testing compares two claims:</p>
+<ul>
+<li>The <strong>null hypothesis</strong>, <span class="math inline">\(H_0\)</span>, states the value assumed for the population parameter.</li>
+<li>The <strong>alternative hypothesis</strong>, <span class="math inline">\(H_A\)</span>, states the competing claim for which the researcher seeks evidence.</li>
+</ul>
+<p>For the traffic-citation example:</p>
+<p><span class="math display">\[
+H_0:\mu=4
+\]</span></p>
+<p><span class="math display">\[
+H_A:\mu&gt;4
+\]</span></p>
+<p>The hypotheses concern the unknown <strong>population mean</strong>, <span class="math inline">\(\mu\)</span>, not the observed sample mean, <span class="math inline">\(\bar{x}\)</span>.</p>
+<p>The test asks:</p>
+<blockquote class="blockquote">
+<p>If the null hypothesis were true, how unusual would our sample result be?</p>
+</blockquote>
+<p>If the sample result would be very unusual under <span class="math inline">\(H_0\)</span>, we reject the null hypothesis. If it would not be sufficiently unusual, we fail to reject it.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="Begin by assuming the null hypothesis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Begin by assuming the null hypothesis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A hypothesis test does not begin by assuming the researcher’s claim is true. It measures how compatible the observed sample is with the value stated by the null hypothesis.</p>
+</div>
+</div>
+</section><section id="reject-or-fail-to-reject" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="reject-or-fail-to-reject">
+<span class="header-section-number">11.4</span> Reject or Fail to Reject</h2>
+<p>A test produces one of two decisions:</p>
+<ul>
+<li>
+<strong>Reject <span class="math inline">\(H_0\)</span>:</strong> The sample provides sufficient evidence against the null hypothesis at the selected significance level.</li>
+<li>
+<strong>Fail to reject <span class="math inline">\(H_0\)</span>:</strong> The sample does not provide sufficient evidence against the null hypothesis.</li>
+</ul>
+<p>Failing to reject is not the same as proving the null hypothesis true. The sample may simply be too small, too variable, or too close to the proposed value to provide strong evidence.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Do not say that the null hypothesis was accepted or proved">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Do not say that the null hypothesis was accepted or proved
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Fail to reject” means that the evidence was insufficient to reject the null hypothesis. It does not establish that the null hypothesis is correct.</p>
+</div>
+</div>
+</section><section id="direction-of-the-alternative-hypothesis" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="direction-of-the-alternative-hypothesis">
+<span class="header-section-number">11.5</span> Direction of the Alternative Hypothesis</h2>
+<p>The alternative hypothesis determines which part of the sampling distribution counts as evidence against <span class="math inline">\(H_0\)</span>.</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Alternative hypothesis</th>
+<th style="text-align: left;">Type of test</th>
+<th style="text-align: left;">Evidence lies in</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu&gt;\mu_0\)</span></td>
+<td style="text-align: left;">Right-tailed</td>
+<td style="text-align: left;">Right tail</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu&lt;\mu_0\)</span></td>
+<td style="text-align: left;">Left-tailed</td>
+<td style="text-align: left;">Left tail</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu\ne\mu_0\)</span></td>
+<td style="text-align: left;">Two-tailed</td>
+<td style="text-align: left;">Both tails</td>
+</tr>
+</tbody>
+</table>
+<p>A directional claim must be selected before examining the result. Choosing a tail after seeing the sample would give the observed result an unfair advantage.</p>
+</section><section id="significance-level-and-critical-values" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="significance-level-and-critical-values">
+<span class="header-section-number">11.6</span> Significance Level and Critical Values</h2>
+<p>The <strong>significance level</strong>, symbolized by <span class="math inline">\(\alpha\)</span>, sets the threshold for deciding that a result is sufficiently unusual. This chapter uses:</p>
+<p><span class="math display">\[
+\alpha=0.05
+\]</span></p>
+<p>For a one-tailed test, the entire 0.05 rejection region is placed in one tail. For a two-tailed test, it is divided into 0.025 in each tail.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 37%">
+<col style="width: 28%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Test at <span class="math inline">\(\alpha=0.05\)</span>
+</th>
+<th style="text-align: left;">Critical value or values</th>
+<th style="text-align: left;">Reject <span class="math inline">\(H_0\)</span> when</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Right-tailed</td>
+<td style="text-align: left;"><span class="math inline">\(z=1.64\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z_{obt}&gt;1.64\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Left-tailed</td>
+<td style="text-align: left;"><span class="math inline">\(z=-1.64\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z_{obt}&lt;-1.64\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Two-tailed</td>
+<td style="text-align: left;"><span class="math inline">\(z=\pm1.96\)</span></td>
+<td style="text-align: left;">
+<span class="math inline">\(z_{obt}&lt;-1.96\)</span> or <span class="math inline">\(z_{obt}&gt;1.96\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The area beyond the critical value is the <strong>rejection region</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-right-tailed-test" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Standard normal curve with the right tail beyond z equals 1.64 shaded and an obtained z-score of 2 marked.">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-right-tailed-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chapter-11-hypothesis-testing_files/figure-html/fig-right-tailed-test-1.png" class="img-fluid figure-img" alt="Standard normal curve with the right tail beyond z equals 1.64 shaded and an obtained z-score of 2 marked." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-right-tailed-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: For a right-tailed test with alpha = 0.05, obtained z-scores beyond 1.64 fall in the rejection region.
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="calculating-the-test-statistic" class="level2" data-number="11.7"><h2 data-number="11.7" class="anchored" data-anchor-id="calculating-the-test-statistic">
+<span class="header-section-number">11.7</span> Calculating the Test Statistic</h2>
+<p>To test a proposed population mean using the normal model:</p>
+<p><span class="math display">\[
+z=\frac{\bar{x}-\mu_0}{\widehat{SE}_{\bar{x}}}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li>
+<span class="math inline">\(\bar{x}\)</span> is the sample mean;</li>
+<li>
+<span class="math inline">\(\mu_0\)</span> is the value proposed by <span class="math inline">\(H_0\)</span>; and</li>
+<li>
+<span class="math inline">\(\widehat{SE}_{\bar{x}}=s/\sqrt{n}\)</span>.</li>
+</ul>
+<p>The obtained <em>z</em>-statistic expresses the difference between the sample mean and proposed population mean in standard-error units.</p>
+<p>This chapter uses the normal distribution to establish the logic of testing. Chapter 12 introduces the <strong><em>t</em>-distribution</strong>, which is generally used for a population mean when the population standard deviation is unknown.</p>
+</section><section id="worked-example-traffic-citations" class="level2" data-number="11.8"><h2 data-number="11.8" class="anchored" data-anchor-id="worked-example-traffic-citations">
+<span class="header-section-number">11.8</span> Worked Example: Traffic Citations</h2>
+<p>A department claims that officers issue an average of four citations per week. A researcher believes the population mean is greater than four. A random sample produces:</p>
+<p><span class="math display">\[
+n=16,\qquad \bar{x}=6,\qquad s=4
+\]</span></p>
+<section id="step-1-state-the-hypotheses" class="level3" data-number="11.8.1"><h3 data-number="11.8.1" class="anchored" data-anchor-id="step-1-state-the-hypotheses">
+<span class="header-section-number">11.8.1</span> Step 1: State the Hypotheses</h3>
+<p><span class="math display">\[
+H_0:\mu=4
+\]</span></p>
+<p><span class="math display">\[
+H_A:\mu&gt;4
+\]</span></p>
+<p>This is a right-tailed test.</p>
+</section><section id="step-2-calculate-the-standard-error" class="level3" data-number="11.8.2"><h3 data-number="11.8.2" class="anchored" data-anchor-id="step-2-calculate-the-standard-error">
+<span class="header-section-number">11.8.2</span> Step 2: Calculate the Standard Error</h3>
+<p><span class="math display">\[
+\widehat{SE}_{\bar{x}}=\frac{4}{\sqrt{16}}=1
+\]</span></p>
+</section><section id="step-3-calculate-the-obtained-statistic" class="level3" data-number="11.8.3"><h3 data-number="11.8.3" class="anchored" data-anchor-id="step-3-calculate-the-obtained-statistic">
+<span class="header-section-number">11.8.3</span> Step 3: Calculate the Obtained Statistic</h3>
+<p><span class="math display">\[
+z=\frac{6-4}{1}=2.00
+\]</span></p>
+<p>The sample mean is two standard errors above the value proposed by <span class="math inline">\(H_0\)</span>.</p>
+</section><section id="step-4-make-the-decision" class="level3" data-number="11.8.4"><h3 data-number="11.8.4" class="anchored" data-anchor-id="step-4-make-the-decision">
+<span class="header-section-number">11.8.4</span> Step 4: Make the Decision</h3>
+<p>For a right-tailed test with <span class="math inline">\(\alpha=0.05\)</span>, the critical value is 1.64:</p>
+<p><span class="math display">\[
+2.00&gt;1.64
+\]</span></p>
+<p>We reject <span class="math inline">\(H_0\)</span>.</p>
+</section><section id="step-5-interpret-the-result" class="level3" data-number="11.8.5"><h3 data-number="11.8.5" class="anchored" data-anchor-id="step-5-interpret-the-result">
+<span class="header-section-number">11.8.5</span> Step 5: Interpret the Result</h3>
+<p>At the 0.05 significance level, the sample provides evidence that the population mean number of citations issued per week is greater than four.</p>
+</section></section><section id="the-p-value" class="level2" data-number="11.9"><h2 data-number="11.9" class="anchored" data-anchor-id="the-p-value">
+<span class="header-section-number">11.9</span> The <em>p</em>-Value</h2>
+<p>The <strong><em>p</em>-value</strong> is the probability, assuming <span class="math inline">\(H_0\)</span> is true, of obtaining a result at least as extreme as the one observed in the direction specified by <span class="math inline">\(H_A\)</span>.</p>
+<p>For the right-tailed test with <span class="math inline">\(z=2.00\)</span>:</p>
+<p><span class="math display">\[
+p=P(Z\ge2.00)=0.0228
+\]</span></p>
+<p>Because <span class="math inline">\(p&lt;0.05\)</span>, we reject <span class="math inline">\(H_0\)</span>. The <em>p</em>-value method and critical-value method reach the same decision.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="What a p-value is not">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>What a p-value is not
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <em>p</em>-value is not the probability that the null hypothesis is true. It is a probability calculated under the assumption that the null hypothesis is true.</p>
+</div>
+</div>
+</section><section id="one-tailed-and-two-tailed-decisions" class="level2" data-number="11.10"><h2 data-number="11.10" class="anchored" data-anchor-id="one-tailed-and-two-tailed-decisions">
+<span class="header-section-number">11.10</span> One-Tailed and Two-Tailed Decisions</h2>
+<p>Suppose a department claims that the mean number of arrests per week is 80. A sample produces:</p>
+<p><span class="math display">\[
+n=64,\qquad \bar{x}=78.25,\qquad s=8
+\]</span></p>
+<p>The standard error and obtained statistic are:</p>
+<p><span class="math display">\[
+\widehat{SE}_{\bar{x}}=\frac{8}{\sqrt{64}}=1
+\]</span></p>
+<p><span class="math display">\[
+z=\frac{78.25-80}{1}=-1.75
+\]</span></p>
+<section id="left-tailed-claim" class="level3" data-number="11.10.1"><h3 data-number="11.10.1" class="anchored" data-anchor-id="left-tailed-claim">
+<span class="header-section-number">11.10.1</span> Left-Tailed Claim</h3>
+<p>If the alternative is <span class="math inline">\(H_A:\mu&lt;80\)</span>, the critical value is <span class="math inline">\(-1.64\)</span>. Because:</p>
+<p><span class="math display">\[
+-1.75&lt;-1.64
+\]</span></p>
+<p>we reject <span class="math inline">\(H_0\)</span>. The one-tailed <em>p</em>-value is approximately 0.0401.</p>
+</section><section id="two-tailed-claim" class="level3" data-number="11.10.2"><h3 data-number="11.10.2" class="anchored" data-anchor-id="two-tailed-claim">
+<span class="header-section-number">11.10.2</span> Two-Tailed Claim</h3>
+<p>If the alternative is <span class="math inline">\(H_A:\mu\ne80\)</span>, the critical values are <span class="math inline">\(\pm1.96\)</span>. Because:</p>
+<p><span class="math display">\[
+|-1.75|&lt;1.96
+\]</span></p>
+<p>we fail to reject <span class="math inline">\(H_0\)</span>. The two-tailed <em>p</em>-value is approximately 0.0801.</p>
+<p>The data are identical. The decision differs because the two hypotheses ask different questions and assign the rejection region differently.</p>
+</section></section><section id="sample-size-variability-and-the-test-statistic" class="level2" data-number="11.11"><h2 data-number="11.11" class="anchored" data-anchor-id="sample-size-variability-and-the-test-statistic">
+<span class="header-section-number">11.11</span> Sample Size, Variability, and the Test Statistic</h2>
+<p>The obtained statistic depends on the difference from the null value and the standard error:</p>
+<p><span class="math display">\[
+z=\frac{\text{Observed difference}}{\text{Standard error}}
+\]</span></p>
+<p>A larger sample generally reduces the standard error. Greater variability increases it. Therefore, identical differences from <span class="math inline">\(\mu_0\)</span> can produce different test statistics.</p>
+<p>For example, another sample has:</p>
+<p><span class="math display">\[
+n=100,\qquad \bar{x}=78.25,\qquad s=5
+\]</span></p>
+<p>Then:</p>
+<p><span class="math display">\[
+\widehat{SE}_{\bar{x}}=\frac{5}{\sqrt{100}}=0.50
+\]</span></p>
+<p><span class="math display">\[
+z=\frac{78.25-80}{0.50}=-3.50
+\]</span></p>
+<p>This result falls beyond both <span class="math inline">\(-1.64\)</span> and <span class="math inline">\(-1.96\)</span>, so it rejects <span class="math inline">\(H_0\)</span> for either the left-tailed or two-tailed alternative.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="Statistical significance is not practical importance">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Statistical significance is not practical importance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A small <em>p</em>-value indicates that the result is difficult to explain through sampling variability under <span class="math inline">\(H_0\)</span>. It does not tell us whether the difference is large, important, beneficial, or harmful in practice.</p>
+</div>
+</div>
+</section><section id="a-complete-testing-process" class="level2" data-number="11.12"><h2 data-number="11.12" class="anchored" data-anchor-id="a-complete-testing-process">
+<span class="header-section-number">11.12</span> A Complete Testing Process</h2>
+<p>Use the following sequence:</p>
+<ol type="1">
+<li>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span> about the population parameter.</li>
+<li>Identify whether the test is right-tailed, left-tailed, or two-tailed.</li>
+<li>Select <span class="math inline">\(\alpha\)</span> before examining the result.</li>
+<li>Calculate the standard error.</li>
+<li>Calculate the obtained test statistic.</li>
+<li>Find the <em>p</em>-value or compare with the appropriate critical value.</li>
+<li>Reject or fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>Interpret the result in context.</li>
+<li>State an important limitation or what the result does not establish.</li>
+</ol></section><section id="check-your-understanding" class="level2" data-number="11.13"><h2 data-number="11.13" class="anchored" data-anchor-id="check-your-understanding">
+<span class="header-section-number">11.13</span> Check Your Understanding</h2>
+<p>The mean number of disciplinary infractions at Chaosington Penitentiary is claimed to be <span class="math inline">\(\mu_0=5\)</span>. A researcher believes the true mean is greater than five.</p>
+<section id="sample-1" class="level3" data-number="11.13.1"><h3 data-number="11.13.1" class="anchored" data-anchor-id="sample-1">
+<span class="header-section-number">11.13.1</span> Sample 1</h3>
+<p><span class="math display">\[
+n=36,\qquad \bar{x}=6,\qquad s=6
+\]</span></p>
+</section><section id="sample-2" class="level3" data-number="11.13.2"><h3 data-number="11.13.2" class="anchored" data-anchor-id="sample-2">
+<span class="header-section-number">11.13.2</span> Sample 2</h3>
+<p><span class="math display">\[
+n=49,\qquad \bar{x}=6,\qquad s=14
+\]</span></p>
+<p>For each sample:</p>
+<ol type="1">
+<li>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>.</li>
+<li>Calculate the standard error and obtained <em>z</em>-statistic.</li>
+<li>Make a decision using <span class="math inline">\(\alpha=0.05\)</span>.</li>
+<li>Explain why the obtained statistics differ even though the means are equal.</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Check your answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check your answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For both samples, <span class="math inline">\(H_0:\mu=5\)</span> and <span class="math inline">\(H_A:\mu&gt;5\)</span>. This is a right-tailed test with a critical value of 1.64.</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Sample</th>
+<th style="text-align: right;">Standard error</th>
+<th style="text-align: right;">Obtained <em>z</em>
+</th>
+<th style="text-align: left;">Decision</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;"><span class="math inline">\(6/\sqrt{36}=1.00\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((6-5)/1=1.00\)</span></td>
+<td style="text-align: left;">Fail to reject <span class="math inline">\(H_0\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;"><span class="math inline">\(14/\sqrt{49}=2.00\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((6-5)/2=0.50\)</span></td>
+<td style="text-align: left;">Fail to reject <span class="math inline">\(H_0\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sample 2 is larger, but it is also much more variable. Its larger standard error makes the observed difference less unusual.</p>
+</div>
+</div>
+</div>
+</section></section><section id="test-your-knowledge-filing-times" class="level2" data-number="11.14"><h2 data-number="11.14" class="anchored" data-anchor-id="test-your-knowledge-filing-times">
+<span class="header-section-number">11.14</span> Test Your Knowledge: Filing Times</h2>
+<section id="the-scenario" class="level3" data-number="11.14.1"><h3 data-number="11.14.1" class="anchored" data-anchor-id="the-scenario">
+<span class="header-section-number">11.14.1</span> The Scenario</h3>
+<p>The Grand State Court of Procedural Efficiency claims that the population mean processing time for a routine filing is 96 minutes. Three attorneys make different claims.</p>
+</section><section id="your-task" class="level3" data-number="11.14.2"><h3 data-number="11.14.2" class="anchored" data-anchor-id="your-task">
+<span class="header-section-number">11.14.2</span> Your Task</h3>
+<p>Complete a hypothesis test for each case using <span class="math inline">\(\alpha=0.05\)</span>.</p>
+<section id="case-1-longer-processing-times" class="level4" data-number="11.14.2.1"><h4 data-number="11.14.2.1" class="anchored" data-anchor-id="case-1-longer-processing-times">
+<span class="header-section-number">11.14.2.1</span> Case 1: Longer Processing Times</h4>
+<p>The attorney claims <span class="math inline">\(\mu&gt;96\)</span>. The sample has:</p>
+<p><span class="math display">\[
+n=81,\qquad \bar{x}=97,\qquad s=4.5
+\]</span></p>
+</section><section id="case-2-shorter-processing-times" class="level4" data-number="11.14.2.2"><h4 data-number="11.14.2.2" class="anchored" data-anchor-id="case-2-shorter-processing-times">
+<span class="header-section-number">11.14.2.2</span> Case 2: Shorter Processing Times</h4>
+<p>The attorney claims <span class="math inline">\(\mu&lt;96\)</span>. The sample has:</p>
+<p><span class="math display">\[
+n=81,\qquad \bar{x}=95,\qquad s=9
+\]</span></p>
+</section><section id="case-3-a-different-processing-time" class="level4" data-number="11.14.2.3"><h4 data-number="11.14.2.3" class="anchored" data-anchor-id="case-3-a-different-processing-time">
+<span class="header-section-number">11.14.2.3</span> Case 3: A Different Processing Time</h4>
+<p>The attorney claims <span class="math inline">\(\mu\ne96\)</span>. The sample has:</p>
+<p><span class="math display">\[
+n=4,\qquad \bar{x}=30,\qquad s=40
+\]</span></p>
+<p>For each case:</p>
+<ol type="1">
+<li>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>.</li>
+<li>Identify the type of test and critical value.</li>
+<li>Calculate the standard error.</li>
+<li>Calculate the obtained statistic.</li>
+<li>Reject or fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>Interpret the result in context.</li>
+<li>Identify any concern about the assumptions.</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review the answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 24%">
+<col style="width: 21%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: center;">Case</th>
+<th style="text-align: left;">Alternative</th>
+<th style="text-align: left;">Test</th>
+<th style="text-align: right;">Standard error</th>
+<th style="text-align: right;">Obtained <em>z</em>
+</th>
+<th style="text-align: left;">Decision</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu&gt;96\)</span></td>
+<td style="text-align: left;">Right-tailed</td>
+<td style="text-align: right;"><span class="math inline">\(4.5/\sqrt{81}=0.50\)</span></td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: left;">Reject <span class="math inline">\(H_0\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu&lt;96\)</span></td>
+<td style="text-align: left;">Left-tailed</td>
+<td style="text-align: right;"><span class="math inline">\(9/\sqrt{81}=1.00\)</span></td>
+<td style="text-align: right;">-1.00</td>
+<td style="text-align: left;">Fail to reject <span class="math inline">\(H_0\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;"><span class="math inline">\(H_A:\mu\ne96\)</span></td>
+<td style="text-align: left;">Two-tailed</td>
+<td style="text-align: right;"><span class="math inline">\(40/\sqrt{4}=20.00\)</span></td>
+<td style="text-align: right;">-3.30</td>
+<td style="text-align: left;">Reject <span class="math inline">\(H_0\)</span> using the normal critical value</td>
+</tr>
+</tbody>
+</table>
+<p>At <span class="math inline">\(\alpha=0.05\)</span>, Case 1 provides evidence that the population mean exceeds 96 minutes. Case 2 does not provide sufficient evidence that it is below 96 minutes. Under the normal-approximation procedure used here, Case 3 provides evidence that it differs from 96 minutes.</p>
+<p>Case 3 has only four observations and an estimated population standard deviation. The normal approximation is questionable. The next chapter’s <em>t</em>-procedure is more appropriate and places greater weight on the uncertainty created by such a small sample.</p>
+</div>
+</div>
+</div>
+</section></section></section><section id="data-investigation-decisions-and-evidence" class="level2" data-number="11.15"><h2 data-number="11.15" class="anchored" data-anchor-id="data-investigation-decisions-and-evidence">
+<span class="header-section-number">11.15</span> Data Investigation: Decisions and Evidence</h2>
+<p>Using a quantitative variable from class data:</p>
+<ol type="1">
+<li>Propose a population mean for comparison.</li>
+<li>Write a substantively meaningful alternative hypothesis.</li>
+<li>Identify the direction of the test.</li>
+<li>Calculate the sample mean, standard deviation, and standard error.</li>
+<li>Calculate the obtained test statistic.</li>
+<li>Make a decision using <span class="math inline">\(\alpha=0.05\)</span>.</li>
+<li>Interpret the result and distinguish statistical significance from practical importance.</li>
+<li>Explain whether the sampling process supports inference to a larger population.</li>
+</ol></section><section id="project-connection" class="level2" data-number="11.16"><h2 data-number="11.16" class="anchored" data-anchor-id="project-connection">
+<span class="header-section-number">11.16</span> Project Connection</h2>
+<ol type="1">
+<li>Identify one population claim related to your semester project.</li>
+<li>Express it as a null hypothesis.</li>
+<li>Write a meaningful alternative hypothesis.</li>
+<li>Identify whether the test would be one-tailed or two-tailed.</li>
+<li>Explain what evidence would justify rejecting <span class="math inline">\(H_0\)</span>.</li>
+<li>Identify a limitation that a small <em>p</em>-value would not resolve.</li>
+</ol></section><section id="looking-ahead" class="level2" data-number="11.17"><h2 data-number="11.17" class="anchored" data-anchor-id="looking-ahead">
+<span class="header-section-number">11.17</span> Looking Ahead</h2>
+<p>This chapter used the standard normal distribution to establish the logic of hypothesis testing. When the population standard deviation is unknown, as it usually is, we estimate it using the sample standard deviation. That additional uncertainty is especially important in small samples.</p>
+<p>Chapter 12 introduces the **t*-distribution** and applies it to tests involving one mean and the difference between two sample means.</p>
+</section><section id="chapter-summary" class="level2" data-number="11.18"><h2 data-number="11.18" class="anchored" data-anchor-id="chapter-summary">
+<span class="header-section-number">11.18</span> Chapter Summary</h2>
+<ul>
+<li>Hypothesis testing evaluates a claim about a population using sample data.</li>
+<li>The null hypothesis states the value assumed for the population parameter.</li>
+<li>The alternative hypothesis specifies the competing claim.</li>
+<li>Right-, left-, and two-tailed tests place the rejection region in different locations.</li>
+<li>The significance level defines how unusual a result must be before <span class="math inline">\(H_0\)</span> is rejected.</li>
+<li>The obtained statistic expresses the sample result’s distance from the null value in standard-error units.</li>
+<li>A <em>p</em>-value is calculated assuming the null hypothesis is true.</li>
+<li>Reject <span class="math inline">\(H_0\)</span> when <span class="math inline">\(p\le\alpha\)</span>; otherwise, fail to reject it.</li>
+<li>Failing to reject does not prove or accept <span class="math inline">\(H_0\)</span>.</li>
+<li>Statistical significance does not establish practical importance or eliminate problems in study design.</li>
+</ul></section><section id="key-terms" class="level2" data-number="11.19"><h2 data-number="11.19" class="anchored" data-anchor-id="key-terms">
+<span class="header-section-number">11.19</span> Key Terms</h2>
+<ul>
+<li>
+<strong>Alternative hypothesis (<span class="math inline">\(H_A\)</span>):</strong> The population claim for which the researcher seeks evidence.</li>
+<li>
+<strong>Critical value:</strong> The boundary separating the rejection region from results that fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>
+<strong>Hypothesis testing:</strong> A procedure for evaluating a population claim using sample data.</li>
+<li>
+<strong>Null hypothesis (<span class="math inline">\(H_0\)</span>):</strong> The population claim assumed when calculating the test statistic and <em>p</em>-value.</li>
+<li>
+<strong><em>p</em>-value:</strong> Assuming <span class="math inline">\(H_0\)</span> is true, the probability of a result at least as extreme as the observed result.</li>
+<li>
+<strong>Rejection region:</strong> Values of the test statistic that lead to rejection of <span class="math inline">\(H_0\)</span>.</li>
+<li>
+<strong>Significance level (<span class="math inline">\(\alpha\)</span>):</strong> The threshold used to decide whether a result is sufficiently unusual to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>
+<strong>Statistical significance:</strong> A result that meets the selected criterion for rejecting <span class="math inline">\(H_0\)</span>.</li>
+<li>
+<strong>Test statistic:</strong> A standardized value comparing a sample result with the null hypothesis.</li>
+<li>
+<strong>Two-tailed test:</strong> A test with an alternative hypothesis using <span class="math inline">\(\ne\)</span>.</li>
+<li>
+<strong>One-tailed test:</strong> A test with an alternative hypothesis using <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span>.</li>
+</ul>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./chapter-10-estimation.html" class="pagination-link" aria-label="Estimation and Confidence Intervals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Estimation and Confidence Intervals</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-12-t-tests.html" class="pagination-link" aria-label="The *t*-Distribution">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The <em>t</em>-Distribution</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Textbook for Statistical Analysis was written by Jacob T.N. Young.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>

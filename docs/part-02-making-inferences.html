@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jacob T.N. Young">
 
-<title>Describing Data – Textbook for Statistical Analysis</title>
+<title>Part II: Statistical Inference – Textbook for Statistical Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Describing Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Part II: Statistical Inference</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./part-01-describing-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Describing Data</span></a>
+ <span class="menu-text">Part I: Understanding and Describing Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -138,8 +138,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-01-thinking-with-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Chapter Title</span></span></a>
+  <a href="./chapter-01-statistical-reasoning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Reasoning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./part-02-making-inferences.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Describing Data</span></a>
+ <span class="menu-text">Part II: Statistical Inference</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -193,6 +193,36 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./chapter-08-normal-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Normal Distribution and <em>z</em>-Scores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-09-sampling-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sampling Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Estimation and Confidence Intervals</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12-t-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The <em>t</em>-Distribution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-13-comparing-two-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Comparing Two Means</span></span></a>
   </div>
 </li>
       </ul>
@@ -236,22 +266,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question">The Question</a></li>
-  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn">What You Will Learn</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why This Matters</a></li>
-  <li><a href="#core-concept" id="toc-core-concept" class="nav-link" data-scroll-target="#core-concept">Core Concept</a></li>
-  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked Example</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check Your Understanding</a></li>
-  <li><a href="#interactive-exploration" id="toc-interactive-exploration" class="nav-link" data-scroll-target="#interactive-exploration">Interactive Exploration</a></li>
-  <li><a href="#test-your-knowledge-activity-title" id="toc-test-your-knowledge-activity-title" class="nav-link" data-scroll-target="#test-your-knowledge-activity-title">Test Your Knowledge: Activity Title</a>
-  <ul class="collapse">
-  <li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario">The Scenario</a></li>
-  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task">Your Task</a></li>
-  </ul></li>
-  <li><a href="#data-investigation" id="toc-data-investigation" class="nav-link" data-scroll-target="#data-investigation">Data Investigation</a></li>
-  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection">Project Connection</a></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary">Chapter Summary</a></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key Terms</a></li>
+  <li><a href="#from-description-to-inference" id="toc-from-description-to-inference" class="nav-link active" data-scroll-target="#from-description-to-inference">From Description to Inference</a></li>
+  <li><a href="#the-logic-connecting-the-chapters" id="toc-the-logic-connecting-the-chapters" class="nav-link" data-scroll-target="#the-logic-connecting-the-chapters">The Logic Connecting the Chapters</a></li>
+  <li><a href="#populations-samples-parameters-and-statistics" id="toc-populations-samples-parameters-and-statistics" class="nav-link" data-scroll-target="#populations-samples-parameters-and-statistics">Populations, Samples, Parameters, and Statistics</a></li>
+  <li><a href="#a-recurring-reasoning-process" id="toc-a-recurring-reasoning-process" class="nav-link" data-scroll-target="#a-recurring-reasoning-process">A Recurring Reasoning Process</a></li>
+  <li><a href="#estimation-and-testing-are-connected" id="toc-estimation-and-testing-are-connected" class="nav-link" data-scroll-target="#estimation-and-testing-are-connected">Estimation and Testing Are Connected</a></li>
+  <li><a href="#statistical-conclusions-require-care" id="toc-statistical-conclusions-require-care" class="nav-link" data-scroll-target="#statistical-conclusions-require-care">Statistical Conclusions Require Care</a></li>
+  <li><a href="#how-to-work-through-part-ii" id="toc-how-to-work-through-part-ii" class="nav-link" data-scroll-target="#how-to-work-through-part-ii">How to Work Through Part II</a></li>
+  <li><a href="#what-you-should-be-able-to-do-by-the-end" id="toc-what-you-should-be-able-to-do-by-the-end" class="nav-link" data-scroll-target="#what-you-should-be-able-to-do-by-the-end">What You Should Be Able to Do by the End</a></li>
   </ul>
 </nav>
     </div>
@@ -260,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Describing Data</h1>
+<h1 class="title">Part II: Statistical Inference</h1>
 </div>
 
 
@@ -277,170 +299,217 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-question" class="level2">
-<h2 class="anchored" data-anchor-id="the-question">The Question</h2>
-<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Central question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Insert the central question for the chapter.</strong></p>
-</div>
-</div>
-<p>Write a short opening that establishes a criminal justice problem and explains why the chapter’s concept is needed.</p>
-</section>
-<section id="what-you-will-learn" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-will-learn">What You Will Learn</h2>
-<p>After completing this chapter, you should be able to:</p>
-<ol type="1">
-<li>Objective one.</li>
-<li>Objective two.</li>
-<li>Objective three.</li>
-</ol>
-</section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why This Matters</h2>
-<p>Connect the concept to criminal justice research, policy, professional practice, or public claims.</p>
-</section>
-<section id="core-concept" class="level2">
-<h2 class="anchored" data-anchor-id="core-concept">Core Concept</h2>
-<p>Develop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.</p>
-<div class="callout callout-style-simple callout-tip callout-titled" title="Helpful reasoning strategy">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Helpful reasoning strategy
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use a tip callout for a reusable strategy or decision rule.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-important callout-titled" title="Important distinction">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Important distinction
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use an important callout for a distinction students must understand.</p>
-</div>
-</div>
-<div class="callout callout-style-simple callout-warning callout-titled" title="A common mistake">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>A common mistake
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use a warning callout for a common misconception or interpretation error.</p>
-</div>
-</div>
-</section>
-<section id="worked-example" class="level2">
-<h2 class="anchored" data-anchor-id="worked-example">Worked Example</h2>
-<ol type="1">
-<li>State the question.</li>
-<li>Identify the cases and variables.</li>
-<li>Select and justify the method.</li>
-<li>Present the result.</li>
-<li>Interpret the result in context.</li>
-<li>State what cannot be concluded.</li>
-</ol>
-</section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check Your Understanding</h2>
-<p>Insert a short, embedded comprehension check.</p>
-<div class="callout callout-style-simple callout-note callout-titled" title="Check your answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Check your answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Provide the answer and a brief explanation.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="interactive-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-exploration">Interactive Exploration</h2>
-<p>When an interactive activity materially improves understanding, ask students to:</p>
-<ol type="1">
-<li><strong>Predict</strong> what will happen.</li>
-<li><strong>Manipulate</strong> an input.</li>
-<li><strong>Observe</strong> the result.</li>
-<li><strong>Explain</strong> why it occurred.</li>
-<li><strong>Reset</strong> and test another prediction.</li>
-</ol>
-<p>Include a static explanation or illustration so the central lesson does not depend entirely on the external application.</p>
-</section>
-<section id="test-your-knowledge-activity-title" class="level2">
-<h2 class="anchored" data-anchor-id="test-your-knowledge-activity-title">Test Your Knowledge: Activity Title</h2>
-<section id="the-scenario" class="level3">
-<h3 class="anchored" data-anchor-id="the-scenario">The Scenario</h3>
-<p>Introduce a self-contained criminal justice scenario, dataset, table, or visualization.</p>
-</section>
-<section id="your-task" class="level3">
-<h3 class="anchored" data-anchor-id="your-task">Your Task</h3>
-<p>Include questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.</p>
-<div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Review the answers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Provide answers with enough reasoning for students to diagnose misunderstandings.</p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="data-investigation" class="level2">
-<h2 class="anchored" data-anchor-id="data-investigation">Data Investigation</h2>
-<p>Connect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.</p>
-</section>
-<section id="project-connection" class="level2">
-<h2 class="anchored" data-anchor-id="project-connection">Project Connection</h2>
-<p>Add a small task that advances the semester investigation.</p>
-</section>
-<section id="chapter-summary" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-summary">Chapter Summary</h2>
+<p>Part I focused on <strong>describing</strong> data. We learned how variables are measured, how distributions can be organized and visualized, and how measures of central tendency and variation summarize what has been observed.</p>
+<p>Those tools answer questions such as:</p>
 <ul>
-<li>Summarize the first central idea.</li>
-<li>Summarize the second central idea.</li>
-<li>Summarize the third central idea.</li>
+<li>What values appear in the data?</li>
+<li>What is a typical value?</li>
+<li>How much do observations differ?</li>
+<li>What is the shape of the distribution?</li>
+</ul>
+<p>Part II makes an important transition. We will use data from a <strong>sample</strong> to reason about a larger <strong>population</strong>. This process is called <strong>statistical inference</strong>.</p>
+<section id="from-description-to-inference" class="level2">
+<h2 class="anchored" data-anchor-id="from-description-to-inference">From Description to Inference</h2>
+<p>Descriptive statistics summarize the cases in front of us. Inferential statistics ask what those cases may tell us about cases we have not observed.</p>
+<p>Suppose a survey finds that 62% of sampled residents trust the police. The percentage describes the sample. We may also want to know whether it provides a reasonable estimate of trust among all residents in the city.</p>
+<p>That move from the sample to the population creates uncertainty. Another random sample would probably produce a somewhat different percentage. Statistical inference does not eliminate this uncertainty. Instead, it gives us tools for describing, measuring, and incorporating it into our conclusions.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="The central problem of Part II">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The central problem of Part II
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Samples vary. Inferential statistics help us distinguish patterns that could reasonably result from sampling variation from patterns that would be unusual under a particular assumption.</p>
+</div>
+</div>
+</section>
+<section id="the-logic-connecting-the-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-connecting-the-chapters">The Logic Connecting the Chapters</h2>
+<p>The chapters in Part II build on one another. Each introduces a piece of a single reasoning process.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Chapter</th>
+<th style="text-align: left;">Main idea</th>
+<th style="text-align: left;">Central question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>7. Understanding Probability</strong></td>
+<td style="text-align: left;">Probability describes uncertainty and long-run patterns.</td>
+<td style="text-align: left;">How can probability help us understand uncertainty in data?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>8. The Normal Distribution and <em>z</em>-Scores</strong></td>
+<td style="text-align: left;">Distributions allow us to locate observations and identify unusual values.</td>
+<td style="text-align: left;">Where does a value fall, and how common or unusual is it?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>9. Sampling Distributions</strong></td>
+<td style="text-align: left;">Sample statistics vary across random samples.</td>
+<td style="text-align: left;">How much should a statistic vary because of chance?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>10. Estimation and Confidence Intervals</strong></td>
+<td style="text-align: left;">A sample statistic and its standard error can estimate an unknown parameter.</td>
+<td style="text-align: left;">What population values are reasonably consistent with the sample?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>11. Hypothesis Testing</strong></td>
+<td style="text-align: left;">Sample evidence can be used to evaluate a claim about a population.</td>
+<td style="text-align: left;">Would the observed result be unusual if a proposed population value were correct?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>12. The <em>t</em>-Distribution</strong></td>
+<td style="text-align: left;">The <em>t</em>-distribution supports inference about one population mean when variability is unknown.</td>
+<td style="text-align: left;">Is a sample mean unusually far from a proposed population mean?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>13. Comparing Two Means</strong></td>
+<td style="text-align: left;">Independent-samples <em>t</em>-tests evaluate differences between two population means.</td>
+<td style="text-align: left;">Is the difference between two sample means larger than expected from sampling variation?</td>
+</tr>
+</tbody>
+</table>
+<p>The sequence can be summarized as:</p>
+<ol type="1">
+<li>Describe uncertainty using probability.</li>
+<li>Represent probability with a distribution.</li>
+<li>Examine how statistics vary across samples.</li>
+<li>Use that expected variation to estimate population values.</li>
+<li>Use it to test population claims.</li>
+<li>Use the <em>t</em>-distribution when population variability is unknown.</li>
+<li>Extend the logic to comparisons between two independent means.</li>
+</ol>
+</section>
+<section id="populations-samples-parameters-and-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="populations-samples-parameters-and-statistics">Populations, Samples, Parameters, and Statistics</h2>
+<p>Several distinctions will appear throughout Part II:</p>
+<ul>
+<li>A <strong>population</strong> is the complete group we want to understand.</li>
+<li>A <strong>sample</strong> is the subset of cases actually observed.</li>
+<li>A <strong>parameter</strong> is a numerical description of a population.</li>
+<li>A <strong>statistic</strong> is a numerical description calculated from a sample.</li>
+</ul>
+<p>For example, the true mean response time for all calls in a city is a population parameter. The mean calculated from 100 sampled calls is a sample statistic.</p>
+<p>In most research settings, the population parameter is unknown. The sample statistic is used to estimate it or evaluate a claim about it.</p>
+<div class="callout callout-style-simple callout-note callout-titled" title="Inference depends on more than a formula">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Inference depends on more than a formula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An inferential calculation is useful only when the sample, measurement process, and assumptions justify connecting the observed data to the population named in the conclusion.</p>
+</div>
+</div>
+</section>
+<section id="a-recurring-reasoning-process" class="level2">
+<h2 class="anchored" data-anchor-id="a-recurring-reasoning-process">A Recurring Reasoning Process</h2>
+<p>Although the calculations will change, the chapters repeatedly use the same underlying questions:</p>
+<ol type="1">
+<li><p><strong>What is the population?</strong><br>
+Identify the cases to which the conclusion is intended to apply.</p></li>
+<li><p><strong>What is the sample?</strong><br>
+Identify the cases that were actually observed and how they were selected.</p></li>
+<li><p><strong>What parameter is being estimated or tested?</strong><br>
+Determine whether the question concerns a population mean, proportion, difference, or another quantity.</p></li>
+<li><p><strong>What statistic was observed?</strong><br>
+Calculate the corresponding value using the sample.</p></li>
+<li><p><strong>How much sampling variability should we expect?</strong><br>
+Use the standard error to describe how statistics would vary across random samples.</p></li>
+<li><p><strong>Is the result common or unusual under the model?</strong><br>
+Use a probability distribution, confidence interval, critical value, or <em>p</em>-value.</p></li>
+<li><p><strong>What conclusion is supported?</strong><br>
+Interpret the result in the language of the research question.</p></li>
+<li><p><strong>What cannot be concluded?</strong><br>
+Consider sampling, measurement, assumptions, practical importance, and whether the design supports a causal claim.</p></li>
+</ol>
+</section>
+<section id="estimation-and-testing-are-connected" class="level2">
+<h2 class="anchored" data-anchor-id="estimation-and-testing-are-connected">Estimation and Testing Are Connected</h2>
+<p>Confidence intervals and hypothesis tests may initially appear to be different techniques, but they rely on the same foundation.</p>
+<p>A <strong>confidence interval</strong> begins with a sample statistic and identifies a range of plausible values for a population parameter.</p>
+<p>A <strong>hypothesis test</strong> begins with a proposed population value and asks whether the observed statistic would be unusual if that proposal were correct.</p>
+<p>Both require us to understand:</p>
+<ul>
+<li>sampling variability;</li>
+<li>standard errors;</li>
+<li>probability distributions; and</li>
+<li>the difference between statistical evidence and certainty.</li>
 </ul>
 </section>
-<section id="key-terms" class="level2">
-<h2 class="anchored" data-anchor-id="key-terms">Key Terms</h2>
+<section id="statistical-conclusions-require-care" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-conclusions-require-care">Statistical Conclusions Require Care</h2>
+<p>Part II introduces formal calculations, but a correct calculation can still support a poor conclusion. Throughout these chapters, keep the following distinctions in mind:</p>
 <ul>
-<li><strong>Term:</strong> Concise definition.</li>
+<li><strong>Statistical significance is not practical importance.</strong> A small difference can be statistically significant when a sample is large.</li>
+<li><strong>Failure to reject is not proof.</strong> Insufficient evidence against a claim does not establish that the claim is true.</li>
+<li><strong>A narrow interval is not protection against bias.</strong> Large samples reduce random variation but do not repair poor sampling or measurement.</li>
+<li><strong>Association is not causation.</strong> A difference between groups does not establish why the groups differ.</li>
+<li><strong>Probability is not certainty.</strong> Unusual outcomes remain possible, and common outcomes are not guaranteed.</li>
 </ul>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Inference does not rescue weak data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Inference does not rescue weak data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The methods in Part II quantify uncertainty created by random sampling. They do not automatically account for selection bias, missing data, inaccurate measurement, violated assumptions, or weak research design.</p>
+</div>
+</div>
+</section>
+<section id="how-to-work-through-part-ii" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-work-through-part-ii">How to Work Through Part II</h2>
+<p>The material is cumulative. Ideas introduced early in the part reappear in later chapters. When solving a problem:</p>
+<ol type="1">
+<li>Write down the population, sample, parameter, and statistic.</li>
+<li>Draw the relevant distribution when an area or tail is involved.</li>
+<li>Keep formulas in symbolic form until the needed values are identified.</li>
+<li>Label each result, especially the standard error and test statistic.</li>
+<li>Finish every calculation with a plain-language interpretation.</li>
+<li>State at least one limitation or unsupported conclusion.</li>
+</ol>
+<p>The appendices provide:</p>
+<ul>
+<li>the <a href="./appendix-01-standard-normal-table.html"><strong>Standard Normal Distribution Table</strong></a> and</li>
+<li>the <a href="./appendix-02-t-distribution-table.html"><strong><em>t</em>-Distribution Critical Values</strong></a>; and</li>
+<li><a href="./appendix-03-chi-square-table.html"><strong>Chi-Square Distribution Critical Values</strong></a>.</li>
+</ul>
+<p>The normal and <em>t</em> tables will be used directly in Part II. The chi-square table is included as a reference for later applications and extensions.</p>
+</section>
+<section id="what-you-should-be-able-to-do-by-the-end" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-should-be-able-to-do-by-the-end">What You Should Be Able to Do by the End</h2>
+<p>By the end of Part II, you should be able to:</p>
+<ul>
+<li>explain why samples from the same population produce different results;</li>
+<li>use probability distributions to identify common and unusual outcomes;</li>
+<li>interpret <em>z</em>-scores, standard errors, confidence intervals, and <em>p</em>-values;</li>
+<li>distinguish parameters from statistics;</li>
+<li>construct and interpret confidence intervals;</li>
+<li>test a claim about a population mean using the <em>t</em>-distribution;</li>
+<li>compare the means of two independent groups;</li>
+<li>distinguish statistical significance from substantive importance; and</li>
+<li>identify the assumptions and limitations accompanying an inferential conclusion.</li>
+</ul>
+<p>The goal is not simply to calculate a statistic. It is to develop a disciplined way of reasoning from incomplete information while being clear about the uncertainty that remains.</p>
 
 
 </section>
