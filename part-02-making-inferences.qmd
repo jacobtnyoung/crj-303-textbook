@@ -1,0 +1,157 @@
+# Part II: Statistical Inference {.unnumbered}
+
+Part I focused on **describing data**. We learned how variables are measured, how distributions can be organized and visualized, and how measures of central tendency and variation summarize what has been observed.
+
+Those tools answer questions such as:
+
+- What values appear in the data?
+- What is a typical value?
+- How much do observations differ?
+- What is the shape of the distribution?
+
+Part II makes an important transition. We will use data from a **sample** to reason about a larger **population**. This process is called **statistical inference**.
+
+## From Description to Inference
+
+Descriptive statistics summarize the cases in front of us. Inferential statistics ask what those cases may tell us about cases we have not observed.
+
+Suppose a survey finds that 62% of sampled residents trust the police. The percentage describes the sample. We may also want to know whether it provides a reasonable estimate of trust among all residents in the city.
+
+That move from the sample to the population creates uncertainty. Another random sample would probably produce a somewhat different percentage. Statistical inference does not eliminate this uncertainty. Instead, it gives us tools for describing, measuring, and incorporating it into our conclusions.
+
+::: {.callout-important title="The central problem of Part II"}
+Samples vary. Inferential statistics help us distinguish patterns that could reasonably result from sampling variation from patterns that would be unusual under a particular assumption.
+:::
+
+## The Logic Connecting the Chapters
+
+The chapters in Part II build on one another. Each introduces a piece of a single reasoning process.
+
+| Chapter | Main idea | Central question |
+|:--------|:----------|:-----------------|
+| **7. Understanding Probability** | Probability describes uncertainty and long-run patterns. | How can probability help us understand uncertainty in data? |
+| **8. The Normal Distribution and *z*-Scores** | Distributions allow us to locate observations and identify unusual values. | Where does a value fall, and how common or unusual is it? |
+| **9. Sampling Distributions** | Sample statistics vary across random samples. | How much should a statistic vary because of chance? |
+| **10. Estimation and Confidence Intervals** | A sample statistic and its standard error can estimate an unknown parameter. | What population values are reasonably consistent with the sample? |
+| **11. Hypothesis Testing** | Sample evidence can be used to evaluate a claim about a population. | Would the observed result be unusual if a proposed population value were correct? |
+| **12. The *t*-Distribution** | The *t*-distribution supports inference about one population mean when variability is unknown. | Is a sample mean unusually far from a proposed population mean? |
+| **13. Comparing Two Means** | Independent-samples *t*-tests evaluate differences between two population means. | Is the difference between two sample means larger than expected from sampling variation? |
+
+The sequence can be summarized as:
+
+1. Describe uncertainty using probability.
+2. Represent probability with a distribution.
+3. Examine how statistics vary across samples.
+4. Use that expected variation to estimate population values.
+5. Use it to test population claims.
+6. Use the *t*-distribution when population variability is unknown.
+7. Extend the logic to comparisons between two independent means.
+
+## Populations, Samples, Parameters, and Statistics
+
+Several distinctions will appear throughout Part II:
+
+- A **population** is the complete group we want to understand.
+- A **sample** is the subset of cases actually observed.
+- A **parameter** is a numerical description of a population.
+- A **statistic** is a numerical description calculated from a sample.
+
+For example, the true mean response time for all calls in a city is a population parameter. The mean calculated from 100 sampled calls is a sample statistic.
+
+In most research settings, the population parameter is unknown. The sample statistic is used to estimate it or evaluate a claim about it.
+
+::: {.callout-note title="Inference depends on more than a formula"}
+An inferential calculation is useful only when the sample, measurement process, and assumptions justify connecting the observed data to the population named in the conclusion.
+:::
+
+## A Recurring Reasoning Process
+
+Although the calculations will change, the chapters repeatedly use the same underlying questions:
+
+1. **What is the population?**  
+   Identify the cases to which the conclusion is intended to apply.
+
+2. **What is the sample?**  
+   Identify the cases that were actually observed and how they were selected.
+
+3. **What parameter is being estimated or tested?**  
+   Determine whether the question concerns a population mean, proportion, difference, or another quantity.
+
+4. **What statistic was observed?**  
+   Calculate the corresponding value using the sample.
+
+5. **How much sampling variability should we expect?**  
+   Use the standard error to describe how statistics would vary across random samples.
+
+6. **Is the result common or unusual under the model?**  
+   Use a probability distribution, confidence interval, critical value, or *p*-value.
+
+7. **What conclusion is supported?**  
+   Interpret the result in the language of the research question.
+
+8. **What cannot be concluded?**  
+   Consider sampling, measurement, assumptions, practical importance, and whether the design supports a causal claim.
+
+## Estimation and Testing Are Connected
+
+Confidence intervals and hypothesis tests may initially appear to be different techniques, but they rely on the same foundation.
+
+A **confidence interval** begins with a sample statistic and identifies a range of plausible values for a population parameter.
+
+A **hypothesis test** begins with a proposed population value and asks whether the observed statistic would be unusual if that proposal were correct.
+
+Both require us to understand:
+
+- sampling variability;
+- standard errors;
+- probability distributions; and
+- the difference between statistical evidence and certainty.
+
+## Statistical Conclusions Require Care
+
+Part II introduces formal calculations, but a correct calculation can still support a poor conclusion. Throughout these chapters, keep the following distinctions in mind:
+
+- **Statistical significance is not practical importance.** A small difference can be statistically significant when a sample is large.
+- **Failure to reject is not proof.** Insufficient evidence against a claim does not establish that the claim is true.
+- **A narrow interval is not protection against bias.** Large samples reduce random variation but do not repair poor sampling or measurement.
+- **Association is not causation.** A difference between groups does not establish why the groups differ.
+- **Probability is not certainty.** Unusual outcomes remain possible, and common outcomes are not guaranteed.
+
+::: {.callout-warning title="Inference does not rescue weak data"}
+The methods in Part II quantify uncertainty created by random sampling. They do not automatically account for selection bias, missing data, inaccurate measurement, violated assumptions, or weak research design.
+:::
+
+## How to Work Through Part II
+
+The material is cumulative. Ideas introduced early in the part reappear in later chapters. When solving a problem:
+
+1. Write down the population, sample, parameter, and statistic.
+2. Draw the relevant distribution when an area or tail is involved.
+3. Keep formulas in symbolic form until the needed values are identified.
+4. Label each result, especially the standard error and test statistic.
+5. Finish every calculation with a plain-language interpretation.
+6. State at least one limitation or unsupported conclusion.
+
+The appendices provide:
+
+- the **Standard Normal Distribution Table**;
+- the ***t*-Distribution Critical Values**; and
+- **Chi-Square Distribution Critical Values**.
+
+The normal and *t* tables will be used directly in Part II. The chi-square table is included as a reference for later applications and extensions.
+
+## What You Should Be Able to Do by the End
+
+By the end of Part II, you should be able to:
+
+- explain why samples from the same population produce different results;
+- use probability distributions to identify common and unusual outcomes;
+- interpret *z*-scores, standard errors, confidence intervals, and *p*-values;
+- distinguish parameters from statistics;
+- construct and interpret confidence intervals;
+- test a claim about a population mean using the *t*-distribution;
+- compare the means of two independent groups;
+- distinguish statistical significance from substantive importance; and
+- identify the assumptions and limitations accompanying an inferential conclusion.
+
+The goal is not simply to calculate a statistic. It is to develop a disciplined way of reasoning from incomplete information while being clear about the uncertainty that remains.

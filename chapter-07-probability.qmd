@@ -1,0 +1,276 @@
+# Understanding Probability
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**How does probability help us understand uncertainty in data?**
+:::
+
+Part I focused on describing observations that have already been collected. We organized data, visualized distributions, and summarized their center and variation. Part II asks a different question: what can observed data tell us about outcomes we have not observed or populations we cannot measure completely?
+
+Answering that question requires **probability**. Probability does not eliminate uncertainty or predict every individual outcome. It provides a language for describing uncertainty, identifying long-run patterns, and determining whether an observed result is common or unusual under a particular set of assumptions.
+
+Probability is therefore the foundation of statistical inference. This chapter provides only the concepts needed for the chapters that follow. Our goal is not to master every rule of probability, but to understand how probability helps us interpret distributions, samples, and statistical conclusions.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Explain probability as a numerical description of uncertainty.
+2. Interpret probability as a proportion or percentage.
+3. Distinguish theoretical probability from probability estimated using data.
+4. Explain why random outcomes vary in the short run but become more predictable over many observations.
+5. Connect probability to areas within a distribution.
+6. Explain how probability will be used in statistical inference.
+
+## Why Probability Matters in Criminal Justice
+
+Criminal justice decisions frequently involve uncertainty:
+
+- Will a person released before trial appear for court?
+- Is a forensic test result likely under competing explanations?
+- Could an apparent crime cluster have occurred through chance?
+- How accurately does a screening tool identify a rare event?
+- Is a difference between two samples larger than we would expect from sampling variation?
+
+A probability describes uncertainty under specified conditions. It does not automatically tell us what decision should be made. Decisions also depend on the quality of the data, the consequences of errors, legal and ethical standards, and the assumptions used to calculate the probability.
+
+::: {.callout-warning title="Probability is conditional on a model"}
+A probability is not a fact detached from assumptions. It may depend on how outcomes are defined, how cases are selected, whether events are treated as independent, and whether the underlying model is appropriate.
+:::
+
+## Random Processes, Outcomes, and Events
+
+A **random process** is a procedure that can produce more than one possible result and whose particular result cannot be known with certainty in advance. Examples include tossing a coin, rolling a die, randomly selecting a case file, or drawing a random sample from a population.
+
+An **outcome** is one possible result of the process. The **sample space**, written as $S$, is the set of all possible outcomes.
+
+For one roll of a six-sided die:
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+An **event** is one or more outcomes of interest. If event $A$ is *rolling an even number*, then:
+
+$$
+A=\{2,4,6\}
+$$
+
+Because three of the six equally likely outcomes satisfy the event:
+
+$$
+P(A)=\frac{3}{6}=0.50
+$$
+
+Probability values range from 0 to 1:
+
+- $P(A)=0$ means the event is impossible under the model.
+- $P(A)=1$ means the event is certain under the model.
+- Values between 0 and 1 express different degrees of uncertainty.
+
+A probability can also be expressed as a percentage. A probability of 0.25 is equivalent to 25%.
+
+## Theoretical and Empirical Probability
+
+### Theoretical Probability
+
+A **theoretical probability** is derived from a model of the possible outcomes. When all outcomes are equally likely:
+
+$$
+P(A)=\frac{\text{Number of outcomes in }A}{\text{Total number of possible outcomes}}
+$$
+
+For a fair six-sided die, the theoretical probability of rolling a value greater than 4 is:
+
+$$
+P(X>4)=\frac{2}{6}=\frac{1}{3}\approx0.3333
+$$
+
+This calculation depends on the assumption that the die is fair and all six outcomes are equally likely.
+
+### Empirical Probability
+
+An **empirical probability** is estimated from observed outcomes:
+
+$$
+\widehat{P}(A)=\frac{\text{Number of times }A\text{ occurred}}{\text{Number of trials}}
+$$
+
+Suppose an analyst reviews 200 randomly selected calls for service and finds that 54 involved a behavioral-health concern. The empirical probability is:
+
+$$
+\widehat{P}(\text{Behavioral-health concern})=\frac{54}{200}=0.27
+$$
+
+Among the 200 selected calls, 27% involved a behavioral-health concern. Whether that estimate applies to a larger population depends on how the calls were selected and what population they represent.
+
+::: {.callout-important title="A proportion can describe observed data or estimate probability"}
+The calculation may look the same, but the interpretation differs. A proportion describes the cases observed. An empirical probability uses observed relative frequency to estimate how often an event occurs in a defined process or population.
+:::
+
+## Short-Run Variability and Long-Run Stability
+
+Random processes can appear erratic over a small number of trials. A fair coin can produce four heads in five tosses even though the probability of heads on each toss is 0.50. As the number of independent trials grows, the observed proportion tends to move closer to the underlying probability. This pattern is called the **law of large numbers**.
+
+The law of large numbers does not mean that short-run imbalances must immediately correct themselves. After several heads, the probability of heads on the next toss remains 0.50 if the tosses are independent.
+
+```{r}
+#| label: fig-long-run-probability
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "The cumulative observed proportion varies early and tends to stabilize near the underlying probability as the number of trials increases."
+#| fig-alt: "Line graph of cumulative event proportion over 500 simulated trials, fluctuating early and gradually approaching a horizontal line at probability 0.30."
+
+library(ggplot2)
+
+set.seed(303)
+
+simulation <- data.frame(
+  trial = 1:500,
+  event = rbinom(500, size = 1, prob = 0.30)
+)
+
+simulation$cumulative_proportion <- cumsum(simulation$event) / simulation$trial
+
+ggplot(simulation, aes(x = trial, y = cumulative_proportion)) +
+  geom_line(linewidth = 0.7, color = "#3C6E9E") +
+  geom_hline(yintercept = 0.30, linetype = "dashed") +
+  annotate("text", x = 430, y = 0.33, label = "Probability = 0.30") +
+  scale_y_continuous(
+    limits = c(0, 1),
+    breaks = seq(0, 1, by = 0.20)
+  ) +
+  labs(
+    title = "Short-Run Variation and Long-Run Stability",
+    x = "Number of Trials",
+    y = "Cumulative Observed Proportion"
+  ) +
+  theme_classic(base_size = 12)
+```
+
+::: {.callout-warning title="The gambler's fallacy"}
+The belief that a random outcome is “due” because it has not occurred recently is called the **gambler's fallacy**. Independent trials do not remember previous outcomes. A run of heads does not make tails more likely on the next fair coin toss.
+:::
+
+## Probability and Distributions
+
+In Part I, a distribution described how observed values were arranged. A **probability distribution** describes how likely different possible values are. Common values receive more probability, while unusual values receive less.
+
+For a continuous distribution, probability is represented by **area under the curve**. The entire area equals 1, or 100%. The area below a value, above a value, or between two values represents the probability of observing a value in that region.
+
+This is the main probability idea needed for the next chapter. The normal distribution will allow us to locate observations and determine how common or unusual they are.
+
+## Common and Unusual Outcomes
+
+Suppose a statistical model indicates that an outcome as large as the one observed would occur only 3% of the time:
+
+$$
+P(\text{Outcome this large or larger})=0.03
+$$
+
+The outcome is possible, but it would be unusual if the assumptions of the model were correct. This is the basic reasoning used later in hypothesis testing: begin with an assumption, determine how sample results would vary by chance, and ask how likely the observed result would be.
+
+::: {.callout-warning title="Unusual does not mean impossible"}
+Low-probability events sometimes occur. A small probability is evidence to consider alongside the study design, data quality, assumptions, and substantive context. It is not proof by itself.
+:::
+
+## How Probability Supports Statistical Inference
+
+**Statistical inference** uses sample data to draw conclusions about a larger population. Probability describes the uncertainty involved in moving from a sample to that population.
+
+In the chapters that follow, probability will help us ask:
+
+- How unusual is a score within a distribution?
+- How much would a sample mean vary across repeated random samples?
+- What range of population values is reasonably consistent with our sample?
+- Could an observed difference have occurred through chance variation?
+
+Statistical conclusions are therefore not statements of certainty. They are conclusions made while acknowledging and estimating uncertainty.
+
+## Check Your Understanding
+
+Suppose 120 of 400 randomly selected incident reports involve property crime.
+
+1. What proportion of the selected reports involve property crime?
+2. Express that value as a probability and as a percentage.
+3. Does the result prove that the next selected report will involve property crime?
+4. Why might another random sample produce a slightly different proportion?
+5. What would you need to know before applying this estimate to all reports in the city?
+
+::: {.callout-note collapse="true" title="Check your answers"}
+1. The observed proportion is $120/400=0.30$.
+2. The estimated probability is 0.30, or 30%.
+3. No. It describes a pattern across cases, not a certain prediction for one case.
+4. Random samples differ because of chance variation.
+5. We would need to know how the reports were selected, what population and period they represent, and whether the sample is representative.
+:::
+
+## Data Investigation: Short-Run and Long-Run Probability
+
+This activity can be completed individually and then pooled across the class.
+
+1. Predict how many heads you expect in 10 tosses of a fair coin.
+2. Toss the coin 10 times and record the sequence.
+3. Calculate the observed proportion of heads.
+4. Compare your observed proportion with the theoretical probability of 0.50.
+5. Combine your results with the class and calculate the class proportion.
+6. Compare the individual and pooled estimates.
+7. Explain why the pooled estimate will often be closer to 0.50 without claiming that it must be exactly 0.50.
+
+The class results provide an empirical demonstration of short-run variability and long-run stability.
+
+## Test Your Knowledge: Probability and Samples
+
+A researcher randomly selects 100 cases from a much larger population and finds that 38 resulted in a particular case outcome.
+
+1. Calculate the observed proportion of cases with the outcome.
+2. Write the estimated probability using probability notation.
+3. Interpret the probability as a percentage and as a long-run frequency.
+4. If another random sample of 100 cases is drawn, must exactly 38 have the outcome? Explain.
+5. Would a random sample of 1,000 cases generally provide a more stable estimate? Explain.
+6. Identify one reason the larger sample could still provide a misleading estimate.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+1. The observed proportion is $38/100=0.38$.
+2. $\widehat{P}(\text{Outcome})=0.38$.
+3. The value is 38%, or approximately 38 outcomes per 100 cases over many observations under similar conditions.
+4. No. Another sample will probably differ somewhat because of chance variation.
+5. Yes. Larger random samples generally produce more stable estimates.
+6. A large sample can still be misleading if selection is biased, the outcome is measured poorly, relevant cases are missing, or the population has changed.
+:::
+
+## Project Connection: Identify Uncertainty
+
+Connect probability to your semester investigation.
+
+1. Identify one proportion you might calculate using your data.
+2. Define the population to which you might want that proportion to apply.
+3. Identify one reason another sample might produce a different proportion.
+4. Identify one possible source of bias that would not be solved by increasing the sample size.
+
+## From Probability to Probability Distributions
+
+Probability provides the bridge from describing observed data to reasoning about data we have not observed. The next chapter introduces the **normal distribution**. We will use its shape, center, and standard deviation to determine where values fall and how common or unusual they are.
+
+## Chapter Summary
+
+- Probability provides a language for reasoning about uncertainty under specified assumptions.
+- Theoretical probability follows from a model; empirical probability is estimated from observed relative frequency.
+- Short sequences can vary substantially, while observed proportions tend to stabilize with many independent trials.
+- Larger random samples generally reduce chance variation but do not eliminate bias.
+- Probability is represented by area within a continuous probability distribution.
+- Statistical inference uses probability to describe uncertainty when drawing conclusions from samples.
+- Low-probability results are unusual under a model, but they are not impossible.
+- A probability describes uncertainty but does not, by itself, prescribe a decision.
+
+## Key Terms
+
+- **Chance variation:** Differences that occur because random processes do not produce identical results every time.
+- **Empirical probability:** A probability estimated from observed relative frequency.
+- **Law of large numbers:** The principle that an observed proportion tends to approach the underlying probability as the number of independent trials increases.
+- **Probability:** A numerical description of uncertainty ranging from 0 to 1.
+- **Probability distribution:** A description of possible values and how likely they are.
+- **Statistical inference:** The process of using sample data to draw conclusions about a larger population.
+- **Theoretical probability:** A probability derived from a model of possible outcomes.

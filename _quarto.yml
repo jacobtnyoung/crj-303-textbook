@@ -22,6 +22,16 @@ book:
         - chapter-05-central-tendency.qmd
         - chapter-06-variation.qmd
 
+    - part: part-02-making-inferences.qmd
+      chapters:
+        - chapter-07-probability.qmd
+        - chapter-08-normal-distribution.qmd
+        - chapter-09-sampling-distributions.qmd
+        - chapter-10-estimation.qmd
+        - chapter-11-hypothesis-testing.qmd
+        - chapter-12-t-tests.qmd
+        - chapter-13-comparing-two-means.qmd
+
   appendices:
     - appendix-01-standard-normal-table.qmd
     - appendix-02-t-distribution-table.qmd

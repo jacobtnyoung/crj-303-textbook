@@ -1,0 +1,353 @@
+# Comparing Two Means
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**Is the difference between two sample means larger than we would expect from sampling variability?**
+:::
+
+So far, we have been examining questions that involve one sample mean or one sample proportion with a proposed population value. 
+Many questions in criminology and criminal justice go beyond this and compare two groups. 
+We may want to know whether two programs have different mean outcomes, whether case processing differs across types of legal representation, or whether officers in different assignments have different mean caseloads.
+
+An **independent-samples *t*-test** extends the same logic to the difference between two means. 
+It compares the observed difference with the amount of variation expected from two independent samples.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. State null and alternative hypotheses comparing two population means.
+2. Distinguish independent samples from paired or repeated observations.
+3. Calculate the standard error of a difference between two sample means.
+4. Calculate and interpret an obtained *t*-statistic.
+5. Select an approximate critical value from the *t* table.
+6. Make and interpret a hypothesis-test decision.
+7. Explain why a statistically significant difference does not establish causation.
+
+Appendix B, [**Student's *t*-Distribution Critical Values**](appendix-02-t-distribution-table.qmd), provides the critical values used in this chapter.
+
+## Comparing Two Population Means
+
+Many criminal justice questions compare two groups:
+
+- Do public defender and private attorney cases have different disposition times?
+- Do specialist and general-assignment probation officers have different caseloads?
+- Do two programs produce different mean outcomes?
+
+For two independent groups, the null hypothesis usually states that the population means are equal:
+
+$$
+H_0:\mu_1=\mu_2
+$$
+
+This is equivalent to:
+
+$$
+H_0:\mu_1-\mu_2=0
+$$
+
+Possible alternatives are:
+
+$$
+H_A:\mu_1\ne\mu_2
+$$
+
+$$
+H_A:\mu_1>\mu_2
+$$
+
+or:
+
+$$
+H_A:\mu_1<\mu_2
+$$
+
+## Standard Error for the Difference
+
+Each sample contributes uncertainty. The estimated standard error of the difference is:
+
+$$
+\widehat{SE}_{\bar{x}_1-\bar{x}_2}
+=\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}
+$$
+
+The test statistic is:
+
+$$
+t=\frac{(\bar{x}_1-\bar{x}_2)-0}
+{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
+$$
+
+The zero represents the difference proposed by $H_0$.
+
+::: {.callout-warning title="Square the standard deviations"}
+The standard-error formula uses the sample variances, $s_1^2$ and $s_2^2$. 
+A common mistake is to insert the standard deviations without squaring them.
+:::
+
+## Degrees of Freedom for Two Samples
+
+For hand calculations in this chapter, we use the approximation:
+
+$$
+df=n_1+n_2-2
+$$
+
+## Worked Example: Time to Disposition
+
+The court compares days from filing to disposition for two independent samples:
+
+| Group | $n$ | Mean | Standard deviation |
+|:------|----:|-----:|-------------------:|
+| Public defender cases | 9 | 42 | 3 |
+| Private attorney cases | 9 | 36 | 3 |
+
+The question asks whether the population means differ:
+
+$$
+H_0:\mu_1=\mu_2
+$$
+
+$$
+H_A:\mu_1\ne\mu_2
+$$
+
+### Step 1: Calculate the Standard Error
+
+$$
+\widehat{SE}_{\bar{x}_1-\bar{x}_2}
+=\sqrt{\frac{3^2}{9}+\frac{3^2}{9}}
+=\sqrt{2}
+=1.414
+$$
+
+### Step 2: Calculate the Obtained Statistic
+
+$$
+t=\frac{42-36}{1.414}=4.24
+$$
+
+### Step 3: Find the Critical Value
+
+Using the approximation:
+
+$$
+df=9+9-2=16
+$$
+
+For a two-tailed test with $\alpha=0.05$:
+
+$$
+t_{critical}=\pm2.120
+$$
+
+### Step 4: Decide and Interpret
+
+Because:
+
+$$
+|4.24|>2.120
+$$
+
+we reject $H_0$. 
+The samples provide evidence that mean disposition time differs between public defender and private attorney cases.
+
+The positive sign indicates that the first sample mean is higher. 
+It does not explain why the groups differ or establish that attorney type caused the difference.
+
+## Assumptions and Study Design
+
+The calculations alone do not guarantee a valid conclusion. Ask whether:
+
+- the observations within and between groups are sufficiently independent;
+- the samples were selected through a defensible process;
+- the outcome is quantitative and measured consistently;
+- severe skew or influential outliers make a mean comparison misleading; and
+- the two groups represent the populations named in the conclusion.
+
+An independent-samples test is not appropriate for repeated observations from the same people or naturally matched pairs. 
+Those designs require a paired procedure.
+
+::: {.callout-important title="A significant difference is not necessarily causal"}
+A two-sample test evaluates evidence of a population difference. 
+Causal interpretation requires a research design that rules out credible alternative explanations.
+:::
+
+## Check Your Understanding
+
+Suppose two independent samples have the following results:
+
+| Group | $n$ | Mean | Standard deviation |
+|:------|----:|-----:|-------------------:|
+| Group 1 | 10 | 24 | 4 |
+| Group 2 | 10 | 20 | 4 |
+
+1. State two-tailed null and alternative hypotheses.
+2. Calculate the standard error of the difference.
+3. Calculate the obtained *t*.
+4. Using the classroom degrees-of-freedom approximation and $\alpha=0.05$, make a decision.
+
+::: {.callout-note collapse="true" title="Check your answers"}
+
+$$
+H_0:\mu_1=\mu_2
+$$
+
+$$
+H_A:\mu_1\ne\mu_2
+$$
+
+$$
+SE=\sqrt{\frac{4^2}{10}+\frac{4^2}{10}}
+=\sqrt{3.2}
+=1.789
+$$
+
+$$
+t=\frac{24-20}{1.789}=2.24
+$$
+
+Using $df=10+10-2=18$, the two-tailed critical value is $\pm2.101$. Because $|2.24|>2.101$, we reject $H_0$.
+:::
+
+## Test Your Knowledge: Probation Officer Caseloads
+
+### Part 1: Any Difference?
+
+A supervisor asks whether specialist and general-assignment probation officers have different population mean caseloads.
+
+| Group | $n$ | Mean | Standard deviation |
+|:------|----:|-----:|-------------------:|
+| Specialist | 8 | 15 | 2 |
+| General assignment | 16 | 13 | 4 |
+
+Using $\alpha=0.05$:
+
+1. State $H_0$ and $H_A$.
+2. Identify the type of test.
+3. Calculate the standard error and obtained *t*.
+4. Calculate the approximate degrees of freedom and find the critical value.
+5. Reject or fail to reject $H_0$.
+6. Interpret the result.
+
+### Part 2: Higher Specialist Caseloads?
+
+The supervisor instead asks whether specialists have a higher population mean caseload.
+
+| Group | $n$ | Mean | Standard deviation |
+|:------|----:|-----:|-------------------:|
+| Specialist | 16 | 18 | 4 |
+| General assignment | 10 | 14 | 5 |
+
+Repeat the six steps using $\alpha=0.05$.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+
+### Part 1
+
+$$
+H_0:\mu_{specialist}=\mu_{general}
+$$
+
+$$
+H_A:\mu_{specialist}\ne\mu_{general}
+$$
+
+This is a two-tailed test.
+
+$$
+SE=\sqrt{\frac{2^2}{8}+\frac{4^2}{16}}
+=\sqrt{1.5}
+=1.225
+$$
+
+$$
+t=\frac{15-13}{1.225}=1.63
+$$
+
+Using the classroom approximation, $df=8+16-2=22$ and $t_{critical}=\pm2.074$. We fail to reject $H_0$. 
+The sample does not provide sufficient evidence that the population mean caseloads differ.
+
+### Part 2
+
+$$
+H_0:\mu_{specialist}=\mu_{general}
+$$
+
+$$
+H_A:\mu_{specialist}>\mu_{general}
+$$
+
+This is a right-tailed test.
+
+$$
+SE=\sqrt{\frac{4^2}{16}+\frac{5^2}{10}}
+=\sqrt{3.5}
+=1.871
+$$
+
+$$
+t=\frac{18-14}{1.871}=2.14
+$$
+
+Using the approximation, $df=16+10-2=24$ and $t_{critical}=1.711$. 
+We reject $H_0$. The sample provides evidence that specialists have a higher population mean caseload.
+
+Neither result establishes that officer assignment causes caseload differences.
+:::
+
+## Data Investigation: Comparing Two Groups
+
+Using a quantitative variable from class or project data:
+
+1. Identify two independent groups.
+2. Calculate the sample size, mean, and standard deviation for each.
+3. Visualize and compare the two sample distributions.
+4. State null and alternative hypotheses.
+5. Calculate the standard error and obtained *t*.
+6. Use the *t* table to make a decision.
+7. Interpret the result in context.
+8. Explain whether the design supports a population or causal conclusion.
+
+## Project Connection
+
+1. Identify a comparison between two groups relevant to your semester project.
+2. Define the outcome and the two populations.
+3. State $H_0$ and $H_A$.
+4. Explain whether the samples are independent.
+5. Identify one assumption or design limitation that should accompany the result.
+
+## Part II: What You Can Now Do
+
+Part II began with probability and developed a sequence of ideas:
+
+1. Probability describes uncertainty.
+2. The normal distribution helps locate common and unusual outcomes.
+3. Sampling distributions describe how statistics vary across samples.
+4. Confidence intervals estimate unknown population parameters.
+5. Hypothesis tests evaluate population claims.
+6. The *t*-distribution supports inference about a population mean when variability is unknown.
+7. Independent-samples *t*-tests evaluate differences between two population means.
+
+These tools do not remove uncertainty. 
+They make uncertainty visible and allow it to be incorporated into statistical reasoning.
+
+## Chapter Summary
+
+- An independent-samples *t*-test evaluates a difference between two population means.
+- The null hypothesis usually states that the difference between population means is zero.
+- The standard error incorporates the sample sizes and variabilities of both groups.
+- The obtained *t*-statistic expresses the observed difference in estimated standard-error units.
+- This chapter uses $n_1+n_2-2$ as a classroom degrees-of-freedom approximation.
+- Statistical software commonly uses Welch's adjusted degrees of freedom.
+- Independent-samples tests are not appropriate for repeated or naturally paired observations.
+- Statistical significance does not establish practical importance or causation.
+
+## Key Terms
+
+- **Independent samples:** Samples containing different, unrelated cases.
+- **Independent-samples *t*-test:** A test comparing the means of two independent populations.
+- **Mean difference:** The difference between two sample or population means.
+- **Paired observations:** Measurements that are linked through repeated observations or natural matching.
+- **Standard error of the difference:** The expected sampling variability of the difference between two sample means.
