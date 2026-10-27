@@ -15,7 +15,7 @@ book:
 
     - part: part-01-describing-data.qmd
       chapters:
-        - chapter-01-thinking-with-data.qmd
+        - chapter-01-statistical-reasoning.qmd
         - chapter-02-measurement.qmd
         - chapter-03-frequency-distributions.qmd
         - chapter-04-visualizing-categorical-data.qmd

@@ -1,98 +1,183 @@
-# Describing Data
+# Part I: Understanding and Describing Data {.unnumbered}
 
-## The Question
+Statistics begins with questions. 
+A researcher may want to know how residents perceive the police, how frequently different offenses occur, how long cases take to process, or whether crime is concentrated in particular places.
 
-::: {.callout-note title="Central question"}
-**Insert the central question for the chapter.**
+Before those questions can be answered, we must decide what to observe, how to record it, and how to describe the resulting data accurately. 
+Part I develops those foundational skills.
+
+The chapters in this part focus on **descriptive statistics**: methods for organizing, visualizing, and summarizing observed data. 
+These methods help us identify patterns without losing sight of what the variables represent or how the data were produced.
+
+## From Questions to Data
+
+A dataset is not simply a collection of numbers. 
+It is a structured record of observations created through decisions about:
+
+- which cases to include;
+- which characteristics to measure;
+- how concepts will be translated into variables;
+- how values will be coded; and
+- how the resulting information will be summarized.
+
+Those decisions shape every conclusion that follows. A technically correct mean or graph can still be misleading if the variable was poorly measured, the cases do not represent the intended group, or the summary does not fit the level of measurement.
+
+::: {.callout-important title="The central problem of Part I"}
+Before we can analyze data, we must understand what the observations represent and select summaries that match the variable, distribution, and research question.
 :::
 
-Write a short opening that establishes a criminal justice problem and explains why the chapter's concept is needed.
+## The Logic Connecting the Chapters
 
-## What You Will Learn
+The chapters in Part I move from the construction of data to increasingly concise descriptions of its patterns.
 
-After completing this chapter, you should be able to:
+| Chapter | Main idea | Central question |
+|:--------|:----------|:-----------------|
+| **1. Statistical Reasoning** | Statistics connects substantive questions with systematic evidence. | What can data help us learn, and what information do we need? |
+| **2. Measuring Variables** | Variables translate characteristics into recorded values. | How do we turn an idea into a variable that can be analyzed? |
+| **3. Organizing Data with Frequency Distributions** | Frequencies, proportions, and percentages reveal how observations are distributed. | How can raw observations be organized into a clear pattern? |
+| **4. Visualizing Categorical Data with Bar Charts** | Visualizations make comparisons across categories easier to see and communicate. | How can a bar chart accurately represent a categorical distribution? |
+| **5. Describing the Typical Case** | The mode, median, and mean provide different descriptions of a distribution's center. | Which value meaningfully represents the typical case? |
+| **6. Describing Variation** | The range, interquartile range, variance, and standard deviation describe spread. | How tightly clustered or widely dispersed are the observations? |
 
-1. Objective one.
-2. Objective two.
-3. Objective three.
+The sequence can be summarized as:
 
-## Why This Matters
+1. Begin with a substantive question.
+2. Identify the cases and variables needed to answer it.
+3. Determine what comparisons the variables permit.
+4. Organize the observed values into distributions.
+5. Visualize important patterns.
+6. Describe both the center and variation of quantitative distributions.
+7. Interpret every result in relation to the original question.
 
-Connect the concept to criminal justice research, policy, professional practice, or public claims.
+## Cases, Variables, and Values
 
-## Core Concept
+Three ideas appear throughout Part I:
 
-Develop the chapter content using descriptive headings. Introduce ideas in plain language before presenting technical notation or formulas.
+- A **case** is the unit being observed, such as a person, incident, neighborhood, court case, or organization.
+- A **variable** is a characteristic recorded for every case.
+- A **value** is the particular response, category, or numerical amount recorded for a case.
 
-::: {.callout-tip title="Helpful reasoning strategy"}
-Use a tip callout for a reusable strategy or decision rule.
+Suppose a dataset contains one row for every reported incident. 
+Each incident is a case. 
+Offense type, neighborhood, response time, and property loss are variables. *Burglary*, *Downtown*, *12 minutes*, and *\$800* are possible values.
+
+Keeping these distinctions clear helps us interpret tables, graphs, and statistics correctly.
+
+## Measurement Determines What We Can Do
+
+Variables contain different kinds of information. 
+A nominal variable identifies categories. 
+An ordinal variable adds meaningful order. 
+Interval- and ratio-level variables permit numerical comparisons.
+
+The level of measurement affects which summaries are meaningful:
+
+| Type of information | Useful descriptions |
+|:--------------------|:--------------------|
+| Categories | Frequencies, proportions, percentages, mode, and bar charts |
+| Ordered categories | Frequencies, cumulative proportions, mode, median, percentiles, and ordered bar charts |
+| Quantitative values | Frequencies, graphs of distributions, mean or median, and measures of variation |
+
+These are not rigid rules that replace judgment. 
+They are a starting point for matching an analytical method to the information contained in the variable.
+
+::: {.callout-note title="Numbers do not automatically make a variable quantitative"}
+A numerical code may simply label a category. 
+The meaning of the values, not their appearance, determines which calculations and comparisons are defensible.
 :::
 
-::: {.callout-important title="Important distinction"}
-Use an important callout for a distinction students must understand.
+## A Recurring Descriptive Workflow
+
+The chapters repeatedly return to a common sequence of questions:
+
+1. **What is the substantive question?**  
+   State what you want to learn before selecting a statistic.
+
+2. **What are the cases?**  
+   Identify the unit represented by each observation.
+
+3. **What variable is being examined?**  
+   Define what was recorded and how it was measured.
+
+4. **What is the level of measurement?**  
+   Determine whether the values represent categories, ranks, or quantities.
+
+5. **What does the distribution look like?**  
+   Examine frequencies, proportions, order, shape, gaps, and unusual values.
+
+6. **Which summary is appropriate?**  
+   Select a graph and numerical measure that fit the variable and question.
+
+7. **What does the result mean in context?**  
+   Translate the calculation into a clear statement about the observed cases.
+
+8. **What information does the summary leave out?**  
+   Consider variation, skew, extreme values, measurement limitations, and missing context.
+
+## Center and Variation Belong Together
+
+A measure of central tendency identifies a distribution's center, but it cannot describe the distribution by itself. 
+Two groups can have the same mean or median while differing substantially in their spread.
+
+Likewise, a measure of variation is difficult to interpret without knowing the center and context of the variable. 
+A useful description of quantitative data therefore commonly includes:
+
+- an appropriate measure of center;
+- an appropriate measure of variation;
+- a graph showing the distribution; and
+- a substantive interpretation.
+
+The choice among the mean, median, standard deviation, and interquartile range depends partly on the distribution's shape. 
+Strong skew and extreme observations may make resistant measures such as the median and interquartile range more informative than the mean and standard deviation.
+
+::: {.callout-warning title="One number is rarely a complete description"}
+An average can conceal variation, skew, subgroups, and extreme observations. 
+Always consider what the chosen summary reveals and what it hides.
 :::
 
-::: {.callout-warning title="A common mistake"}
-Use a warning callout for a common misconception or interpretation error.
-:::
+## Description Requires Judgment
 
-## Worked Example
+Descriptive statistics are sometimes presented as simple calculations, but every useful description requires analytical choices:
 
-1. State the question.
-2. Identify the cases and variables.
-3. Select and justify the method.
-4. Present the result.
-5. Interpret the result in context.
-6. State what cannot be concluded.
+- Should counts or proportions be used?
+- Do categories have a meaningful order?
+- Which graph best represents the variable?
+- Is the mean or median a better description of the center?
+- Is the standard deviation or interquartile range a better description of spread?
+- Are apparent outliers errors, rare cases, or substantively important observations?
+- Does the summary answer the research question?
 
-## Check Your Understanding
+The goal is not to calculate every possible statistic. It is to select a small set of accurate, relevant descriptions and explain what they show.
 
-Insert a short, embedded comprehension check.
+## How to Work Through Part I
 
-::: {.callout-note collapse="true" title="Check your answer"}
-Provide the answer and a brief explanation.
-:::
+When completing the chapters and activities:
 
-## Interactive Exploration
+1. Begin with the research question rather than the formula.
+2. Write down the cases, variable, and level of measurement.
+3. Organize or visualize the complete distribution before summarizing it.
+4. Show the steps used to calculate numerical summaries.
+5. Interpret results using the variable's original units or categories.
+6. Compare the numerical result with the graph.
+7. Identify at least one limitation or feature the summary does not capture.
 
-When an interactive activity materially improves understanding, ask students to:
+The Test Your Knowledge activities provide opportunities to practice these skills independently. 
+The data investigations and project connections ask you to apply the same reasoning to data you collect or analyze during the semester.
 
-1. **Predict** what will happen.
-2. **Manipulate** an input.
-3. **Observe** the result.
-4. **Explain** why it occurred.
-5. **Reset** and test another prediction.
+## What You Should Be Able to Do by the End
 
-Include a static explanation or illustration so the central lesson does not depend entirely on the external application.
+By the end of Part I, you should be able to:
 
-## Test Your Knowledge: Activity Title
+- identify cases, variables, and values in a dataset;
+- distinguish nominal, ordinal, interval, and ratio levels of measurement;
+- construct and interpret frequency distributions;
+- calculate frequencies, proportions, percentages, and cumulative proportions;
+- create and interpret an accurate bar chart;
+- calculate and select among the mode, median, and mean;
+- describe percentiles, quartiles, and skew;
+- calculate and interpret the range, interquartile range, variance, and standard deviation;
+- pair an appropriate measure of center with an appropriate measure of variation; and
+- communicate what a descriptive result shows—and what it cannot show.
 
-### The Scenario
-
-Introduce a self-contained criminal justice scenario, dataset, table, or visualization.
-
-### Your Task
-
-Include questions that ask students to identify information, calculate or construct something appropriate, interpret a result, and evaluate a limitation or unsupported conclusion.
-
-::: {.callout-note collapse="true" title="Review the answers"}
-Provide answers with enough reasoning for students to diagnose misunderstandings.
-:::
-
-## Data Investigation
-
-Connect the chapter to an observation, survey, coding activity, open dataset, or simulation when appropriate.
-
-## Project Connection
-
-Add a small task that advances the semester investigation.
-
-## Chapter Summary
-
-- Summarize the first central idea.
-- Summarize the second central idea.
-- Summarize the third central idea.
-
-## Key Terms
-
-- **Term:** Concise definition.
+Part I describes the observations we have collected. 
+Part II begins with a new challenge: using a sample to reason about a larger population while accounting for uncertainty.

@@ -1,3 +1,30 @@
 # Preface {.unnumbered}
 
-this is the prefaces
+Statistics is an essential part of understanding crime, justice, and the institutions created to respond to them. Claims about crime rates, disparities, program effectiveness, public opinion, and system performance all rely on data. To evaluate those claims, students need more than formulas: they need to understand where data come from, what statistical results mean, and what conclusions the evidence can support.
+
+This book was created as an accessible introduction to statistics for students of criminology and criminal justice. It emphasizes statistical reasoning, interpretation, and application. Mathematical notation and calculation are included when they help explain an idea, but the main goal is to help students use statistics thoughtfully and communicate conclusions clearly.
+
+## What This Book Covers
+
+The book is organized in two parts. **Part I: Understanding and Describing Data** introduces the foundations of statistical reasoning. It examines how questions become data, how concepts are measured, and how distributions can be organized and displayed. It also introduces measures of central tendency and variation, which summarize what is typical in a distribution and how much observations differ from one another.
+
+**Part II: Making Inferences** explains how researchers use samples to learn about larger populations. It introduces probability, the normal distribution, sampling distributions, estimation, confidence intervals, and hypothesis testing. The final chapters apply these ideas using the *t* distribution to evaluate one mean and to compare two means.
+
+Together, these chapters move from describing the data we have to evaluating what those data may tell us about a broader population. Throughout the book, examples are drawn from criminal justice settings so that statistical ideas remain connected to substantive questions.
+
+## How to Use This Book
+
+The chapters build on one another, so they are best read in order. As you work through each chapter:
+
+- Begin with the opening question and learning objectives. They identify the main ideas you should be able to explain or apply.
+- Work through the examples rather than reading past them. Pause before each solution and try to determine what you would do next.
+- Use the **Check Your Understanding** questions to make sure the central ideas are clear before continuing.
+- Complete the **Test Your Knowledge** exercises without looking at the answers first. The answer explanations are designed to help you identify and correct misunderstandings.
+- Use the **Data Investigation** activities to practice connecting statistical concepts to real data and research decisions.
+- Review the chapter summary and key terms before moving on. If a term is unfamiliar, return to the section where it was introduced.
+
+The appendices provide statistical tables used in the inference chapters. You do not need to memorize these tables. Instead, practice identifying the correct table, locating the appropriate value, and explaining how that value contributes to a statistical conclusion.
+
+Statistics becomes easier through repeated practice. Focus first on the question being asked, the meaning of the variables, and the conclusion the analysis is intended to support. Calculations matter, but a correct calculation is useful only when it is paired with careful interpretation.
+
+The aim of this book is not simply to teach a collection of statistical procedures. It is to help you become a more careful reader, user, and evaluator of evidence in criminology and criminal justice.

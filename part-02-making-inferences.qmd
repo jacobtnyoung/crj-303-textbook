@@ -1,6 +1,7 @@
 # Part II: Statistical Inference {.unnumbered}
 
-Part I focused on **describing data**. We learned how variables are measured, how distributions can be organized and visualized, and how measures of central tendency and variation summarize what has been observed.
+Part I focused on **describing** data. 
+We learned how variables are measured, how distributions can be organized and visualized, and how measures of central tendency and variation summarize what has been observed.
 
 Those tools answer questions such as:
 
@@ -9,23 +10,33 @@ Those tools answer questions such as:
 - How much do observations differ?
 - What is the shape of the distribution?
 
-Part II makes an important transition. We will use data from a **sample** to reason about a larger **population**. This process is called **statistical inference**.
+Part II makes an important transition. 
+We will use data from a **sample** to reason about a larger **population**. 
+This process is called **statistical inference**.
 
 ## From Description to Inference
 
-Descriptive statistics summarize the cases in front of us. Inferential statistics ask what those cases may tell us about cases we have not observed.
+Descriptive statistics summarize the cases in front of us. 
+Inferential statistics ask what those cases may tell us about cases we have not observed.
 
-Suppose a survey finds that 62% of sampled residents trust the police. The percentage describes the sample. We may also want to know whether it provides a reasonable estimate of trust among all residents in the city.
+Suppose a survey finds that 62% of sampled residents trust the police. 
+The percentage describes the sample. 
+We may also want to know whether it provides a reasonable estimate of trust among all residents in the city.
 
-That move from the sample to the population creates uncertainty. Another random sample would probably produce a somewhat different percentage. Statistical inference does not eliminate this uncertainty. Instead, it gives us tools for describing, measuring, and incorporating it into our conclusions.
+That move from the sample to the population creates uncertainty. 
+Another random sample would probably produce a somewhat different percentage. 
+Statistical inference does not eliminate this uncertainty. 
+Instead, it gives us tools for describing, measuring, and incorporating it into our conclusions.
 
 ::: {.callout-important title="The central problem of Part II"}
-Samples vary. Inferential statistics help us distinguish patterns that could reasonably result from sampling variation from patterns that would be unusual under a particular assumption.
+Samples vary. 
+Inferential statistics help us distinguish patterns that could reasonably result from sampling variation from patterns that would be unusual under a particular assumption.
 :::
 
 ## The Logic Connecting the Chapters
 
-The chapters in Part II build on one another. Each introduces a piece of a single reasoning process.
+The chapters in Part II build on one another. 
+Each introduces a piece of a single reasoning process.
 
 | Chapter | Main idea | Central question |
 |:--------|:----------|:-----------------|
@@ -56,9 +67,11 @@ Several distinctions will appear throughout Part II:
 - A **parameter** is a numerical description of a population.
 - A **statistic** is a numerical description calculated from a sample.
 
-For example, the true mean response time for all calls in a city is a population parameter. The mean calculated from 100 sampled calls is a sample statistic.
+For example, the true mean response time for all calls in a city is a population parameter. 
+The mean calculated from 100 sampled calls is a sample statistic.
 
-In most research settings, the population parameter is unknown. The sample statistic is used to estimate it or evaluate a claim about it.
+In most research settings, the population parameter is unknown. 
+The sample statistic is used to estimate it or evaluate a claim about it.
 
 ::: {.callout-note title="Inference depends on more than a formula"}
 An inferential calculation is useful only when the sample, measurement process, and assumptions justify connecting the observed data to the population named in the conclusion.
@@ -118,12 +131,15 @@ Part II introduces formal calculations, but a correct calculation can still supp
 - **Probability is not certainty.** Unusual outcomes remain possible, and common outcomes are not guaranteed.
 
 ::: {.callout-warning title="Inference does not rescue weak data"}
-The methods in Part II quantify uncertainty created by random sampling. They do not automatically account for selection bias, missing data, inaccurate measurement, violated assumptions, or weak research design.
+The methods in Part II quantify uncertainty created by random sampling. 
+They do not automatically account for selection bias, missing data, inaccurate measurement, violated assumptions, or weak research design.
 :::
 
 ## How to Work Through Part II
 
-The material is cumulative. Ideas introduced early in the part reappear in later chapters. When solving a problem:
+The material is cumulative. 
+Ideas introduced early in the part reappear in later chapters. 
+When solving a problem:
 
 1. Write down the population, sample, parameter, and statistic.
 2. Draw the relevant distribution when an area or tail is involved.
@@ -134,11 +150,12 @@ The material is cumulative. Ideas introduced early in the part reappear in later
 
 The appendices provide:
 
-- the **Standard Normal Distribution Table**;
-- the ***t*-Distribution Critical Values**; and
-- **Chi-Square Distribution Critical Values**.
+- the [**Standard Normal Distribution Table**](appendix-01-standard-normal-table.qmd) and 
+- the [***t*-Distribution Critical Values**](appendix-02-t-distribution-table.qmd); and
+- [**Chi-Square Distribution Critical Values**](appendix-03-chi-square-table.qmd).
 
-The normal and *t* tables will be used directly in Part II. The chi-square table is included as a reference for later applications and extensions.
+The normal and *t* tables will be used directly in Part II. 
+The chi-square table is included as a reference for later applications and extensions.
 
 ## What You Should Be Able to Do by the End
 
@@ -154,4 +171,5 @@ By the end of Part II, you should be able to:
 - distinguish statistical significance from substantive importance; and
 - identify the assumptions and limitations accompanying an inferential conclusion.
 
-The goal is not simply to calculate a statistic. It is to develop a disciplined way of reasoning from incomplete information while being clear about the uncertainty that remains.
+The goal is not simply to calculate a statistic. 
+It is to develop a disciplined way of reasoning from incomplete information while being clear about the uncertainty that remains.

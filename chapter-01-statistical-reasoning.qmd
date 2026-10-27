@@ -1,0 +1,359 @@
+# Statistical Reasoning
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**How can data help us answer criminal justice questions, and what must we know before drawing a conclusion?**
+:::
+
+Criminal justice decisions are often supported by claims about data. A police department may report that crime decreased, a court may claim that case processing became faster, or a survey may find that residents trust one institution more than another.
+
+Statistics gives us tools for evaluating such claims. Those tools include tables, graphs, averages, measures of variation, confidence intervals, and hypothesis tests. Before using any of them, however, we must understand what question is being asked, what the observations represent, how the data were produced, and what kind of conclusion the evidence can support.
+
+Statistical reasoning is therefore more than calculation. It is the process of connecting a substantive question to appropriate data, analysis, and interpretation.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Explain the role of statistics in answering empirical questions.
+2. Identify cases, variables, and values in a dataset.
+3. Distinguish a population from a sample.
+4. Distinguish descriptive from inferential statistical questions.
+5. Identify descriptive, comparative, relational, and causal questions.
+6. Explain why the process that produced the data matters for interpretation.
+7. Evaluate whether a conclusion goes beyond the available evidence.
+
+## What Is Statistics?
+
+**Statistics** is a set of methods for learning from data. It helps us:
+
+- organize observations;
+- identify patterns;
+- describe similarities and differences;
+- quantify uncertainty; and
+- communicate evidence.
+
+Statistics does not replace substantive knowledge or research design. A calculation cannot determine whether a variable was measured well, whether a sample represents the intended population, or whether an observed relationship is causal. Statistical methods are most useful when they are part of a larger reasoning process.
+
+::: {.callout-important title="Statistics connects questions and evidence"}
+A statistic is not meaningful by itself. Its meaning depends on the question being asked, the cases observed, the variables measured, and the process that generated the data.
+:::
+
+## Why Statistics Matters in Criminal Justice
+
+Criminal justice systems generate enormous amounts of information:
+
+- calls for service;
+- incident and arrest reports;
+- court filings and dispositions;
+- correctional admissions and releases;
+- victimization and public-opinion surveys;
+- officer activity records;
+- program participation and outcomes; and
+- observations of people, organizations, and places.
+
+These data may be used to allocate resources, assess programs, identify disparities, evaluate policies, or describe public experiences. The consequences of the conclusions can be substantial. Poor measurement or careless interpretation may misrepresent communities, conceal unequal treatment, or support ineffective decisions.
+
+Statistical reasoning helps us ask not only *What does the calculation show?* but also:
+
+- What process created these observations?
+- What is missing?
+- Who or what is represented?
+- Which comparisons are appropriate?
+- How uncertain is the conclusion?
+- What alternative explanations remain?
+
+## From a Question to a Conclusion
+
+A statistical investigation can be represented as a sequence:
+
+1. **Ask a question.**  
+   Identify what you want to learn and why it matters.
+
+2. **Define the cases.**  
+   Determine the people, incidents, places, organizations, or time periods being studied.
+
+3. **Identify the variables.**  
+   Specify which characteristics must be recorded.
+
+4. **Collect or obtain data.**  
+   Decide how cases are selected and how values are measured.
+
+5. **Organize and analyze the observations.**  
+   Use tables, graphs, and statistics that match the question and variables.
+
+6. **Interpret the results.**  
+   Translate the analysis into a statement about the cases or population.
+
+7. **Evaluate limitations.**  
+   Identify uncertainty, missing information, assumptions, and conclusions the design cannot support.
+
+The process is not always perfectly linear. Examining a distribution may reveal a measurement problem or lead to a better research question. Good analysis often requires returning to earlier decisions.
+
+## Cases, Variables, and Values
+
+A dataset is commonly organized so that:
+
+- each **row** represents a **case**;
+- each **column** represents a **variable**; and
+- each cell contains a **value** recorded for a particular case and variable.
+
+Consider this small dataset:
+
+| Incident ID | Incident type | Response time | Arrest made |
+|------------:|:--------------|--------------:|:------------|
+| 101 | Burglary | 8 minutes | No |
+| 102 | Assault | 4 minutes | Yes |
+| 103 | Burglary | 11 minutes | No |
+| 104 | Theft | 7 minutes | Yes |
+
+The cases are reported incidents. The variables are incident type, response time, and arrest made. For Incident 102, *Assault*, *4 minutes*, and *Yes* are values.
+
+The incident ID identifies each row but does not measure a substantive characteristic. This distinction will matter when we consider how variables should be analyzed.
+
+### Unit of Analysis
+
+The **unit of analysis** is the type of case about which a conclusion is made. It might be:
+
+- people;
+- reported incidents;
+- neighborhoods;
+- court cases;
+- police departments;
+- states; or
+- months or years.
+
+The unit of analysis affects the meaning of every variable. A variable named *crime count* could describe crimes committed by a person, crimes reported in a neighborhood, or crimes recorded during a month. Those are different data structures and answer different questions.
+
+::: {.callout-tip title="Identify the noun"}
+When determining the unit of analysis, ask: “What does each row represent?” The answer should usually be a noun such as a person, incident, neighborhood, agency, or year.
+:::
+
+## Populations and Samples
+
+A **population** is the complete set of cases we want to understand. A **sample** is the subset of cases actually observed.
+
+Suppose a city surveys 500 residents about trust in the police:
+
+- The **sample** is the 500 residents who responded.
+- The **population** might be all adult residents of the city.
+
+The distinction matters because a result calculated from the sample directly describes only those respondents. Applying it to all city residents requires additional reasoning about how the respondents were selected and whether they represent the population.
+
+Sometimes the observed data include the complete population relevant to the question. If an analyst examines every reported robbery recorded by a department during 2025 and asks only about those recorded robberies, the dataset may represent the entire defined population. If the analyst wants to make claims about unreported robberies or future years, the desired population is broader than the observed records.
+
+## Descriptive and Inferential Statistics
+
+**Descriptive statistics** organize and summarize observed data. Examples include:
+
+- the number of reported burglaries;
+- the percentage of sampled residents who trust the police;
+- the median sentence in a group of cases; and
+- a graph of response times.
+
+**Inferential statistics** use sample data to reason about a larger population. Examples include:
+
+- estimating the percentage of all residents who trust the police;
+- evaluating whether a sample mean differs from a proposed population value; and
+- determining whether two population means appear to differ.
+
+Part I focuses on descriptive statistics. Part II introduces probability and the inferential tools needed to move from samples to populations.
+
+::: {.callout-warning title="Description and inference are different claims"}
+“Sixty-two percent of surveyed residents reported trust” describes the sample. “Sixty-two percent of all residents trust the police” makes a claim about the population and requires evidence that the sample supports that inference.
+:::
+
+## Types of Statistical Questions
+
+The wording of a question helps determine the needed data and analysis.
+
+### Descriptive Questions
+
+Descriptive questions ask what is occurring in a group:
+
+- What percentage of reported incidents involve property crime?
+- What is the median case-processing time?
+- How much do response times vary?
+
+### Comparative Questions
+
+Comparative questions ask whether groups or periods differ:
+
+- Do case-processing times differ between two courts?
+- Is trust in the police higher in one neighborhood than another?
+- Did reported crime change after a policy was introduced?
+
+### Relational Questions
+
+Relational questions ask whether variables are associated:
+
+- Is neighborhood disadvantage associated with reported crime?
+- Are longer response times related to lower satisfaction?
+
+### Causal Questions
+
+Causal questions ask whether changing one condition produces a change in another:
+
+- Did the outreach program increase trust?
+- Does a treatment program reduce recidivism?
+
+Causal questions require more than observing a difference or relationship. Research design must address alternative explanations, selection into groups, changes over time, and other factors that could produce the result.
+
+## Data Are Produced Through a Process
+
+Criminal justice data often come from administrative systems created to support agency operations rather than research. A police incident database contains events that were experienced, reported, recorded, classified, and retained. Each step affects what appears in the data.
+
+For example, an increase in recorded theft could reflect:
+
+- an increase in theft;
+- greater willingness to report;
+- easier reporting procedures;
+- changes in offense classification;
+- increased enforcement or documentation; or
+- some combination of these processes.
+
+The recorded number is real, but its interpretation depends on how it was produced.
+
+::: {.callout-important title="Data are not the same as the phenomenon"}
+Police-recorded crime is not identical to all crime that occurred. Arrest data are not identical to offending. Court records describe cases processed by the courts, not every harmful event. Always distinguish the recorded measure from the broader concept.
+:::
+
+## Worked Example: Evaluating a Trust Survey
+
+A city surveys 400 residents after introducing a police-community outreach program. Sixty-two percent of respondents report that they trust the police.
+
+### 1. State the Question
+
+The city wants to know the level of public trust after the program.
+
+### 2. Identify the Cases and Variables
+
+The cases are the 400 respondents. The central variable is whether each respondent reports trust in the police. Other useful variables might include neighborhood, age, previous police contact, and participation in the outreach program.
+
+### 3. Identify the Sample and Population
+
+The sample is the 400 respondents. The intended population may be all adult city residents.
+
+### 4. Make a Descriptive Statement
+
+Among surveyed residents, 62% reported trusting the police.
+
+### 5. Evaluate an Inferential Statement
+
+Claiming that exactly 62% of all residents trust the police requires information about how residents were selected and who did not respond.
+
+### 6. Evaluate a Causal Statement
+
+The survey alone does not show that the outreach program increased trust. We would need a design that provides a credible comparison and addresses other explanations.
+
+This example shows that one number can support a direct description of the sample while providing weaker support for population or causal claims.
+
+## Check Your Understanding
+
+A researcher examines all 275 cases filed in one county court during March and reports that 40% involved a probation violation.
+
+1. What are the cases?
+2. What is the unit of analysis?
+3. What variable is summarized?
+4. Does 40% directly describe the observed cases or every court case in the state?
+5. What additional claim would require inferential reasoning?
+
+::: {.callout-note collapse="true" title="Check your answers"}
+1. The cases are the 275 county court cases filed during March.
+2. The unit of analysis is a court case.
+3. The summarized variable is whether the case involved a probation violation.
+4. The value directly describes the observed county cases, not every court case in the state.
+5. A claim that the result represents other counties, other periods, or all cases in the state would require inferential reasoning and a defensible sampling process.
+:::
+
+## Test Your Knowledge: Calls for Service
+
+### The Scenario
+
+An analyst selects eight calls from a city's call-for-service database:
+
+| Call ID | Call type | Priority | Response time | Arrest made |
+|--------:|:----------|:---------|--------------:|:------------|
+| 201 | Disturbance | High | 6 | No |
+| 202 | Theft | Medium | 14 | No |
+| 203 | Assault | High | 5 | Yes |
+| 204 | Suspicious activity | Low | 22 | No |
+| 205 | Disturbance | Medium | 11 | No |
+| 206 | Assault | High | 7 | Yes |
+| 207 | Theft | Low | 19 | No |
+| 208 | Disturbance | High | 8 | Yes |
+
+### Your Task
+
+1. Identify the cases, unit of analysis, variables, and two example values.
+2. Which column functions only as an identifier?
+3. Write one descriptive question that these data can answer.
+4. Write one comparative question that could be examined with a larger dataset.
+5. Identify a population to which the analyst might want to generalize.
+6. What information is needed before treating the eight calls as representative?
+7. Explain why the table cannot establish that high-priority calls cause arrests.
+8. Identify one process that could affect which events appear in the database.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+1. The cases are calls for service, so the unit of analysis is a call. The substantive variables are call type, priority, response time, and arrest made. Example values include *Disturbance*, *High*, *6 minutes*, and *No*.
+2. Call ID identifies rows but does not measure a substantive characteristic.
+3. One descriptive question is: What is the most common call type among these eight calls?
+4. One comparative question is: Do high-priority calls have shorter response times than lower-priority calls?
+5. A possible population is all calls for service received by the city during a defined period.
+6. We need to know how the calls were selected, the time and locations represented, whether calls are missing, and whether eight observations provide an adequate representation.
+7. The table shows observations, not a design capable of ruling out alternative explanations. Priority, incident severity, offense type, and other factors may be related to arrest.
+8. Events must be reported or detected, entered into the system, classified, and retained. Any of these stages could affect the recorded data.
+:::
+
+## Data Investigation: How Data Are Generated
+
+Choose one source of criminal justice data, such as police incidents, arrests, court cases, correctional records, victimization surveys, or systematic observations.
+
+1. Identify the cases and unit of analysis.
+2. List three variables the source might contain.
+3. Describe how an event or person enters the dataset.
+4. Identify one event or person that might be missing.
+5. Explain one way agency practices or measurement decisions could affect a recorded pattern.
+6. Write one conclusion the data could support and one conclusion they could not support by themselves.
+
+## Project Connection: Define the Investigation
+
+Begin outlining your semester investigation:
+
+1. Write a focused research question.
+2. Identify the unit of analysis.
+3. Define the population you want to understand.
+4. Describe the sample or cases you expect to observe.
+5. Identify two or three variables needed to answer the question.
+6. Classify the question as descriptive, comparative, relational, or causal.
+7. Identify one limitation you will need to consider.
+
+## Looking Ahead
+
+Statistical reasoning begins by connecting a question to cases and variables. The next chapter examines measurement in greater detail. It asks how a concept becomes a recorded variable and how the structure of its values determines which comparisons and statistical summaries are meaningful.
+
+## Chapter Summary
+
+- Statistics provides methods for learning from data, but calculations must be interpreted in relation to the question and research design.
+- Cases are the observations in a dataset, variables are recorded characteristics, and values are the recorded responses or amounts.
+- The unit of analysis identifies the kind of case about which a conclusion is made.
+- A population is the complete group of interest; a sample is the subset observed.
+- Descriptive statistics summarize observed data, while inferential statistics use sample data to reason about a larger population.
+- Descriptive, comparative, relational, and causal questions require different evidence.
+- Criminal justice data reflect reporting, recording, classification, and institutional processes.
+- A statistical result does not automatically justify a population or causal conclusion.
+
+## Key Terms
+
+- **Case:** One observation or unit represented in a dataset.
+- **Causal question:** A question asking whether changing one condition produces a change in another.
+- **Dataset:** A structured collection of cases, variables, and values.
+- **Descriptive statistics:** Methods for organizing, visualizing, and summarizing observed data.
+- **Inferential statistics:** Methods that use sample data to reason about a larger population.
+- **Population:** The complete set of cases a researcher wants to understand.
+- **Sample:** The subset of population cases that are observed.
+- **Statistics:** Methods for learning from data.
+- **Unit of analysis:** The type of case about which a conclusion is made.
+- **Value:** The recorded category, response, or amount for a case.
+- **Variable:** A characteristic recorded for each case.
