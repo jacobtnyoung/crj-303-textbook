@@ -180,4 +180,5 @@ By the end of Part I, you should be able to:
 - communicate what a descriptive result shows—and what it cannot show.
 
 Part I describes the observations we have collected. 
-Part II begins with a new challenge: using a sample to reason about a larger population while accounting for uncertainty.
+Part II begins with a new challenge: using a sample to reason about a larger population while accounting for uncertainty. 
+Part III then brings descriptive and inferential reasoning together to examine relationships between variables.

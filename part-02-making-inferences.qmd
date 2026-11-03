@@ -150,12 +150,12 @@ When solving a problem:
 
 The appendices provide:
 
-- the [**Standard Normal Distribution Table**](appendix-01-standard-normal-table.qmd) and 
+- the [**Standard Normal Distribution Table**](appendix-01-standard-normal-table.qmd);
 - the [***t*-Distribution Critical Values**](appendix-02-t-distribution-table.qmd); and
 - [**Chi-Square Distribution Critical Values**](appendix-03-chi-square-table.qmd).
 
 The normal and *t* tables will be used directly in Part II. 
-The chi-square table is included as a reference for later applications and extensions.
+The chi-square table will be used in Part III when testing relationships between categorical variables.
 
 ## What You Should Be Able to Do by the End
 
@@ -173,3 +173,6 @@ By the end of Part II, you should be able to:
 
 The goal is not simply to calculate a statistic. 
 It is to develop a disciplined way of reasoning from incomplete information while being clear about the uncertainty that remains.
+
+Part III extends this reasoning from individual parameters and differences between means to relationships between variables. 
+It begins with descriptive bivariate tables, applies hypothesis-testing logic through the chi-square test, and then uses scatterplots and correlation to examine relationships between quantitative variables.
