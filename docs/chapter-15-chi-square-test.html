@@ -326,7 +326,10 @@ window.Quarto = {
   <ul>
   <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">15.1</span> The Question</a></li>
   <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">15.2</span> What You Will Learn</a></li>
-  <li><a href="#from-description-to-inference" id="toc-from-description-to-inference" class="nav-link" data-scroll-target="#from-description-to-inference"><span class="header-section-number">15.3</span> From Description to Inference</a></li>
+  <li><a href="#from-description-to-inference" id="toc-from-description-to-inference" class="nav-link" data-scroll-target="#from-description-to-inference"><span class="header-section-number">15.3</span> From Description to Inference</a>
+  <ul class="collapse">
+  <li><a href="#what-random-chance-means" id="toc-what-random-chance-means" class="nav-link" data-scroll-target="#what-random-chance-means"><span class="header-section-number">15.3.1</span> What “Random Chance” Means</a></li>
+  </ul></li>
   <li><a href="#independence-and-the-hypotheses" id="toc-independence-and-the-hypotheses" class="nav-link" data-scroll-target="#independence-and-the-hypotheses"><span class="header-section-number">15.4</span> Independence and the Hypotheses</a></li>
   <li><a href="#observed-and-expected-frequencies" id="toc-observed-and-expected-frequencies" class="nav-link" data-scroll-target="#observed-and-expected-frequencies"><span class="header-section-number">15.5</span> Observed and Expected Frequencies</a></li>
   <li><a href="#the-chi-square-test-statistic" id="toc-the-chi-square-test-statistic" class="nav-link" data-scroll-target="#the-chi-square-test-statistic"><span class="header-section-number">15.6</span> The Chi-Square Test Statistic</a></li>
@@ -387,11 +390,11 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Is an association observed in a sample larger than we would expect from sampling variability alone?</strong></p>
+<p><strong>Could the association observed in a sample have arisen through chance variation if the variables were independent?</strong></p>
 </div>
 </div>
 <p>Chapter 14 used bivariate tables and conditional proportions to describe relationships between categorical variables. If two groups have different outcome proportions, we can say that the variables are associated in the observed data.</p>
-<p>When the cases are a sample from a larger population, however, we face another question: Does the sample provide convincing evidence that the variables are also associated in the population, or could the observed differences be the result of sampling variability?</p>
+<p>When the cases are a sample from a larger population, however, we face another question: Does the sample provide convincing evidence that the variables are also associated in the population, or could the observed differences have arisen through random chance under independence?</p>
 <p>The <strong>chi-square test of independence</strong> applies the logic of hypothesis testing to a bivariate table. It compares the frequencies we observe with the frequencies we would expect if the two variables were independent.</p>
 </section>
 <section id="what-you-will-learn" class="level2" data-number="15.2">
@@ -443,11 +446,29 @@ window.Quarto = {
 </table>
 <p>Among officers with 0–5 years of experience, <span class="math inline">\(18/25=0.72\)</span>, or 72%, were involved in a use-of-force incident. Among officers with 6 or more years of experience, <span class="math inline">\(12/50=0.24\)</span>, or 24%, were involved.</p>
 <p>The 48-percentage-point difference is an association in this sample. It does not automatically demonstrate an association in a larger population. Even when two variables are independent in a population, random samples will rarely produce exactly equal proportions.</p>
-<p>The chi-square test helps us decide whether the observed table departs enough from independence to reject sampling variability as a plausible explanation.</p>
+<section id="what-random-chance-means" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="what-random-chance-means"><span class="header-section-number">15.3.1</span> What “Random Chance” Means</h3>
+<p>Imagine repeatedly flipping a fair coin. Even though heads and tails are equally likely, a small set of flips will rarely divide perfectly in half. The difference does not necessarily mean that the coin is unfair; ordinary random chance can produce an uneven result.</p>
+<p>The same idea applies to a bivariate table. If two variables are independent, repeated random samples will not reproduce the expected frequencies exactly. Some cases will fall into cells differently simply by chance. For sample data, statisticians call this <strong>sampling variability</strong>: the chance variation that occurs because one random sample will differ from another.</p>
+<p>The chi-square test asks whether the observed counts depart so far from the expected counts that random chance under independence is no longer a plausible explanation.</p>
+<div class="callout callout-style-simple callout-note callout-titled" title="Chance does not mean unexplained causation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Chance does not mean unexplained causation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here, <strong>chance</strong> refers to the random variation we would expect in cell counts if the null hypothesis were true. It does not mean that the people, decisions, or events in the study occurred without causes.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="independence-and-the-hypotheses" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="independence-and-the-hypotheses"><span class="header-section-number">15.4</span> Independence and the Hypotheses</h2>
-<p>Two categorical variables are <em>independent</em> when the distribution of one variable is the same across categories of the other. If officer experience and use-of-force incidents are independent, the proportion involved in use of force should be approximately the same for both experience groups, apart from sampling variability.</p>
+<p>Two categorical variables are <em>independent</em> when the distribution of one variable is the same across categories of the other. If officer experience and use-of-force incidents are independent, the proportion involved in use of force should be approximately the same for both experience groups, apart from chance variation from one sample to another.</p>
 <p>The hypotheses for a chi-square test of independence are:</p>
 <p><span class="math display">\[
 H_0:\text{ The two variables are independent in the population.}
@@ -714,7 +735,7 @@ df=(2-1)(2-1)=1
 <li>Explain why the decision does not prove whether the program reduced rearrest.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled" title="Check your answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -723,7 +744,7 @@ df=(2-1)(2-1)=1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The rearrest rate is <span class="math inline">\(8/30=26.7\%\)</span> for program participants and <span class="math inline">\(15/30=50.0\%\)</span> for nonparticipants, a difference of 23.3 percentage points.</p>
 <p>The hypotheses are:</p>
@@ -797,7 +818,7 @@ H_A:\text{ Program participation and rearrest are associated.}
 <li>State one conclusion that the result does not support.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -806,7 +827,7 @@ H_A:\text{ Program participation and rearrest are associated.}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The row proportions are:</p>
 <table class="caption-top table">
@@ -958,7 +979,7 @@ H_A:\text{ Sex and offense type are associated.}
 <li>Make and interpret the hypothesis-test decision.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -967,7 +988,7 @@ H_A:\text{ Sex and offense type are associated.}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For <strong>student status and incident type</strong>, 65.0% of undergraduate encounters and 25.0% of graduate encounters were alcohol-related.</p>
 <p>The expected frequencies are:</p>
@@ -1060,6 +1081,7 @@ H_A:\text{ Sex and offense type are associated.}
 <ul>
 <li>A bivariate table provides a descriptive view of an association between categorical variables.</li>
 <li>The chi-square test of independence evaluates whether a sample provides evidence of an association in the population.</li>
+<li>Under the null hypothesis, random chance can make observed counts differ from expected counts; in sample data, this chance variation is called sampling variability.</li>
 <li>Expected frequencies represent the counts predicted under the null hypothesis of independence.</li>
 <li>The chi-square statistic summarizes discrepancies between observed and expected frequencies across all cells.</li>
 <li>Degrees of freedom depend on the number of rows and columns.</li>

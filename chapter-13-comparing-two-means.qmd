@@ -27,6 +27,71 @@ After completing this chapter, you should be able to:
 
 Appendix B, [**Student's *t*-Distribution Critical Values**](appendix-02-t-distribution-table.qmd), provides the critical values used in this chapter.
 
+## Two Explanations for a Difference
+
+Two sample means will almost never be exactly equal. 
+An observed difference can arise under two different scenarios:
+
+1. The samples came from populations with the **same mean**, and ordinary sampling variability produced different sample means.
+2. The samples came from populations with **different means**, so the observed difference reflects a population difference as well as sampling variability.
+
+```{r}
+#| label: fig-two-sample-scenarios
+#| echo: false
+#| fig-cap: "Two explanations for a difference between sample means"
+#| fig-alt: "The left panel shows two different sample means drawn from one population with a common mean. The right panel shows two samples associated with populations that have different means."
+#| fig-width: 9
+#| fig-height: 3.5
+
+x <- seq(20, 58, length.out = 600)
+common_density <- dnorm(x, mean = 39, sd = 5)
+group1_density <- dnorm(x, mean = 36, sd = 5)
+group2_density <- dnorm(x, mean = 42, sd = 5)
+
+old_par <- par(mfrow = c(1, 2), mar = c(4, 4, 3, 1))
+
+plot(
+  x,
+  common_density,
+  type = "l",
+  lwd = 2,
+  xlab = "Outcome",
+  ylab = "Density",
+  main = "Same Population Mean",
+  ylim = c(0, max(common_density) * 1.12)
+)
+abline(v = 39, lwd = 2)
+abline(v = c(36, 42), lty = 2)
+text(39, max(common_density) * 1.08, "Population mean")
+text(36, max(common_density) * 0.55, "Sample 1 mean", srt = 90, pos = 2)
+text(42, max(common_density) * 0.55, "Sample 2 mean", srt = 90, pos = 4)
+
+plot(
+  x,
+  group1_density,
+  type = "l",
+  lwd = 2,
+  lty = 1,
+  xlab = "Outcome",
+  ylab = "Density",
+  main = "Different Population Means",
+  ylim = c(0, max(group1_density) * 1.12)
+)
+lines(x, group2_density, lwd = 2, lty = 3)
+abline(v = c(36, 42), lty = c(1, 3))
+text(36, max(group1_density) * 1.08, expression(mu[1]))
+text(42, max(group2_density) * 1.08, expression(mu[2]))
+
+par(old_par)
+```
+
+The null hypothesis represents the first scenario: the two population means are equal, and the sample difference is attributed to sampling variability. 
+The alternative hypothesis represents the second scenario: the population means differ.
+
+::: {.callout-important title="The test evaluates two explanations"}
+The independent-samples *t*-test asks whether the observed difference is too large to be reasonably explained by sampling variability when $\mu_1=\mu_2$.
+:::
+
 ## Comparing Two Population Means
 
 Many criminal justice questions compare two groups:

@@ -290,10 +290,14 @@ Use employment status as the row variable and bail decision as the column variab
 
 1. Construct a bivariate table of frequencies, including marginal totals.
 2. Convert the interior cells to row proportions.
-3. Among employed defendants, what proportion were released?
-4. Among unemployed defendants, what proportion were released?
-5. Describe the association between employment status and bail decision.
-6. Identify one conclusion the table does not support.
+3. Convert the interior cells to column proportions.
+4. Among employed defendants, what proportion were released?
+5. Among unemployed defendants, what proportion were released?
+6. Among released defendants, what proportion were employed?
+7. Among detained defendants, what proportion were employed?
+8. Explain how the row-proportion and column-proportion interpretations differ.
+9. Describe the association between employment status and bail decision.
+10. Identify one conclusion the table does not support.
 
 ::: {.callout-note collapse="true" title="Review the answers"}
 The frequency table is:
@@ -311,9 +315,26 @@ The row-proportion table is:
 | Employed          | 0.857 | 0.143 | 1.00 |
 | Unemployed        | 0.286 | 0.714 | 1.00 |
 
+The column-proportion table is:
+
+| Employment status | Released | Detained |
+|:------------------|---------:|---------:|
+| Employed          | 0.750 | 0.167 |
+| Unemployed        | 0.250 | 0.833 |
+| **Total**         | **1.00** | **1.00** |
+
 Among employed defendants, $6/7=0.857$, or 85.7%, were released. 
 Among unemployed defendants, $2/7=0.286$, or 28.6%, were released. 
 Release was 57.1 percentage points more common among employed defendants in this sample, indicating an association between employment status and bail decision.
+
+Among released defendants, $6/8=0.750$, or 75.0%, were employed. 
+Among detained defendants, $1/6=0.167$, or 16.7%, were employed.
+
+The row proportions describe **bail decisions within each employment group**. 
+They answer whether release was more common among employed or unemployed defendants. 
+The column proportions describe **employment status within each bail-decision group**. 
+They answer whether released and detained defendants differed in their employment composition. 
+Both tables describe the same association, but they condition on different variables and therefore answer different questions.
 
 The table does not establish that employment status caused the bail decision. 
 It also does not show whether the pattern represents the larger population of defendants. 
@@ -322,8 +343,7 @@ Other factors—such as offense severity, prior record, or assessed risk—could
 
 ## Data Investigation: Two Categorical Variables
 
-Identify two categorical variables in a dataset available to you. O
-ne should serve as a grouping variable and the other as an outcome.
+Identify two categorical variables in a dataset available to you. One should serve as a grouping variable and the other as an outcome.
 
 1. State a bivariate research question.
 2. Identify the cases represented by the data.
@@ -343,7 +363,7 @@ Do not make a causal claim unless the research design supports one. At this stag
 ## Looking Ahead to Chapter 15
 
 A bivariate table can reveal that groups have different outcome proportions. 
-It does not tell us whether a difference observed in a sample is larger than we might expect from sampling variability.
+It does not tell us whether a difference observed in a sample is larger than we might expect from random chance under independence.
 
 Chapter 15 introduces the **chi-square test of independence**. 
 This test compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.

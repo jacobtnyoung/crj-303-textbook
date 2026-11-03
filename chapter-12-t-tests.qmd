@@ -212,19 +212,19 @@ A response agency claims the population mean response time is 96 minutes.
 ### Case 1
 
 $$
-n=16,\qquad \bar{x}=97,\qquad s=4.5,\qquad H_A:\mu>96
+n=16,\qquad \bar{x}=97,\qquad s=4,\qquad H_A:\mu>96
 $$
 
 ### Case 2
 
 $$
-n=25,\qquad \bar{x}=95,\qquad s=9,\qquad H_A:\mu<96
+n=25,\qquad \bar{x}=95,\qquad s=5,\qquad H_A:\mu<96
 $$
 
 ### Case 3
 
 $$
-n=9,\qquad \bar{x}=30,\qquad s=40,\qquad H_A:\mu\ne96
+n=9,\qquad \bar{x}=30,\qquad s=33,\qquad H_A:\mu\ne96
 $$
 
 For each case, calculate the obtained *t*, degrees of freedom, critical value for $\alpha=0.01$, and decision.
@@ -233,9 +233,9 @@ For each case, calculate the obtained *t*, degrees of freedom, critical value fo
 
 | Case | Obtained *t* | $df$ | Critical value | Decision |
 |:----:|-------------:|-----:|:---------------|:---------|
-| 1 | $0.89$ | 15 | $2.602$ | Fail to reject $H_0$ |
-| 2 | $-0.56$ | 24 | $-2.492$ | Fail to reject $H_0$ |
-| 3 | $-4.95$ | 8 | $\pm3.355$ | Reject $H_0$ |
+| 1 | $1.00$ | 15 | $2.602$ | Fail to reject $H_0$ |
+| 2 | $-1.00$ | 24 | $-2.492$ | Fail to reject $H_0$ |
+| 3 | $-6.00$ | 8 | $\pm3.355$ | Reject $H_0$ |
 
 The critical values differ because the sample sizes—and therefore the degrees of freedom—differ. Case 3 is two-tailed, which also requires a larger absolute critical value.
 :::

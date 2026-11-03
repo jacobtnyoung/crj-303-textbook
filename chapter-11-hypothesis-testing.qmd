@@ -17,10 +17,10 @@ We begin by assuming a specific population value, determine how unusual the samp
 
 After completing this chapter, you should be able to:
 
-1. State null and alternative hypotheses about a population mean.
+1. State null and alternative hypotheses about a population mean or proportion.
 2. Distinguish right-tailed, left-tailed, and two-tailed tests.
 3. Explain the meaning of the significance level and *p*-value.
-4. Calculate a standard error and obtained *z*-statistic.
+4. Calculate a standard error and obtained *z*-statistic for a mean or proportion.
 5. Compare an **obtained** statistic with a **critical** value.
 6. Decide whether to reject or fail to reject a null hypothesis.
 7. Interpret a hypothesis-test result without overstating the evidence.
@@ -97,21 +97,27 @@ $$
 For a one-tailed test, the entire 0.05 rejection region is placed in one tail. 
 For a two-tailed test, it is divided into 0.025 in each tail.
 
-| Test at $\alpha=0.05$ | Critical value or values | Reject $H_0$ when |
+| Test at $\alpha=0.05$ | Critical *z*-value or values | Reject $H_0$ when |
 |:-----------------------|:-------------------------|:-------------------|
-| Right-tailed | $z=1.64$ | $z_{obt}>1.64$ |
-| Left-tailed | $z=-1.64$ | $z_{obt}<-1.64$ |
-| Two-tailed | $z=\pm1.96$ | $z_{obt}<-1.96$ or $z_{obt}>1.96$ |
+| Right-tailed | $z_{crit}=1.64$ | $z_{obt}>1.64$ |
+| Left-tailed | $z_{crit}=-1.64$ | $z_{obt}<-1.64$ |
+| Two-tailed | $z_{crit}=\pm1.96$ | $|z_{obt}|>1.96$ |
 
 The area beyond the critical value is the **rejection region**.
+
+::: {.callout-tip title="When to use the absolute value"}
+For a **two-tailed** test, take the absolute value of the obtained statistic and compare it with the positive critical value. Reject $H_0$ when $|z_{obt}|>z_{crit}$.
+
+For a **one-tailed** test, retain the sign and confirm that the obtained statistic falls in the tail specified by $H_A$. Taking the absolute value for a one-tailed test could lead to rejection in the wrong direction.
+:::
 
 ```{r}
 #| label: fig-right-tailed-test
 #| echo: false
 #| warning: false
 #| message: false
-#| fig-cap: "For a right-tailed test with alpha = 0.05, obtained z-scores beyond 1.64 fall in the rejection region."
-#| fig-alt: "Standard normal curve with the right tail beyond z equals 1.64 shaded and an obtained z-score of 2 marked."
+#| fig-cap: "For a right-tailed test with alpha = 0.05, obtained z-statistics beyond 1.64 fall in the rejection region."
+#| fig-alt: "Standard normal curve with the right tail beyond z equals 1.64 shaded and an obtained z-statistic of 2 marked."
 #| fig-height: 2.8
 #| fig-width: 7
 
@@ -148,6 +154,12 @@ where:
 - $\widehat{SE}_{\bar{x}}=s/\sqrt{n}$.
 
 The obtained *z*-statistic expresses the difference between the sample mean and proposed population mean in standard-error units.
+
+::: {.callout-note title="A z-score and a z-statistic are related but distinct"}
+Chapter 8 used a ***z*-score** to locate an individual observation within a distribution. 
+In hypothesis testing, the **obtained *z*-statistic** locates a sample statistic relative to the value proposed by $H_0$. 
+A **critical *z*-value** marks the boundary of the rejection region.
+:::
 
 This chapter uses the normal distribution to establish the logic of testing. 
 Chapter 12 introduces the ***t*-distribution**, which is generally used for a population mean when the population standard deviation is unknown.
@@ -219,6 +231,109 @@ The *p*-value method and critical-value method reach the same decision.
 The *p*-value is not the probability that the null hypothesis is true. 
 It is a probability calculated under the assumption that the null hypothesis is true.
 :::
+
+## Testing a Population Proportion
+
+The same hypothesis-testing logic can be used for a population proportion. 
+Suppose a city claims that half of its residents trust the police. 
+A researcher obtains a random sample of 100 residents, and 60 report that they trust the police.
+
+The sample proportion is:
+
+$$
+\hat{p}=\frac{60}{100}=0.60
+$$
+
+The researcher asks whether the population proportion differs from 0.50:
+
+$$
+H_0:\pi=0.50
+$$
+
+$$
+H_A:\pi\ne0.50
+$$
+
+This is a two-tailed test. 
+For a one-sample proportion test, the standard error is calculated using the proportion proposed by the null hypothesis:
+
+$$
+SE_{H_0}=\sqrt{\frac{\pi_0(1-\pi_0)}{n}}
+$$
+
+For this example:
+
+$$
+SE_{H_0}=\sqrt{\frac{0.50(1-0.50)}{100}}
+=\sqrt{0.0025}
+=0.05
+$$
+
+The obtained *z*-statistic is:
+
+$$
+z_{obt}=\frac{\hat{p}-\pi_0}{SE_{H_0}}
+=\frac{0.60-0.50}{0.05}
+=2.00
+$$
+
+For a two-tailed test with $\alpha=0.05$, the positive critical value is 1.96. 
+Using the [**Standard Normal Distribution Table**](appendix-01-standard-normal-table.qmd), we need an area of $0.5000-0.0250=0.4750$ between the mean and the positive critical value. 
+The table associates that area with $z_{crit}=1.96$.
+
+Take the absolute value of the obtained statistic:
+
+$$
+|2.00|>1.96
+$$
+
+We reject $H_0$. 
+At the 0.05 significance level, the sample provides evidence that the population proportion of residents who trust the police differs from 0.50.
+
+The two-tailed *p*-value is:
+
+$$
+p=2P(Z\ge2.00)=2(0.0228)=0.0456
+$$
+
+Because $p<0.05$, the *p*-value method gives the same decision.
+
+::: {.callout-warning title="Use the null proportion in the test standard error"}
+For a one-sample *z*-test of a proportion, calculate the standard error using the hypothesized proportion, $\pi_0$. 
+The question is how much sample proportions would vary if $H_0$ were true.
+:::
+
+## Connecting a Hypothesis Test to a Confidence Interval
+
+Confidence intervals and two-tailed hypothesis tests evaluate the same population claim from different directions. 
+A confidence interval identifies population values that are reasonably compatible with the sample. 
+A hypothesis test asks whether one proposed value is sufficiently incompatible with the sample to reject.
+
+For the trust example, the estimated standard error used for a confidence interval is based on the sample proportion:
+
+$$
+\widehat{SE}_{\hat{p}}
+=\sqrt{\frac{0.60(1-0.60)}{100}}
+=0.0490
+$$
+
+The approximate 95% confidence interval is:
+
+$$
+0.60\pm1.96(0.0490)
+=0.60\pm0.0960
+=(0.504,0.696)
+$$
+
+The null value, 0.50, falls just outside this interval. 
+That agrees with the two-tailed test at $\alpha=0.05$, which rejected $H_0:\pi=0.50$.
+
+For the normal-approximation methods used in this book:
+
+- a null value outside the corresponding 95% confidence interval is evidence for rejection in a two-tailed test at $\alpha=0.05$; and
+- a null value inside the interval is consistent with failing to reject it.
+
+The interval adds useful information because it shows the range of plausible population values rather than giving only a reject-or-fail-to-reject decision.
 
 ## One-Tailed and Two-Tailed Decisions
 
@@ -341,7 +456,7 @@ For each sample:
 For both samples, $H_0:\mu=5$ and $H_A:\mu>5$. 
 This is a right-tailed test with a critical value of 1.64.
 
-| Sample | Standard error | Obtained *z* | Decision |
+| Sample | Standard error | Obtained *z*-statistic | Decision |
 |:-------|---------------:|-------------:|:---------|
 | 1 | $6/\sqrt{36}=1.00$ | $(6-5)/1=1.00$ | Fail to reject $H_0$ |
 | 2 | $14/\sqrt{49}=2.00$ | $(6-5)/2=0.50$ | Fail to reject $H_0$ |
@@ -397,7 +512,7 @@ For each case:
 
 ::: {.callout-note collapse="true" title="Review the answers"}
 
-| Case | Alternative | Test | Standard error | Obtained *z* | Decision |
+| Case | Alternative | Test | Standard error | Obtained *z*-statistic | Decision |
 |:----:|:------------|:-----|---------------:|-------------:|:---------|
 | 1 | $H_A:\mu>96$ | Right-tailed | $4.5/\sqrt{81}=0.50$ | 2.00 | Reject $H_0$ |
 | 2 | $H_A:\mu<96$ | Left-tailed | $9/\sqrt{81}=1.00$ | -1.00 | Fail to reject $H_0$ |
@@ -414,12 +529,12 @@ The next chapter's *t*-procedure is more appropriate and places greater weight o
 
 ## Data Investigation: Decisions and Evidence
 
-Using a quantitative variable from class data:
+Using a quantitative variable or binary outcome from class data:
 
-1. Propose a population mean for comparison.
+1. Propose a population mean or proportion for comparison.
 2. Write a substantively meaningful alternative hypothesis.
 3. Identify the direction of the test.
-4. Calculate the sample mean, standard deviation, and standard error.
+4. Calculate the relevant sample statistic and standard error.
 5. Calculate the obtained test statistic.
 6. Make a decision using $\alpha=0.05$.
 7. Interpret the result and distinguish statistical significance from practical importance.
@@ -427,7 +542,7 @@ Using a quantitative variable from class data:
 
 ## Project Connection
 
-1. Identify one population claim related to your semester project.
+1. Identify one population-mean or population-proportion claim related to your semester project.
 2. Express it as a null hypothesis.
 3. Write a meaningful alternative hypothesis.
 4. Identify whether the test would be one-tailed or two-tailed.
@@ -440,7 +555,7 @@ This chapter used the standard normal distribution to establish the logic of hyp
 When the population standard deviation is unknown, as it usually is, we estimate it using the sample standard deviation.
 That additional uncertainty is especially important in small samples.
 
-Chapter 12 introduces the **t*-distribution** and applies it to tests involving one mean and the difference between two sample means.
+Chapter 12 introduces the ***t*-distribution** and applies it to tests involving one mean when population variability is unknown.
 
 ## Chapter Summary
 
@@ -450,6 +565,8 @@ Chapter 12 introduces the **t*-distribution** and applies it to tests involving 
 - Right-, left-, and two-tailed tests place the rejection region in different locations.
 - The significance level defines how unusual a result must be before $H_0$ is rejected.
 - The obtained statistic expresses the sample result's distance from the null value in standard-error units.
+- A one-sample *z*-test for a proportion compares $\hat{p}$ with a hypothesized population proportion, $\pi_0$.
+- A corresponding confidence interval shows which population values are reasonably compatible with the sample.
 - A *p*-value is calculated assuming the null hypothesis is true.
 - Reject $H_0$ when $p\le\alpha$; otherwise, fail to reject it.
 - Failing to reject does not prove or accept $H_0$.

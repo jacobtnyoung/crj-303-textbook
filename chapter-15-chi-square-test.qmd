@@ -3,13 +3,13 @@
 ## The Question
 
 ::: {.callout-note title="Central question"}
-**Is an association observed in a sample larger than we would expect from sampling variability alone?**
+**Could the association observed in a sample have arisen through chance variation if the variables were independent?**
 :::
 
 Chapter 14 used bivariate tables and conditional proportions to describe relationships between categorical variables. 
 If two groups have different outcome proportions, we can say that the variables are associated in the observed data.
 
-When the cases are a sample from a larger population, however, we face another question: Does the sample provide convincing evidence that the variables are also associated in the population, or could the observed differences be the result of sampling variability?
+When the cases are a sample from a larger population, however, we face another question: Does the sample provide convincing evidence that the variables are also associated in the population, or could the observed differences have arisen through random chance under independence?
 
 The **chi-square test of independence** applies the logic of hypothesis testing to a bivariate table. 
 It compares the frequencies we observe with the frequencies we would expect if the two variables were independent.
@@ -46,12 +46,28 @@ The 48-percentage-point difference is an association in this sample.
 It does not automatically demonstrate an association in a larger population. 
 Even when two variables are independent in a population, random samples will rarely produce exactly equal proportions.
 
-The chi-square test helps us decide whether the observed table departs enough from independence to reject sampling variability as a plausible explanation.
+### What "Random Chance" Means
+
+Imagine repeatedly flipping a fair coin. 
+Even though heads and tails are equally likely, a small set of flips will rarely divide perfectly in half. 
+The difference does not necessarily mean that the coin is unfair; ordinary random chance can produce an uneven result.
+
+The same idea applies to a bivariate table. 
+If two variables are independent, repeated random samples will not reproduce the expected frequencies exactly. 
+Some cases will fall into cells differently simply by chance. 
+For sample data, statisticians call this **sampling variability**: the chance variation that occurs because one random sample will differ from another.
+
+The chi-square test asks whether the observed counts depart so far from the expected counts that random chance under independence is no longer a plausible explanation.
+
+::: {.callout-note title="Chance does not mean unexplained causation"}
+Here, **chance** refers to the random variation we would expect in cell counts if the null hypothesis were true. 
+It does not mean that the people, decisions, or events in the study occurred without causes.
+:::
 
 ## Independence and the Hypotheses
 
 Two categorical variables are *independent* when the distribution of one variable is the same across categories of the other. 
-If officer experience and use-of-force incidents are independent, the proportion involved in use of force should be approximately the same for both experience groups, apart from sampling variability.
+If officer experience and use-of-force incidents are independent, the proportion involved in use of force should be approximately the same for both experience groups, apart from chance variation from one sample to another.
 
 The hypotheses for a chi-square test of independence are:
 
@@ -470,6 +486,7 @@ Chapter 16 introduces scatterplots and the correlation coefficient. These tools 
 
 - A bivariate table provides a descriptive view of an association between categorical variables.
 - The chi-square test of independence evaluates whether a sample provides evidence of an association in the population.
+- Under the null hypothesis, random chance can make observed counts differ from expected counts; in sample data, this chance variation is called sampling variability.
 - Expected frequencies represent the counts predicted under the null hypothesis of independence.
 - The chi-square statistic summarizes discrepancies between observed and expected frequencies across all cells.
 - Degrees of freedom depend on the number of rows and columns.

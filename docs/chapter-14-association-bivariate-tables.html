@@ -839,8 +839,12 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 <ol type="1">
 <li>Construct a bivariate table of frequencies, including marginal totals.</li>
 <li>Convert the interior cells to row proportions.</li>
+<li>Convert the interior cells to column proportions.</li>
 <li>Among employed defendants, what proportion were released?</li>
 <li>Among unemployed defendants, what proportion were released?</li>
+<li>Among released defendants, what proportion were employed?</li>
+<li>Among detained defendants, what proportion were employed?</li>
+<li>Explain how the row-proportion and column-proportion interpretations differ.</li>
 <li>Describe the association between employment status and bail decision.</li>
 <li>Identify one conclusion the table does not support.</li>
 </ol>
@@ -912,7 +916,36 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </tr>
 </tbody>
 </table>
+<p>The column-proportion table is:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Employment status</th>
+<th style="text-align: right;">Released</th>
+<th style="text-align: right;">Detained</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Employed</td>
+<td style="text-align: right;">0.750</td>
+<td style="text-align: right;">0.167</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unemployed</td>
+<td style="text-align: right;">0.250</td>
+<td style="text-align: right;">0.833</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+</tr>
+</tbody>
+</table>
 <p>Among employed defendants, <span class="math inline">\(6/7=0.857\)</span>, or 85.7%, were released. Among unemployed defendants, <span class="math inline">\(2/7=0.286\)</span>, or 28.6%, were released. Release was 57.1 percentage points more common among employed defendants in this sample, indicating an association between employment status and bail decision.</p>
+<p>Among released defendants, <span class="math inline">\(6/8=0.750\)</span>, or 75.0%, were employed. Among detained defendants, <span class="math inline">\(1/6=0.167\)</span>, or 16.7%, were employed.</p>
+<p>The row proportions describe <strong>bail decisions within each employment group</strong>. They answer whether release was more common among employed or unemployed defendants. The column proportions describe <strong>employment status within each bail-decision group</strong>. They answer whether released and detained defendants differed in their employment composition. Both tables describe the same association, but they condition on different variables and therefore answer different questions.</p>
 <p>The table does not establish that employment status caused the bail decision. It also does not show whether the pattern represents the larger population of defendants. Other factors—such as offense severity, prior record, or assessed risk—could be related to both employment status and the bail decision.</p>
 </div>
 </div>
@@ -921,7 +954,7 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </section>
 <section id="data-investigation-two-categorical-variables" class="level2" data-number="14.13">
 <h2 data-number="14.13" class="anchored" data-anchor-id="data-investigation-two-categorical-variables"><span class="header-section-number">14.13</span> Data Investigation: Two Categorical Variables</h2>
-<p>Identify two categorical variables in a dataset available to you. O ne should serve as a grouping variable and the other as an outcome.</p>
+<p>Identify two categorical variables in a dataset available to you. One should serve as a grouping variable and the other as an outcome.</p>
 <ol type="1">
 <li>State a bivariate research question.</li>
 <li>Identify the cases represented by the data.</li>
@@ -939,7 +972,7 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </section>
 <section id="looking-ahead-to-chapter-15" class="level2" data-number="14.15">
 <h2 data-number="14.15" class="anchored" data-anchor-id="looking-ahead-to-chapter-15"><span class="header-section-number">14.15</span> Looking Ahead to Chapter 15</h2>
-<p>A bivariate table can reveal that groups have different outcome proportions. It does not tell us whether a difference observed in a sample is larger than we might expect from sampling variability.</p>
+<p>A bivariate table can reveal that groups have different outcome proportions. It does not tell us whether a difference observed in a sample is larger than we might expect from random chance under independence.</p>
 <p>Chapter 15 introduces the <strong>chi-square test of independence</strong>. This test compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.</p>
 </section>
 <section id="chapter-summary" class="level2" data-number="14.16">

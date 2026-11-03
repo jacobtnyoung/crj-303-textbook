@@ -48,8 +48,9 @@ When determining a variable's level of measurement, ask:
 
 1. Are the values simply different categories?
 2. Can the values be placed in a meaningful order?
-3. Are the distances between values equal?
-4. Does zero represent the absence of the quantity?
+3. What does one unit represent, and does it have a consistent meaning across the scale?
+4. Are the distances between values equal?
+5. Does zero represent the absence of the quantity?
 :::
 
 ## The Four Levels of Measurement
@@ -129,6 +130,74 @@ If one response took 20 minutes and another took 10 minutes, the first took twic
 If one neighborhood recorded 50 crimes and another recorded 25, the first recorded twice as many crimes. 
 These comparisons are possible because time and counts have meaningful zero points.
 
+### Interval and Ratio Variables in Practice
+
+The distinction between interval and ratio measurement matters when we make statements involving multiplication. 
+We can say that 20 minutes is twice as long as 10 minutes, but we cannot say that the year 2020 is twice the year 1010. 
+
+In practice, however, researchers often analyze interval and ratio variables using many of the same statistical tools. 
+Both are commonly treated as **quantitative variables** for calculations involving means, standard deviations, and correlations. 
+The distinction becomes most important when interpreting zero or making ratio statements such as “twice as much.”
+
+When deciding whether a variable is quantitative, ask what one unit represents and whether that unit has a consistent meaning. 
+For **year of conviction**, the unit is one year. 
+The difference between 2000 and 2001 has the same meaning as the difference between 2020 and 2021, so the variable has equal intervals. 
+Its calendar zero does not represent the absence of time, so it is interval rather than ratio.
+
+### Binary Variables: Yes, No, 1, and 0
+
+A **binary variable** has two possible categories, such as yes/no, present/absent, or released/detained. 
+These variables are usually nominal because their values identify two groups rather than measured quantities.
+
+A dataset may code `No = 0` and `Yes = 1`. 
+The numerical codes are convenient for storing and summarizing the data, but they do not turn the variable into an interval- or ratio-level measure. 
+The difference between 0 and 1 identifies a change in category; it does not measure a one-unit increase in the underlying characteristic.
+
+Some binary categories have a logical order. 
+For example, *not convicted* and *convicted* can be arranged according to whether a conviction occurred. 
+Even then, the two values do not have a measurable distance, and `1` is not “twice” `0`. 
+For the methods used in this book, binary outcomes are treated as categorical variables.
+
+::: {.callout-important title="A 0/1 code is still a category"}
+Coding yes as 1 and no as 0 can make it easy to calculate a proportion, but the coding does not make the underlying variable interval or ratio. 
+Always interpret the result as a proportion of cases in one category.
+:::
+
+## From a Coding Rule to a Dataset
+
+Measurement requires both a variable definition and a rule for assigning values. 
+Suppose a police department uses the following codebook:
+
+| Variable | Coding rule |
+|:---------|:------------|
+| Incident type | `1 = Burglary`, `2 = Robbery`, `3 = Fraud` |
+| Arrest made | `0 = No`, `1 = Yes` |
+| Crime severity | `1 = Low`, `2 = Moderate`, `3 = High` |
+| Response time | Number of minutes from dispatch to arrival |
+| Year of conviction | Four-digit calendar year |
+
+The resulting dataset might look like this:
+
+| Case ID | Incident type | Arrest made | Crime severity | Response time | Year of conviction |
+|:--------|--------------:|------------:|---------------:|--------------:|-------------------:|
+| 1001 | 1 | 0 | 2 | 14 | 2021 |
+| 1002 | 3 | 1 | 1 | 8  | 2022 |
+| 1003 | 2 | 1 | 3 | 11 | 2022 |
+| 1004 | 1 | 0 | 2 | 19 | 2023 |
+
+The numbers do not all carry the same kind of information:
+
+- Averaging incident-type codes would not describe a meaningful “average offense.”
+- The mean of the 0/1 arrest codes equals the proportion of cases coded `1`, but it should be interpreted as a proportion arrested—not as an average amount of arrest.
+- Crime-severity codes are ordered, but the difference between low and moderate is not necessarily equal to the difference between moderate and high.
+- A one-minute difference in response time has a consistent meaning, and zero minutes represents no elapsed response time.
+- A one-year difference has a consistent meaning for year of conviction, but the calendar does not have a meaningful zero.
+
+::: {.callout-tip title="Do these numbers make sense?"}
+Before calculating with a numerical column, substitute the category labels back into the data. 
+Then ask whether addition, subtraction, averaging, or ratio comparisons still make substantive sense.
+:::
+
 ## Comparing the Four Levels
 
 | Level | Categories differ | Values have an order | Equal intervals | Meaningful zero | Example |
@@ -189,13 +258,31 @@ You are a data analyst with the **Metrovale Bureau of Justice Analytics (MBJA)**
 
 Your supervisor reminds you that the level of measurement determines what kinds of statistical summaries and analyses can be used later.
 
+Several variables are stored using numerical codes. 
+The codebook defines them as follows:
+
+- `Incident Type`: `1 = Burglary`, `2 = Fraud`, `3 = Assault`
+- `Arrest Made`: `0 = No`, `1 = Yes`
+- `Officer Rating`: `1 = Poor` through `5 = Excellent`
+- `Crime Severity Code`: `1 = Low`, `2 = Moderate`, `3 = High`
+
+A small extract from the dataset is:
+
+| Case ID | Incident Type | Arrest Made | Officer Rating | Crime Severity Code | Response Time |
+|:--------|--------------:|------------:|---------------:|--------------------:|--------------:|
+| 2001 | 1 | 0 | 3 | 2 | 12 |
+| 2002 | 3 | 1 | 4 | 3 | 7  |
+| 2003 | 2 | 0 | 2 | 1 | 18 |
+| 2004 | 1 | 1 | 5 | 2 | 9  |
+
 ### Your Task
 
 For each variable:
 
-1. Identify its level of measurement.
-2. Briefly explain why that classification is appropriate.
-3. Base your explanation on what the values represent, not simply on whether they are written as numbers or words.
+1. Use the codebook to explain what the recorded values mean.
+2. Identify the variable's level of measurement.
+3. Briefly explain why that classification is appropriate.
+4. Base your explanation on what the values represent, not simply on whether they are written as numbers or words.
 
 | Variable | Description | Level | Explanation |
 |:---------|:------------|:-----:|:------------|
@@ -219,12 +306,16 @@ For each variable:
 
 After completing the table, answer the following questions:
 
-1. Which variables use numbers as labels rather than as measured quantities?
-2. For which variables would a mean be meaningful? Why?
-3. Could the same underlying concept be measured at different levels? Give one example.
-4. What information would you need before deciding how to classify *Day of Week* if an analyst wanted to study the passage of time?
+1. Translate the coded values for Case 2002 into words.
+2. Which variables use numbers as labels rather than as measured quantities?
+3. Why does coding *Arrest Made* as 0 and 1 not make it a ratio variable?
+4. For which variables would a mean be meaningful? Why?
+5. Could the same underlying concept be measured at different levels? Give one example.
+6. What information would you need before deciding how to classify *Day of Week* if an analyst wanted to study the passage of time?
 
 ::: {.callout-note collapse="true" title="Review the classifications"}
+For Case 2002, the recorded values indicate an assault, an arrest, an officer rating of 4, high crime severity, and a response time of 7 minutes.
+
 | Variable | Level | Explanation |
 |:---------|:-----:|:------------|
 | Case ID | Nominal | The values uniquely label reports but do not measure an amount. |
@@ -264,11 +355,14 @@ For example, consider whether a concept has been reduced to broad categories, wh
 - Ordinal variables place categories in a meaningful order, but the spacing between categories is not necessarily equal.
 - Interval variables have meaningful order and equal spacing, but they do not have a true zero.
 - Ratio variables have meaningful order, equal spacing, and a true zero.
+- Binary variables such as yes/no are categorical even when they are coded 1/0.
+- Interval and ratio variables are often analyzed together as quantitative variables, although the distinction matters when interpreting ratios such as "twice as much."
 - A variable's level of measurement depends on what its values represent, not on how those values are written or coded.
 - Recognizing the level of measurement helps us select appropriate summaries, comparisons, visualizations, and statistical procedures.
 
 ## Key Terms
 
+- **Binary variable:** A categorical variable with two possible categories, such as yes/no, even if the categories are coded 1 and 0.
 - **Interval variable:** A variable with ordered values and equal intervals but no meaningful zero.
 - **Level of measurement:** The mathematical structure of a variable and the comparisons its values permit.
 - **Measurement:** The use of a rule to assign a value to an observation.
