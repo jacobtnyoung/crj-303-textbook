@@ -1,0 +1,373 @@
+# Association and Bivariate Tables
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**How can we use a table to describe the relationship between two categorical variables?**
+:::
+
+Earlier chapters examined one variable at a time. 
+We calculated the proportion of defendants with prior records, identified the most common case outcome, and compared mean outcomes between groups. 
+Those analyses are useful, but many criminal justice questions concern how *two* variables are related.
+
+For example, a court analyst might ask whether defendants with prior records are more likely to be convicted. 
+Answering that question requires more than a frequency distribution for prior record and a separate distribution for case outcome. 
+The analyst must examine the two variables together.
+
+This chapter introduces **bivariate tables**, which organize two categorical variables in a single table. 
+These tables allow us to compare groups, identify patterns, and describe associations.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Distinguish univariate questions from bivariate questions.
+2. Construct a bivariate table from case-level data.
+3. Identify cells, row totals, column totals, and the grand total.
+4. Calculate row and column proportions.
+5. Select the proportions that answer a particular research question.
+6. Describe an association between two categorical variables.
+7. Explain why an observed association does not by itself establish causation.
+
+## From One Variable to Two
+
+A **univariate** analysis examines one variable. 
+Suppose a court analyst reviews 20 cases and reports that:
+
+- 40% of the defendants had a prior criminal record; and
+- 65% of the cases resulted in conviction.
+
+These statements describe the separate distributions of two variables. 
+They do *not* tell us whether defendants with prior records were more likely to be convicted.
+
+A **bivariate** analysis examines two variables together. 
+It asks whether the distribution of one variable differs across the categories of another variable. 
+Examples include:
+
+- Is bail release related to employment status?
+- Does enforcement outcome differ by incident type?
+- Is participation in a treatment program associated with rearrest?
+- Does public confidence in police differ across neighborhoods?
+
+Each question involves two variables. 
+When both variables are *categorical*, a bivariate table is a useful starting point.
+
+## Bivariate Association
+
+Two variables are **associated** when the distribution of one variable differs across categories of the other. 
+If conviction rates differ between defendants with and without prior records, prior-record status and case outcome are associated in the observed data.
+
+If the conviction rates are the same for both groups, the variables show no association in the table. 
+IN other words, knowing a defendant's prior-record status would not help us anticipate the distribution of case outcomes.
+
+Association is about a pattern of differences. 
+It does not necessarily mean that one variable causes the other.
+It simply tells us that the variables are related.
+
+::: {.callout-important title="Association is not causation"}
+A bivariate table can show that two variables are associated. 
+It cannot, by itself, establish that one variable caused the other. 
+Other characteristics, selection processes, measurement decisions, and institutional practices may help explain the observed pattern.
+:::
+
+## Constructing a Bivariate Table
+
+Consider a sample of 20 criminal cases. 
+The two variables are **Prior Criminal Record** and **Case Outcome**.
+
+To construct a bivariate table:
+
+1. Select one variable for the rows.
+2. Select the other variable for the columns.
+3. Count the cases with each combination of values.
+4. Add the row totals, column totals, and grand total.
+
+Using prior record as the row variable and case outcome as the column variable produces the following table:
+
+| Prior criminal record | Convicted | Not convicted | Total |
+|:----------------------|----------:|--------------:|------:|
+| Yes                   | 7         | 1             | 8     |
+| No                    | 6         | 6             | 12    |
+| **Total**             | **13**    | **7**         | **20** |
+
+Each interior value is a **cell frequency**. 
+The upper-left cell contains the seven cases in which the defendant had a prior record and was convicted.
+
+The totals at the edges of the table are **marginal totals**:
+
+- The row totals show that 8 defendants had prior records and 12 did not.
+- The column totals show that 13 defendants were convicted and 7 were not.
+- The **grand total** is the complete sample of 20 cases.
+
+The marginal totals reproduce the separate frequency distributions (remember [frequency distributions](chapter-03-frequency-distributions.qmd)!). 
+The interior cells show how the two variables occur together.
+
+::: {.callout-tip title="Check the table before interpreting it"}
+The interior cells must add to the grand total. 
+Each row total must equal the sum of the cells in that row, and each column total must equal the sum of the cells in that column.
+:::
+
+## Why Frequencies Are Often Not Enough
+
+The counts in the table suggest that defendants with prior records were frequently convicted: seven defendants with prior records were convicted, compared with six defendants without prior records. 
+However, the groups are different sizes. 
+There are only 8 defendants with prior records but 12 without them.
+
+Comparing the counts 7 and 6 ignores that difference. 
+Proportions place the groups on a common scale and provide a clearer comparison.
+
+The correct denominator depends on the question. 
+We can calculate either row proportions or column proportions, but they answer different questions.
+
+## Row Proportions
+
+A **row proportion** divides each cell by its row total:
+
+$$
+\text{Row proportion}=\frac{\text{cell frequency}}{\text{row total}}
+$$
+
+Row proportions describe the distribution of the column variable within each category of the row variable. 
+Each row sums to 1.00, or 100% if we are using percentages.
+
+For defendants with prior records:
+
+$$
+P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
+$$
+
+The vertical bar can be read as “given.” The result is the proportion convicted **given that** the defendant had a prior record.
+
+The complete row-proportion table is:
+
+| Prior criminal record | Convicted | Not convicted | Total |
+|:----------------------|-----------:|---------------:|------:|
+| Yes                   | 0.875      | 0.125          | 1.00  |
+| No                    | 0.500      | 0.500          | 1.00  |
+
+This table answers the question: *Given a defendant's prior-record status, what proportion were convicted or not convicted?*
+
+- Among defendants with prior records, 87.5% were convicted.
+- Among defendants without prior records, 50.0% were convicted.
+
+The conviction proportion is 37.5 percentage points higher among defendants with prior records:
+
+$$
+87.5\%-50.0\%=37.5\text{ percentage points}
+$$
+
+The differing proportions indicate an association in this sample.
+
+::: {.callout-warning title="Compare percentages, not percentage change"}
+Subtracting 50.0% from 87.5% gives a difference of **37.5 percentage points**. 
+Percentage points describe the absolute difference between two percentages. 
+They are not the same as a percent increase.
+:::
+
+## Column Proportions
+
+A **column proportion** divides each cell by its column total:
+
+$$
+\text{Column proportion}=\frac{\text{cell frequency}}{\text{column total}}
+$$
+
+Column proportions describe the distribution of the row variable within each category of the column variable. 
+Each column sums to 1.00.
+
+| Prior criminal record | Convicted | Not convicted |
+|:----------------------|-----------:|---------------:|
+| Yes                   | 0.538      | 0.143          |
+| No                    | 0.462      | 0.857          |
+| **Total**             | **1.00**   | **1.00**       |
+
+This table answers a different question: *Given the case outcome, what proportion of defendants had a prior record?*
+
+- Among convicted defendants, 53.8% had a prior record.
+- Among defendants who were not convicted, 14.3% had a prior record.
+
+These statements are correct, but they do not directly answer whether defendants with prior records were more likely to be convicted. 
+That question requires conviction proportions within the prior-record groups, so the *row* proportions are the more direct choice.
+
+## Choosing the Correct Proportions
+
+The placement of variables should follow the question rather than a mechanical rule. 
+A useful arrangement is:
+
+- place the grouping or explanatory variable in the rows;
+- place the response or outcome variable in the columns; and
+- compare the outcome proportions across rows.
+
+With this arrangement, row proportions usually answer the substantive question.
+
+| Research question | Groups being compared | Outcome | Useful calculation |
+|:------------------|:----------------------|:--------|:-------------------|
+| Does bail release differ by employment status? | Employment groups | Bail decision | Row proportions with employment in rows |
+| Does enforcement outcome differ by incident type? | Incident types | Warning or citation | Row proportions with incident type in rows |
+| Among cited students, what proportion were undergraduates? | Outcome groups | Student status | Column proportions if outcomes are columns |
+
+::: {.callout-tip title="Read the denominator in words"}
+Ask, “Within which groups do I want the percentages to sum to 100%?” Those groups provide the denominator. 
+If you want to compare outcomes within employment groups, divide by the employment-group totals.
+:::
+
+Reversing the rows and columns does not change the underlying data or association. 
+It changes which proportions are easiest to calculate and interpret.
+
+## Describing an Association
+
+A clear interpretation should identify:
+
+1. the groups being compared;
+2. the outcome being examined;
+3. the relevant proportions;
+4. the direction and size of the difference; and
+5. the population to which the evidence applies.
+
+For the court example, an appropriate description is:
+
+> In this sample, 87.5% of defendants with prior records were convicted, compared with 50.0% of defendants without prior records. 
+Conviction was therefore 37.5 percentage points more common among defendants with prior records.
+
+This statement describes the pattern without making an unsupported causal claim or assuming that the sample necessarily represents every case in the court system.
+
+Avoid interpretations such as:
+
+- “A prior record caused the conviction.”
+- “Judges discriminated against defendants with records.”
+- “Prior record is the only reason the groups differ.”
+
+Those explanations may be important research questions, but the bivariate table alone cannot answer them.
+
+## Check Your Understanding
+
+A campus police department records the following encounters:
+
+| Incident type | Warning | Citation | Total |
+|:--------------|--------:|---------:|------:|
+| Alcohol-related | 25 | 37 | 62 |
+| Non-alcohol-related | 51 | 7 | 58 |
+
+1. Which variable is the row variable?
+2. What proportion of alcohol-related incidents resulted in a citation?
+3. What proportion of non-alcohol-related incidents resulted in a citation?
+4. Does the table suggest an association between incident type and enforcement outcome?
+
+::: {.callout-note collapse="true" title="Check your answers"}
+1. Incident type is the row variable. Enforcement outcome is the column variable.
+2. For alcohol-related incidents, the citation proportion is $37/62=0.597$, or 59.7%.
+3. For non-alcohol-related incidents, the citation proportion is $7/58=0.121$, or 12.1%.
+4. Yes. Citation was 47.6 percentage points more common among alcohol-related incidents. This is a substantial descriptive difference in the observed encounters. The table does not establish that incident type caused the enforcement decision.
+:::
+
+## Test Your Knowledge: Employment Status and Bail Decisions
+
+### The Scenario
+
+The Statistically Independent Court System is examining whether pretrial bail decisions differ by a defendant's employment status. 
+Each row represents one defendant.
+
+| Case ID | Employment status | Bail decision |
+|:-------:|:------------------|:--------------|
+| 1  | Employed   | Released |
+| 2  | Employed   | Released |
+| 3  | Employed   | Released |
+| 4  | Employed   | Released |
+| 5  | Employed   | Detained |
+| 6  | Employed   | Released |
+| 7  | Employed   | Released |
+| 8  | Unemployed | Detained |
+| 9  | Unemployed | Detained |
+| 10 | Unemployed | Released |
+| 11 | Unemployed | Detained |
+| 12 | Unemployed | Detained |
+| 13 | Unemployed | Released |
+| 14 | Unemployed | Detained |
+
+### Your Task
+
+Use employment status as the row variable and bail decision as the column variable.
+
+1. Construct a bivariate table of frequencies, including marginal totals.
+2. Convert the interior cells to row proportions.
+3. Among employed defendants, what proportion were released?
+4. Among unemployed defendants, what proportion were released?
+5. Describe the association between employment status and bail decision.
+6. Identify one conclusion the table does not support.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+The frequency table is:
+
+| Employment status | Released | Detained | Total |
+|:------------------|---------:|---------:|------:|
+| Employed          | 6 | 1 | 7 |
+| Unemployed        | 2 | 5 | 7 |
+| **Total**         | **8** | **6** | **14** |
+
+The row-proportion table is:
+
+| Employment status | Released | Detained | Total |
+|:------------------|---------:|---------:|------:|
+| Employed          | 0.857 | 0.143 | 1.00 |
+| Unemployed        | 0.286 | 0.714 | 1.00 |
+
+Among employed defendants, $6/7=0.857$, or 85.7%, were released. 
+Among unemployed defendants, $2/7=0.286$, or 28.6%, were released. 
+Release was 57.1 percentage points more common among employed defendants in this sample, indicating an association between employment status and bail decision.
+
+The table does not establish that employment status caused the bail decision. 
+It also does not show whether the pattern represents the larger population of defendants. 
+Other factors—such as offense severity, prior record, or assessed risk—could be related to both employment status and the bail decision.
+:::
+
+## Data Investigation: Two Categorical Variables
+
+Identify two categorical variables in a dataset available to you. O
+ne should serve as a grouping variable and the other as an outcome.
+
+1. State a bivariate research question.
+2. Identify the cases represented by the data.
+3. Construct a frequency table with marginal totals.
+4. Calculate the conditional proportions that answer your question.
+5. Describe the observed association in one or two sentences.
+6. State one limitation or alternative explanation that the table cannot resolve.
+
+Before interpreting the table, consider whether missing values, small groups, or inconsistent classification could produce a misleading pattern.
+
+## Project Connection
+
+Select two categorical variables relevant to your investigation. Write a question about whether the outcome differs across categories of the grouping variable. Construct a bivariate table and explain why row or column proportions provide the appropriate comparison.
+
+Do not make a causal claim unless the research design supports one. At this stage, the goal is to describe the relationship visible in the data.
+
+## Looking Ahead to Chapter 15
+
+A bivariate table can reveal that groups have different outcome proportions. 
+It does not tell us whether a difference observed in a sample is larger than we might expect from sampling variability.
+
+Chapter 15 introduces the **chi-square test of independence**. 
+This test compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.
+
+## Chapter Summary
+
+- Univariate analysis describes one variable, while bivariate analysis examines two variables together.
+- A bivariate table displays the frequency associated with each combination of two categorical variables.
+- Marginal totals describe the separate distributions; interior cells show how the variables occur together.
+- Row and column proportions answer different conditional questions.
+- The research question determines which proportions should be compared.
+- An association exists when the distribution of one variable differs across categories of another.
+- An observed association does not, by itself, demonstrate causation or rule out alternative explanations.
+
+## Key Terms
+
+- **Association:** A pattern in which the distribution of one variable differs across categories or values of another variable.
+- **Bivariate analysis:** Analysis involving two variables.
+- **Bivariate table:** A table displaying the joint frequencies of two categorical variables.
+- **Cell frequency:** The number of cases with a particular combination of values on two variables.
+- **Column proportion:** A cell frequency divided by its column total.
+- **Conditional proportion:** A proportion calculated within a specified group or category.
+- **Grand total:** The total number of cases represented in a table.
+- **Marginal total:** A row or column total shown at the edge of a bivariate table.
+- **Percentage-point difference:** The result of subtracting one percentage from another.
+- **Row proportion:** A cell frequency divided by its row total.
+- **Univariate analysis:** Analysis involving one variable.

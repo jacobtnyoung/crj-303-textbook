@@ -2759,5 +2759,203 @@
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Chi-Square Distribution Critical Values</span>"
     ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html",
+    "href": "chapter-14-association-bivariate-tables.html",
+    "title": "14  Association and Bivariate Tables",
+    "section": "",
+    "text": "14.1 The Question\nEarlier chapters examined one variable at a time. We calculated the proportion of defendants with prior records, identified the most common case outcome, and compared mean outcomes between groups. Those analyses are useful, but many criminal justice questions concern how two variables are related.\nFor example, a court analyst might ask whether defendants with prior records are more likely to be convicted. Answering that question requires more than a frequency distribution for prior record and a separate distribution for case outcome. The analyst must examine the two variables together.\nThis chapter introduces bivariate tables, which organize two categorical variables in a single table. These tables allow us to compare groups, identify patterns, and describe associations.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#the-question",
+    "href": "chapter-14-association-bivariate-tables.html#the-question",
+    "title": "14  Association and Bivariate Tables",
+    "section": "",
+    "text": "NoteCentral question\n\n\n\nHow can we use a table to describe the relationship between two categorical variables?",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#what-you-will-learn",
+    "href": "chapter-14-association-bivariate-tables.html#what-you-will-learn",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.2 What You Will Learn",
+    "text": "14.2 What You Will Learn\nAfter completing this chapter, you should be able to:\n\nDistinguish univariate questions from bivariate questions.\nConstruct a bivariate table from case-level data.\nIdentify cells, row totals, column totals, and the grand total.\nCalculate row and column proportions.\nSelect the proportions that answer a particular research question.\nDescribe an association between two categorical variables.\nExplain why an observed association does not by itself establish causation.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#from-one-variable-to-two",
+    "href": "chapter-14-association-bivariate-tables.html#from-one-variable-to-two",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.3 From One Variable to Two",
+    "text": "14.3 From One Variable to Two\nA univariate analysis examines one variable. Suppose a court analyst reviews 20 cases and reports that:\n\n40% of the defendants had a prior criminal record; and\n65% of the cases resulted in conviction.\n\nThese statements describe the separate distributions of two variables. They do not tell us whether defendants with prior records were more likely to be convicted.\nA bivariate analysis examines two variables together. It asks whether the distribution of one variable differs across the categories of another variable. Examples include:\n\nIs bail release related to employment status?\nDoes enforcement outcome differ by incident type?\nIs participation in a treatment program associated with rearrest?\nDoes public confidence in police differ across neighborhoods?\n\nEach question involves two variables. When both variables are categorical, a bivariate table is a useful starting point.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#bivariate-association",
+    "href": "chapter-14-association-bivariate-tables.html#bivariate-association",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.4 Bivariate Association",
+    "text": "14.4 Bivariate Association\nTwo variables are associated when the distribution of one variable differs across categories of the other. If conviction rates differ between defendants with and without prior records, prior-record status and case outcome are associated in the observed data.\nIf the conviction rates are the same for both groups, the variables show no association in the table. Knowing a defendant’s prior-record status would not help us anticipate the distribution of case outcomes.\nAssociation is about a pattern of differences. It does not necessarily mean that one variable causes the other.\n\n\n\n\n\n\nImportantAssociation is not causation\n\n\n\nA bivariate table can show that two variables are related. It cannot, by itself, establish that one variable caused the other. Other characteristics, selection processes, measurement decisions, and institutional practices may help explain the observed pattern.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#constructing-a-bivariate-table",
+    "href": "chapter-14-association-bivariate-tables.html#constructing-a-bivariate-table",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.5 Constructing a Bivariate Table",
+    "text": "14.5 Constructing a Bivariate Table\nConsider a sample of 20 criminal cases. The two variables are Prior Criminal Record and Case Outcome.\nTo construct a bivariate table:\n\nSelect one variable for the rows.\nSelect the other variable for the columns.\nCount the cases with each combination of values.\nAdd the row totals, column totals, and grand total.\n\nUsing prior record as the row variable and case outcome as the column variable produces the following table:\n\n\n\nPrior criminal record\nConvicted\nNot convicted\nTotal\n\n\n\n\nYes\n7\n1\n8\n\n\nNo\n6\n6\n12\n\n\nTotal\n13\n7\n20\n\n\n\nEach interior value is a cell frequency. The upper-left cell contains the seven cases in which the defendant had a prior record and was convicted.\nThe totals at the edges of the table are marginal totals:\n\nThe row totals show that 8 defendants had prior records and 12 did not.\nThe column totals show that 13 defendants were convicted and 7 were not.\nThe grand total is the complete sample of 20 cases.\n\nThe marginal totals reproduce the separate frequency distributions. The interior cells show how the two variables occur together.\n\n\n\n\n\n\nTipCheck the table before interpreting it\n\n\n\nThe interior cells must add to the grand total. Each row total must equal the sum of the cells in that row, and each column total must equal the sum of the cells in that column.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#why-frequencies-are-often-not-enough",
+    "href": "chapter-14-association-bivariate-tables.html#why-frequencies-are-often-not-enough",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.6 Why Frequencies Are Often Not Enough",
+    "text": "14.6 Why Frequencies Are Often Not Enough\nThe counts suggest that defendants with prior records were frequently convicted: seven defendants with prior records were convicted, compared with six defendants without prior records. However, the groups are different sizes. There are only 8 defendants with prior records but 12 without them.\nComparing the counts 7 and 6 ignores that difference. Proportions place the groups on a common scale and provide a clearer comparison.\nThe correct denominator depends on the question. We can calculate either row proportions or column proportions, but they answer different questions.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#row-proportions",
+    "href": "chapter-14-association-bivariate-tables.html#row-proportions",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.7 Row Proportions",
+    "text": "14.7 Row Proportions\nA row proportion divides each cell by its row total:\n\\[\n\\text{Row proportion}=\\frac{\\text{cell frequency}}{\\text{row total}}\n\\]\nRow proportions describe the distribution of the column variable within each category of the row variable. Each row sums to 1.00, or 100%.\nFor defendants with prior records:\n\\[\nP(\\text{Convicted}\\mid\\text{Prior record})=\\frac{7}{8}=0.875\n\\]\nThe vertical bar can be read as “given.” The result is the proportion convicted given that the defendant had a prior record.\nThe complete row-proportion table is:\n\n\n\nPrior criminal record\nConvicted\nNot convicted\nTotal\n\n\n\n\nYes\n0.875\n0.125\n1.00\n\n\nNo\n0.500\n0.500\n1.00\n\n\n\nThis table answers the question: Given a defendant’s prior-record status, what proportion were convicted or not convicted?\n\nAmong defendants with prior records, 87.5% were convicted.\nAmong defendants without prior records, 50.0% were convicted.\n\nThe conviction proportion is 37.5 percentage points higher among defendants with prior records:\n\\[\n87.5\\%-50.0\\%=37.5\\text{ percentage points}\n\\]\nThe differing proportions indicate an association in this sample.\n\n\n\n\n\n\nWarningCompare percentages, not percentage change\n\n\n\nSubtracting 50.0% from 87.5% gives a difference of 37.5 percentage points. Percentage points describe the absolute difference between two percentages. They are not the same as a percent increase.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#column-proportions",
+    "href": "chapter-14-association-bivariate-tables.html#column-proportions",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.8 Column Proportions",
+    "text": "14.8 Column Proportions\nA column proportion divides each cell by its column total:\n\\[\n\\text{Column proportion}=\\frac{\\text{cell frequency}}{\\text{column total}}\n\\]\nColumn proportions describe the distribution of the row variable within each category of the column variable. Each column sums to 1.00.\n\n\n\nPrior criminal record\nConvicted\nNot convicted\n\n\n\n\nYes\n0.538\n0.143\n\n\nNo\n0.462\n0.857\n\n\nTotal\n1.00\n1.00\n\n\n\nThis table answers a different question: Given the case outcome, what proportion of defendants had a prior record?\n\nAmong convicted defendants, 53.8% had a prior record.\nAmong defendants who were not convicted, 14.3% had a prior record.\n\nThese statements are correct, but they do not directly answer whether defendants with prior records were more likely to be convicted. That question requires conviction proportions within the prior-record groups, so the row proportions are the more direct choice.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#choosing-the-correct-proportions",
+    "href": "chapter-14-association-bivariate-tables.html#choosing-the-correct-proportions",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.9 Choosing the Correct Proportions",
+    "text": "14.9 Choosing the Correct Proportions\nThe placement of variables should follow the question rather than a mechanical rule. A useful arrangement is:\n\nplace the grouping or explanatory variable in the rows;\nplace the response or outcome variable in the columns; and\ncompare the outcome proportions across rows.\n\nWith this arrangement, row proportions usually answer the substantive question.\n\n\n\n\n\n\n\n\n\nResearch question\nGroups being compared\nOutcome\nUseful calculation\n\n\n\n\nDoes bail release differ by employment status?\nEmployment groups\nBail decision\nRow proportions with employment in rows\n\n\nDoes enforcement outcome differ by incident type?\nIncident types\nWarning or citation\nRow proportions with incident type in rows\n\n\nAmong cited students, what proportion were undergraduates?\nOutcome groups\nStudent status\nColumn proportions if outcomes are columns\n\n\n\n\n\n\n\n\n\nTipRead the denominator in words\n\n\n\nAsk, “Within which groups do I want the percentages to sum to 100%?” Those groups provide the denominator. If you want to compare outcomes within employment groups, divide by the employment-group totals.\n\n\nReversing the rows and columns does not change the underlying data or association. It changes which proportions are easiest to calculate and interpret.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#describing-an-association",
+    "href": "chapter-14-association-bivariate-tables.html#describing-an-association",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.10 Describing an Association",
+    "text": "14.10 Describing an Association\nA clear interpretation should identify:\n\nthe groups being compared;\nthe outcome being examined;\nthe relevant proportions;\nthe direction and size of the difference; and\nthe population to which the evidence applies.\n\nFor the court example, an appropriate description is:\n\nIn this sample, 87.5% of defendants with prior records were convicted, compared with 50.0% of defendants without prior records. Conviction was therefore 37.5 percentage points more common among defendants with prior records.\n\nThis statement describes the pattern without making an unsupported causal claim or assuming that the sample necessarily represents every case in the court system.\nAvoid interpretations such as:\n\n“A prior record caused the conviction.”\n“Judges discriminated against defendants with records.”\n“Prior record is the only reason the groups differ.”\n\nThose explanations may be important research questions, but the bivariate table alone cannot answer them.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#check-your-understanding",
+    "href": "chapter-14-association-bivariate-tables.html#check-your-understanding",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.11 Check Your Understanding",
+    "text": "14.11 Check Your Understanding\nA campus police department records the following encounters:\n\n\n\nIncident type\nWarning\nCitation\nTotal\n\n\n\n\nAlcohol-related\n25\n37\n62\n\n\nNon-alcohol-related\n51\n7\n58\n\n\n\n\nWhich variable is the row variable?\nWhat proportion of alcohol-related incidents resulted in a citation?\nWhat proportion of non-alcohol-related incidents resulted in a citation?\nDoes the table suggest an association between incident type and enforcement outcome?\n\n\n\n\n\n\n\nNoteCheck your answers\n\n\n\n\n\n\nIncident type is the row variable. Enforcement outcome is the column variable.\nFor alcohol-related incidents, the citation proportion is \\(37/62=0.597\\), or 59.7%.\nFor non-alcohol-related incidents, the citation proportion is \\(7/58=0.121\\), or 12.1%.\nYes. Citation was 47.6 percentage points more common among alcohol-related incidents. This is a substantial descriptive difference in the observed encounters. The table does not establish that incident type caused the enforcement decision.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#test-your-knowledge-employment-status-and-bail-decisions",
+    "href": "chapter-14-association-bivariate-tables.html#test-your-knowledge-employment-status-and-bail-decisions",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.12 Test Your Knowledge: Employment Status and Bail Decisions",
+    "text": "14.12 Test Your Knowledge: Employment Status and Bail Decisions\n\n14.12.1 The Scenario\nThe Statistically Independent Court System is examining whether pretrial bail decisions differ by a defendant’s employment status. Each row represents one defendant.\n\n\n\nCase ID\nEmployment status\nBail decision\n\n\n\n\n1\nEmployed\nReleased\n\n\n2\nEmployed\nReleased\n\n\n3\nEmployed\nReleased\n\n\n4\nEmployed\nReleased\n\n\n5\nEmployed\nDetained\n\n\n6\nEmployed\nReleased\n\n\n7\nEmployed\nReleased\n\n\n8\nUnemployed\nDetained\n\n\n9\nUnemployed\nDetained\n\n\n10\nUnemployed\nReleased\n\n\n11\nUnemployed\nDetained\n\n\n12\nUnemployed\nDetained\n\n\n13\nUnemployed\nReleased\n\n\n14\nUnemployed\nDetained\n\n\n\n\n\n14.12.2 Your Task\nUse employment status as the row variable and bail decision as the column variable.\n\nConstruct a bivariate table of frequencies, including marginal totals.\nConvert the interior cells to row proportions.\nAmong employed defendants, what proportion were released?\nAmong unemployed defendants, what proportion were released?\nDescribe the association between employment status and bail decision.\nIdentify one conclusion the table does not support.\n\n\n\n\n\n\n\nNoteReview the answers\n\n\n\n\n\nThe frequency table is:\n\n\n\nEmployment status\nReleased\nDetained\nTotal\n\n\n\n\nEmployed\n6\n1\n7\n\n\nUnemployed\n2\n5\n7\n\n\nTotal\n8\n6\n14\n\n\n\nThe row-proportion table is:\n\n\n\nEmployment status\nReleased\nDetained\nTotal\n\n\n\n\nEmployed\n0.857\n0.143\n1.00\n\n\nUnemployed\n0.286\n0.714\n1.00\n\n\n\nAmong employed defendants, \\(6/7=0.857\\), or 85.7%, were released. Among unemployed defendants, \\(2/7=0.286\\), or 28.6%, were released. Release was 57.1 percentage points more common among employed defendants in this sample, indicating an association between employment status and bail decision.\nThe table does not establish that employment status caused the bail decision. It also does not show whether the pattern represents the larger population of defendants. Other factors—such as offense severity, prior record, or assessed risk—could be related to both employment status and the bail decision.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#data-investigation-two-categorical-variables",
+    "href": "chapter-14-association-bivariate-tables.html#data-investigation-two-categorical-variables",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.13 Data Investigation: Two Categorical Variables",
+    "text": "14.13 Data Investigation: Two Categorical Variables\nIdentify two categorical variables in a dataset available to you. One should serve as a grouping variable and the other as an outcome.\n\nState a bivariate research question.\nIdentify the cases represented by the data.\nConstruct a frequency table with marginal totals.\nCalculate the conditional proportions that answer your question.\nDescribe the observed association in one or two sentences.\nState one limitation or alternative explanation that the table cannot resolve.\n\nBefore interpreting the table, consider whether missing values, small groups, or inconsistent classification could produce a misleading pattern.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#project-connection",
+    "href": "chapter-14-association-bivariate-tables.html#project-connection",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.14 Project Connection",
+    "text": "14.14 Project Connection\nSelect two categorical variables relevant to your investigation. Write a question about whether the outcome differs across categories of the grouping variable. Construct a bivariate table and explain why row or column proportions provide the appropriate comparison.\nDo not make a causal claim unless the research design supports one. At this stage, the goal is to describe the relationship visible in the data.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#looking-ahead-to-chapter-15",
+    "href": "chapter-14-association-bivariate-tables.html#looking-ahead-to-chapter-15",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.15 Looking Ahead to Chapter 15",
+    "text": "14.15 Looking Ahead to Chapter 15\nA bivariate table can reveal that groups have different outcome proportions. It does not tell us whether a difference observed in a sample is larger than we might expect from sampling variability.\nChapter 15 introduces the chi-square test of independence. It compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#chapter-summary",
+    "href": "chapter-14-association-bivariate-tables.html#chapter-summary",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.16 Chapter Summary",
+    "text": "14.16 Chapter Summary\n\nUnivariate analysis describes one variable, while bivariate analysis examines two variables together.\nA bivariate table displays the frequency associated with each combination of two categorical variables.\nMarginal totals describe the separate distributions; interior cells show how the variables occur together.\nRow and column proportions answer different conditional questions.\nThe research question determines which proportions should be compared.\nAn association exists when the distribution of one variable differs across categories of another.\nAn observed association does not, by itself, demonstrate causation or rule out alternative explanations.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-association-bivariate-tables.html#key-terms",
+    "href": "chapter-14-association-bivariate-tables.html#key-terms",
+    "title": "14  Association and Bivariate Tables",
+    "section": "14.17 Key Terms",
+    "text": "14.17 Key Terms\n\nAssociation: A pattern in which the distribution of one variable differs across categories or values of another variable.\nBivariate analysis: Analysis involving two variables.\nBivariate table: A table displaying the joint frequencies of two categorical variables.\nCell frequency: The number of cases with a particular combination of values on two variables.\nColumn proportion: A cell frequency divided by its column total.\nConditional proportion: A proportion calculated within a specified group or category.\nGrand total: The total number of cases represented in a table.\nMarginal total: A row or column total shown at the edge of a bivariate table.\nPercentage-point difference: The result of subtracting one percentage from another.\nRow proportion: A cell frequency divided by its row total.\nUnivariate analysis: Analysis involving one variable.",
+    "crumbs": [
+      "Part II: Statistical Inference",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Association and Bivariate Tables</span>"
+    ]
   }
 ]

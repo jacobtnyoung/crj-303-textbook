@@ -32,6 +32,12 @@ book:
         - chapter-12-t-tests.qmd
         - chapter-13-comparing-two-means.qmd
 
+    - part: part-03-examining-relationships.qmd
+      chapters:
+        - chapter-14-association-bivariate-tables.qmd
+        - chapter-15-chi-square-test.qmd
+        - chapter-16-correlation.qmd
+
   appendices:
     - appendix-01-standard-normal-table.qmd
     - appendix-02-t-distribution-table.qmd

@@ -1,0 +1,182 @@
+# Part III: Examining Relationships {.unnumbered}
+
+Part I focused on understanding and describing individual variables. 
+Part II introduced statistical inference and used samples to estimate population values and test claims about means.
+
+Part III turns to **relationships between variables**. 
+Criminal justice research often asks whether an outcome differs across groups, whether two characteristics occur together, or whether higher values of one measure are associated with higher or lower values of another.
+
+Examples include:
+
+- Is bail release associated with employment status?
+- Does use-of-force involvement differ by officer experience?
+- Are sentence length and risk scores related?
+- Does officer workload correspond with arrests or community contacts?
+
+Answering these questions requires us to examine two variables at the same time.
+
+## From Group Differences to Relationships
+
+Chapter 13 compared the means of two independent groups. 
+That comparison is one type of relationship: a categorical variable identifies the groups, and a quantitative variable records the outcome.
+
+Part III extends this reasoning to two other combinations of variables:
+
+- Two **categorical variables** can be examined using bivariate tables, conditional proportions, and the chi-square test.
+- Two **quantitative variables** can be examined using scatterplots and correlation.
+
+The analytical method changes with the variables, but the underlying questions remain familiar. 
+What pattern appears in the observed data? Could that pattern reflect sampling variability? What conclusion is justified, and what remains unexplained?
+
+::: {.callout-important title="The central problem of Part III"}
+Relationships must be described with methods that match the variables, and an observed association must not be mistaken for a causal explanation.
+:::
+
+## The Logic Connecting the Chapters
+
+The chapters in Part III move from describing a relationship between categorical variables to testing that relationship and then examining relationships between quantitative variables.
+
+| Chapter | Main idea | Central question |
+|:--------|:----------|:-----------------|
+| **14. Association and Bivariate Tables** | Bivariate tables and conditional proportions describe relationships between categorical variables. | Does the distribution of one categorical variable differ across categories of another? |
+| **15. The Chi-Square Test** | Observed and expected frequencies allow us to test whether two categorical variables are independent. | Is the association observed in a sample larger than we would expect from sampling variability? |
+| **16. Correlation** | Scatterplots and the correlation coefficient describe linear relationships between quantitative variables. | What are the direction and strength of the linear relationship between two quantitative variables? |
+
+The sequence can be summarized as:
+
+1. Place two categorical variables in a bivariate table.
+2. Calculate conditional proportions that answer the research question.
+3. Describe the association visible in the sample.
+4. Use the chi-square test when the goal and sampling process support population inference.
+5. Use a scatterplot to examine two quantitative variables.
+6. Calculate a correlation to summarize a linear relationship.
+7. Interpret every result in light of the data and research design.
+
+## Match the Method to the Variables
+
+The level of measurement determines which comparisons are meaningful. Across Parts II and III, three common bivariate situations appear:
+
+| Explanatory or grouping variable | Outcome or second variable | Useful methods |
+|:---------------------------------|:---------------------------|:---------------|
+| Categorical | Quantitative | Group means and an independent-samples *t*-test |
+| Categorical | Categorical | Bivariate table, conditional proportions, and a chi-square test |
+| Quantitative | Quantitative | Scatterplot and correlation |
+
+Suppose an analyst studies officer experience and use of force. If experience is grouped into “0–5 years” and “6 or more years,” both variables are categorical and a bivariate table is appropriate. If experience is recorded as the exact number of years and use of force as the number of incidents, both variables are quantitative and a scatterplot and correlation may be appropriate.
+
+The substantive topic has not changed, but the measurement and research question have. Selecting a method begins with identifying what each variable represents.
+
+::: {.callout-note title="The same concept can be measured in different ways"}
+A variable may be recorded as categories in one study and as a quantitative measure in another. Always examine the actual values and their meaning before selecting an analysis.
+:::
+
+## Description Comes Before Testing
+
+Statistical testing does not replace descriptive analysis. Before conducting a chi-square test, we need a bivariate table and conditional proportions. Before interpreting a correlation, we need a scatterplot.
+
+The descriptive pattern tells us:
+
+- which groups or values differ;
+- the direction of the relationship;
+- the approximate size of the difference or association;
+- whether the pattern is linear or curved; and
+- whether unusual observations or small groups may be influential.
+
+An inferential result answers a narrower question about sampling variability. A statistically significant result does not explain the association, demonstrate that it is important, or repair weaknesses in measurement and sampling.
+
+## A Recurring Reasoning Process
+
+The chapters in Part III repeatedly use the following questions:
+
+1. **What are the cases?**  
+   Identify the unit represented by each row or observation.
+
+2. **What are the two variables?**  
+   Define how each was measured and determine whether it is categorical or quantitative.
+
+3. **What relationship is being asked about?**  
+   State which groups, outcomes, or paired values are being compared.
+
+4. **Which method matches the variables?**  
+   Select a bivariate table, chi-square test, scatterplot, correlation, or comparison of means.
+
+5. **What does the observed pattern show?**  
+   Compare conditional proportions or describe the direction, strength, and form of a scatterplot.
+
+6. **Is population inference justified?**  
+   Consider the sampling process, independence, expected frequencies, and other assumptions.
+
+7. **What conclusion is supported?**  
+   Report the relevant statistics and interpret them in substantive language.
+
+8. **What remains unresolved?**  
+   Identify alternative explanations, measurement limitations, unusual observations, and unsupported causal claims.
+
+## Association and Causation
+
+Part III uses the word **association** to describe a statistical relationship. Two categorical variables are associated when the distribution of one differs across categories of the other. Two quantitative variables are associated when their paired values follow a pattern.
+
+Association does not establish causation. A relationship may arise because:
+
+- one variable influences the other;
+- the direction of influence is reversed;
+- a third variable influences both;
+- the cases were selected in a way that creates the pattern;
+- the measures reflect the same reporting or classification process; or
+- the observed pattern results partly from sampling variability.
+
+For example, recorded crime may be positively correlated with police presence across neighborhoods. This does not demonstrate that police presence causes crime. Officers may be assigned to places with more reported incidents, and greater police presence may increase the detection and recording of offenses.
+
+::: {.callout-warning title="A statistical relationship is not a causal mechanism"}
+Bivariate statistics describe whether variables move or occur together. Causal claims require a research design that establishes time order and addresses credible alternative explanations.
+:::
+
+## Tables, Graphs, and Statistics Work Together
+
+No single number provides a complete account of a relationship.
+
+For categorical variables, the chi-square statistic does not show which groups differ or how large the observed differences are. Conditional proportions provide that information.
+
+For quantitative variables, the correlation coefficient summarizes a linear relationship but can conceal curves, clusters, restricted variation, and influential observations. A scatterplot reveals features that $r$ alone cannot show.
+
+A useful analysis therefore combines:
+
+- a table or graph showing the observed data;
+- an appropriate numerical summary or test;
+- an interpretation in the language of the research question; and
+- a statement of limitations.
+
+## How to Work Through Part III
+
+When completing the chapters and activities:
+
+1. Identify the cases and the measurement level of both variables.
+2. Write the research question before selecting a method.
+3. Construct the table or graph before calculating a test statistic or coefficient.
+4. Show the steps used to calculate conditional proportions, expected frequencies, chi-square, or correlation.
+5. Describe the observed pattern separately from the inferential decision.
+6. Interpret results using the original categories and units.
+7. Examine small cells, outliers, curves, and subgroups that may affect the result.
+8. State what the analysis does not establish.
+
+The Test Your Knowledge activities provide structured practice with each method. The data investigations and project connections ask you to apply the same reasoning to other data and research questions.
+
+Appendix C, [**Chi-Square Distribution Critical Values**](appendix-03-chi-square-table.qmd), provides the critical values used in Chapter 15.
+
+## What You Should Be Able to Do by the End
+
+By the end of Part III, you should be able to:
+
+- distinguish univariate questions from bivariate questions;
+- construct and interpret a bivariate frequency table;
+- calculate and select appropriate row or column proportions;
+- describe an association between two categorical variables;
+- calculate expected frequencies and a chi-square statistic;
+- use degrees of freedom and a critical value to evaluate independence;
+- construct and interpret a scatterplot;
+- calculate and interpret the correlation coefficient;
+- recognize how nonlinearity, outliers, restricted variation, and subgroups can affect correlation;
+- match a bivariate method to the measurement levels of the variables; and
+- distinguish statistical association from causal explanation.
+
+Part III brings together the descriptive and inferential reasoning developed throughout the book. The goal is not merely to identify whether two variables are related, but to describe the relationship accurately, evaluate the evidence carefully, and communicate the limits of the conclusion.

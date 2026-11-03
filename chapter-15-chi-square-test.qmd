@@ -1,0 +1,488 @@
+# The Chi-Square Test
+
+## The Question
+
+::: {.callout-note title="Central question"}
+**Is an association observed in a sample larger than we would expect from sampling variability alone?**
+:::
+
+Chapter 14 used bivariate tables and conditional proportions to describe relationships between categorical variables. 
+If two groups have different outcome proportions, we can say that the variables are associated in the observed data.
+
+When the cases are a sample from a larger population, however, we face another question: Does the sample provide convincing evidence that the variables are also associated in the population, or could the observed differences be the result of sampling variability?
+
+The **chi-square test of independence** applies the logic of hypothesis testing to a bivariate table. 
+It compares the frequencies we observe with the frequencies we would expect if the two variables were independent.
+
+## What You Will Learn
+
+After completing this chapter, you should be able to:
+
+1. Distinguish a descriptive association from an inferential conclusion.
+2. State null and alternative hypotheses for a chi-square test of independence.
+3. Calculate expected frequencies for a bivariate table.
+4. Calculate the chi-square test statistic.
+5. Determine the degrees of freedom and locate a critical value.
+6. Make and interpret a hypothesis-test decision.
+7. Identify the assumptions and limitations of a chi-square test.
+
+Appendix C, [**Chi-Square Distribution Critical Values**](appendix-03-chi-square-table.qmd), provides the critical values used in this chapter.
+
+## From Description to Inference
+
+Suppose a police department examines whether use-of-force involvement differs by officer experience. 
+A bivariate table and row proportions can show whether the observed rates differ:
+
+| Officer experience | Use of force: Yes | Use of force: No | Total |
+|:-------------------|------------------:|-----------------:|------:|
+| 0–5 years          | 18 | 7  | 25 |
+| 6 or more years    | 12 | 38 | 50 |
+| **Total**          | **30** | **45** | **75** |
+
+Among officers with 0–5 years of experience, $18/25=0.72$, or 72%, were involved in a use-of-force incident. 
+Among officers with 6 or more years of experience, $12/50=0.24$, or 24%, were involved.
+
+The 48-percentage-point difference is an association in this sample. 
+It does not automatically demonstrate an association in a larger population. 
+Even when two variables are independent in a population, random samples will rarely produce exactly equal proportions.
+
+The chi-square test helps us decide whether the observed table departs enough from independence to reject sampling variability as a plausible explanation.
+
+## Independence and the Hypotheses
+
+Two categorical variables are *independent* when the distribution of one variable is the same across categories of the other. 
+If officer experience and use-of-force incidents are independent, the proportion involved in use of force should be approximately the same for both experience groups, apart from sampling variability.
+
+The hypotheses for a chi-square test of independence are:
+
+$$
+H_0:\text{ The two variables are independent in the population.}
+$$
+
+$$
+H_A:\text{ The two variables are associated in the population.}
+$$
+
+For the officer example:
+
+$$
+H_0:\text{ Officer experience and use-of-force involvement are independent.}
+$$
+
+$$
+H_A:\text{ Officer experience and use-of-force involvement are associated.}
+$$
+
+The hypotheses refer to the population, not merely to the sample. 
+The sample table provides the evidence used to evaluate them.
+
+::: {.callout-important title="The null hypothesis is independence"}
+For a chi-square test of independence, the null hypothesis does not claim that every cell has the same frequency. 
+It claims that the variables are independent. 
+Unequal group sizes and unequal marginal totals can still produce different expected cell frequencies.
+:::
+
+## Observed and Expected Frequencies
+
+The values recorded in the sample table are the **observed frequencies**, represented by $f_O$. 
+To evaluate independence, we compare them with **expected frequencies**, represented by $f_E$.
+
+An expected frequency is the count a cell would have under the null hypothesis, given the table's row total, column total, and grand total. 
+For each cell:
+
+$$
+f_E=\frac{(\text{row total})(\text{column total})}{n}
+$$
+
+In the officer example, the expected frequency for officers with 0–5 years of experience who were involved in use of force is:
+
+$$
+f_E=\frac{(25)(30)}{75}=10
+$$
+
+The complete expected-frequency table is:
+
+| Officer experience | Use of force: Yes | Use of force: No | Total |
+|:-------------------|------------------:|-----------------:|------:|
+| 0–5 years          | 10 | 15 | 25 |
+| 6 or more years    | 20 | 30 | 50 |
+| **Total**          | **30** | **45** | **75** |
+
+Notice that the expected table has the same marginal totals as the observed table. 
+Only the interior cell frequencies have changed.
+
+Under independence, 40% of all officers were involved in use of force because $30/75=0.40$. 
+The expected table therefore assigns 40% of each experience group to the “Yes” column:
+
+$$
+0.40(25)=10
+$$
+
+$$
+0.40(50)=20
+$$
+
+The observed values, 18 and 12, depart substantially from those expectations.
+
+::: {.callout-tip title="Check the expected table"}
+Expected frequencies should reproduce the observed row totals, column totals, and grand total. 
+If they do not, check the calculation before continuing.
+:::
+
+## The Chi-Square Test Statistic
+
+The chi-square statistic summarizes the difference between observed and expected frequencies across every cell:
+
+$$
+\chi^2=\sum\frac{(f_O-f_E)^2}{f_E}
+$$
+
+For each cell, the calculation:
+
+1. subtracts the expected frequency from the observed frequency;
+2. squares the difference so positive and negative deviations do not cancel;
+3. divides by the expected frequency to account for the size of the cell; and
+4. adds the result to the contributions from all other cells.
+
+The four cell contributions for the officer example are:
+
+| Officer experience | Use of force: Yes | Use of force: No |
+|:-------------------|------------------:|-----------------:|
+| 0–5 years | $\frac{(18-10)^2}{10}=6.400$ | $\frac{(7-15)^2}{15}=4.267$ |
+| 6 or more years | $\frac{(12-20)^2}{20}=3.200$ | $\frac{(38-30)^2}{30}=2.133$ |
+
+Adding the contributions gives:
+
+$$
+\chi^2=6.400+4.267+3.200+2.133=16.00
+$$
+
+The statistic cannot be negative because every deviation is squared. 
+A value near zero means the observed and expected tables are similar. 
+A larger value indicates a greater departure from independence.
+
+::: {.callout-warning title="Use counts in the chi-square calculation"}
+The chi-square statistic is calculated from observed and expected **frequencies**, not percentages or proportions. 
+Conditional proportions help describe the association; frequencies are used to test it.
+:::
+
+## Degrees of Freedom and the Critical Value
+
+The chi-square sampling distribution depends on the number of rows and columns. 
+The degrees of freedom are:
+
+$$
+df=(r-1)(c-1)
+$$
+
+where $r$ is the number of rows and $c$ is the number of columns.
+
+The officer table has two rows and two columns:
+
+$$
+df=(2-1)(2-1)=1
+$$
+
+For $df=1$ and $\alpha=0.05$, the chi-square critical value is 3.841. 
+The rejection region is in the right tail because larger chi-square values represent greater disagreement with the null hypothesis.
+
+The decision rule is:
+
+- If $\chi^2_{obtained}>\chi^2_{critical}$, reject $H_0$.
+- If $\chi^2_{obtained}\leq\chi^2_{critical}$, fail to reject $H_0$.
+
+For the officer example:
+
+$$
+16.00>3.841
+$$
+
+We reject the null hypothesis. 
+The sample provides evidence that officer experience and use-of-force involvement are associated in the population represented by the sample.
+
+## A Complete Interpretation
+
+A useful conclusion combines the descriptive pattern with the inferential decision:
+
+> Officers with 0–5 years of experience had a higher observed use-of-force involvement rate than officers with 6 or more years of experience, 72% compared with 24%. 
+The chi-square test was statistically significant, $\chi^2(1)=16.00$, so we reject the null hypothesis of independence.
+
+The conclusion should not say that experience caused the difference. 
+The test also does not explain why the association exists.
+
+::: {.callout-important title="Statistical significance is not an explanation"}
+A significant chi-square result indicates evidence of an association. 
+It does not establish causation, identify the mechanism producing the association, or show that the relationship is substantively important.
+:::
+
+## What Chi-Square Does Not Tell Us
+
+The chi-square test answers a limited question: Are the variables associated in the population represented by the sample?
+
+It does not, by itself, tell us:
+
+- which variable causes the other;
+- whether a third variable explains the association;
+- why the observed pattern exists;
+- whether the association is large or practically important; or
+- whether the data were measured or sampled well.
+
+The conditional proportions remain essential because they show the direction and size of the observed differences. 
+A chi-square decision without the underlying proportions is incomplete.
+
+The value of $\chi^2$ is also affected by sample size. 
+With a large sample, relatively small differences may become statistically significant. 
+A larger chi-square statistic should not automatically be described as a stronger or more important relationship.
+
+## Assumptions and Conditions
+
+A chi-square test is appropriate when:
+
+- both variables are categorical;
+- the table contains frequency counts rather than percentages;
+- each case appears in only one cell;
+- the observations are sufficiently independent;
+- the sampling process supports inference to the population named in the conclusion; and
+- expected frequencies are not too small.
+
+## Check Your Understanding
+
+A reentry program compares rearrest outcomes for a sample of participants and nonparticipants.
+
+| Group | Rearrested | Not rearrested | Total |
+|:------|-----------:|---------------:|------:|
+| Program participants | 8 | 22 | 30 |
+| Nonparticipants | 15 | 15 | 30 |
+| **Total** | **23** | **37** | **60** |
+
+Using $\alpha=0.05$:
+
+1. Describe the rearrest pattern using row proportions.
+2. State $H_0$ and $H_A$.
+3. Calculate the four expected frequencies.
+4. Calculate $\chi^2$ and $df$.
+5. Compare the result with the critical value and make a decision.
+6. Explain why the decision does not prove whether the program reduced rearrest.
+
+::: {.callout-note collapse="true" title="Check your answers"}
+The rearrest rate is $8/30=26.7\%$ for program participants and $15/30=50.0\%$ for nonparticipants, a difference of 23.3 percentage points.
+
+The hypotheses are:
+
+$$
+H_0:\text{ Program participation and rearrest are independent.}
+$$
+
+$$
+H_A:\text{ Program participation and rearrest are associated.}
+$$
+
+The expected frequencies are 11.5 rearrested and 18.5 not rearrested in each row. The statistic is:
+
+$$
+\chi^2=
+\frac{(8-11.5)^2}{11.5}+
+\frac{(22-18.5)^2}{18.5}+
+\frac{(15-11.5)^2}{11.5}+
+\frac{(15-18.5)^2}{18.5}
+=3.45
+$$
+
+There is one degree of freedom. 
+Because $3.45<3.841$, we fail to reject $H_0$. 
+The observed difference does not reach the $\alpha=0.05$ threshold in this sample.
+
+Neither the descriptive difference nor a significant test would, by itself, prove a program effect. 
+Participants and nonparticipants may differ in risk, motivation, eligibility, supervision, or other characteristics.
+:::
+
+## Test Your Knowledge 1: Sex and Offense Type
+
+### The Scenario
+
+A criminologist examines whether offense type differs by sex among a random sample of 40 arrested individuals.
+
+| Sex | Violent offense | Nonviolent offense | Total |
+|:----|----------------:|-------------------:|------:|
+| Male | 18 | 6 | 24 |
+| Female | 2 | 14 | 16 |
+| **Total** | **20** | **20** | **40** |
+
+### Your Task
+
+Using $\alpha=0.05$:
+
+1. Create a table of row proportions and describe the observed association.
+2. State the null and alternative hypotheses.
+3. Calculate the expected frequency for each cell.
+4. Calculate the chi-square statistic.
+5. Report the degrees of freedom and critical value.
+6. Make and interpret the hypothesis-test decision.
+7. State one conclusion that the result does not support.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+The row proportions are:
+
+| Sex | Violent offense | Nonviolent offense | Total |
+|:----|----------------:|-------------------:|------:|
+| Male | 0.750 | 0.250 | 1.00 |
+| Female | 0.125 | 0.875 | 1.00 |
+
+Violent offenses account for 75.0% of the male cases and 12.5% of the female cases in the sample.
+
+The hypotheses are:
+
+$$
+H_0:\text{ Sex and offense type are independent.}
+$$
+
+$$
+H_A:\text{ Sex and offense type are associated.}
+$$
+
+The expected frequencies are:
+
+| Sex | Violent offense | Nonviolent offense |
+|:----|----------------:|-------------------:|
+| Male | 12 | 12 |
+| Female | 8 | 8 |
+
+The test statistic is:
+
+$$
+\chi^2=
+\frac{(18-12)^2}{12}+
+\frac{(6-12)^2}{12}+
+\frac{(2-8)^2}{8}+
+\frac{(14-8)^2}{8}
+=15.00
+$$
+
+With $df=1$, the critical value is 3.841. 
+Because $15.00>3.841$, we reject $H_0$. 
+The sample provides evidence that sex and offense type are associated in the population represented by the sample.
+
+The result does not show that sex causes offending behavior. 
+It also does not explain the roles of reporting, enforcement, arrest, charging, or other selection processes in producing the observed cases.
+:::
+
+## Test Your Knowledge 2: Campus Police Encounters
+
+### The Scenario
+
+A university police department studies 120 encounters involving three variables: student status, incident type, and enforcement outcome. 
+It constructs two bivariate tables.
+
+**Incident Type by Student Status**
+
+| Student status | Alcohol-related | Non-alcohol-related | Total |
+|:---------------|----------------:|--------------------:|------:|
+| Undergraduate | 52 | 28 | 80 |
+| Graduate | 10 | 30 | 40 |
+| **Total** | **62** | **58** | **120** |
+
+**Enforcement Outcome by Incident Type**
+
+| Incident type | Warning | Citation | Total |
+|:--------------|--------:|---------:|------:|
+| Alcohol-related | 25 | 37 | 62 |
+| Non-alcohol-related | 51 | 7 | 58 |
+| **Total** | **76** | **44** | **120** |
+
+### Your Task
+
+Conduct a separate chi-square test for each table using $\alpha=0.05$. 
+For each test:
+
+1. Calculate and interpret the row proportions.
+2. State $H_0$ and $H_A$.
+3. Calculate the expected frequencies.
+4. Calculate $\chi^2$ and $df$.
+5. Make and interpret the hypothesis-test decision.
+
+::: {.callout-note collapse="true" title="Review the answers"}
+For **student status and incident type**, 65.0% of undergraduate encounters and 25.0% of graduate encounters were alcohol-related.
+
+The expected frequencies are:
+
+| Student status | Alcohol-related | Non-alcohol-related |
+|:---------------|----------------:|--------------------:|
+| Undergraduate | 41.333 | 38.667 |
+| Graduate | 20.667 | 19.333 |
+
+The hypotheses state that student status and incident type are independent ($H_0$) or associated ($H_A$). The result is:
+
+$$
+\chi^2(1)=17.09
+$$
+
+Because $17.09>3.841$, we reject $H_0$. The sample provides evidence of an association between student status and incident type.
+
+For **incident type and enforcement outcome**, 59.7% of alcohol-related encounters and 12.1% of non-alcohol-related encounters resulted in citations.
+
+The expected frequencies are:
+
+| Incident type | Warning | Citation |
+|:--------------|--------:|---------:|
+| Alcohol-related | 39.267 | 22.733 |
+| Non-alcohol-related | 36.733 | 21.267 |
+
+The hypotheses state that incident type and enforcement outcome are independent ($H_0$) or associated ($H_A$). The result is:
+
+$$
+\chi^2(1)=29.25
+$$
+
+Because $29.25>3.841$, we reject $H_0$. 
+The sample provides evidence of an association between incident type and enforcement outcome.
+
+Neither result establishes causation. 
+The tables also do not show whether the associations reflect differences in behavior, reporting, enforcement, classification, or other features of the encounter process.
+:::
+
+## Data Investigation: Testing Independence
+
+Select two categorical variables in a dataset available to you.
+
+1. State a research question about their association.
+2. Construct a frequency table and calculate the relevant conditional proportions.
+3. State the null and alternative hypotheses.
+4. Calculate the expected frequencies and verify that the conditions for the test are reasonable.
+5. Calculate the chi-square statistic and degrees of freedom.
+6. Make an inferential decision using $\alpha=0.05$.
+7. Write a conclusion that includes the descriptive pattern, inferential result, and an important limitation.
+
+If the data were not obtained through a defensible sampling process, be careful about extending the conclusion beyond the observed cases.
+
+## Project Connection
+
+Return to the two categorical variables examined in Chapter 14. If the data and sampling process support inference, conduct a chi-square test of independence. Report the row or column proportions, $\chi^2$, degrees of freedom, decision, and substantive interpretation.
+
+If inference is not justified, explain why and retain the analysis as descriptive. Recognizing when a statistical test is not warranted is part of sound statistical reasoning.
+
+## Looking Ahead to Chapter 16
+
+Bivariate tables and chi-square tests examine relationships between categorical variables. Some research questions instead involve two quantitative variables, such as sentence length and a risk score or officer workload and the number of community contacts.
+
+Chapter 16 introduces scatterplots and the correlation coefficient. These tools describe the direction and strength of a linear relationship between two quantitative variables.
+
+## Chapter Summary
+
+- A bivariate table provides a descriptive view of an association between categorical variables.
+- The chi-square test of independence evaluates whether a sample provides evidence of an association in the population.
+- Expected frequencies represent the counts predicted under the null hypothesis of independence.
+- The chi-square statistic summarizes discrepancies between observed and expected frequencies across all cells.
+- Degrees of freedom depend on the number of rows and columns.
+- A statistically significant chi-square result indicates evidence of association, not causation, explanation, or practical importance.
+- Valid inference depends on independent observations, adequate expected frequencies, and a defensible sampling process.
+
+## Key Terms
+
+- **Chi-square distribution:** A family of right-skewed sampling distributions used to evaluate chi-square statistics.
+- **Chi-square test of independence:** A hypothesis test assessing whether two categorical variables are associated in a population.
+- **Critical value:** The threshold separating results that lead to rejection of the null hypothesis from those that do not.
+- **Degrees of freedom:** A value determined by the number of rows and columns, calculated as $(r-1)(c-1)$.
+- **Expected frequency ($f_E$):** The cell count predicted under the null hypothesis of independence.
+- **Independence:** A condition in which the distribution of one variable does not differ across categories of another.
+- **Observed frequency ($f_O$):** The cell count recorded in the sample data.
+- **Statistical significance:** A conclusion that the observed result would be sufficiently unusual under the null hypothesis to reject it at the chosen alpha level.
