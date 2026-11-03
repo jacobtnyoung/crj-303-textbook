@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Jacob T.N. Young">
+<title>16&nbsp; Correlation – Textbook for Statistical Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./appendix-01-standard-normal-table.html" rel="next">
+<link href="./chapter-15-chi-square-test.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2202478e21b5d5705478b75c28beab00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-03-examining-relationships.html">Part III: Examining Relationships</a></li><li class="breadcrumb-item"><a href="./chapter-16-correlation.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Correlation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Textbook for Statistical Analysis</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-01-describing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part I: Understanding and Describing Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-01-statistical-reasoning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Reasoning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Variables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-03-frequency-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organizing Data with Frequency Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-04-visualizing-categorical-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Visualizing Categorical Data with Bar Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-05-central-tendency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Describing the Typical Case</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-06-variation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Describing Variation</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-02-making-inferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part II: Statistical Inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-07-probability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Understanding Probability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-08-normal-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Normal Distribution and <em>z</em>-Scores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-09-sampling-distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sampling Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Estimation and Confidence Intervals</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hypothesis Testing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12-t-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The <em>t</em>-Distribution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-13-comparing-two-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Comparing Two Means</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-03-examining-relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part III: Examining Relationships</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-14-association-bivariate-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-15-chi-square-test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The Chi-Square Test</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-16-correlation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-01-standard-normal-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-02-t-distribution-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">t-Distribution Critical Values</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-03-chi-square-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Chi-Square Distribution Critical Values</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question"><span class="header-section-number">16.1</span> The Question</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn"><span class="header-section-number">16.2</span> What You Will Learn</a></li>
+  <li><a href="#relationships-between-quantitative-variables" id="toc-relationships-between-quantitative-variables" class="nav-link" data-scroll-target="#relationships-between-quantitative-variables"><span class="header-section-number">16.3</span> Relationships Between Quantitative Variables</a></li>
+  <li><a href="#begin-with-a-scatterplot" id="toc-begin-with-a-scatterplot" class="nav-link" data-scroll-target="#begin-with-a-scatterplot"><span class="header-section-number">16.4</span> Begin with a Scatterplot</a></li>
+  <li>
+<a href="#reading-a-scatterplot" id="toc-reading-a-scatterplot" class="nav-link" data-scroll-target="#reading-a-scatterplot"><span class="header-section-number">16.5</span> Reading a Scatterplot</a>
+  <ul class="collapse">
+<li><a href="#direction" id="toc-direction" class="nav-link" data-scroll-target="#direction"><span class="header-section-number">16.5.1</span> Direction</a></li>
+  <li><a href="#strength" id="toc-strength" class="nav-link" data-scroll-target="#strength"><span class="header-section-number">16.5.2</span> Strength</a></li>
+  <li><a href="#form" id="toc-form" class="nav-link" data-scroll-target="#form"><span class="header-section-number">16.5.3</span> Form</a></li>
+  <li><a href="#unusual-observations" id="toc-unusual-observations" class="nav-link" data-scroll-target="#unusual-observations"><span class="header-section-number">16.5.4</span> Unusual Observations</a></li>
+  </ul>
+</li>
+  <li><a href="#patterns-and-the-correlation-coefficient" id="toc-patterns-and-the-correlation-coefficient" class="nav-link" data-scroll-target="#patterns-and-the-correlation-coefficient"><span class="header-section-number">16.6</span> Patterns and the Correlation Coefficient</a></li>
+  <li><a href="#calculating-the-correlation-coefficient" id="toc-calculating-the-correlation-coefficient" class="nav-link" data-scroll-target="#calculating-the-correlation-coefficient"><span class="header-section-number">16.7</span> Calculating the Correlation Coefficient</a></li>
+  <li><a href="#worked-example-sentence-length-and-risk-score" id="toc-worked-example-sentence-length-and-risk-score" class="nav-link" data-scroll-target="#worked-example-sentence-length-and-risk-score"><span class="header-section-number">16.8</span> Worked Example: Sentence Length and Risk Score</a></li>
+  <li><a href="#interpreting-correlation-in-context" id="toc-interpreting-correlation-in-context" class="nav-link" data-scroll-target="#interpreting-correlation-in-context"><span class="header-section-number">16.9</span> Interpreting Correlation in Context</a></li>
+  <li>
+<a href="#when-correlation-can-mislead" id="toc-when-correlation-can-mislead" class="nav-link" data-scroll-target="#when-correlation-can-mislead"><span class="header-section-number">16.10</span> When Correlation Can Mislead</a>
+  <ul class="collapse">
+<li><a href="#a-near-zero-correlation-can-hide-a-curve" id="toc-a-near-zero-correlation-can-hide-a-curve" class="nav-link" data-scroll-target="#a-near-zero-correlation-can-hide-a-curve"><span class="header-section-number">16.10.1</span> A Near-Zero Correlation Can Hide a Curve</a></li>
+  <li><a href="#outliers-can-dominate-the-result" id="toc-outliers-can-dominate-the-result" class="nav-link" data-scroll-target="#outliers-can-dominate-the-result"><span class="header-section-number">16.10.2</span> Outliers Can Dominate the Result</a></li>
+  <li><a href="#restricted-variation-can-weaken-correlation" id="toc-restricted-variation-can-weaken-correlation" class="nav-link" data-scroll-target="#restricted-variation-can-weaken-correlation"><span class="header-section-number">16.10.3</span> Restricted Variation Can Weaken Correlation</a></li>
+  <li><a href="#combined-groups-can-conceal-different-patterns" id="toc-combined-groups-can-conceal-different-patterns" class="nav-link" data-scroll-target="#combined-groups-can-conceal-different-patterns"><span class="header-section-number">16.10.4</span> Combined Groups Can Conceal Different Patterns</a></li>
+  </ul>
+</li>
+  <li><a href="#correlation-does-not-establish-causation" id="toc-correlation-does-not-establish-causation" class="nav-link" data-scroll-target="#correlation-does-not-establish-causation"><span class="header-section-number">16.11</span> Correlation Does Not Establish Causation</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">16.12</span> Check Your Understanding</a></li>
+  <li>
+<a href="#test-your-knowledge-officer-workload-and-activity" id="toc-test-your-knowledge-officer-workload-and-activity" class="nav-link" data-scroll-target="#test-your-knowledge-officer-workload-and-activity"><span class="header-section-number">16.13</span> Test Your Knowledge: Officer Workload and Activity</a>
+  <ul class="collapse">
+<li><a href="#the-scenario" id="toc-the-scenario" class="nav-link" data-scroll-target="#the-scenario"><span class="header-section-number">16.13.1</span> The Scenario</a></li>
+  <li><a href="#your-task" id="toc-your-task" class="nav-link" data-scroll-target="#your-task"><span class="header-section-number">16.13.2</span> Your Task</a></li>
+  </ul>
+</li>
+  <li><a href="#data-investigation-visualizing-a-quantitative-relationship" id="toc-data-investigation-visualizing-a-quantitative-relationship" class="nav-link" data-scroll-target="#data-investigation-visualizing-a-quantitative-relationship"><span class="header-section-number">16.14</span> Data Investigation: Visualizing a Quantitative Relationship</a></li>
+  <li><a href="#project-connection" id="toc-project-connection" class="nav-link" data-scroll-target="#project-connection"><span class="header-section-number">16.15</span> Project Connection</a></li>
+  <li><a href="#part-iii-what-you-can-now-do" id="toc-part-iii-what-you-can-now-do" class="nav-link" data-scroll-target="#part-iii-what-you-can-now-do"><span class="header-section-number">16.16</span> Part III: What You Can Now Do</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">16.17</span> Chapter Summary</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">16.18</span> Key Terms</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-03-examining-relationships.html">Part III: Examining Relationships</a></li><li class="breadcrumb-item"><a href="./chapter-16-correlation.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Correlation</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Correlation</span>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="the-question" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="the-question">
+<span class="header-section-number">16.1</span> The Question</h2>
+<div class="callout callout-style-simple callout-note callout-titled" title="Central question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Central question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What are the direction and strength of the linear relationship between two quantitative variables?</strong></p>
+</div>
+</div>
+<p>Chapters 14 and 15 examined relationships between categorical variables using bivariate tables and the chi-square test. Many criminal justice questions instead involve two quantitative variables. An analyst might ask whether longer sentences are associated with higher risk scores, whether officer workload is related to community contacts, or whether neighborhood disadvantage is related to crime rates.</p>
+<p>A <strong>scatterplot</strong> provides a visual representation of the relationship. The <strong>correlation coefficient</strong>, represented by <span class="math inline">\(r\)</span>, summarizes the direction and strength of a linear relationship with a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>.</p>
+</section><section id="what-you-will-learn" class="level2" data-number="16.2"><h2 data-number="16.2" class="anchored" data-anchor-id="what-you-will-learn">
+<span class="header-section-number">16.2</span> What You Will Learn</h2>
+<p>After completing this chapter, you should be able to:</p>
+<ol type="1">
+<li>Identify when correlation is appropriate.</li>
+<li>Construct and interpret a scatterplot.</li>
+<li>Describe the direction, strength, and form of a relationship.</li>
+<li>Calculate the correlation coefficient.</li>
+<li>Interpret the sign and absolute value of <span class="math inline">\(r\)</span>.</li>
+<li>Explain how nonlinearity, outliers, and restricted variation can affect correlation.</li>
+<li>Explain why correlation does not establish causation.</li>
+</ol></section><section id="relationships-between-quantitative-variables" class="level2" data-number="16.3"><h2 data-number="16.3" class="anchored" data-anchor-id="relationships-between-quantitative-variables">
+<span class="header-section-number">16.3</span> Relationships Between Quantitative Variables</h2>
+<p>Correlation is designed for two <strong>quantitative variables</strong> measured on the same cases. Examples include:</p>
+<ul>
+<li>sentence length and a risk-assessment score for each defendant;</li>
+<li>hours worked and community contacts for each officer;</li>
+<li>calls for service and response time for each patrol area; and</li>
+<li>neighborhood poverty rate and violent-crime rate for each neighborhood.</li>
+</ul>
+<p>Each case must have a value on both variables. The paired values are essential. If we know only the separate distribution of sentence length and the separate distribution of risk scores, we cannot determine whether the two variables are related.</p>
+<p>The method should match the variable types:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variables</th>
+<th style="text-align: left;">Useful method</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Two categorical variables</td>
+<td style="text-align: left;">Bivariate table and chi-square test</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">One categorical and one quantitative variable</td>
+<td style="text-align: left;">Comparison of group means</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Two quantitative variables</td>
+<td style="text-align: left;">Scatterplot and correlation</td>
+</tr>
+</tbody>
+</table></section><section id="begin-with-a-scatterplot" class="level2" data-number="16.4"><h2 data-number="16.4" class="anchored" data-anchor-id="begin-with-a-scatterplot">
+<span class="header-section-number">16.4</span> Begin with a Scatterplot</h2>
+<p>A <strong>scatterplot</strong> places one point on a graph for each case. The horizontal axis displays one variable, conventionally called <span class="math inline">\(x\)</span>, and the vertical axis displays the other, called <span class="math inline">\(y\)</span>.</p>
+<p>Suppose five defendants have the following values:</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Defendant</th>
+<th style="text-align: right;">Sentence length (<span class="math inline">\(x\)</span>)</th>
+<th style="text-align: right;">Risk score (<span class="math inline">\(y\)</span>)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-sentence-risk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sentence-risk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chapter-16-correlation_files/figure-html/fig-sentence-risk-1.png" class="img-fluid figure-img" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sentence-risk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.1: Sentence length and risk score
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The points rise from left to right. Defendants with longer sentences also have higher risk scores in these data.</p>
+<p>Two pairs of defendants have identical values, so their points overlap on the graph. A scatterplot may therefore display fewer visible points than there are cases.</p>
+</section><section id="reading-a-scatterplot" class="level2" data-number="16.5"><h2 data-number="16.5" class="anchored" data-anchor-id="reading-a-scatterplot">
+<span class="header-section-number">16.5</span> Reading a Scatterplot</h2>
+<p>Examine four features before calculating a correlation.</p>
+<section id="direction" class="level3" data-number="16.5.1"><h3 data-number="16.5.1" class="anchored" data-anchor-id="direction">
+<span class="header-section-number">16.5.1</span> Direction</h3>
+<p>A <strong>positive relationship</strong> slopes upward: higher values of <span class="math inline">\(x\)</span> tend to occur with higher values of <span class="math inline">\(y\)</span>. A <strong>negative relationship</strong> slopes downward: higher values of <span class="math inline">\(x\)</span> tend to occur with lower values of <span class="math inline">\(y\)</span>.</p>
+<p>If the points show no consistent upward or downward pattern, the relationship may have little or no linear direction.</p>
+</section><section id="strength" class="level3" data-number="16.5.2"><h3 data-number="16.5.2" class="anchored" data-anchor-id="strength">
+<span class="header-section-number">16.5.2</span> Strength</h3>
+<p>Strength describes how closely the points follow a consistent pattern. Points clustered tightly around a straight line indicate a stronger linear relationship. Widely scattered points indicate a weaker one.</p>
+</section><section id="form" class="level3" data-number="16.5.3"><h3 data-number="16.5.3" class="anchored" data-anchor-id="form">
+<span class="header-section-number">16.5.3</span> Form</h3>
+<p>Correlation summarizes a <strong>linear</strong> relationship. Before interpreting <span class="math inline">\(r\)</span>, ask whether the points follow an approximately straight-line pattern. A clear curved pattern may represent a strong relationship even when the correlation is near zero.</p>
+</section><section id="unusual-observations" class="level3" data-number="16.5.4"><h3 data-number="16.5.4" class="anchored" data-anchor-id="unusual-observations">
+<span class="header-section-number">16.5.4</span> Unusual Observations</h3>
+<p>An <strong>outlier</strong> is a case located far from the general pattern. A single unusual observation can substantially increase, decrease, or reverse a correlation, especially in a small dataset.</p>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Plot first, calculate second">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Plot first, calculate second
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Always examine a scatterplot before interpreting a correlation coefficient. The same value of <span class="math inline">\(r\)</span> can accompany very different patterns, and the coefficient alone may conceal curves, clusters, or influential observations.</p>
+</div>
+</div>
+</section></section><section id="patterns-and-the-correlation-coefficient" class="level2" data-number="16.6"><h2 data-number="16.6" class="anchored" data-anchor-id="patterns-and-the-correlation-coefficient">
+<span class="header-section-number">16.6</span> Patterns and the Correlation Coefficient</h2>
+<p>The following plots illustrate positive, near-zero, and negative linear relationships.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-correlation-patterns" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-correlation-patterns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chapter-16-correlation_files/figure-html/fig-correlation-patterns-1.png" class="img-fluid figure-img" width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-correlation-patterns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.2: Examples of positive, near-zero, and negative linear relationships
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The <strong>correlation coefficient</strong> ranges from <span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span>:</p>
+<ul>
+<li>
+<span class="math inline">\(r=1\)</span> indicates a perfect positive linear relationship.</li>
+<li>
+<span class="math inline">\(r=0\)</span> indicates no linear relationship.</li>
+<li>
+<span class="math inline">\(r=-1\)</span> indicates a perfect negative linear relationship.</li>
+</ul>
+<p>The sign describes direction. The absolute value, <span class="math inline">\(|r|\)</span>, describes strength. For example, <span class="math inline">\(r=-0.80\)</span> is stronger than <span class="math inline">\(r=0.30\)</span> even though <span class="math inline">\(-0.80\)</span> is numerically smaller.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="There are no universal strength labels">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>There are no universal strength labels
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Values closer to <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span> indicate stronger linear relationships, but labels such as “weak,” “moderate,” and “strong” depend on the research context, measurement quality, and consequences of the relationship. Interpret the coefficient rather than relying only on a fixed cutoff.</p>
+</div>
+</div>
+</section><section id="calculating-the-correlation-coefficient" class="level2" data-number="16.7"><h2 data-number="16.7" class="anchored" data-anchor-id="calculating-the-correlation-coefficient">
+<span class="header-section-number">16.7</span> Calculating the Correlation Coefficient</h2>
+<p>The sample correlation coefficient is:</p>
+<p><span class="math display">\[
+r=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}
+{\sqrt{\sum(x_i-\bar{x})^2}\sqrt{\sum(y_i-\bar{y})^2}}
+\]</span></p>
+<p>The numerator measures whether <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> deviate from their means in the same direction:</p>
+<ul>
+<li>When both values are above their means, the product is positive.</li>
+<li>When both values are below their means, the product is also positive.</li>
+<li>When one is above its mean and the other is below, the product is negative.</li>
+</ul>
+<p>The denominator accounts for the total variation in both variables. Dividing by this quantity places the result on the standard scale from <span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span>.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Keep the cases paired">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Keep the cases paired
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each <span class="math inline">\(x_i\)</span> must remain paired with the <span class="math inline">\(y_i\)</span> observed for the same case. Sorting one variable without sorting the other in exactly the same way destroys the relationship and produces an invalid correlation.</p>
+</div>
+</div>
+</section><section id="worked-example-sentence-length-and-risk-score" class="level2" data-number="16.8"><h2 data-number="16.8" class="anchored" data-anchor-id="worked-example-sentence-length-and-risk-score">
+<span class="header-section-number">16.8</span> Worked Example: Sentence Length and Risk Score</h2>
+<p>For the five defendants, the means are:</p>
+<p><span class="math display">\[
+\bar{x}=60
+\]</span></p>
+<p><span class="math display">\[
+\bar{y}=6
+\]</span></p>
+<p>We calculate the deviations, cross-products, and squared deviations:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 25%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Defendant</th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x-\bar{x}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(y-\bar{y}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((x-\bar{x})(y-\bar{y})\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((x-\bar{x})^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((y-\bar{y})^2\)</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-20</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-20</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Sum</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>240</strong></td>
+<td style="text-align: right;"><strong>1,600</strong></td>
+<td style="text-align: right;"><strong>36</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Insert the sums into the formula:</p>
+<p><span class="math display">\[
+r=\frac{240}{\sqrt{1{,}600}\sqrt{36}}
+=\frac{240}{(40)(6)}
+=1.00
+\]</span></p>
+<p>The two variables have a perfect positive linear relationship in this small sample. Every increase in sentence length corresponds to a proportional increase in risk score.</p>
+<p>This does not mean that risk score caused sentence length or that sentence length caused risk score. The variables could reflect shared case characteristics, institutional rules, or the way each measure was produced.</p>
+</section><section id="interpreting-correlation-in-context" class="level2" data-number="16.9"><h2 data-number="16.9" class="anchored" data-anchor-id="interpreting-correlation-in-context">
+<span class="header-section-number">16.9</span> Interpreting Correlation in Context</h2>
+<p>A complete interpretation names the variables, direction, strength, cases, and limitations. For example:</p>
+<blockquote class="blockquote">
+<p>Among these five defendants, sentence length and risk score have a perfect positive linear relationship, <span class="math inline">\(r=1.00\)</span>. Defendants with longer sentences have higher risk scores in this sample. The correlation does not establish a causal relationship or show that the pattern applies to other defendants.</p>
+</blockquote>
+<p>Avoid interpretations such as:</p>
+<ul>
+<li>“A one-unit increase in <span class="math inline">\(x\)</span> causes <span class="math inline">\(y\)</span> to increase.”</li>
+<li>“An <span class="math inline">\(r\)</span> of 0.70 means that 70% of the cases follow the pattern.”</li>
+<li>“A correlation near zero means the variables are completely unrelated.”</li>
+<li>“The larger variable should be placed on the <span class="math inline">\(y\)</span>-axis.”</li>
+</ul>
+<p>Correlation is unchanged if the variables switch axes. It is also unchanged by converting a variable to another linear unit, such as months to years. The substantive question, however, should guide which variable is displayed on each axis and how the result is discussed.</p>
+</section><section id="when-correlation-can-mislead" class="level2" data-number="16.10"><h2 data-number="16.10" class="anchored" data-anchor-id="when-correlation-can-mislead">
+<span class="header-section-number">16.10</span> When Correlation Can Mislead</h2>
+<section id="a-near-zero-correlation-can-hide-a-curve" class="level3" data-number="16.10.1"><h3 data-number="16.10.1" class="anchored" data-anchor-id="a-near-zero-correlation-can-hide-a-curve">
+<span class="header-section-number">16.10.1</span> A Near-Zero Correlation Can Hide a Curve</h3>
+<p>The figure below has a strong curved pattern, but its linear correlation is approximately zero.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-nonlinear-correlation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-nonlinear-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chapter-16-correlation_files/figure-html/fig-nonlinear-correlation-1.png" class="img-fluid figure-img" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nonlinear-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.3: A curved relationship can have a correlation near zero
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The variables are clearly related, but not linearly. Reporting only <span class="math inline">\(r\)</span> would miss the most important feature of the data.</p>
+</section><section id="outliers-can-dominate-the-result" class="level3" data-number="16.10.2"><h3 data-number="16.10.2" class="anchored" data-anchor-id="outliers-can-dominate-the-result">
+<span class="header-section-number">16.10.2</span> Outliers Can Dominate the Result</h3>
+<p>An influential observation can pull the correlation toward <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span>, weaken an otherwise clear pattern, or reverse its direction. Investigate unusual cases rather than automatically deleting them. The observation may be a data-entry error, a genuinely exceptional case, or evidence that the relationship differs across groups.</p>
+</section><section id="restricted-variation-can-weaken-correlation" class="level3" data-number="16.10.3"><h3 data-number="16.10.3" class="anchored" data-anchor-id="restricted-variation-can-weaken-correlation">
+<span class="header-section-number">16.10.3</span> Restricted Variation Can Weaken Correlation</h3>
+<p>A correlation depends on the range of values in the data. If a study includes only high-risk defendants, for example, the limited variation in risk scores may produce a smaller correlation than would appear in a broader population.</p>
+</section><section id="combined-groups-can-conceal-different-patterns" class="level3" data-number="16.10.4"><h3 data-number="16.10.4" class="anchored" data-anchor-id="combined-groups-can-conceal-different-patterns">
+<span class="header-section-number">16.10.4</span> Combined Groups Can Conceal Different Patterns</h3>
+<p>An overall correlation may differ from the correlations within meaningful subgroups. A relationship between workload and arrests could vary by assignment, shift, neighborhood, or officer role. A scatterplot using different symbols or panels for relevant groups can reveal this structure.</p>
+</section></section><section id="correlation-does-not-establish-causation" class="level2" data-number="16.11"><h2 data-number="16.11" class="anchored" data-anchor-id="correlation-does-not-establish-causation">
+<span class="header-section-number">16.11</span> Correlation Does Not Establish Causation</h2>
+<p>An observed correlation can arise for several reasons:</p>
+<ul>
+<li>
+<span class="math inline">\(x\)</span> may influence <span class="math inline">\(y\)</span>;</li>
+<li>
+<span class="math inline">\(y\)</span> may influence <span class="math inline">\(x\)</span>;</li>
+<li>a third variable may influence both;</li>
+<li>the cases may have been selected in a way that creates the pattern;</li>
+<li>the measures may share a common source or classification process; or</li>
+<li>the association may reflect sampling variability.</li>
+</ul>
+<p>For example, a positive relationship between neighborhood police presence and recorded crime does not necessarily mean police presence increases crime. Police resources may be assigned to places with more reported crime, and increased police presence may also increase the detection and recording of offenses.</p>
+<div class="callout callout-style-simple callout-important callout-titled" title="Ask how the data were produced">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Ask how the data were produced
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Interpreting correlation requires more than inspecting <span class="math inline">\(r\)</span>. Consider the unit of analysis, measurement process, time order, sampling design, plausible third variables, and institutional practices that generated the observations.</p>
+</div>
+</div>
+</section><section id="check-your-understanding" class="level2" data-number="16.12"><h2 data-number="16.12" class="anchored" data-anchor-id="check-your-understanding">
+<span class="header-section-number">16.12</span> Check Your Understanding</h2>
+<p>Suppose six defendants have the following values:</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Defendant</th>
+<th style="text-align: right;">Sentence length (<span class="math inline">\(x\)</span>)</th>
+<th style="text-align: right;">Risk score (<span class="math inline">\(y\)</span>)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>What direction should appear in a scatterplot?</li>
+<li>Calculate the correlation coefficient.</li>
+<li>Interpret the result.</li>
+<li>What can you not conclude from this correlation?</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Check your answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Check your answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The points generally descend from left to right, indicating a negative linear relationship.</p>
+<p>First, calculate the means:</p>
+<p><span class="math display">\[
+\bar{x}=\frac{20+30+40+50+60+70}{6}
+=\frac{270}{6}
+=45
+\]</span></p>
+<p><span class="math display">\[
+\bar{y}=\frac{9+7+8+5+4+3}{6}
+=\frac{36}{6}
+=6
+\]</span></p>
+<p>Next, calculate the deviations, cross-products, and squared deviations:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 24%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Defendant</th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x-\bar{x}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(y-\bar{y}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((x-\bar{x})(y-\bar{y})\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((x-\bar{x})^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((y-\bar{y})^2\)</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">-25</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-75</td>
+<td style="text-align: right;">625</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-15</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-10</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-30</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-75</td>
+<td style="text-align: right;">625</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sum</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>-210</strong></td>
+<td style="text-align: right;"><strong>1,750</strong></td>
+<td style="text-align: right;"><strong>28</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Insert the sums into the correlation formula:</p>
+<p><span class="math display">\[
+r=
+\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}
+{\sqrt{\sum(x_i-\bar{x})^2}\sqrt{\sum(y_i-\bar{y})^2}}
+\]</span></p>
+<p><span class="math display">\[
+r=
+\frac{-210}
+{\sqrt{1{,}750}\sqrt{28}}
+\]</span></p>
+<p><span class="math display">\[
+r=
+\frac{-210}
+{(41.833)(5.292)}
+=
+\frac{-210}{221.359}
+=
+-0.949
+\]</span></p>
+<p>Sentence length and risk score have a strong negative linear relationship in this sample. Defendants with longer sentences tend to have lower risk scores.</p>
+<p>The result does not establish that sentence length changes risk scores, that risk scores change sentence length, or that this pattern applies to a broader population.</p>
+</div>
+</div>
+</div>
+</section><section id="test-your-knowledge-officer-workload-and-activity" class="level2" data-number="16.13"><h2 data-number="16.13" class="anchored" data-anchor-id="test-your-knowledge-officer-workload-and-activity">
+<span class="header-section-number">16.13</span> Test Your Knowledge: Officer Workload and Activity</h2>
+<section id="the-scenario" class="level3" data-number="16.13.1"><h3 data-number="16.13.1" class="anchored" data-anchor-id="the-scenario">
+<span class="header-section-number">16.13.1</span> The Scenario</h3>
+<p>A police department is interested in how officer workload relates to enforcement and community activity. Data are collected for six patrol officers:</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: center;">Officer</th>
+<th style="text-align: right;">Hours worked</th>
+<th style="text-align: right;">Arrests made</th>
+<th style="text-align: right;">Community contacts</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table></section><section id="your-task" class="level3" data-number="16.13.2"><h3 data-number="16.13.2" class="anchored" data-anchor-id="your-task">
+<span class="header-section-number">16.13.2</span> Your Task</h3>
+<p>For each pair of variables:</p>
+<ol type="1">
+<li>Construct or examine a scatterplot.</li>
+<li>Calculate the correlation coefficient.</li>
+<li>Describe the direction and strength of the linear relationship.</li>
+</ol>
+<p>Calculate correlations for:</p>
+<ul>
+<li>hours worked and arrests made;</li>
+<li>hours worked and community contacts; and</li>
+<li>arrests made and community contacts.</li>
+</ul>
+<p>Then answer the following:</p>
+<ol start="4" type="1">
+<li>Which pair has the strongest linear relationship?</li>
+<li>Identify one limitation of drawing conclusions from these data.</li>
+<li>Explain why the three correlations do not establish a causal chain among workload, arrests, and community contacts.</li>
+</ol>
+<div class="callout callout-style-simple callout-note callout-titled" title="Review the answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review the answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Let:</p>
+<ul>
+<li>
+<span class="math inline">\(h\)</span> represent hours worked;</li>
+<li>
+<span class="math inline">\(a\)</span> represent arrests made; and</li>
+<li>
+<span class="math inline">\(c\)</span> represent community contacts.</li>
+</ul>
+<p>First, calculate the mean of each variable:</p>
+<p><span class="math display">\[
+\bar{h}
+=
+\frac{20+30+40+50+60+70}{6}
+=
+\frac{270}{6}
+=
+45
+\]</span></p>
+<p><span class="math display">\[
+\bar{a}
+=
+\frac{9+6+7+5+3+6}{6}
+=
+\frac{36}{6}
+=
+6
+\]</span></p>
+<p><span class="math display">\[
+\bar{c}
+=
+\frac{3+5+6+9+10+9}{6}
+=
+\frac{42}{6}
+=
+7
+\]</span></p>
+<p>Next, calculate the deviations and squared deviations:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: center;">Officer</th>
+<th style="text-align: right;"><span class="math inline">\(h-\bar{h}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((h-\bar{h})^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(a-\bar{a}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((a-\bar{a})^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(c-\bar{c}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((c-\bar{c})^2\)</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">-25</td>
+<td style="text-align: right;">625</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">-15</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">625</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Sum</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>1,750</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>20</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>38</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The cross-products for the three pairs are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: center;">Officer</th>
+<th style="text-align: right;"><span class="math inline">\((h-\bar{h})(a-\bar{a})\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((h-\bar{h})(c-\bar{c})\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((a-\bar{a})(c-\bar{c})\)</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">-75</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">-12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">-45</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">-9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Sum</strong></td>
+<td style="text-align: right;"><strong>-130</strong></td>
+<td style="text-align: right;"><strong>240</strong></td>
+<td style="text-align: right;"><strong>-24</strong></td>
+</tr>
+</tbody>
+</table>
+<section id="hours-worked-and-arrests-made" class="level3" data-number="16.13.3"><h3 data-number="16.13.3" class="anchored" data-anchor-id="hours-worked-and-arrests-made">
+<span class="header-section-number">16.13.3</span> Hours Worked and Arrests Made</h3>
+<p>Insert the appropriate sums into the correlation formula:</p>
+<p><span class="math display">\[
+r_{ha}
+=
+\frac{\sum(h_i-\bar{h})(a_i-\bar{a})}
+{\sqrt{\sum(h_i-\bar{h})^2}\sqrt{\sum(a_i-\bar{a})^2}}
+\]</span></p>
+<p><span class="math display">\[
+r_{ha}
+=
+\frac{-130}
+{\sqrt{1{,}750}\sqrt{20}}
+\]</span></p>
+<p><span class="math display">\[
+r_{ha}
+=
+\frac{-130}
+{(41.833)(4.472)}
+=
+\frac{-130}{187.083}
+=
+-0.695
+\]</span></p>
+<p>Hours worked and arrests made have a moderately strong negative linear relationship. Officers who worked more hours generally made fewer arrests in this sample.</p>
+</section><section id="hours-worked-and-community-contacts" class="level3" data-number="16.13.4"><h3 data-number="16.13.4" class="anchored" data-anchor-id="hours-worked-and-community-contacts">
+<span class="header-section-number">16.13.4</span> Hours Worked and Community Contacts</h3>
+<p><span class="math display">\[
+r_{hc}
+=
+\frac{\sum(h_i-\bar{h})(c_i-\bar{c})}
+{\sqrt{\sum(h_i-\bar{h})^2}\sqrt{\sum(c_i-\bar{c})^2}}
+\]</span></p>
+<p><span class="math display">\[
+r_{hc}
+=
+\frac{240}
+{\sqrt{1{,}750}\sqrt{38}}
+\]</span></p>
+<p><span class="math display">\[
+r_{hc}
+=
+\frac{240}
+{(41.833)(6.164)}
+=
+\frac{240}{257.876}
+=
+0.931
+\]</span></p>
+<p>Hours worked and community contacts have a strong positive linear relationship. Officers who worked more hours generally had more community contacts.</p>
+</section><section id="arrests-made-and-community-contacts" class="level3" data-number="16.13.5"><h3 data-number="16.13.5" class="anchored" data-anchor-id="arrests-made-and-community-contacts">
+<span class="header-section-number">16.13.5</span> Arrests Made and Community Contacts</h3>
+<p><span class="math display">\[
+r_{ac}
+=
+\frac{\sum(a_i-\bar{a})(c_i-\bar{c})}
+{\sqrt{\sum(a_i-\bar{a})^2}\sqrt{\sum(c_i-\bar{c})^2}}
+\]</span></p>
+<p><span class="math display">\[
+r_{ac}
+=
+\frac{-24}
+{\sqrt{20}\sqrt{38}}
+\]</span></p>
+<p><span class="math display">\[
+r_{ac}
+=
+\frac{-24}
+{(4.472)(6.164)}
+=
+\frac{-24}{27.568}
+=
+-0.871
+\]</span></p>
+<p>Arrests made and community contacts have a strong negative linear relationship. Officers with more community contacts generally made fewer arrests in this sample.</p>
+<p>The completed results are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 13%">
+<col style="width: 44%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable pair</th>
+<th style="text-align: right;"><span class="math inline">\(r\)</span></th>
+<th style="text-align: left;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hours worked and arrests made</td>
+<td style="text-align: right;">-0.695</td>
+<td style="text-align: left;">A moderately strong negative linear relationship</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hours worked and community contacts</td>
+<td style="text-align: right;">0.931</td>
+<td style="text-align: left;">A strong positive linear relationship</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arrests made and community contacts</td>
+<td style="text-align: right;">-0.871</td>
+<td style="text-align: left;">A strong negative linear relationship</td>
+</tr>
+</tbody>
+</table>
+<p>Hours worked and community contacts have the strongest linear relationship because <span class="math inline">\(|0.931|\)</span> is the largest absolute correlation.</p>
+<p>The results are based on only six officers, so an unusual observation can have a substantial effect and the patterns may not represent other officers or time periods. Assignment, shift, patrol area, officer role, and departmental expectations could influence all three variables.</p>
+<p>The correlations do not establish that working more hours causes additional community contacts, that community contacts reduce arrests, or that workload produces a sequence connecting all three outcomes. Correlation describes paired patterns. Causal conclusions require evidence about time order, alternative explanations, and research design.</p>
+</section>
+</div>
+</div>
+</div>
+</section></section><section id="data-investigation-visualizing-a-quantitative-relationship" class="level2" data-number="16.14"><h2 data-number="16.14" class="anchored" data-anchor-id="data-investigation-visualizing-a-quantitative-relationship">
+<span class="header-section-number">16.14</span> Data Investigation: Visualizing a Quantitative Relationship</h2>
+<p>Identify two quantitative variables measured on the same cases.</p>
+<ol type="1">
+<li>State a research question about their relationship.</li>
+<li>Identify the unit of analysis and explain how each variable was measured.</li>
+<li>Construct a scatterplot.</li>
+<li>Describe its direction, strength, form, and unusual observations.</li>
+<li>Calculate and interpret <span class="math inline">\(r\)</span>.</li>
+<li>Compare the coefficient with the visual pattern.</li>
+<li>Identify at least one alternative explanation or limitation.</li>
+</ol>
+<p>If the scatterplot is clearly curved or separated into clusters, explain why a single correlation may be an incomplete summary.</p>
+</section><section id="project-connection" class="level2" data-number="16.15"><h2 data-number="16.15" class="anchored" data-anchor-id="project-connection">
+<span class="header-section-number">16.15</span> Project Connection</h2>
+<p>If your investigation contains two quantitative variables measured on the same cases, construct a scatterplot and calculate their correlation. Interpret the coefficient in context and explain what the result does not establish.</p>
+<p>If your variables are not both quantitative, identify the method from Chapters 13–15 that better matches their measurement levels and research question.</p>
+</section><section id="part-iii-what-you-can-now-do" class="level2" data-number="16.16"><h2 data-number="16.16" class="anchored" data-anchor-id="part-iii-what-you-can-now-do">
+<span class="header-section-number">16.16</span> Part III: What You Can Now Do</h2>
+<p>Part III developed tools for examining relationships between variables. You can now:</p>
+<ul>
+<li>construct and interpret a bivariate table for two categorical variables;</li>
+<li>select conditional proportions that answer a research question;</li>
+<li>use a chi-square test to evaluate independence;</li>
+<li>construct and interpret a scatterplot for two quantitative variables;</li>
+<li>calculate and interpret a correlation coefficient; and</li>
+<li>distinguish association from causal explanation.</li>
+</ul>
+<p>The central lesson is that no single statistic speaks for itself. A sound analysis matches the method to the variables, inspects the underlying data, and limits the conclusion to what the research design can support.</p>
+</section><section id="chapter-summary" class="level2" data-number="16.17"><h2 data-number="16.17" class="anchored" data-anchor-id="chapter-summary">
+<span class="header-section-number">16.17</span> Chapter Summary</h2>
+<ul>
+<li>A scatterplot displays paired values for two quantitative variables.</li>
+<li>Direction, strength, form, and unusual observations should be examined before calculating a summary statistic.</li>
+<li>The correlation coefficient ranges from <span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span> and summarizes a linear relationship.</li>
+<li>The sign of <span class="math inline">\(r\)</span> indicates direction, while <span class="math inline">\(|r|\)</span> indicates strength.</li>
+<li>A correlation near zero does not rule out a nonlinear relationship.</li>
+<li>Outliers, restricted variation, and combined subgroups can alter or conceal a correlation.</li>
+<li>Correlation does not establish causation.</li>
+</ul></section><section id="key-terms" class="level2" data-number="16.18"><h2 data-number="16.18" class="anchored" data-anchor-id="key-terms">
+<span class="header-section-number">16.18</span> Key Terms</h2>
+<ul>
+<li>
+<strong>Correlation coefficient (<span class="math inline">\(r\)</span>):</strong> A statistic ranging from <span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span> that describes the direction and strength of a linear relationship between two quantitative variables.</li>
+<li>
+<strong>Form:</strong> The shape of a relationship, such as linear or curved.</li>
+<li>
+<strong>Linear relationship:</strong> A relationship that can be approximated by a straight line.</li>
+<li>
+<strong>Negative relationship:</strong> A pattern in which higher values of one variable tend to occur with lower values of another.</li>
+<li>
+<strong>Outlier:</strong> An observation located far from the general pattern of the data.</li>
+<li>
+<strong>Positive relationship:</strong> A pattern in which higher values of one variable tend to occur with higher values of another.</li>
+<li>
+<strong>Restricted variation:</strong> A limited range of values that may weaken or conceal an association.</li>
+<li>
+<strong>Scatterplot:</strong> A graph displaying paired values for two quantitative variables, with one point for each case.</li>
+</ul>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./chapter-15-chi-square-test.html" class="pagination-link" aria-label="The Chi-Square Test">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The Chi-Square Test</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./appendix-01-standard-normal-table.html" class="pagination-link" aria-label="Standard Normal Distribution Table">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Textbook for Statistical Analysis was written by Jacob T.N. Young.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>

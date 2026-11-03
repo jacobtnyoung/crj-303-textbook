@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix-01-standard-normal-table.html" rel="next">
-<link href="./chapter-13-comparing-two-means.html" rel="prev">
+<link href="./chapter-15-chi-square-test.html" rel="next">
+<link href="./part-03-examining-relationships.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -118,7 +118,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Part II: Statistical Inference</a></li><li class="breadcrumb-item"><a href="./chapter-14-association-bivariate-tables.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-03-examining-relationships.html">Part III: Examining Relationships</a></li><li class="breadcrumb-item"><a href="./chapter-14-association-bivariate-tables.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -258,8 +258,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./part-02-making-inferences.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part II: Statistical Inference</span></a>
+            <a href="./part-03-examining-relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part III: Examining Relationships</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -269,6 +269,18 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./chapter-14-association-bivariate-tables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-15-chi-square-test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The Chi-Square Test</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-16-correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Correlation</span></span></a>
   </div>
 </li>
       </ul>
@@ -339,7 +351,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-02-making-inferences.html">Part II: Statistical Inference</a></li><li class="breadcrumb-item"><a href="./chapter-14-association-bivariate-tables.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-03-examining-relationships.html">Part III: Examining Relationships</a></li><li class="breadcrumb-item"><a href="./chapter-14-association-bivariate-tables.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Association and Bivariate Tables</span></h1>
 </div>
@@ -373,7 +385,7 @@ window.Quarto = {
 <p><strong>How can we use a table to describe the relationship between two categorical variables?</strong></p>
 </div>
 </div>
-<p>Earlier chapters examined one variable at a time. We calculated the proportion of defendants with prior records, identified the most common case outcome, and compared mean outcomes between groups. Those analyses are useful, but many criminal justice questions concern how two variables are related.</p>
+<p>Earlier chapters examined one variable at a time. We calculated the proportion of defendants with prior records, identified the most common case outcome, and compared mean outcomes between groups. Those analyses are useful, but many criminal justice questions concern how <em>two</em> variables are related.</p>
 <p>For example, a court analyst might ask whether defendants with prior records are more likely to be convicted. Answering that question requires more than a frequency distribution for prior record and a separate distribution for case outcome. The analyst must examine the two variables together.</p>
 <p>This chapter introduces <strong>bivariate tables</strong>, which organize two categorical variables in a single table. These tables allow us to compare groups, identify patterns, and describe associations.</p>
 </section>
@@ -397,7 +409,7 @@ window.Quarto = {
 <li>40% of the defendants had a prior criminal record; and</li>
 <li>65% of the cases resulted in conviction.</li>
 </ul>
-<p>These statements describe the separate distributions of two variables. They do not tell us whether defendants with prior records were more likely to be convicted.</p>
+<p>These statements describe the separate distributions of two variables. They do <em>not</em> tell us whether defendants with prior records were more likely to be convicted.</p>
 <p>A <strong>bivariate</strong> analysis examines two variables together. It asks whether the distribution of one variable differs across the categories of another variable. Examples include:</p>
 <ul>
 <li>Is bail release related to employment status?</li>
@@ -405,13 +417,13 @@ window.Quarto = {
 <li>Is participation in a treatment program associated with rearrest?</li>
 <li>Does public confidence in police differ across neighborhoods?</li>
 </ul>
-<p>Each question involves two variables. When both variables are categorical, a bivariate table is a useful starting point.</p>
+<p>Each question involves two variables. When both variables are <em>categorical</em>, a bivariate table is a useful starting point.</p>
 </section>
 <section id="bivariate-association" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="bivariate-association"><span class="header-section-number">14.4</span> Bivariate Association</h2>
 <p>Two variables are <strong>associated</strong> when the distribution of one variable differs across categories of the other. If conviction rates differ between defendants with and without prior records, prior-record status and case outcome are associated in the observed data.</p>
-<p>If the conviction rates are the same for both groups, the variables show no association in the table. Knowing a defendant’s prior-record status would not help us anticipate the distribution of case outcomes.</p>
-<p>Association is about a pattern of differences. It does not necessarily mean that one variable causes the other.</p>
+<p>If the conviction rates are the same for both groups, the variables show no association in the table. IN other words, knowing a defendant’s prior-record status would not help us anticipate the distribution of case outcomes.</p>
+<p>Association is about a pattern of differences. It does not necessarily mean that one variable causes the other. It simply tells us that the variables are related.</p>
 <div class="callout callout-style-simple callout-important callout-titled" title="Association is not causation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -422,7 +434,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A bivariate table can show that two variables are related. It cannot, by itself, establish that one variable caused the other. Other characteristics, selection processes, measurement decisions, and institutional practices may help explain the observed pattern.</p>
+<p>A bivariate table can show that two variables are associated. It cannot, by itself, establish that one variable caused the other. Other characteristics, selection processes, measurement decisions, and institutional practices may help explain the observed pattern.</p>
 </div>
 </div>
 </section>
@@ -474,7 +486,7 @@ window.Quarto = {
 <li>The column totals show that 13 defendants were convicted and 7 were not.</li>
 <li>The <strong>grand total</strong> is the complete sample of 20 cases.</li>
 </ul>
-<p>The marginal totals reproduce the separate frequency distributions. The interior cells show how the two variables occur together.</p>
+<p>The marginal totals reproduce the separate frequency distributions (remember <a href="./chapter-03-frequency-distributions.html">frequency distributions</a>!). The interior cells show how the two variables occur together.</p>
 <div class="callout callout-style-simple callout-tip callout-titled" title="Check the table before interpreting it">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -491,7 +503,7 @@ window.Quarto = {
 </section>
 <section id="why-frequencies-are-often-not-enough" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="why-frequencies-are-often-not-enough"><span class="header-section-number">14.6</span> Why Frequencies Are Often Not Enough</h2>
-<p>The counts suggest that defendants with prior records were frequently convicted: seven defendants with prior records were convicted, compared with six defendants without prior records. However, the groups are different sizes. There are only 8 defendants with prior records but 12 without them.</p>
+<p>The counts in the table suggest that defendants with prior records were frequently convicted: seven defendants with prior records were convicted, compared with six defendants without prior records. However, the groups are different sizes. There are only 8 defendants with prior records but 12 without them.</p>
 <p>Comparing the counts 7 and 6 ignores that difference. Proportions place the groups on a common scale and provide a clearer comparison.</p>
 <p>The correct denominator depends on the question. We can calculate either row proportions or column proportions, but they answer different questions.</p>
 </section>
@@ -501,7 +513,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \text{Row proportion}=\frac{\text{cell frequency}}{\text{row total}}
 \]</span></p>
-<p>Row proportions describe the distribution of the column variable within each category of the row variable. Each row sums to 1.00, or 100%.</p>
+<p>Row proportions describe the distribution of the column variable within each category of the row variable. Each row sums to 1.00, or 100% if we are using percentages.</p>
 <p>For defendants with prior records:</p>
 <p><span class="math display">\[
 P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
@@ -532,7 +544,7 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </tr>
 </tbody>
 </table>
-<p>This table answers the question: <strong>Given a defendant’s prior-record status, what proportion were convicted or not convicted?</strong></p>
+<p>This table answers the question: <em>Given a defendant’s prior-record status, what proportion were convicted or not convicted?</em></p>
 <ul>
 <li>Among defendants with prior records, 87.5% were convicted.</li>
 <li>Among defendants without prior records, 50.0% were convicted.</li>
@@ -589,12 +601,12 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </tr>
 </tbody>
 </table>
-<p>This table answers a different question: <strong>Given the case outcome, what proportion of defendants had a prior record?</strong></p>
+<p>This table answers a different question: <em>Given the case outcome, what proportion of defendants had a prior record?</em></p>
 <ul>
 <li>Among convicted defendants, 53.8% had a prior record.</li>
 <li>Among defendants who were not convicted, 14.3% had a prior record.</li>
 </ul>
-<p>These statements are correct, but they do not directly answer whether defendants with prior records were more likely to be convicted. That question requires conviction proportions within the prior-record groups, so the row proportions are the more direct choice.</p>
+<p>These statements are correct, but they do not directly answer whether defendants with prior records were more likely to be convicted. That question requires conviction proportions within the prior-record groups, so the <em>row</em> proportions are the more direct choice.</p>
 </section>
 <section id="choosing-the-correct-proportions" class="level2" data-number="14.9">
 <h2 data-number="14.9" class="anchored" data-anchor-id="choosing-the-correct-proportions"><span class="header-section-number">14.9</span> Choosing the Correct Proportions</h2>
@@ -909,7 +921,7 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 </section>
 <section id="data-investigation-two-categorical-variables" class="level2" data-number="14.13">
 <h2 data-number="14.13" class="anchored" data-anchor-id="data-investigation-two-categorical-variables"><span class="header-section-number">14.13</span> Data Investigation: Two Categorical Variables</h2>
-<p>Identify two categorical variables in a dataset available to you. One should serve as a grouping variable and the other as an outcome.</p>
+<p>Identify two categorical variables in a dataset available to you. O ne should serve as a grouping variable and the other as an outcome.</p>
 <ol type="1">
 <li>State a bivariate research question.</li>
 <li>Identify the cases represented by the data.</li>
@@ -928,7 +940,7 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
 <section id="looking-ahead-to-chapter-15" class="level2" data-number="14.15">
 <h2 data-number="14.15" class="anchored" data-anchor-id="looking-ahead-to-chapter-15"><span class="header-section-number">14.15</span> Looking Ahead to Chapter 15</h2>
 <p>A bivariate table can reveal that groups have different outcome proportions. It does not tell us whether a difference observed in a sample is larger than we might expect from sampling variability.</p>
-<p>Chapter 15 introduces the <strong>chi-square test of independence</strong>. It compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.</p>
+<p>Chapter 15 introduces the <strong>chi-square test of independence</strong>. This test compares the frequencies observed in a bivariate table with the frequencies we would expect if the two variables were independent in the population.</p>
 </section>
 <section id="chapter-summary" class="level2" data-number="14.16">
 <h2 data-number="14.16" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">14.16</span> Chapter Summary</h2>
@@ -1364,13 +1376,13 @@ P(\text{Convicted}\mid\text{Prior record})=\frac{7}{8}=0.875
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter-13-comparing-two-means.html" class="pagination-link" aria-label="Comparing Two Means">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Comparing Two Means</span></span>
+      <a href="./part-03-examining-relationships.html" class="pagination-link" aria-label="Part III: Examining Relationships">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Part III: Examining Relationships</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./appendix-01-standard-normal-table.html" class="pagination-link" aria-label="Standard Normal Distribution Table">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Standard Normal Distribution Table</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapter-15-chi-square-test.html" class="pagination-link" aria-label="The Chi-Square Test">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The Chi-Square Test</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
